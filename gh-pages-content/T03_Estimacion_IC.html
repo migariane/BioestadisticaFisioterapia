@@ -1,0 +1,2205 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/tabby.min.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.38">
+
+  <meta name="author" content="Miguel Angel Luque-Fernández">
+  <meta name="dcterms.date" content="2026-01-01">
+  <title>Bioestadística para Fisioterapia – Teoría de la Estimación</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-84e496b1649940a15455be70d7a52673.css">
+  <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <script>
+  MathJax = {
+    tex: {
+      macros: {
+        E: "\\mathbb{E}",
+        Var: ["\\operatorname{Var}"],
+        Cov: ["\\operatorname{Cov}"],
+        Corr: ["\\operatorname{Corr}"],
+        P: "\\mathbb{P}",
+        bbeta: "\\boldsymbol{\\beta}",
+        bmu: "\\boldsymbol{\\mu}",
+        btheta: "\\boldsymbol{\\theta}",
+        bX: "\\mathbf{X}",
+        reals: "\\mathbb{R}",
+        indep: "\\perp\\!\\!\\!\\perp",
+        SE: ["\\operatorname{SE}"],
+        SD: ["\\operatorname{SD}"],
+        I: "\\mathbb{I}",
+        Pr: ["\\operatorname{Pr}"],
+        NNT: ["\\operatorname{NNT}"],
+        AIC: ["\\operatorname{AIC}"],
+        BIC: ["\\operatorname{BIC}"],
+        MSE: ["\\operatorname{MSE}"],
+        OR: ["\\operatorname{OR}"],
+        RR: ["\\operatorname{RR}"],
+        DR: ["\\operatorname{DR}"],
+        VIF: ["\\operatorname{VIF}"]
+      }
+    }
+  };
+  </script>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Teoría de la Estimación</h1>
+  <p class="subtitle">Tema III — Intervalos de Confianza</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+<a href="https://migariane.github.io">Miguel Angel Luque-Fernández</a> 
+</div>
+<div class="quarto-title-author-email">
+<a href="mailto:mluquefe@ugr.es">mluquefe@ugr.es</a>
+</div>
+        <p class="quarto-title-affiliation">
+            Dpto. Estadística e Investigación Operativa, Universidad de Granada
+          </p>
+    </div>
+</div>
+
+  <p class="date">2026-01-01</p>
+</section><section id="TOC">
+<nav role="doc-toc"> 
+<h2 id="toc-title">Tabla de contenidos</h2>
+<ul>
+<li><a href="#/teoría-de-la-estimación" id="/toc-teoría-de-la-estimación">Teoría de la Estimación</a>
+<ul>
+<li><a href="#/objetivos-de-aprendizaje-tema-3" id="/toc-objetivos-de-aprendizaje-tema-3">Objetivos de aprendizaje — Tema 3</a></li>
+<li><a href="#/recordemos-población-y-muestra" id="/toc-recordemos-población-y-muestra">Recordemos: Población y muestra</a></li>
+<li><a href="#/el-problema-de-la-estimación-puntual" id="/toc-el-problema-de-la-estimación-puntual">El problema de la estimación puntual</a></li>
+<li><a href="#/estimación-puntual" id="/toc-estimación-puntual">Estimación puntual</a></li>
+<li><a href="#/comprueba-tu-comprensión-parámetro-vs-estimador" id="/toc-comprueba-tu-comprensión-parámetro-vs-estimador">Comprueba tu comprensión — Parámetro vs estimador</a></li>
+<li><a href="#/estadístico-muestral" id="/toc-estadístico-muestral">Estadístico muestral</a></li>
+<li><a href="#/de-dónde-sale-la-corrección-n-1" id="/toc-de-dónde-sale-la-corrección-n-1">¿De Dónde Sale la Corrección <span class="math inline">\(n-1\)</span>?</a></li>
+<li><a href="#/simulación-veamos-el-sesgo-con-nuestros-propios-ojos" id="/toc-simulación-veamos-el-sesgo-con-nuestros-propios-ojos">Simulación — Veamos el sesgo con nuestros propios ojos</a></li>
+<li><a href="#/respiro-clínico-la-corrección-n-1-en-la-práctica" id="/toc-respiro-clínico-la-corrección-n-1-en-la-práctica">Respiro clínico — La corrección n-1 en la práctica</a></li>
+<li><a href="#/derivación-matemática-por-qué-exactamente-n-1" id="/toc-derivación-matemática-por-qué-exactamente-n-1">Derivación matemática — ¿por qué exactamente <span class="math inline">\(n-1\)</span>?</a></li>
+<li><a href="#/derivación-matemática-el-resultado" id="/toc-derivación-matemática-el-resultado">Derivación matemática — El resultado</a></li>
+<li><a href="#/grados-de-libertad-la-intuición" id="/toc-grados-de-libertad-la-intuición">Grados de libertad — La intuición</a></li>
+<li><a href="#/impacto-práctico-en-fisioterapia" id="/toc-impacto-práctico-en-fisioterapia">Impacto práctico en fisioterapia</a></li>
+<li><a href="#/n-1-para-recordar" id="/toc-n-1-para-recordar">n-1 — Para Recordar</a></li>
+
+</ul></li>
+<li><a href="#/teorema-central-del-límite" id="/toc-teorema-central-del-límite">Teorema Central del Límite</a>
+<ul>
+<li><a href="#/tcl-visualización" id="/toc-tcl-visualización">TCL — Visualización</a></li>
+<li><a href="#/teorema-central-del-límite-tcl" id="/toc-teorema-central-del-límite-tcl">Teorema central del límite (TCL)</a></li>
+<li><a href="#/tcl-implicaciones-prácticas" id="/toc-tcl-implicaciones-prácticas">TCL — Implicaciones prácticas</a></li>
+<li><a href="#/tcl-fundamento-matemático" id="/toc-tcl-fundamento-matemático">TCL — Fundamento matemático</a></li>
+<li><a href="#/tcl-ejemplo-numérico-paso-a-paso" id="/toc-tcl-ejemplo-numérico-paso-a-paso">TCL — Ejemplo numérico paso a paso</a></li>
+<li><a href="#/estimación-por-intervalo-de-confianza" id="/toc-estimación-por-intervalo-de-confianza">Estimación por intervalo de confianza</a></li>
+<li><a href="#/derivación-del-ic-para-mu-desde-el-tcl-hasta-la-fórmula" id="/toc-derivación-del-ic-para-mu-desde-el-tcl-hasta-la-fórmula">Derivación del IC para <span class="math inline">\(\mu\)</span> — Desde el TCL hasta la fórmula</a></li>
+<li><a href="#/derivación-del-ic-de-la-probabilidad-a-la-fórmula" id="/toc-derivación-del-ic-de-la-probabilidad-a-la-fórmula">Derivación del IC — De la probabilidad a la fórmula</a></li>
+<li><a href="#/fiabilidad-y-precisión-del-ic" id="/toc-fiabilidad-y-precisión-del-ic">Fiabilidad y precisión del IC</a></li>
+<li><a href="#/actividad-en-pareja-qué-ic-es-más-preciso" id="/toc-actividad-en-pareja-qué-ic-es-más-preciso">Actividad en pareja — ¿Qué IC es más preciso?</a></li>
+<li><a href="#/de-qué-depende-la-precisión" id="/toc-de-qué-depende-la-precisión">De qué depende la precisión</a></li>
+<li><a href="#/ic-para-mu-ejemplo-paso-a-paso" id="/toc-ic-para-mu-ejemplo-paso-a-paso">IC para <span class="math inline">\(\mu\)</span> — Ejemplo paso a paso</a></li>
+<li><a href="#/ic-para-la-media-qué-afecta-a-su-anchura" id="/toc-ic-para-la-media-qué-afecta-a-su-anchura">IC para la media — ¿qué afecta a su anchura?</a></li>
+<li><a href="#/visualización-del-ic-sobre-la-distribución-t-de-student" id="/toc-visualización-del-ic-sobre-la-distribución-t-de-student">Visualización del IC sobre la distribución <span class="math inline">\(t\)</span> de Student</a></li>
+<li><a href="#/interpretación-correcta-del-ic" id="/toc-interpretación-correcta-del-ic">Interpretación correcta del IC</a></li>
+<li><a href="#/derivación-del-tamaño-muestral-para-mu" id="/toc-derivación-del-tamaño-muestral-para-mu">Derivación del tamaño muestral para <span class="math inline">\(\mu\)</span></a></li>
+<li><a href="#/tamaño-muestral-el-problema-de-circularidad" id="/toc-tamaño-muestral-el-problema-de-circularidad">Tamaño muestral — El problema de circularidad</a></li>
+<li><a href="#/tamaño-muestral-ejemplo-numérico-completo" id="/toc-tamaño-muestral-ejemplo-numérico-completo">Tamaño muestral — Ejemplo numérico completo</a></li>
+<li><a href="#/ic-para-la-media-ejemplo-con-datos-reales-de-fisioterapia" id="/toc-ic-para-la-media-ejemplo-con-datos-reales-de-fisioterapia">IC para la media — Ejemplo con datos reales de fisioterapia</a></li>
+<li><a href="#/ic-para-una-proporción-poblacional" id="/toc-ic-para-una-proporción-poblacional">IC para una proporción poblacional</a></li>
+<li><a href="#/ic-para-proporción-ejemplo-en-fisioterapia" id="/toc-ic-para-proporción-ejemplo-en-fisioterapia">IC para proporción — Ejemplo en fisioterapia</a></li>
+<li><a href="#/comparación-de-métodos" id="/toc-comparación-de-métodos">Comparación de métodos</a></li>
+<li><a href="#/tamaño-muestral" id="/toc-tamaño-muestral">Tamaño muestral</a></li>
+<li><a href="#/ic-exacto-de-clopper-pearson" id="/toc-ic-exacto-de-clopper-pearson">IC exacto de Clopper-Pearson</a></li>
+<li><a href="#/ic-para-proporción-visualización-de-los-4-métodos" id="/toc-ic-para-proporción-visualización-de-los-4-métodos">IC para proporción — Visualización de los 4 métodos</a></li>
+
+
+</ul></li>
+<li><a href="#/del-ic-al-contraste-de-hipótesis" id="/toc-del-ic-al-contraste-de-hipótesis">Del IC al Contraste de Hipótesis</a>
+<ul>
+<li><a href="#/del-ic-al-contraste-de-hipótesis-el-estadístico-t" id="/toc-del-ic-al-contraste-de-hipótesis-el-estadístico-t">Del IC al contraste de hipótesis: El estadístico <span class="math inline">\(t\)</span></a></li>
+<li><a href="#/dualidad-ic-contraste-de-hipótesis" id="/toc-dualidad-ic-contraste-de-hipótesis">Dualidad IC — Contraste de hipótesis</a></li>
+<li><a href="#/del-ic-al-contraste-ejemplo-clínico-en-fisioterapia" id="/toc-del-ic-al-contraste-ejemplo-clínico-en-fisioterapia">Del IC al contraste: Ejemplo clínico en fisioterapia</a></li>
+<li><a href="#/resumen-visual-de-la-muestra-a-la-decisión-clínica" id="/toc-resumen-visual-de-la-muestra-a-la-decisión-clínica">Resumen visual: De la muestra a la decisión clínica</a></li>
+<li><a href="#/bioestatr-ics-y-tamaño-muestral" id="/toc-bioestatr-ics-y-tamaño-muestral">BioEstatR — Ics y tamaño muestral</a></li>
+<li><a href="#/resumen-tema-3" id="/toc-resumen-tema-3">Resumen — Tema 3</a></li>
+
+</ul></li>
+</ul>
+</nav>
+</section>
+<section>
+<section id="teoría-de-la-estimación" class="title-slide slide level1 center">
+<h1>Teoría de la Estimación</h1>
+
+<img data-src="logo.png" width="90" class="r-stretch"><p><strong>Grado en Fisioterapia</strong></p>
+<p><strong>CC BY 4.0</strong> · Miguel Angel Luque-Fernández</p>
+<p><a href="https://migariane.github.io">Miguel Angel Luque-Fernández</a> · <a href="https://maluque.netlify.app">maluque.netlify.app</a></p>
+<p>Dpto. Estadística e Investigación Operativa · Universidad de Granada</p>
+</section>
+<section id="objetivos-de-aprendizaje-tema-3" class="slide level2 center">
+<h2>Objetivos de aprendizaje — Tema 3</h2>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Al finalizar este tema sabrás:</strong></p>
+</div>
+</div>
+</div>
+<ol type="1">
+<li class="fragment">Distinguir entre población y muestra, parámetro y estimador</li>
+<li class="fragment">Entender qué es un estadístico muestral, su distribución y el TCL</li>
+<li class="fragment">Deducir matemáticamente el tamaño muestral a partir de la precisión deseada</li>
+<li class="fragment">Construir e interpretar intervalos de confianza para una media y una proporción</li>
+<li class="fragment">Calcular el tamaño muestral necesario para una precisión deseada</li>
+<li class="fragment">Conectar la estimación por IC con el contraste de hipotesis (test <span class="math inline">\(t\)</span>)</li>
+</ol>
+</section>
+<section id="recordemos-población-y-muestra" class="slide level2 center">
+<h2>Recordemos: Población y muestra</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Población (<span class="math inline">\(N \to \infty\)</span>)</strong> - Conjunto completo de individuos/objetos que queremos estudiar - Es <strong>inaccesible</strong> en su totalidad - Se caracteriza mediante <strong>parámetros poblacionales</strong>: <span class="math inline">\(\mu\)</span>, <span class="math inline">\(\sigma\)</span>, <span class="math inline">\(p\)</span></p>
+</div><div class="column" style="width:50%;">
+<p><strong>Muestra (<span class="math inline">\(n\)</span>)</strong> - Subconjunto <strong>accesible</strong> de la población - Debe ser <strong>representativa</strong> (selección aleatoria) - Proporciona <strong>estadísticos muestrales</strong>: <span class="math inline">\(\bar{x}\)</span>, <span class="math inline">\(s\)</span>, <span class="math inline">\(\hat{p}\)</span></p>
+</div></div>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Importante</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Inferencia Estadística:</strong> conjunto de técnicas que permiten extender las conclusiones de la muestra a toda la población. Dos ramas: - <strong>Teoría de la Estimación</strong> → determinar el valor de los parámetros poblacionales - <strong>Teoría de Contrastes de Hipótesis</strong> → decidir entre hipótesis sobre los parámetros</p>
+</div>
+</div>
+</div>
+</section>
+<section id="el-problema-de-la-estimación-puntual" class="slide level2 center">
+<h2>El problema de la estimación puntual</h2>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Advertencia</strong></p>
+</div>
+<div class="callout-content">
+<p>Los estimadores puntuales <strong>solo dan una idea</strong> de cuánto puede valer el parámetro, pero <strong>no informan de cómo de buena es la aproximación</strong>. Reducen toda la información muestral a un solo valor.</p>
+</div>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Ejemplo — Peso medio de estudiantes UGR:</strong></p>
+<p>Dos muestras aleatorias de 20 estudiantes:</p>
+<ul>
+<li>Muestra 1: <span class="math inline">\(\bar{x}_1 = 71\)</span> kg</li>
+<li>Muestra 2: <span class="math inline">\(\bar{x}_2 = 67\)</span> kg</li>
+</ul>
+<ul>
+<li class="fragment">¿Coinciden?</li>
+<li class="fragment">¿Cuál es mejor?</li>
+<li class="fragment">¿Qué error cometemos al asumir una de ellas como <span class="math inline">\(\mu\)</span>?</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><strong>Solución → Estimación por intervalos</strong></p>
+<p>En lugar de un único valor, damos un <strong>conjunto de valores probables</strong> para el parámetro, con una <strong>probabilidad (confianza)</strong> asociada.</p>
+</div></div>
+</section>
+<section id="estimación-puntual" class="slide level2 center">
+<h2>Estimación puntual</h2>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Nota</strong></p>
+</div>
+<div class="callout-content">
+<p>La <strong>estimación puntual</strong> asigna al parámetro poblacional un <strong>único valor</strong> aproximado que depende de la muestra.</p>
+</div>
+</div>
+</div>
+<p><strong>Estimador</strong> → <strong>Estimación</strong></p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 32%">
+<col style="width: 38%">
+<col style="width: 29%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Concepto</th>
+<th style="text-align: left;">Definición</th>
+<th style="text-align: left;">Ejemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Estimador</strong></td>
+<td style="text-align: left;">Función de las observaciones muestrales (regla/estadístico)</td>
+<td style="text-align: left;"><span class="math inline">\(\hat{\mu} = \bar{X} = \frac{1}{n}\sum X_i\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Estimación</strong></td>
+<td style="text-align: left;">Valor numérico concreto que toma el estimador en una muestra</td>
+<td style="text-align: left;"><span class="math inline">\(\bar{x} = 169.4\)</span> mg/dL</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Notación:</strong> el acento circunflejo (ˆ) sobre el símbolo del parámetro indica su estimador: <span class="math inline">\(\hat{\mu}\)</span> es el estimador puntual de <span class="math inline">\(\mu\)</span>.</p>
+</div>
+</div>
+</div>
+<p><strong>Método analógico</strong> (el más habitual):</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Parámetro poblacional</th>
+<th style="text-align: left;">Estimador puntual</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Media <span class="math inline">\(\mu\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\hat{\mu} = \bar{x}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Desviación tipica <span class="math inline">\(\sigma\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\hat{\sigma} = s\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Proporción <span class="math inline">\(p\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\hat{p} = x/n\)</span></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="comprueba-tu-comprensión-parámetro-vs-estimador" class="slide level2 center">
+<h2>Comprueba tu comprensión — Parámetro vs estimador</h2>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Pregunta rápida:</strong> Tu compañero dice: “La media de glucemia en mi muestra de 5 pacientes es 105 mg/dL, por lo tanto la media poblacional es 105.” ¿Qué le responderías? Señala al menos dos problemas con esta afirmación.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="estadístico-muestral" class="slide level2 center">
+<h2>Estadístico muestral</h2>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Importante</strong></p>
+</div>
+<div class="callout-content">
+<p>Un <strong>estadístico muestral</strong> es cualquier función de las observaciones de la muestra:</p>
+<p><span class="math display">\[T = f(X_1, X_2, \ldots, X_n)\]</span></p>
+<p>Ejemplos: <span class="math inline">\(\bar{X}\)</span>, <span class="math inline">\(s^2\)</span>, <span class="math inline">\(\hat{p}\)</span>, mediana, mínimo, máximo…</p>
+</div>
+</div>
+</div>
+<p><strong>Propiedades clave:</strong></p>
+<ul>
+<li><strong>Es una variable aleatoria</strong> — su valor cambia de muestra a muestra</li>
+<li><strong>Tiene una distribución</strong> — la <em>distribución muestral</em> del estadístico</li>
+<li><strong>La distribución muestral</strong> describe cómo varía el estadístico si repitiéramos el muestreo infinitas veces</li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Parámetro <span class="math inline">\(\neq\)</span> Estadístico</strong></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Parámetro</th>
+<th style="text-align: left;">Estadístico</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Población</td>
+<td style="text-align: left;">Muestra</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Fijo (desconocido)</td>
+<td style="text-align: left;">Variable aleatoria</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\mu, \sigma, p\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\bar{x}, s, \hat{p}\)</span></td>
+</tr>
+</tbody>
+</table>
+</div><div class="column" style="width:50%;">
+<p><strong>Distribución muestral de <span class="math inline">\(\bar{X}\)</span>:</strong></p>
+<ul>
+<li><span class="math inline">\(E[\bar{X}] = \mu\)</span> (insesgado)</li>
+<li><span class="math inline">\(Var(\bar{X}) = \frac{\sigma^2}{n}\)</span></li>
+<li>Si <span class="math inline">\(X \sim N(\mu, \sigma^2) \Rightarrow \bar{X} \sim N(\mu, \frac{\sigma^2}{n})\)</span></li>
+</ul>
+</div></div>
+</section>
+<section id="de-dónde-sale-la-corrección-n-1" class="slide level2 center">
+<h2>¿De Dónde Sale la Corrección <span class="math inline">\(n-1\)</span>?</h2>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Material complementario (opcional):</strong> Esta derivación matemática es para quien quiera profundizar. Si solo recuerdas una idea, quédate con esto: dividir por <span class="math inline">\(n-1\)</span> en lugar de <span class="math inline">\(n\)</span> corrige el sesgo porque la media muestral <span class="math inline">\(\bar{x}\)</span> está más cerca de los datos que la media poblacional <span class="math inline">\(\mu\)</span> — las distancias son sistemáticamente más pequeñas y necesitamos compensar inflando la estimación.</p>
+</div>
+</div>
+</div>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Nota</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>La pregunta:</strong> ¿Por qué dividimos por <span class="math inline">\(n-1\)</span> al calcular la varianza muestral en lugar de por <span class="math inline">\(n\)</span>, que parecería lo natural?</p>
+<p><span class="math display">\[S^2 = \frac{1}{n-1}\sum_{i=1}^n (X_i - \bar{X})^2 \quad \text{(con corrección)} \qquad \text{vs.} \qquad S'^2 = \frac{1}{n}\sum_{i=1}^n (X_i - \bar{X})^2 \quad \text{(sin corrección)}\]</span></p>
+</div>
+</div>
+</div>
+<p><strong>La intuición en una frase:</strong> <span class="math inline">\(\bar{X}\)</span> está más cerca de los datos que <span class="math inline">\(\mu\)</span>, así que las distancias a <span class="math inline">\(\bar{X}\)</span> son sistemáticamente más pequeñas que las distancias a <span class="math inline">\(\mu\)</span>. Para compensar, inflamos la estimación dividiendo por un número menor (<span class="math inline">\(n-1\)</span>).</p>
+</section>
+<section id="simulación-veamos-el-sesgo-con-nuestros-propios-ojos" class="slide level2 center">
+<h2>Simulación — Veamos el sesgo con nuestros propios ojos</h2>
+<p><strong>Experimento:</strong> Extraemos 10,000 muestras de una población Normal(<span class="math inline">\(\mu=150\)</span>, <span class="math inline">\(\sigma^2=400\)</span>). Para cada muestra, calculamos <span class="math inline">\(S'^2\)</span> (dividiendo por <span class="math inline">\(n\)</span>) y <span class="math inline">\(S^2\)</span> (dividiendo por <span class="math inline">\(n-1\)</span>). Comparamos sus promedios con <span class="math inline">\(\sigma^2=400\)</span>.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Mostrar código R</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
+<span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="dv">5</span>; sigma2 <span class="ot">&lt;-</span> <span class="dv">400</span>; Nsim <span class="ot">&lt;-</span> <span class="dv">10000</span></span>
+<span id="cb1-3"><a aria-hidden="true" tabindex="-1"></a>S2_prime <span class="ot">&lt;-</span> <span class="fu">replicate</span>(Nsim, {x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(n, <span class="dv">150</span>, <span class="fu">sqrt</span>(sigma2)); <span class="fu">sum</span>((x<span class="sc">-</span><span class="fu">mean</span>(x))<span class="sc">^</span><span class="dv">2</span>)<span class="sc">/</span>n})</span>
+<span id="cb1-4"><a aria-hidden="true" tabindex="-1"></a>S2_correct <span class="ot">&lt;-</span> S2_prime <span class="sc">*</span> n<span class="sc">/</span>(n<span class="dv">-1</span>)  <span class="co"># S² = S'² × n/(n-1)</span></span>
+<span id="cb1-5"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>), <span class="at">mar=</span><span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">4</span>,<span class="dv">3</span>,<span class="dv">1</span>))</span>
+<span id="cb1-7"><a aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(S2_prime, <span class="at">col=</span><span class="fu">rgb</span>(<span class="fl">0.9</span>,<span class="fl">0.3</span>,<span class="fl">0.2</span>,<span class="fl">0.4</span>), <span class="at">border=</span><span class="st">"white"</span>, <span class="at">breaks=</span><span class="dv">40</span>,</span>
+<span id="cb1-8"><a aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">"Sin correccion: S'2 = Suma/n"</span>,</span>
+<span id="cb1-9"><a aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab=</span><span class="st">"Varianza estimada"</span>, <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1500</span>))</span>
+<span id="cb1-10"><a aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v=</span>sigma2, <span class="at">col=</span><span class="st">"darkgreen"</span>, <span class="at">lwd=</span><span class="dv">3</span>); <span class="fu">abline</span>(<span class="at">v=</span><span class="fu">mean</span>(S2_prime), <span class="at">col=</span><span class="st">"#e74c3c"</span>, <span class="at">lwd=</span><span class="dv">3</span>, <span class="at">lty=</span><span class="dv">2</span>)</span>
+<span id="cb1-11"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="dv">800</span>, <span class="fl">0.003</span>, <span class="fu">paste0</span>(<span class="st">"Media = "</span>,<span class="fu">round</span>(<span class="fu">mean</span>(S2_prime),<span class="dv">0</span>),<span class="st">"</span><span class="sc">\n</span><span class="st">Sesgo = -"</span>,<span class="fu">round</span>(<span class="dv">100</span><span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span><span class="fu">mean</span>(S2_prime)<span class="sc">/</span>sigma2),<span class="dv">1</span>),<span class="st">"%"</span>),</span>
+<span id="cb1-12"><a aria-hidden="true" tabindex="-1"></a>     <span class="at">col=</span><span class="st">"#e74c3c"</span>, <span class="at">font=</span><span class="dv">2</span>, <span class="at">cex=</span><span class="fl">0.8</span>)</span>
+<span id="cb1-13"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(S2_correct, <span class="at">col=</span><span class="fu">rgb</span>(<span class="fl">0.2</span>,<span class="fl">0.6</span>,<span class="fl">0.4</span>,<span class="fl">0.4</span>), <span class="at">border=</span><span class="st">"white"</span>, <span class="at">breaks=</span><span class="dv">40</span>,</span>
+<span id="cb1-15"><a aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">"Con correccion: S2 = Suma/(n-1)"</span>,</span>
+<span id="cb1-16"><a aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab=</span><span class="st">"Varianza estimada"</span>, <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1500</span>))</span>
+<span id="cb1-17"><a aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v=</span>sigma2, <span class="at">col=</span><span class="st">"darkgreen"</span>, <span class="at">lwd=</span><span class="dv">3</span>); <span class="fu">abline</span>(<span class="at">v=</span><span class="fu">mean</span>(S2_correct), <span class="at">col=</span><span class="st">"#27ae60"</span>, <span class="at">lwd=</span><span class="dv">3</span>, <span class="at">lty=</span><span class="dv">2</span>)</span>
+<span id="cb1-18"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="dv">800</span>, <span class="fl">0.003</span>, <span class="fu">paste0</span>(<span class="st">"Media = "</span>,<span class="fu">round</span>(<span class="fu">mean</span>(S2_correct),<span class="dv">0</span>),<span class="st">"</span><span class="sc">\n</span><span class="st">Sesgo ~ 0%"</span>),</span>
+<span id="cb1-19"><a aria-hidden="true" tabindex="-1"></a>     <span class="at">col=</span><span class="st">"#27ae60"</span>, <span class="at">font=</span><span class="dv">2</span>, <span class="at">cex=</span><span class="fl">0.8</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+
+<details class="code-fold">
+<summary>Mostrar código R</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<img data-src="T03_Estimacion_IC_files/figure-revealjs/unnamed-chunk-1-1.png" width="864" class="r-stretch"><div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Lo que vemos:</strong> Sin corrección (rojo), la media de 10,000 estimaciones es ~320, muy por debajo de <span class="math inline">\(\sigma^2=400\)</span> → <strong>sesgo negativo del 20%</strong>. Con corrección (verde), la media es ~400 → <strong>insesgado</strong>. La corrección funciona.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="respiro-clínico-la-corrección-n-1-en-la-práctica" class="slide level2 center">
+<h2>Respiro clínico — La corrección n-1 en la práctica</h2>
+<p><strong>Analogía clínica:</strong> Mides la flexión de rodilla en 5 pacientes. Sabes que la media es 130°. Si te digo el valor de 4 pacientes, el 5º queda <strong>determinado</strong> (no es libre). Solo <span class="math inline">\(5-1=4\)</span> pacientes aportan información independiente sobre la <strong>variabilidad</strong>.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Para recordar:</strong> Con <span class="math inline">\(n=5\)</span> pacientes (típico en estudios piloto de fisioterapia), dividir por <span class="math inline">\(n\)</span> subestima la variabilidad en un 20%. Usa siempre <span class="math inline">\(n-1\)</span>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="derivación-matemática-por-qué-exactamente-n-1" class="slide level2 center">
+<h2>Derivación matemática — ¿por qué exactamente <span class="math inline">\(n-1\)</span>?</h2>
+<p><strong>Paso 1 — Partimos de lo que quisiéramos estimar:</strong> La varianza poblacional usa distancias a <span class="math inline">\(\mu\)</span>:</p>
+<p><span class="math display">\[\sigma^2 = E\left[\frac{1}{n}\sum_{i=1}^n (X_i - \mu)^2\right]\]</span></p>
+<p>Pero como no conocemos <span class="math inline">\(\mu\)</span>, usamos <span class="math inline">\(\bar{X}\)</span>. <strong>Este es el origen del problema.</strong></p>
+<p><strong>Paso 2 — Sumamos y restamos <span class="math inline">\(\bar{X}\)</span> dentro del cuadrado:</strong></p>
+<p><span class="math display">\[(X_i - \mu)^2 = (X_i - \bar{X} + \bar{X} - \mu)^2 = \underbrace{(X_i - \bar{X})^2}_{\text{lo que calculamos}} + (\bar{X} - \mu)^2 + 2(X_i - \bar{X})(\bar{X} - \mu)\]</span></p>
+<p><strong>Paso 3 — Sumamos sobre <span class="math inline">\(i\)</span> y aplicamos esperanzas:</strong></p>
+<p><span class="math display">\[E\left[\sum (X_i - \mu)^2\right] = E\left[\sum (X_i - \bar{X})^2\right] + n \cdot E[(\bar{X} - \mu)^2] + \underbrace{2E\left[(\bar{X} - \mu)\sum (X_i - \bar{X})\right]}_{=0 \text{ porque } \sum (X_i - \bar{X}) = 0}\]</span></p>
+</section>
+<section id="derivación-matemática-el-resultado" class="slide level2 center">
+<h2>Derivación matemática — El resultado</h2>
+<p><strong>Paso 4 — Identificamos cada término:</strong></p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 31%">
+<col style="width: 24%">
+<col style="width: 44%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Término</th>
+<th>Valor</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(E\left[\sum (X_i - \mu)^2\right]\)</span></td>
+<td><span class="math inline">\(n\sigma^2\)</span></td>
+<td>Varianza poblacional total</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(E\left[\sum (X_i - \bar{X})^2\right]\)</span></td>
+<td><span class="math inline">\((n-1)\sigma^2\)</span></td>
+<td>Suma de cuadrados muestral (¡lo que calculamos!)</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(n \cdot E[(\bar{X} - \mu)^2]\)</span></td>
+<td><span class="math inline">\(n \cdot \frac{\sigma^2}{n} = \sigma^2\)</span></td>
+<td>Varianza de la media muestral × n</td>
+</tr>
+</tbody>
+</table>
+<p><span class="math display">\[n\sigma^2 = E\left[\sum (X_i - \bar{X})^2\right] + \sigma^2 \quad\Rightarrow\quad E\left[\sum (X_i - \bar{X})^2\right] = (n-1)\sigma^2\]</span></p>
+<p><strong>Paso 5 — Despejamos el estimador insesgado:</strong></p>
+<p><span class="math display">\[E\left[\frac{\sum (X_i - \bar{X})^2}{n-1}\right] = \sigma^2 \qquad\Longrightarrow\qquad S^2 = \frac{1}{n-1}\sum_{i=1}^n (X_i - \bar{X})^2\]</span></p>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Importante</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>La intuición algebraica:</strong> De la variabilidad total (<span class="math inline">\(n\sigma^2\)</span>), <span class="math inline">\(\sigma^2\)</span> se “gasta” en estimar <span class="math inline">\(\bar{X}\)</span> (la incertidumbre sobre la media). Solo quedan <span class="math inline">\((n-1)\sigma^2\)</span> para estimar la dispersión. Por eso dividimos por <span class="math inline">\(n-1\)</span>: es el número de <strong>piezas independientes de información sobre la variabilidad</strong> que quedan tras estimar la media.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="grados-de-libertad-la-intuición" class="slide level2 center">
+<h2>Grados de libertad — La intuición</h2>
+<p>Los <strong>grados de libertad</strong> (<span class="math inline">\(gl = n-1\)</span>) son exactamente eso: el número de piezas de información independiente que quedan tras usar los datos para estimar un parámetro.</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Analogía clínica:</strong> Mides la flexión de rodilla en 5 pacientes. Sabes que la media es 130°. Si te digo el valor de 4 pacientes, el 5º queda <strong>determinado</strong> (no es libre). Solo <span class="math inline">\(5-1=4\)</span> pacientes aportan información independiente sobre la <strong>variabilidad</strong>.</p>
+</div>
+</div>
+</div>
+<p><span class="math display">\[\sum_{i=1}^n (x_i - \bar{x}) = 0 \quad\Rightarrow\quad \text{1 restricción} \quad\Rightarrow\quad n-1 \text{ grados de libertad}\]</span></p>
+</section>
+<section id="impacto-práctico-en-fisioterapia" class="slide level2 center">
+<h2>Impacto práctico en fisioterapia</h2>
+<table class="caption-top">
+<colgroup>
+<col style="width: 6%">
+<col style="width: 22%">
+<col style="width: 36%">
+<col style="width: 34%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(n\)</span></th>
+<th style="text-align: center;">Factor <span class="math inline">\((n-1)/n\)</span></th>
+<th style="text-align: center;">Subestimación de <span class="math inline">\(\sigma^2\)</span></th>
+<th style="text-align: center;">Subestimación de <span class="math inline">\(\sigma\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">0.667</td>
+<td style="text-align: center;"><strong>33.3%</strong></td>
+<td style="text-align: center;">~18%</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0.800</td>
+<td style="text-align: center;"><strong>20.0%</strong></td>
+<td style="text-align: center;">~11%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">0.900</td>
+<td style="text-align: center;">10.0%</td>
+<td style="text-align: center;">~5%</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">30</td>
+<td style="text-align: center;">0.967</td>
+<td style="text-align: center;">3.3%</td>
+<td style="text-align: center;">~1.7%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">60</td>
+<td style="text-align: center;">0.983</td>
+<td style="text-align: center;">1.7%</td>
+<td style="text-align: center;">~0.8%</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">100</td>
+<td style="text-align: center;">0.990</td>
+<td style="text-align: center;">1.0%</td>
+<td style="text-align: center;">~0.5%</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Advertencia</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Conclusión clínica:</strong> Con <span class="math inline">\(n=5\)</span> pacientes (típico en un estudio piloto), dividir por <span class="math inline">\(n\)</span> subestima la variabilidad en un <strong>20%</strong>. Esto produce IC demasiado estrechos y tests que encuentran significación donde no la hay. Con <span class="math inline">\(n \geq 60\)</span>, la corrección es casi irrelevante (<span class="math inline">\(&lt;2\%\)</span>). <strong>Pero en fisioterapia, donde los estudios pequeños son frecuentes, usar siempre <span class="math inline">\(n-1\)</span> es fundamental.</strong></p>
+</div>
+</div>
+</div>
+</section>
+<section id="n-1-para-recordar" class="slide level2 center">
+<h2>n-1 — Para Recordar</h2>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Importante</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Si solo recuerdas una cosa sobre <span class="math inline">\(n-1\)</span>:</strong> Dividir por <span class="math inline">\(n-1\)</span> (en lugar de <span class="math inline">\(n\)</span>) corrige un sesgo que subestima la variabilidad. Con muestras pequeñas (<span class="math inline">\(n&lt;30\)</span>, típicas en fisioterapia), la corrección es crucial. Con muestras grandes (<span class="math inline">\(n&gt;60\)</span>), la diferencia es pequeña.</p>
+</div>
+</div>
+</div>
+<p><strong>Tres formas de entenderlo:</strong> 1. <strong>Intuición:</strong> <span class="math inline">\(\bar{x}\)</span> está más cerca de los datos que <span class="math inline">\(\mu\)</span> → distancias más pequeñas → compensamos dividiendo por menos 2. <strong>Simulación:</strong> 10,000 muestras confirman que sin corrección subestimamos ~20% con <span class="math inline">\(n=5\)</span> 3. <strong>Matemáticas:</strong> De la variabilidad total, una parte se gasta en estimar <span class="math inline">\(\bar{x}\)</span> → quedan <span class="math inline">\(n-1\)</span> piezas independientes (grados de libertad)</p>
+</section>
+<section class="slide level2 center">
+
+</section></section>
+<section>
+<section id="teorema-central-del-límite" class="title-slide slide level1 center">
+<h1>Teorema Central del Límite</h1>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Importante</strong></p>
+</div>
+<div class="callout-content">
+<div class="connection">
+<p><strong>Conexión T02→T03:</strong> La distribución Normal que estudiamos en el Tema 2 es el destino al que converge cualquier suma de variables independientes. El TCL es el puente matemático entre la probabilidad teórica y la inferencia práctica.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="tcl-visualización" class="slide level2 center">
+<h2>TCL — Visualización</h2>
+<p><strong>Para reflexionar:</strong> Si mido la flexión de hombro en solo 5 pacientes, ¿la media de esos 5 seguirá una distribución Normal?</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Mostrar código R</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>), <span class="at">mar=</span><span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">4</span>,<span class="dv">3</span>,<span class="dv">1</span>)); <span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb3-2"><a aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(n <span class="cf">in</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">30</span>, <span class="dv">100</span>)){</span>
+<span id="cb3-3"><a aria-hidden="true" tabindex="-1"></a>  medias <span class="ot">&lt;-</span> <span class="fu">replicate</span>(<span class="dv">1000</span>, <span class="fu">mean</span>(<span class="fu">rexp</span>(n, <span class="at">rate=</span><span class="dv">1</span><span class="sc">/</span><span class="dv">10</span>)))</span>
+<span id="cb3-4"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">hist</span>(medias, <span class="at">col=</span><span class="st">"steelblue"</span>, <span class="at">border=</span><span class="st">"white"</span>, <span class="at">breaks=</span><span class="dv">30</span>, <span class="at">freq=</span><span class="cn">FALSE</span>,</span>
+<span id="cb3-5"><a aria-hidden="true" tabindex="-1"></a>       <span class="at">main=</span><span class="fu">paste0</span>(<span class="st">"Exponencial, n="</span>, n, <span class="cf">if</span>(n<span class="sc">&gt;=</span><span class="dv">30</span>){<span class="st">" → ≈Normal"</span>}<span class="cf">else</span>{<span class="st">""</span>}),</span>
+<span id="cb3-6"><a aria-hidden="true" tabindex="-1"></a>       <span class="at">xlab=</span><span class="fu">expression</span>(<span class="fu">bar</span>(x)), <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">16</span>))</span>
+<span id="cb3-7"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">curve</span>(<span class="fu">dnorm</span>(x, <span class="dv">10</span>, <span class="dv">10</span><span class="sc">/</span><span class="fu">sqrt</span>(n)), <span class="at">add=</span>T, <span class="at">col=</span><span class="st">"darkgreen"</span>, <span class="at">lwd=</span><span class="dv">2</span>)</span>
+<span id="cb3-8"><a aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-9"><a aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(n <span class="cf">in</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">30</span>, <span class="dv">100</span>)){</span>
+<span id="cb3-10"><a aria-hidden="true" tabindex="-1"></a>  medias <span class="ot">&lt;-</span> <span class="fu">replicate</span>(<span class="dv">1000</span>, <span class="fu">mean</span>(<span class="fu">runif</span>(n, <span class="dv">0</span>, <span class="dv">20</span>)))</span>
+<span id="cb3-11"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">hist</span>(medias, <span class="at">col=</span><span class="st">"seagreen"</span>, <span class="at">border=</span><span class="st">"white"</span>, <span class="at">breaks=</span><span class="dv">30</span>, <span class="at">freq=</span><span class="cn">FALSE</span>,</span>
+<span id="cb3-12"><a aria-hidden="true" tabindex="-1"></a>       <span class="at">main=</span><span class="fu">paste0</span>(<span class="st">"Uniforme, n="</span>, n), <span class="at">xlab=</span><span class="fu">expression</span>(<span class="fu">bar</span>(x)), <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">16</span>))</span>
+<span id="cb3-13"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">curve</span>(<span class="fu">dnorm</span>(x, <span class="dv">10</span>, <span class="fu">sqrt</span>((<span class="dv">20</span><span class="sc">^</span><span class="dv">2</span><span class="sc">/</span><span class="dv">12</span>)<span class="sc">/</span>n)), <span class="at">add=</span>T, <span class="at">col=</span><span class="st">"darkgreen"</span>, <span class="at">lwd=</span><span class="dv">2</span>)</span>
+<span id="cb3-14"><a aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+
+<details class="code-fold">
+<summary>Mostrar código R</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<img data-src="T03_Estimacion_IC_files/figure-revealjs/unnamed-chunk-2-1.png" width="864" class="r-stretch"><p><strong>Con <span class="math inline">\(n=30\)</span> ya se aprecia la campana. Con <span class="math inline">\(n=100\)</span> es casi perfecta.</strong> <a href="https://watzile.shinyapps.io/TeoreCLT/">App interactiva TCL</a></p>
+</section>
+<section id="teorema-central-del-límite-tcl" class="slide level2 center">
+<h2>Teorema central del límite (TCL)</h2>
+<p>Sea <span class="math inline">\(X_1, X_2, \ldots, X_n\)</span> una muestra aleatoria de <strong>cualquier distribución</strong> con media <span class="math inline">\(\mu\)</span> y varianza <span class="math inline">\(\sigma^2\)</span>. Cuando <span class="math inline">\(n\)</span> es <strong>suficientemente grande</strong>:</p>
+<p><span class="math display">\[\bar{X} \xrightarrow{\text{approx}} N\left(\mu, \frac{\sigma^2}{n}\right)\]</span></p>
+<p>Equivalentemente:</p>
+<p><span class="math display">\[\frac{\bar{X} - \mu}{\sigma/\sqrt{n}} \xrightarrow{d} N(0, 1)\]</span></p>
+</section>
+<section id="tcl-implicaciones-prácticas" class="slide level2 center">
+<h2>TCL — Implicaciones prácticas</h2>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Importante</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Lo fundamental del TCL para la práctica clínica:</strong></p>
+</div>
+</div>
+</div>
+<ul>
+<li><strong>No importa la forma</strong> de la distribución original (puede ser exponencial, uniforme, binomial…)</li>
+<li>La media de una muestra grande <strong>siempre</strong> tiende a distribuirse normalmente</li>
+<li><strong><span class="math inline">\(n \geq 30\)</span></strong> es la regla práctica habitual para considerar “suficientemente grande”</li>
+<li>Este teorema es el <strong>pilar</strong> que permite construir intervalos de confianza y tests de hipótesis</li>
+</ul>
+</section>
+<section id="tcl-fundamento-matemático" class="slide level2 center">
+<h2>TCL — Fundamento matemático</h2>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Nota</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>¿Por qué funciona el TCL?</strong> La clave está en la <strong>suma</strong> de variables independientes.</p>
+</div>
+</div>
+</div>
+<p>Sea <span class="math inline">\(S_n = X_1 + X_2 + \cdots + X_n = \sum_{i=1}^n X_i\)</span>, con <span class="math inline">\(E[X_i]=\mu\)</span>, <span class="math inline">\(Var(X_i)=\sigma^2\)</span>.</p>
+<p><strong>Paso 1 — Esperanza y varianza de la suma:</strong> <span class="math display">\[E[S_n] = n\mu \qquad Var(S_n) = n\sigma^2 \qquad DE(S_n) = \sigma\sqrt{n}\]</span></p>
+<p><strong>Paso 2 — Tipificación (centrar y reducir):</strong> <span class="math display">\[Z_n = \frac{S_n - E[S_n]}{DE(S_n)} = \frac{\sum X_i - n\mu}{\sigma\sqrt{n}} = \frac{\bar{X} - \mu}{\sigma/\sqrt{n}}\]</span></p>
+<p><strong>Paso 3 — El TCL afirma:</strong> <span class="math inline">\(Z_n \xrightarrow{d} N(0, 1)\)</span> cuando <span class="math inline">\(n \to \infty\)</span></p>
+<p><em>El papel de <span class="math inline">\(\sqrt{n}\)</span>:</em> La variabilidad de la suma crece con <span class="math inline">\(\sqrt{n}\)</span> (no con <span class="math inline">\(n\)</span>). Por eso la media muestral se <strong>concentra</strong> alrededor de <span class="math inline">\(\mu\)</span> al aumentar <span class="math inline">\(n\)</span>: <span class="math display">\[Var(\bar{X}) = \frac{\sigma^2}{n} \quad \Rightarrow \quad DE(\bar{X}) = \frac{\sigma}{\sqrt{n}}\]</span></p>
+</section>
+<section id="tcl-ejemplo-numérico-paso-a-paso" class="slide level2 center">
+<h2>TCL — Ejemplo numérico paso a paso</h2>
+<p><strong>Población:</strong> Tiempo de recuperación (días) tras tratamiento de fisioterapia. Distribución <strong>exponencial</strong> con media <span class="math inline">\(\mu = 10\)</span> días (<span class="math inline">\(\sigma = 10\)</span>).</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Para <span class="math inline">\(n=5\)</span> (muestra pequeña):</strong> <span class="math display">\[E[\bar{X}] = 10 \quad DE(\bar{X}) = \frac{10}{\sqrt{5}} = 4.47\]</span> La media muestral varía mucho — <strong>NO es normal</strong> aún.</p>
+</div><div class="column" style="width:50%;">
+<p><strong>Para <span class="math inline">\(n=100\)</span> (muestra grande):</strong> <span class="math display">\[E[\bar{X}] = 10 \quad DE(\bar{X}) = \frac{10}{\sqrt{100}} = 1.0\]</span> La media muestral se <strong>concentra</strong> — <strong>≈ normal</strong> (TCL).</p>
+</div></div>
+<p><strong>Comparación numérica de la precisión según <span class="math inline">\(n\)</span>:</strong></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;"><span class="math inline">\(n\)</span></th>
+<th style="text-align: left;"><span class="math inline">\(DE(\bar{X})\)</span></th>
+<th style="text-align: left;">IC 95% aproximado para <span class="math inline">\(\bar{X}\)</span></th>
+<th style="text-align: left;">Amplitud</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">5</td>
+<td style="text-align: left;"><span class="math inline">\(10/\sqrt{5} = 4.47\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(10 \pm 1.96 \cdot 4.47\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\pm 8.76\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">30</td>
+<td style="text-align: left;"><span class="math inline">\(10/\sqrt{30} = 1.83\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(10 \pm 1.96 \cdot 1.83\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\pm 3.58\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">100</td>
+<td style="text-align: left;"><span class="math inline">\(10/\sqrt{100} = 1.00\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(10 \pm 1.96 \cdot 1.00\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(\pm 1.96\)</span></td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Importante</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Ley de rendimientos decrecientes:</strong> Para reducir el error a la mitad, necesitas <strong>cuadruplicar</strong> <span class="math inline">\(n\)</span> (porque <span class="math inline">\(DE \propto 1/\sqrt{n}\)</span>).</p>
+</div>
+</div>
+</div>
+</section>
+<section id="estimación-por-intervalo-de-confianza" class="slide level2 center">
+<h2>Estimación por intervalo de confianza</h2>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Importante</strong></p>
+</div>
+<div class="callout-content">
+<p>Un <strong>intervalo de confianza</strong> <span class="math inline">\(1-\alpha\)</span> para <span class="math inline">\(\theta\)</span> es <span class="math inline">\([L, U]\)</span> tal que:</p>
+<p><span class="math display">\[P(L \leq \theta \leq U) = 1 - \alpha\]</span></p>
+<p><strong>Significado frecuentista:</strong> de 100 estudios independientes, ≈ <span class="math inline">\((1-\alpha)\times 100\)</span> IC contendrán <span class="math inline">\(\theta\)</span>.</p>
+</div>
+</div>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Mostrar código R</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>); mu<span class="ot">&lt;-</span><span class="dv">120</span>; sigma<span class="ot">&lt;-</span><span class="dv">20</span>; n<span class="ot">&lt;-</span><span class="dv">5</span>; t_crit<span class="ot">&lt;-</span><span class="fu">qt</span>(<span class="fl">0.975</span>,n<span class="dv">-1</span>)</span>
+<span id="cb5-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar=</span><span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">6</span>,<span class="dv">4</span>,<span class="dv">1</span>)); <span class="fu">plot</span>(<span class="cn">NA</span>, <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">60</span>,<span class="dv">180</span>), <span class="at">ylim=</span><span class="fu">c</span>(<span class="fl">0.5</span>,<span class="fl">5.5</span>), <span class="at">yaxt=</span><span class="st">"n"</span>,</span>
+<span id="cb5-3"><a aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab=</span><span class="st">"Glucemia (mg/dL)"</span>, <span class="at">ylab=</span><span class="st">""</span>, <span class="at">main=</span><span class="st">"5 IC al 95% para μ=120"</span>)</span>
+<span id="cb5-4"><a aria-hidden="true" tabindex="-1"></a><span class="fu">axis</span>(<span class="dv">2</span>, <span class="at">at=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>, <span class="at">labels=</span><span class="fu">paste</span>(<span class="st">"M"</span>,<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>), <span class="at">las=</span><span class="dv">2</span>); <span class="fu">abline</span>(<span class="at">v=</span><span class="dv">120</span>, <span class="at">col=</span><span class="st">"darkgreen"</span>, <span class="at">lwd=</span><span class="dv">2</span>, <span class="at">lty=</span><span class="dv">2</span>)</span>
+<span id="cb5-5"><a aria-hidden="true" tabindex="-1"></a>contiene<span class="ot">&lt;-</span><span class="dv">0</span></span>
+<span id="cb5-6"><a aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>){m<span class="ot">&lt;-</span><span class="fu">rnorm</span>(n,mu,sigma); ic<span class="ot">&lt;-</span><span class="fu">mean</span>(m)<span class="sc">+</span><span class="fu">c</span>(<span class="sc">-</span><span class="dv">1</span>,<span class="dv">1</span>)<span class="sc">*</span>t_crit<span class="sc">*</span><span class="fu">sd</span>(m)<span class="sc">/</span><span class="fu">sqrt</span>(n)</span>
+<span id="cb5-7"><a aria-hidden="true" tabindex="-1"></a>  col<span class="ot">&lt;-</span><span class="cf">if</span>(ic[<span class="dv">1</span>]<span class="sc">&lt;=</span><span class="dv">120</span><span class="sc">&amp;</span>ic[<span class="dv">2</span>]<span class="sc">&gt;=</span><span class="dv">120</span>){contiene<span class="ot">&lt;-</span>contiene<span class="sc">+</span><span class="dv">1</span>;<span class="st">"steelblue"</span>}<span class="cf">else</span>{<span class="st">"coral"</span>}</span>
+<span id="cb5-8"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">lines</span>(ic, <span class="fu">c</span>(i,i), <span class="at">col=</span>col, <span class="at">lwd=</span><span class="dv">3</span>); <span class="fu">points</span>(<span class="fu">mean</span>(m), i, <span class="at">pch=</span><span class="dv">19</span>, <span class="at">col=</span>col)}</span>
+<span id="cb5-9"><a aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"topright"</span>, <span class="fu">paste</span>(contiene,<span class="st">"/5 contienen μ"</span>), <span class="at">bty=</span><span class="st">"n"</span>, <span class="at">cex=</span><span class="fl">1.2</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+
+</div>
+<img data-src="T03_Estimacion_IC_files/figure-revealjs/unnamed-chunk-3-1.png" width="864" class="r-stretch"><div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Advertencia</strong></p>
+</div>
+<div class="callout-content">
+<p>El <strong>parámetro</strong> no “cae” en el intervalo. Es el <strong>intervalo</strong> el que intenta contenerlo.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="derivación-del-ic-para-mu-desde-el-tcl-hasta-la-fórmula" class="slide level2 center">
+<h2>Derivación del IC para <span class="math inline">\(\mu\)</span> — Desde el TCL hasta la fórmula</h2>
+<p>La fórmula del intervalo de confianza para la media no es arbitraria. Se obtiene de tres resultados encadenados que hemos construido a lo largo de los Temas 2 y 3:</p>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Nota</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Paso 1 — Distribución de la media muestral (TCL, Tema 3):</strong> <span class="math display">\[\bar{X} \sim N\left(\mu, \frac{\sigma}{\sqrt{n}}\right) \quad \Rightarrow \quad Z = \frac{\bar{X} - \mu}{\sigma / \sqrt{n}} \sim N(0,1)\]</span></p>
+<p><strong>Paso 2 — Sustitución de <span class="math inline">\(\sigma\)</span> por <span class="math inline">\(s\)</span> (Tema 3, corrección <span class="math inline">\(n-1\)</span>):</strong> <span class="math display">\[T = \frac{\bar{X} - \mu}{s / \sqrt{n}} \sim t_{n-1}\]</span> La distribución <span class="math inline">\(t\)</span> de Student (Tema 2) corrige la incertidumbre adicional por estimar <span class="math inline">\(\sigma\)</span>.</p>
+<p><em>(El despeje y la fórmula final se desarrollan en la siguiente diapositiva.)</em></p>
+</div>
+</div>
+</div>
+</section>
+<section id="derivación-del-ic-de-la-probabilidad-a-la-fórmula" class="slide level2 center">
+<h2>Derivación del IC — De la probabilidad a la fórmula</h2>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Nota</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Paso 3 — Intervalo de probabilidad y despeje de <span class="math inline">\(\mu\)</span>:</strong> <span class="math display">\[P\left(-t_{\alpha/2;\, n-1} \leq \frac{\bar{X} - \mu}{s / \sqrt{n}} \leq t_{\alpha/2;\, n-1}\right) = 1 - \alpha\]</span></p>
+<p>Despejando <span class="math inline">\(\mu\)</span> de la desigualdad central: <span class="math display">\[P\left(\bar{X} - t_{\alpha/2;\, n-1} \cdot \frac{s}{\sqrt{n}} \leq \mu \leq \bar{X} + t_{\alpha/2;\, n-1} \cdot \frac{s}{\sqrt{n}}\right) = 1 - \alpha\]</span></p>
+</div>
+</div>
+</div>
+<div class="framed">
+<p><strong>Intervalo de Confianza para <span class="math inline">\(\mu\)</span> con <span class="math inline">\(\sigma\)</span> desconocida:</strong> <span class="math display">\[IC_{1-\alpha}(\mu) = \bar{x} \pm t_{\alpha/2;\, n-1} \cdot \frac{s}{\sqrt{n}}\]</span></p>
+</div>
+<p><strong>Interpretación:</strong> el IC no es un intervalo para <span class="math inline">\(\bar{x}\)</span> (que ya conocemos), sino para <span class="math inline">\(\mu\)</span> (el parámetro poblacional desconocido). La amplitud <span class="math inline">\(t_{\alpha/2;\, n-1} \cdot s / \sqrt{n}\)</span> es lo que llamamos <strong>precisión</strong> (<span class="math inline">\(d\)</span>).</p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Para reflexionar:</strong> Si el IC 95% es (164.9, 171.6), y el valor de referencia clínico es 170°, ¿qué conclusión preliminar puedes extraer antes de hacer el test de hipótesis?</p>
+</div>
+</div>
+</div>
+</section>
+<section id="fiabilidad-y-precisión-del-ic" class="slide level2 center">
+<h2>Fiabilidad y precisión del IC</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Fiabilidad (<span class="math inline">\(1-\alpha\)</span>):</strong> probabilidad de contener <span class="math inline">\(\theta\)</span>. La fija el investigador (95%, 99%). <strong>No depende de <span class="math inline">\(n\)</span>.</strong></p>
+</div><div class="column" style="width:50%;">
+<p><strong>Precisión (<span class="math inline">\(d\)</span>):</strong> mitad de la anchura. <span class="math inline">\(d = t_{\alpha/2} \cdot s/\sqrt{n}\)</span>. <strong>Sí depende de <span class="math inline">\(n\)</span>, <span class="math inline">\(s\)</span>, <span class="math inline">\(\alpha\)</span>.</strong></p>
+</div></div>
+<p><strong>Conflicto:</strong> aumentar <span class="math inline">\(1-\alpha\)</span> → <span class="math inline">\(t_{\alpha/2} \uparrow\)</span> → <span class="math inline">\(d \uparrow\)</span> → menos precisión. Solución: aumentar <span class="math inline">\(n\)</span>.</p>
+<p><em>Regla nemotécnica para IC:</em> “A más confianza, más ancho. A más muestra, más estrecho.” Si quieres un IC más preciso (estrecho), aumenta <span class="math inline">\(n\)</span>. Duplicar la precisión requiere cuadruplicar <span class="math inline">\(n\)</span>.</p>
+</section>
+<section id="actividad-en-pareja-qué-ic-es-más-preciso" class="slide level2 center">
+<h2>Actividad en pareja — ¿Qué IC es más preciso?</h2>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Discute con tu compañero (2 min):</strong> Un estudio reporta IC 95% = (62, 78) con n=50. Otro reporta IC 95% = (67, 73) con n=200.</p>
+<ol type="1">
+<li>¿Cuál de los dos estudios tiene mayor precisión? ¿Por qué?</li>
+<li>Si quisieras reducir la anchura del primer IC a la mitad, ¿aproximadamente cuántos pacientes necesitarías?</li>
+</ol>
+</div>
+</div>
+</div>
+</section>
+<section id="de-qué-depende-la-precisión" class="slide level2 center">
+<h2>De qué depende la precisión</h2>
+<p><span class="math display">\[d = t_{\alpha/2;\, n-1} \cdot \frac{s}{\sqrt{n}}\]</span></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Factor</th>
+<th style="text-align: left;">Efecto sobre <span class="math inline">\(d\)</span></th>
+<th style="text-align: left;">Controlable</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(n \uparrow\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(d \downarrow\)</span> (más preciso)</td>
+<td style="text-align: left;">✓ Sí</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(\alpha \uparrow\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(d \downarrow\)</span></td>
+<td style="text-align: left;">✓ Sí (a costa de confianza)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(s \uparrow\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(d \uparrow\)</span> (menos preciso)</td>
+<td style="text-align: left;">✗ No</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="ic-para-mu-ejemplo-paso-a-paso" class="slide level2 center">
+<h2>IC para <span class="math inline">\(\mu\)</span> — Ejemplo paso a paso</h2>
+<p><strong>Colesterol (mg/dL) en 10 estudiantes:</strong> 162, 176, 169, 165, 171, 169, 172, 168, 167, 175</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Mostrar código R</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a>x<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="dv">162</span>,<span class="dv">176</span>,<span class="dv">169</span>,<span class="dv">165</span>,<span class="dv">171</span>,<span class="dv">169</span>,<span class="dv">172</span>,<span class="dv">168</span>,<span class="dv">167</span>,<span class="dv">175</span>)</span>
+<span id="cb6-2"><a aria-hidden="true" tabindex="-1"></a>n<span class="ot">&lt;-</span><span class="fu">length</span>(x); xbar<span class="ot">&lt;-</span><span class="fu">mean</span>(x); s<span class="ot">&lt;-</span><span class="fu">sd</span>(x); t_crit<span class="ot">&lt;-</span><span class="fu">qt</span>(<span class="fl">0.975</span>,n<span class="dv">-1</span>)</span>
+<span id="cb6-3"><a aria-hidden="true" tabindex="-1"></a>d<span class="ot">&lt;-</span>t_crit<span class="sc">*</span>s<span class="sc">/</span><span class="fu">sqrt</span>(n)</span>
+<span id="cb6-4"><a aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"n ="</span>, n, <span class="st">"xbar ="</span>, <span class="fu">round</span>(xbar,<span class="dv">2</span>), <span class="st">"s ="</span>, <span class="fu">round</span>(s,<span class="dv">2</span>),</span>
+<span id="cb6-5"><a aria-hidden="true" tabindex="-1"></a>    <span class="st">"</span><span class="sc">\n</span><span class="st">t(0.025, 9) ="</span>, <span class="fu">round</span>(t_crit,<span class="dv">3</span>),</span>
+<span id="cb6-6"><a aria-hidden="true" tabindex="-1"></a>    <span class="st">"</span><span class="sc">\n</span><span class="st">IC 95%: ("</span>, <span class="fu">round</span>(xbar<span class="sc">-</span>d,<span class="dv">2</span>), <span class="st">","</span>, <span class="fu">round</span>(xbar<span class="sc">+</span>d,<span class="dv">2</span>), <span class="st">") mg/dL"</span>,</span>
+<span id="cb6-7"><a aria-hidden="true" tabindex="-1"></a>    <span class="st">"</span><span class="sc">\n</span><span class="st">Precisión d ="</span>, <span class="fu">round</span>(d,<span class="dv">2</span>), <span class="st">"mg/dL"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>n = 10 xbar = 169.4 s = 4.3 
+t(0.025, 9) = 2.262 
+IC 95%: ( 166.32 , 172.48 ) mg/dL 
+Precisión d = 3.08 mg/dL</code></pre>
+</div>
+</div>
+<p><strong>Interpretación:</strong> <span class="math inline">\(\mu \in (166.3,\; 172.5)\)</span> mg/dL con 95% de confianza. <span class="math inline">\(d = \pm 3.08\)</span> mg/dL.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Mostrar código R</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># BioEstatR: icm(x = x, nivel = 0.95)</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+</section>
+<section id="ic-para-la-media-qué-afecta-a-su-anchura" class="slide level2 center">
+<h2>IC para la media — ¿qué afecta a su anchura?</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Mostrar código R</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>), <span class="at">mar=</span><span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">4</span>,<span class="dv">3</span>,<span class="dv">1</span>))</span>
+<span id="cb9-2"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Efecto de n (misma s, misma confianza)</span></span>
+<span id="cb9-3"><a aria-hidden="true" tabindex="-1"></a>s<span class="ot">&lt;-</span><span class="dv">12</span>; conf<span class="ot">&lt;-</span><span class="fl">0.95</span></span>
+<span id="cb9-4"><a aria-hidden="true" tabindex="-1"></a>ns<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="dv">5</span>,<span class="dv">10</span>,<span class="dv">20</span>,<span class="dv">40</span>,<span class="dv">80</span>,<span class="dv">160</span>)</span>
+<span id="cb9-5"><a aria-hidden="true" tabindex="-1"></a>widths<span class="ot">&lt;-</span><span class="fu">sapply</span>(ns,<span class="cf">function</span>(n){<span class="dv">2</span><span class="sc">*</span><span class="fu">qt</span>((<span class="dv">1</span><span class="sc">+</span>conf)<span class="sc">/</span><span class="dv">2</span>,n<span class="dv">-1</span>)<span class="sc">*</span>s<span class="sc">/</span><span class="fu">sqrt</span>(n)})</span>
+<span id="cb9-6"><a aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(ns, widths, <span class="at">type=</span><span class="st">"b"</span>, <span class="at">pch=</span><span class="dv">19</span>, <span class="at">col=</span><span class="st">"steelblue"</span>, <span class="at">lwd=</span><span class="dv">3</span>, <span class="at">cex=</span><span class="fl">1.5</span>,</span>
+<span id="cb9-7"><a aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">"Efecto de n en la anchura del IC 95%"</span>,</span>
+<span id="cb9-8"><a aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab=</span><span class="st">"Tamaño muestral (n)"</span>, <span class="at">ylab=</span><span class="st">"Anchura del IC"</span>, <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">25</span>))</span>
+<span id="cb9-9"><a aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h=</span><span class="dv">5</span>, <span class="at">lty=</span><span class="dv">2</span>, <span class="at">col=</span><span class="st">"darkgreen"</span>, <span class="at">lwd=</span><span class="dv">2</span>)</span>
+<span id="cb9-10"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="dv">100</span>, <span class="fl">5.5</span>, <span class="st">"Precisión deseada"</span>, <span class="at">col=</span><span class="st">"darkgreen"</span>, <span class="at">cex=</span><span class="fl">0.9</span>)</span>
+<span id="cb9-11"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-12"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Efecto de la confianza (mismo n, misma s)</span></span>
+<span id="cb9-13"><a aria-hidden="true" tabindex="-1"></a>n<span class="ot">&lt;-</span><span class="dv">30</span>; confs<span class="ot">&lt;-</span><span class="fu">seq</span>(<span class="fl">0.80</span>,<span class="fl">0.99</span>,<span class="fl">0.01</span>)</span>
+<span id="cb9-14"><a aria-hidden="true" tabindex="-1"></a>widths2<span class="ot">&lt;-</span><span class="fu">sapply</span>(confs,<span class="cf">function</span>(c){<span class="dv">2</span><span class="sc">*</span><span class="fu">qt</span>((<span class="dv">1</span><span class="sc">+</span>c)<span class="sc">/</span><span class="dv">2</span>,n<span class="dv">-1</span>)<span class="sc">*</span>s<span class="sc">/</span><span class="fu">sqrt</span>(n)})</span>
+<span id="cb9-15"><a aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(confs<span class="sc">*</span><span class="dv">100</span>, widths2, <span class="at">type=</span><span class="st">"l"</span>, <span class="at">lwd=</span><span class="dv">3</span>, <span class="at">col=</span><span class="st">"seagreen"</span>,</span>
+<span id="cb9-16"><a aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">"Efecto de la confianza (n=30, s=12)"</span>,</span>
+<span id="cb9-17"><a aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab=</span><span class="st">"Nivel de confianza (%)"</span>, <span class="at">ylab=</span><span class="st">"Anchura del IC"</span>)</span>
+<span id="cb9-18"><a aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v=</span><span class="dv">95</span>, <span class="at">lty=</span><span class="dv">2</span>, <span class="at">col=</span><span class="st">"grey40"</span>)</span>
+<span id="cb9-19"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="dv">95</span>, <span class="fl">7.5</span>, <span class="st">"95%"</span>, <span class="at">col=</span><span class="st">"grey40"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+
+<details class="code-fold">
+<summary>Mostrar código R</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<img data-src="T03_Estimacion_IC_files/figure-revealjs/unnamed-chunk-6-1.png" width="864" class="r-stretch"><p><em>Para recordar:</em> Más <span class="math inline">\(n\)</span> → IC más estrecho. Más confianza → IC más ancho. El precio de estar más seguro es perder precisión.</p>
+</section>
+<section id="visualización-del-ic-sobre-la-distribución-t-de-student" class="slide level2 center">
+<h2>Visualización del IC sobre la distribución <span class="math inline">\(t\)</span> de Student</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Mostrar código R</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">162</span>,<span class="dv">176</span>,<span class="dv">169</span>,<span class="dv">165</span>,<span class="dv">171</span>,<span class="dv">169</span>,<span class="dv">172</span>,<span class="dv">168</span>,<span class="dv">167</span>,<span class="dv">175</span>)</span>
+<span id="cb11-2"><a aria-hidden="true" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="fu">length</span>(x); xbar <span class="ot">&lt;-</span> <span class="fu">mean</span>(x); s <span class="ot">&lt;-</span> <span class="fu">sd</span>(x)</span>
+<span id="cb11-3"><a aria-hidden="true" tabindex="-1"></a>t_crit <span class="ot">&lt;-</span> <span class="fu">qt</span>(<span class="fl">0.975</span>, n<span class="dv">-1</span>)</span>
+<span id="cb11-4"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a aria-hidden="true" tabindex="-1"></a><span class="fu">curve</span>(<span class="fu">dt</span>(x, n<span class="dv">-1</span>), <span class="sc">-</span><span class="fl">4.5</span>, <span class="fl">4.5</span>, <span class="at">lwd =</span> <span class="dv">3</span>, <span class="at">col =</span> <span class="st">"steelblue"</span>,</span>
+<span id="cb11-6"><a aria-hidden="true" tabindex="-1"></a>      <span class="at">main =</span> <span class="st">"IC 95% para μ — Distribución t(9)"</span>,</span>
+<span id="cb11-7"><a aria-hidden="true" tabindex="-1"></a>      <span class="at">xlab =</span> <span class="fu">expression</span>(t <span class="sc">==</span> (<span class="fu">bar</span>(x)<span class="sc">-</span>mu)<span class="sc">/</span>(s<span class="sc">/</span><span class="fu">sqrt</span>(n))), <span class="at">ylab =</span> <span class="st">"Densidad"</span>,</span>
+<span id="cb11-8"><a aria-hidden="true" tabindex="-1"></a>      <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.45</span>))</span>
+<span id="cb11-9"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Región central 95%</span></span>
+<span id="cb11-10"><a aria-hidden="true" tabindex="-1"></a>xc <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span>t_crit, t_crit, <span class="fl">0.01</span>)</span>
+<span id="cb11-11"><a aria-hidden="true" tabindex="-1"></a>yc <span class="ot">&lt;-</span> <span class="fu">dt</span>(xc, n<span class="dv">-1</span>)</span>
+<span id="cb11-12"><a aria-hidden="true" tabindex="-1"></a><span class="fu">polygon</span>(<span class="fu">c</span>(xc, <span class="fu">rev</span>(xc)), <span class="fu">c</span>(yc, <span class="fu">rep</span>(<span class="dv">0</span>, <span class="fu">length</span>(yc))),</span>
+<span id="cb11-13"><a aria-hidden="true" tabindex="-1"></a>        <span class="at">col =</span> <span class="fu">rgb</span>(<span class="fl">0.2</span>, <span class="fl">0.6</span>, <span class="fl">0.4</span>, <span class="fl">0.25</span>), <span class="at">border =</span> <span class="cn">NA</span>)</span>
+<span id="cb11-14"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Líneas críticas</span></span>
+<span id="cb11-15"><a aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v =</span> <span class="fu">c</span>(<span class="sc">-</span>t_crit, t_crit), <span class="at">col =</span> <span class="st">"darkgreen"</span>, <span class="at">lwd =</span> <span class="fl">2.5</span>, <span class="at">lty =</span> <span class="dv">2</span>)</span>
+<span id="cb11-16"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Anotaciones</span></span>
+<span id="cb11-17"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="dv">0</span>, <span class="fl">0.42</span>, <span class="st">"95%"</span>, <span class="at">col =</span> <span class="st">"darkgreen"</span>, <span class="at">font =</span> <span class="dv">2</span>, <span class="at">cex =</span> <span class="fl">1.3</span>)</span>
+<span id="cb11-18"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="sc">-</span>t_crit <span class="sc">-</span> <span class="fl">0.8</span>, <span class="fl">0.15</span>, <span class="fu">expression</span>(<span class="sc">-</span>t[<span class="fl">0.025</span>] <span class="sc">==</span> <span class="sc">-</span><span class="fl">2.262</span>), <span class="at">col =</span> <span class="st">"darkgreen"</span>)</span>
+<span id="cb11-19"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(t_crit <span class="sc">+</span> <span class="fl">0.8</span>, <span class="fl">0.15</span>, <span class="fu">expression</span>(<span class="sc">+</span>t[<span class="fl">0.025</span>] <span class="sc">==</span> <span class="sc">+</span><span class="fl">2.262</span>), <span class="at">col =</span> <span class="st">"darkgreen"</span>)</span>
+<span id="cb11-20"><a aria-hidden="true" tabindex="-1"></a><span class="fu">arrows</span>(<span class="sc">-</span><span class="fl">3.8</span>, <span class="fl">0.06</span>, <span class="sc">-</span>t_crit <span class="sc">-</span> <span class="fl">0.1</span>, <span class="fl">0.01</span>, <span class="at">col =</span> <span class="st">"#e74c3c"</span>, <span class="at">lwd =</span> <span class="dv">2</span>, <span class="at">length =</span> <span class="fl">0.1</span>)</span>
+<span id="cb11-21"><a aria-hidden="true" tabindex="-1"></a><span class="fu">arrows</span>(<span class="fl">3.8</span>, <span class="fl">0.06</span>, t_crit <span class="sc">+</span> <span class="fl">0.1</span>, <span class="fl">0.01</span>, <span class="at">col =</span> <span class="st">"#e74c3c"</span>, <span class="at">lwd =</span> <span class="dv">2</span>, <span class="at">length =</span> <span class="fl">0.1</span>)</span>
+<span id="cb11-22"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="sc">-</span><span class="fl">3.8</span>, <span class="fl">0.09</span>, <span class="fu">expression</span>(alpha<span class="sc">/</span><span class="dv">2</span> <span class="sc">==</span> <span class="fl">2.5</span><span class="sc">*</span><span class="st">"%"</span>), <span class="at">col =</span> <span class="st">"#e74c3c"</span>, <span class="at">cex =</span> <span class="fl">0.8</span>)</span>
+<span id="cb11-23"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="fl">3.8</span>, <span class="fl">0.09</span>, <span class="fu">expression</span>(alpha<span class="sc">/</span><span class="dv">2</span> <span class="sc">==</span> <span class="fl">2.5</span><span class="sc">*</span><span class="st">"%"</span>), <span class="at">col =</span> <span class="st">"#e74c3c"</span>, <span class="at">cex =</span> <span class="fl">0.8</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+
+</div>
+<img data-src="T03_Estimacion_IC_files/figure-revealjs/unnamed-chunk-7-1.png" width="864" class="r-stretch"><div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Nota</strong></p>
+</div>
+<div class="callout-content">
+<p>El <strong>área verde</strong> central cubre el 95% de la distribución. Los valores de <span class="math inline">\(t\)</span> que caen en esta región producen IC que contienen a <span class="math inline">\(\mu\)</span>. Las <strong>colas rojas</strong> (<span class="math inline">\(\alpha/2 = 2.5\%\)</span> cada una) corresponden a los IC que no contienen a <span class="math inline">\(\mu\)</span>. De 100 IC construidos, ~95 contendrán el verdadero valor de <span class="math inline">\(\mu\)</span>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="interpretación-correcta-del-ic" class="slide level2 center">
+<h2>Interpretación correcta del IC</h2>
+<p><strong>Para reflexionar:</strong> Acabamos de calcular IC 95% = (166.3, 172.5). ¿Significa esto que hay un 95% de probabilidad de que μ esté entre 166.3 y 172.5? <em>(La respuesta está en esta misma diapositiva.)</em></p>
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Advertencia</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Errores frecuentes de interpretación:</strong></p>
+<ol type="1">
+<li><p>❌ “Hay 95% de probabilidad de que <span class="math inline">\(\mu\)</span> esté en el IC” ✅ “El 95% de los IC así construidos contendrán <span class="math inline">\(\mu\)</span>”</p></li>
+<li><p>❌ “El 95% de los pacientes están en ese rango” ✅ “El IC estima la <strong>media poblacional</strong>, no la dispersión de individuos”</p></li>
+<li><p>❌ “Un IC más ancho = datos de peor calidad” ✅ “Depende de <span class="math inline">\(n\)</span>, <span class="math inline">\(s\)</span> y <span class="math inline">\((1-\alpha)\)</span>. Con <span class="math inline">\(n\)</span> pequeño, el IC es naturalmente ancho”</p></li>
+</ol>
+</div>
+</div>
+</div>
+<p><a href="https://watzile.shinyapps.io/IntervalosConfianza/">App interactiva: Intervalos de Confianza</a></p>
+</section>
+<section id="derivación-del-tamaño-muestral-para-mu" class="slide level2 center">
+<h2>Derivación del tamaño muestral para <span class="math inline">\(\mu\)</span></h2>
+<p><strong>Punto de partida — la precisión del IC:</strong> <span class="math display">\[d = t_{\alpha/2;\, n-1} \cdot \frac{s}{\sqrt{n}}\]</span></p>
+<p><strong>Paso 1 — Despejar <span class="math inline">\(n\)</span>:</strong> <span class="math display">\[d = t_{\alpha/2;\, n-1} \cdot \frac{s}{\sqrt{n}} \;\Rightarrow\; \sqrt{n} = \frac{t_{\alpha/2;\, n-1} \cdot s}{d} \;\Rightarrow\; n = \left(\frac{t_{\alpha/2;\, n-1} \cdot s}{d}\right)^2\]</span></p>
+<p><em>(La solución iterativa y la fórmula con z se desarrollan en la siguiente diapositiva.)</em></p>
+</section>
+<section id="tamaño-muestral-el-problema-de-circularidad" class="slide level2 center">
+<h2>Tamaño muestral — El problema de circularidad</h2>
+<p><strong>Paso 2 — El problema de circularidad:</strong> <span class="math inline">\(t_{\alpha/2;\, n-1}\)</span> depende de <span class="math inline">\(n\)</span> (grados de libertad). Solución práctica: 1. Usar <span class="math inline">\(z_{\alpha/2}\)</span> (normal) como aproximación inicial 2. Calcular <span class="math inline">\(n_0\)</span> provisional 3. Ajustar con la <span class="math inline">\(t\)</span> correspondiente a <span class="math inline">\(n_0-1\)</span> gl 4. Iterar si es necesario (normalmente 1-2 pasos bastan)</p>
+<p><strong>Paso 3 — Fórmula con <span class="math inline">\(z\)</span> (aproximación para muestra grande):</strong> <span class="math display">\[n \geq \left(\frac{z_{\alpha/2} \cdot s}{d}\right)^2\]</span></p>
+</section>
+<section id="tamaño-muestral-ejemplo-numérico-completo" class="slide level2 center">
+<h2>Tamaño muestral — Ejemplo numérico completo</h2>
+<p><strong>Contexto clínico:</strong> Queremos estimar la media de flexión de hombro con precisión <span class="math inline">\(d = 3°\)</span> y 95% de confianza. Un estudio piloto con 8 pacientes dio <span class="math inline">\(s = 4.06°\)</span>.</p>
+<p><strong>Iteración 1 (con <span class="math inline">\(z\)</span>):</strong> <span class="math display">\[n_0 = \left(\frac{1.96 \times 4.06}{3}\right)^2 = \left(\frac{7.9576}{3}\right)^2 = (2.653)^2 = 7.04 \rightarrow 8\]</span></p>
+<p><strong>Iteración 2 (con <span class="math inline">\(t_{0.025; 7}\)</span>):</strong> <span class="math display">\[n_1 = \left(\frac{2.365 \times 4.06}{3}\right)^2 = \left(\frac{9.602}{3}\right)^2 = (3.201)^2 = 10.24 \rightarrow 11\]</span></p>
+<p><strong>Comprobación (con <span class="math inline">\(t_{0.025; 10} = 2.228\)</span>):</strong> <span class="math display">\[n_2 = \left(\frac{2.228 \times 4.06}{3}\right)^2 = (3.015)^2 = 9.09 \rightarrow 10\]</span></p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Convergencia:</strong> <span class="math inline">\(8 \to 11 \to 10\)</span>. Necesitamos <strong><span class="math inline">\(n=10\)</span></strong> (2 pacientes más que el piloto). La diferencia <span class="math inline">\(z\)</span> vs <span class="math inline">\(t\)</span> importa con muestras pequeñas.</p>
+</div>
+</div>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Mostrar código R</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a aria-hidden="true" tabindex="-1"></a>s_piloto <span class="ot">&lt;-</span> <span class="fl">4.06</span>; d_deseada <span class="ot">&lt;-</span> <span class="dv">3</span>; alpha <span class="ot">&lt;-</span> <span class="fl">0.05</span></span>
+<span id="cb12-2"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Iteración</span></span>
+<span id="cb12-3"><a aria-hidden="true" tabindex="-1"></a>n0 <span class="ot">&lt;-</span> <span class="fu">ceiling</span>((<span class="fu">qnorm</span>(<span class="dv">1</span><span class="sc">-</span>alpha<span class="sc">/</span><span class="dv">2</span>) <span class="sc">*</span> s_piloto <span class="sc">/</span> d_deseada)<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb12-4"><a aria-hidden="true" tabindex="-1"></a>n1 <span class="ot">&lt;-</span> <span class="fu">ceiling</span>((<span class="fu">qt</span>(<span class="dv">1</span><span class="sc">-</span>alpha<span class="sc">/</span><span class="dv">2</span>, n0<span class="dv">-1</span>) <span class="sc">*</span> s_piloto <span class="sc">/</span> d_deseada)<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb12-5"><a aria-hidden="true" tabindex="-1"></a>n2 <span class="ot">&lt;-</span> <span class="fu">ceiling</span>((<span class="fu">qt</span>(<span class="dv">1</span><span class="sc">-</span>alpha<span class="sc">/</span><span class="dv">2</span>, n1<span class="dv">-1</span>) <span class="sc">*</span> s_piloto <span class="sc">/</span> d_deseada)<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb12-6"><a aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"n0 (z) ="</span>, n0, <span class="st">"→ n1 (t,"</span>, n0<span class="dv">-1</span>, <span class="st">"gl) ="</span>, n1, <span class="st">"→ n2 (t,"</span>, n1<span class="dv">-1</span>, <span class="st">"gl) ="</span>, n2)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>n0 (z) = 8 → n1 (t, 7 gl) = 11 → n2 (t, 10 gl) = 10</code></pre>
+</div>
+</div>
+</section>
+<section id="ic-para-la-media-ejemplo-con-datos-reales-de-fisioterapia" class="slide level2 center">
+<h2>IC para la media — Ejemplo con datos reales de fisioterapia</h2>
+<p><strong>Contexto clínico:</strong> Goniometría de flexión de hombro en 8 pacientes post-rehabilitación:</p>
+<p>168°, 174°, 162°, 170°, 166°, 172°, 164°, 170°</p>
+<p><strong>Paso 1 — Estadísticos muestrales:</strong> <span class="math inline">\(n=8\)</span>, <span class="math inline">\(\bar{x} = \frac{168+174+162+170+166+172+164+170}{8} = \frac{1346}{8} = 168.25°\)</span></p>
+<p><span class="math inline">\(s = \sqrt{\frac{\sum(x_i-\bar{x})^2}{7}} = \sqrt{\frac{(-0.25)^2+5.75^2+(-6.25)^2+1.75^2+(-2.25)^2+3.75^2+(-4.25)^2+1.75^2}{7}}\)</span></p>
+<p><span class="math inline">\(s = \sqrt{\frac{0.06+33.06+39.06+3.06+5.06+14.06+18.06+3.06}{7}} = \sqrt{\frac{115.5}{7}} = 4.06°\)</span></p>
+<p><strong>Paso 2 — Valor crítico:</strong> <span class="math inline">\(t_{0.025;7} = 2.365\)</span></p>
+<p><strong>Paso 3 — IC 95%:</strong> <span class="math inline">\(168.25 \pm 2.365 \cdot \frac{4.06}{\sqrt{8}} = 168.25 \pm 3.39 = (164.9°, 171.6°)\)</span></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Mostrar código R</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">168</span>,<span class="dv">174</span>,<span class="dv">162</span>,<span class="dv">170</span>,<span class="dv">166</span>,<span class="dv">172</span>,<span class="dv">164</span>,<span class="dv">170</span>)</span>
+<span id="cb14-2"><a aria-hidden="true" tabindex="-1"></a>n<span class="ot">&lt;-</span><span class="fu">length</span>(x); xbar<span class="ot">&lt;-</span><span class="fu">mean</span>(x); s<span class="ot">&lt;-</span><span class="fu">sd</span>(x); t_crit<span class="ot">&lt;-</span><span class="fu">qt</span>(<span class="fl">0.975</span>,n<span class="dv">-1</span>)</span>
+<span id="cb14-3"><a aria-hidden="true" tabindex="-1"></a>IC_lo<span class="ot">&lt;-</span>xbar<span class="sc">-</span>t_crit<span class="sc">*</span>s<span class="sc">/</span><span class="fu">sqrt</span>(n); IC_hi<span class="ot">&lt;-</span>xbar<span class="sc">+</span>t_crit<span class="sc">*</span>s<span class="sc">/</span><span class="fu">sqrt</span>(n)</span>
+<span id="cb14-4"><a aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"IC 95%: ("</span>, <span class="fu">round</span>(IC_lo,<span class="dv">1</span>), <span class="st">","</span>, <span class="fu">round</span>(IC_hi,<span class="dv">1</span>), <span class="st">")°"</span>,</span>
+<span id="cb14-5"><a aria-hidden="true" tabindex="-1"></a>    <span class="st">"</span><span class="sc">\n</span><span class="st">Precision d ="</span>, <span class="fu">round</span>(t_crit<span class="sc">*</span>s<span class="sc">/</span><span class="fu">sqrt</span>(n),<span class="dv">2</span>), <span class="st">"°"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>IC 95%: ( 164.9 , 171.6 )° 
+Precision d = 3.4 °</code></pre>
+</div>
+</div>
+<p><strong>Interpretación clinica:</strong> Con 95% de confianza, la flexión media de hombro post-rehabilitación está entre 164.9° y 171.6°. La precisión de ±3.4° es clínicamente aceptable para goniometría.</p>
+</section>
+<section id="ic-para-una-proporción-poblacional" class="slide level2 center">
+<h2>IC para una proporción poblacional</h2>
+<p><strong>Estimador puntual:</strong> <span class="math inline">\(\hat{p} = x/n\)</span></p>
+<p><strong>Método de Wilson (recomendado, condición: <span class="math inline">\(x&gt;5\)</span>, <span class="math inline">\(n-x&gt;5\)</span>):</strong></p>
+<p><span class="math display">\[p \in \frac{x + \frac{z_{\alpha/2}^2}{2}}{n + z_{\alpha/2}^2} \pm \frac{z_{\alpha/2}}{n + z_{\alpha/2}^2}\sqrt{\frac{x(n-x)}{n} + \frac{z_{\alpha/2}^2}{4}}\]</span></p>
+<p><strong>Wald (evitar):</strong> <span class="math inline">\(\hat{p} \pm z_{\alpha/2} \sqrt{\hat{p}(1-\hat{p})/n}\)</span> (requiere <span class="math inline">\(x&gt;20\)</span>, <span class="math inline">\(n-x&gt;20\)</span>, puede exceder <span class="math inline">\([0,1]\)</span>)</p>
+<p><strong>Wald ajustado:</strong> <span class="math inline">\(\frac{x+2}{n+4} \pm z_{\alpha/2} \sqrt{\frac{(x+2)(n-x+2)}{(n+4)^3}}\)</span> (siempre válido)</p>
+<p><em>Siempre preferir Wilson.</em> Es el que mejor cobertura tiene y respeta <span class="math inline">\([0,1]\)</span>.</p>
+</section>
+<section id="ic-para-proporción-ejemplo-en-fisioterapia" class="slide level2 center">
+<h2>IC para proporción — Ejemplo en fisioterapia</h2>
+<p><strong>18 de 40 pacientes con cervicalgia mejoran con ejercicio terapéutico.</strong></p>
+<p><span class="math inline">\(n=40\)</span>, <span class="math inline">\(x=18\)</span>, <span class="math inline">\(\hat{p}=0.45\)</span>, <span class="math inline">\(z_{0.025}=1.96\)</span></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Mostrar código R</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a aria-hidden="true" tabindex="-1"></a>x<span class="ot">&lt;-</span><span class="dv">18</span>; n<span class="ot">&lt;-</span><span class="dv">40</span>; z<span class="ot">&lt;-</span><span class="fu">qnorm</span>(<span class="fl">0.975</span>)</span>
+<span id="cb16-2"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Wilson</span></span>
+<span id="cb16-3"><a aria-hidden="true" tabindex="-1"></a>den<span class="ot">&lt;-</span>n<span class="sc">+</span>z<span class="sc">^</span><span class="dv">2</span>; cent<span class="ot">&lt;-</span>(x<span class="sc">+</span>z<span class="sc">^</span><span class="dv">2</span><span class="sc">/</span><span class="dv">2</span>)<span class="sc">/</span>den; marg<span class="ot">&lt;-</span>z<span class="sc">/</span>den<span class="sc">*</span><span class="fu">sqrt</span>(x<span class="sc">*</span>(n<span class="sc">-</span>x)<span class="sc">/</span>n<span class="sc">+</span>z<span class="sc">^</span><span class="dv">2</span><span class="sc">/</span><span class="dv">4</span>)</span>
+<span id="cb16-4"><a aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"IC 95% Wilson: ("</span>, <span class="fu">round</span>(cent<span class="sc">-</span>marg,<span class="dv">3</span>), <span class="st">","</span>, <span class="fu">round</span>(cent<span class="sc">+</span>marg,<span class="dv">3</span>), <span class="st">")"</span>,</span>
+<span id="cb16-5"><a aria-hidden="true" tabindex="-1"></a>    <span class="st">"</span><span class="sc">\n</span><span class="st">→ Entre"</span>, <span class="fu">round</span>(<span class="dv">100</span><span class="sc">*</span>(cent<span class="sc">-</span>marg),<span class="dv">1</span>), <span class="st">"% y"</span>, <span class="fu">round</span>(<span class="dv">100</span><span class="sc">*</span>(cent<span class="sc">+</span>marg),<span class="dv">1</span>), <span class="st">"%"</span>,</span>
+<span id="cb16-6"><a aria-hidden="true" tabindex="-1"></a>    <span class="st">"</span><span class="sc">\n</span><span class="st">Precisión: ±"</span>, <span class="fu">round</span>(marg<span class="sc">*</span><span class="dv">100</span>,<span class="dv">1</span>), <span class="st">"pp"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>IC 95% Wilson: ( 0.307 , 0.602 ) 
+→ Entre 30.7 % y 60.2 % 
+Precisión: ± 14.7 pp</code></pre>
+</div>
+</div>
+<p><strong>Interpretación:</strong> Con 95% de confianza, entre 30.7% y 60.1% de pacientes mejoran.</p>
+</section>
+<section id="comparación-de-métodos" class="slide level2 center">
+<h2>Comparación de métodos</h2>
+<p><strong>Ejemplo (<span class="math inline">\(x=18\)</span>, <span class="math inline">\(n=40\)</span>):</strong></p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Método</th>
+<th>IC 95%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Wilson</strong></td>
+<td>(0.307, 0.601)</td>
+</tr>
+<tr class="even">
+<td><strong>Wald ajustado</strong></td>
+<td>(0.308, 0.600)</td>
+</tr>
+<tr class="odd">
+<td><strong>Wald</strong></td>
+<td>(0.296, 0.604)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Cuantiles Z más usados:</strong></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Mostrar código R</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"IC 90%: z ="</span>, <span class="fu">round</span>(<span class="fu">qnorm</span>(<span class="fl">0.95</span>),<span class="dv">3</span>),</span>
+<span id="cb18-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="st">"</span><span class="sc">\n</span><span class="st">IC 95%: z ="</span>, <span class="fu">round</span>(<span class="fu">qnorm</span>(<span class="fl">0.975</span>),<span class="dv">3</span>),</span>
+<span id="cb18-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="st">"</span><span class="sc">\n</span><span class="st">IC 99%: z ="</span>, <span class="fu">round</span>(<span class="fu">qnorm</span>(<span class="fl">0.995</span>),<span class="dv">3</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>IC 90%: z = 1.645 
+IC 95%: z = 1.96 
+IC 99%: z = 2.576</code></pre>
+</div>
+</div>
+</section>
+<section id="tamaño-muestral" class="slide level2 center">
+<h2>Tamaño muestral</h2>
+<p><strong>Para la media (<span class="math inline">\(d\)</span> = precisión deseada):</strong></p>
+<p><span class="math display">\[n = \left(\frac{z_{\alpha/2} \cdot s}{d}\right)^2\]</span></p>
+<p><strong>Para la proporción (con <span class="math inline">\(\tilde{p}\)</span> piloto):</strong></p>
+<p><span class="math display">\[n = \left(\frac{z_{\alpha/2}}{d}\right)^2 \cdot \tilde{p}(1-\tilde{p})\]</span></p>
+<p><strong>Peor caso (<span class="math inline">\(\tilde{p}=0.5\)</span>):</strong> <span class="math inline">\(n_{\max} = 0.25 \cdot z_{\alpha/2}^2 / d^2\)</span></p>
+<p><strong>Ejemplo:</strong> <span class="math inline">\(d=5\%\)</span>, <span class="math inline">\(\tilde{p}=0.45\)</span>, 95% confianza:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Mostrar código R</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a aria-hidden="true" tabindex="-1"></a>n<span class="ot">&lt;-</span><span class="fu">ceiling</span>((<span class="fu">qnorm</span>(<span class="fl">0.975</span>)<span class="sc">/</span><span class="fl">0.05</span>)<span class="sc">^</span><span class="dv">2</span> <span class="sc">*</span> <span class="fl">0.45</span> <span class="sc">*</span> <span class="fl">0.55</span>)</span>
+<span id="cb20-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"n necesario ="</span>, n, <span class="st">"pacientes"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>n necesario = 381 pacientes</code></pre>
+</div>
+</div>
+</section>
+<section id="ic-exacto-de-clopper-pearson" class="slide level2 center">
+<h2>IC exacto de Clopper-Pearson</h2>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Nota</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>El IC exacto de Clopper-Pearson</strong> se basa directamente en la distribución binomial, sin aproximaciones normales. Es el método más conservador y se recomienda cuando las aproximaciones fallan.</p>
+</div>
+</div>
+</div>
+<p><strong>¿Cuándo usar Clopper-Pearson?</strong></p>
+<ul>
+<li>Muestras <strong>pequeñas</strong> (<span class="math inline">\(n &lt; 30\)</span>) donde Wilson puede ser impreciso</li>
+<li>Proporciones <strong>extremas</strong> (<span class="math inline">\(\hat{p} \approx 0\)</span> o <span class="math inline">\(\hat{p} \approx 1\)</span>)</li>
+<li>Cuando se necesita <strong>cobertura garantizada</strong> <span class="math inline">\(\geq 1-\alpha\)</span> (IC conservador)</li>
+</ul>
+<p><strong>Concepto:</strong> Se buscan los valores <span class="math inline">\(p_L\)</span> y <span class="math inline">\(p_U\)</span> tales que: <span class="math display">\[P(X \geq x \mid p_L) = \alpha/2 \qquad P(X \leq x \mid p_U) = \alpha/2\]</span></p>
+<p>donde <span class="math inline">\(X \sim \text{Binomial}(n, p)\)</span>.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Mostrar código R</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># IC exacto de Clopper-Pearson en R</span></span>
+<span id="cb22-2"><a aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">18</span>; n <span class="ot">&lt;-</span> <span class="dv">40</span></span>
+<span id="cb22-3"><a aria-hidden="true" tabindex="-1"></a>ic_exacto <span class="ot">&lt;-</span> <span class="fu">binom.test</span>(x, n, <span class="at">conf.level =</span> <span class="fl">0.95</span>)<span class="sc">$</span>conf.int</span>
+<span id="cb22-4"><a aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"IC 95% exacto (Clopper-Pearson): ("</span>, <span class="fu">round</span>(ic_exacto[<span class="dv">1</span>], <span class="dv">3</span>), <span class="st">","</span>, <span class="fu">round</span>(ic_exacto[<span class="dv">2</span>], <span class="dv">3</span>), <span class="st">")"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>IC 95% exacto (Clopper-Pearson): ( 0.293 , 0.615 )</code></pre>
+</div>
+<details class="code-fold">
+<summary>Mostrar código R</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Comparación con Wilson</span></span>
+<span id="cb24-2"><a aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="fu">qnorm</span>(<span class="fl">0.975</span>); den <span class="ot">&lt;-</span> n <span class="sc">+</span> z<span class="sc">^</span><span class="dv">2</span></span>
+<span id="cb24-3"><a aria-hidden="true" tabindex="-1"></a>cent <span class="ot">&lt;-</span> (x <span class="sc">+</span> z<span class="sc">^</span><span class="dv">2</span><span class="sc">/</span><span class="dv">2</span>)<span class="sc">/</span>den; marg <span class="ot">&lt;-</span> z<span class="sc">/</span>den <span class="sc">*</span> <span class="fu">sqrt</span>(x<span class="sc">*</span>(n<span class="sc">-</span>x)<span class="sc">/</span>n <span class="sc">+</span> z<span class="sc">^</span><span class="dv">2</span><span class="sc">/</span><span class="dv">4</span>)</span>
+<span id="cb24-4"><a aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">IC 95% Wilson:                    ("</span>, <span class="fu">round</span>(cent <span class="sc">-</span> marg, <span class="dv">3</span>), <span class="st">","</span>, <span class="fu">round</span>(cent <span class="sc">+</span> marg, <span class="dv">3</span>), <span class="st">")"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+IC 95% Wilson:                    ( 0.307 , 0.602 )</code></pre>
+</div>
+<details class="code-fold">
+<summary>Mostrar código R</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"</span><span class="sc">\n\n</span><span class="st">Clopper-Pearson es más ancho (conservador) pero garantiza cobertura ≥ 95%."</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+
+Clopper-Pearson es más ancho (conservador) pero garantiza cobertura ≥ 95%.</code></pre>
+</div>
+</div>
+<p><em>Regla práctica:</em> Usa <strong>Wilson</strong> como método estándar. Recurre a <strong>Clopper-Pearson</strong> con muestras pequeñas (<span class="math inline">\(n &lt; 20\)</span>) o cuando <span class="math inline">\(x = 0\)</span> o <span class="math inline">\(x = n\)</span> (donde Wilson falla).</p>
+</section>
+<section id="ic-para-proporción-visualización-de-los-4-métodos" class="slide level2 center">
+<h2>IC para proporción — Visualización de los 4 métodos</h2>
+<p><strong>18/40 pacientes mejoran (45%). Comparación de IC 95%:</strong></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Mostrar código R</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a aria-hidden="true" tabindex="-1"></a>x<span class="ot">&lt;-</span><span class="dv">18</span>; n<span class="ot">&lt;-</span><span class="dv">40</span>; alpha<span class="ot">&lt;-</span><span class="fl">0.05</span>; z<span class="ot">&lt;-</span><span class="fu">qnorm</span>(<span class="dv">1</span><span class="sc">-</span>alpha<span class="sc">/</span><span class="dv">2</span>); p_hat<span class="ot">&lt;-</span>x<span class="sc">/</span>n</span>
+<span id="cb28-2"><a aria-hidden="true" tabindex="-1"></a>den<span class="ot">&lt;-</span>n<span class="sc">+</span>z<span class="sc">^</span><span class="dv">2</span>; w_cent<span class="ot">&lt;-</span>(x<span class="sc">+</span>z<span class="sc">^</span><span class="dv">2</span><span class="sc">/</span><span class="dv">2</span>)<span class="sc">/</span>den; w_marg<span class="ot">&lt;-</span>z<span class="sc">/</span>den<span class="sc">*</span><span class="fu">sqrt</span>(x<span class="sc">*</span>(n<span class="sc">-</span>x)<span class="sc">/</span>n<span class="sc">+</span>z<span class="sc">^</span><span class="dv">2</span><span class="sc">/</span><span class="dv">4</span>)</span>
+<span id="cb28-3"><a aria-hidden="true" tabindex="-1"></a>wilson<span class="ot">&lt;-</span><span class="fu">c</span>(w_cent<span class="sc">-</span>w_marg, w_cent<span class="sc">+</span>w_marg)</span>
+<span id="cb28-4"><a aria-hidden="true" tabindex="-1"></a>p_tilde<span class="ot">&lt;-</span>(x<span class="sc">+</span><span class="dv">2</span>)<span class="sc">/</span>(n<span class="sc">+</span><span class="dv">4</span>); wa_marg<span class="ot">&lt;-</span>z<span class="sc">*</span><span class="fu">sqrt</span>(p_tilde<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>p_tilde)<span class="sc">/</span>(n<span class="sc">+</span><span class="dv">4</span>))</span>
+<span id="cb28-5"><a aria-hidden="true" tabindex="-1"></a>wald_adj<span class="ot">&lt;-</span><span class="fu">c</span>(p_tilde<span class="sc">-</span>wa_marg, p_tilde<span class="sc">+</span>wa_marg)</span>
+<span id="cb28-6"><a aria-hidden="true" tabindex="-1"></a>wald<span class="ot">&lt;-</span><span class="fu">c</span>(p_hat<span class="sc">-</span>z<span class="sc">*</span><span class="fu">sqrt</span>(p_hat<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>p_hat)<span class="sc">/</span>n), p_hat<span class="sc">+</span>z<span class="sc">*</span><span class="fu">sqrt</span>(p_hat<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>p_hat)<span class="sc">/</span>n))</span>
+<span id="cb28-7"><a aria-hidden="true" tabindex="-1"></a>exacto<span class="ot">&lt;-</span><span class="fu">binom.test</span>(x,n,<span class="at">conf.level=</span><span class="fl">0.95</span>)<span class="sc">$</span>conf.int</span>
+<span id="cb28-8"><a aria-hidden="true" tabindex="-1"></a>ics<span class="ot">&lt;-</span><span class="fu">rbind</span>(<span class="at">Wilson=</span>wilson, <span class="at">Wald_aj=</span>wald_adj, <span class="at">Wald=</span>wald, <span class="at">Exacto=</span>exacto)</span>
+<span id="cb28-9"><a aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar=</span><span class="fu">c</span>(<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">4</span>,<span class="dv">1</span>))</span>
+<span id="cb28-10"><a aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="cn">NA</span>, <span class="at">xlim=</span><span class="fu">c</span>(<span class="fl">0.2</span>,<span class="fl">0.7</span>), <span class="at">ylim=</span><span class="fu">c</span>(<span class="fl">0.5</span>,<span class="fl">4.5</span>), <span class="at">yaxt=</span><span class="st">"n"</span>, <span class="at">ylab=</span><span class="st">""</span>,</span>
+<span id="cb28-11"><a aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab=</span><span class="st">"Proporcion de mejoria"</span>, <span class="at">main=</span><span class="st">"IC 95% — 4 Metodos"</span>)</span>
+<span id="cb28-12"><a aria-hidden="true" tabindex="-1"></a><span class="fu">axis</span>(<span class="dv">2</span>, <span class="at">at=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="at">labels=</span><span class="fu">rownames</span>(ics), <span class="at">las=</span><span class="dv">2</span>)</span>
+<span id="cb28-13"><a aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>){<span class="fu">lines</span>(ics[i,], <span class="fu">c</span>(i,i), <span class="at">lwd=</span><span class="dv">4</span>, <span class="at">col=</span><span class="fu">c</span>(<span class="st">"steelblue"</span>,<span class="st">"darkgreen"</span>,<span class="st">"coral"</span>,<span class="st">"purple"</span>)[i])</span>
+<span id="cb28-14"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">points</span>(p_hat, i, <span class="at">pch=</span><span class="dv">19</span>, <span class="at">cex=</span><span class="fl">1.5</span>)}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+
+</div>
+<img data-src="T03_Estimacion_IC_files/figure-revealjs/unnamed-chunk-14-1.png" width="864" class="r-stretch"><p><strong>Wilson (azul) es el recomendado. Los 4 convergen con <span class="math inline">\(n\)</span> grande.</strong></p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>📎 Apéndice — Método de los Momentos (MoM):</strong> Técnica de estimación que iguala momentos muestrales a poblacionales. Para la Normal, coincide con los estimadores que ya usamos (<span class="math inline">\(\hat{\mu}=\bar{x}\)</span>, <span class="math inline">\(\hat{\sigma}^2=s^2\)</span>). Es simple pero menos eficiente que Máxima Verosimilitud en algunos casos. No es necesario para el resto del curso.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="slide level2 center">
+
+<div class="exercise">
+<p><strong>Ejercicio Clínico</strong> — IC y Tamaño Muestral</p>
+<p>Un fisioterapeuta mide la fuerza de prensión (kg) en 30 pacientes con artrosis de mano. Obtiene <span class="math inline">\(\bar{x} = 22.4\)</span> kg, <span class="math inline">\(s = 6.8\)</span> kg.</p>
+<ol type="1">
+<li>Calcula e interpreta el IC 95% para la fuerza media poblacional usando <code>icm(22.4, 6.8, 30)</code>.</li>
+<li>¿Qué precisión tiene este estudio? Si el fisioterapeuta quiere una precisión de ±2 kg con 95% de confianza, ¿cuántos pacientes necesita? Usa <code>nm(d=2, s=6.8)</code>.</li>
+<li>Si en otra muestra de 50 pacientes, 18 presentan mejoría clínica, calcula el IC 95% para la proporción poblacional usando <code>icp(18, 50)</code> (Wilson). Interpreta.</li>
+</ol>
+</div>
+</section>
+<section class="slide level2 center">
+
+</section></section>
+<section>
+<section id="del-ic-al-contraste-de-hipótesis" class="title-slide slide level1 center">
+<h1>Del IC al Contraste de Hipótesis</h1>
+<div class="connection">
+<p><strong>Conexión T03→T04:</strong> La estimación por intervalos y el contraste de hipótesis son dos caras de la misma moneda. El IC da el rango de valores compatibles; el test decide sobre un valor concreto.</p>
+</div>
+</section>
+<section id="del-ic-al-contraste-de-hipótesis-el-estadístico-t" class="slide level2 center">
+<h2>Del IC al contraste de hipótesis: El estadístico <span class="math inline">\(t\)</span></h2>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Importante</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>El puente entre estimación y contraste es el estadístico <span class="math inline">\(t\)</span>:</strong> <span class="math display">\[t = \frac{\bar{x} - \mu_0}{s / \sqrt{n}}\]</span></p>
+</div>
+</div>
+</div>
+<p><strong>Dos caras de la misma moneda — la distribución <span class="math inline">\(t\)</span> de Student:</strong></p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 46%">
+<col style="width: 17%">
+<col style="width: 35%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Perspectiva</th>
+<th style="text-align: left;">Uso</th>
+<th style="text-align: left;">Pregunta</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Estimación (IC)</strong></td>
+<td style="text-align: left;"><span class="math inline">\(\bar{x} \pm t_{\alpha/2;\,n-1} \cdot \frac{s}{\sqrt{n}}\)</span></td>
+<td style="text-align: left;">¿Entre qué valores está <span class="math inline">\(\mu\)</span>?</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Contraste (test)</strong></td>
+<td style="text-align: left;"><span class="math inline">\(t = \frac{\bar{x} - \mu_0}{s / \sqrt{n}}\)</span></td>
+<td style="text-align: left;">¿Es <span class="math inline">\(\mu = \mu_0\)</span> compatible con los datos?</td>
+</tr>
+</tbody>
+</table>
+<p><em>Origen de la distribución <span class="math inline">\(t\)</span>:</em> Cuando sustituimos <span class="math inline">\(\sigma\)</span> (desconocida) por <span class="math inline">\(s\)</span> (estimada), el cociente ya no es normal. La incertidumbre adicional al estimar <span class="math inline">\(\sigma\)</span> <strong>ensancha</strong> las colas: nace la <span class="math inline">\(t\)</span> de Student (Gosset, 1908). Con <span class="math inline">\(n\)</span> grande, <span class="math inline">\(t \to N(0,1)\)</span>.</p>
+</section>
+<section id="dualidad-ic-contraste-de-hipótesis" class="slide level2 center">
+<h2>Dualidad IC — Contraste de hipótesis</h2>
+<p><strong>Para reflexionar:</strong> Si μ₀ = 170 está dentro del IC 95%, ¿qué crees que pasará con el test de hipótesis H₀: μ = 170?</p>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Importante</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Principio de dualidad:</strong> Un IC al <span class="math inline">\((1-\alpha)\%\)</span> contiene exactamente los valores del parámetro que <strong>no serían rechazados</strong> en un contraste bilateral a nivel <span class="math inline">\(\alpha\)</span>.</p>
+</div>
+</div>
+</div>
+<p><strong>Ejemplo numérico (colesterol, <span class="math inline">\(n=10\)</span>, datos anteriores):</strong></p>
+<p>IC 95%: <span class="math inline">\(\mu \in (166.3, 172.5)\)</span> mg/dL</p>
+<table class="caption-top">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 23%">
+<col style="width: 29%">
+<col style="width: 23%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Hipótesis nula</th>
+<th style="text-align: left;">Estadístico <span class="math inline">\(t\)</span></th>
+<th style="text-align: left;">¿Se rechaza <span class="math inline">\(H_0\)</span>?</th>
+<th style="text-align: left;"><span class="math inline">\(\mu_0 \in\)</span> IC?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(H_0: \mu = 170\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(t = \frac{169.4-170}{4.30/\sqrt{10}} = -0.441\)</span></td>
+<td style="text-align: left;">No (<span class="math inline">\(\|t\| &lt; 2.262\)</span>)</td>
+<td style="text-align: left;">✓ Sí</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(H_0: \mu = 175\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(t = \frac{169.4-175}{1.36} = -4.118\)</span></td>
+<td style="text-align: left;"><strong>Sí</strong> (<span class="math inline">\(\|t\| &gt; 2.262\)</span>)</td>
+<td style="text-align: left;">✗ No</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(H_0: \mu = 165\)</span></td>
+<td style="text-align: left;"><span class="math inline">\(t = \frac{169.4-165}{1.36} = 3.235\)</span></td>
+<td style="text-align: left;"><strong>Sí</strong> (<span class="math inline">\(\|t\| &gt; 2.262\)</span>)</td>
+<td style="text-align: left;">✗ No</td>
+</tr>
+</tbody>
+</table>
+<div class="cell">
+<details class="code-fold">
+<summary>Mostrar código R</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a aria-hidden="true" tabindex="-1"></a>xbar<span class="ot">&lt;-</span><span class="fl">169.4</span>; s<span class="ot">&lt;-</span><span class="fl">4.30</span>; n<span class="ot">&lt;-</span><span class="dv">10</span>; SE<span class="ot">&lt;-</span>s<span class="sc">/</span><span class="fu">sqrt</span>(n); tc<span class="ot">&lt;-</span><span class="fu">qt</span>(<span class="fl">0.975</span>,<span class="dv">9</span>)</span>
+<span id="cb29-2"><a aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(mu0 <span class="cf">in</span> <span class="fu">c</span>(<span class="dv">170</span>, <span class="dv">175</span>, <span class="dv">165</span>)){</span>
+<span id="cb29-3"><a aria-hidden="true" tabindex="-1"></a>  t_stat<span class="ot">&lt;-</span>(xbar<span class="sc">-</span>mu0)<span class="sc">/</span>SE; en_IC<span class="ot">&lt;-</span>mu0<span class="sc">&gt;=</span>xbar<span class="sc">-</span>tc<span class="sc">*</span>SE <span class="sc">&amp;</span> mu0<span class="sc">&lt;=</span>xbar<span class="sc">+</span>tc<span class="sc">*</span>SE</span>
+<span id="cb29-4"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">cat</span>(<span class="st">"mu0 ="</span>, mu0, <span class="st">"| t ="</span>, <span class="fu">round</span>(t_stat,<span class="dv">3</span>), <span class="st">"| Rechaza:"</span>, <span class="fu">abs</span>(t_stat)<span class="sc">&gt;</span>tc, <span class="st">"| En IC:"</span>, en_IC, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb29-5"><a aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>mu0 = 170 | t = -0.441 | Rechaza: FALSE | En IC: TRUE 
+mu0 = 175 | t = -4.118 | Rechaza: TRUE | En IC: FALSE 
+mu0 = 165 | t = 3.236 | Rechaza: TRUE | En IC: FALSE </code></pre>
+</div>
+</div>
+</section>
+<section id="del-ic-al-contraste-ejemplo-clínico-en-fisioterapia" class="slide level2 center">
+<h2>Del IC al contraste: Ejemplo clínico en fisioterapia</h2>
+<p><strong>Contexto:</strong> Goniometría de flexión de hombro en 8 pacientes post-rehabilitación. Valor de referencia clínico: <span class="math inline">\(170°\)</span>.</p>
+<p><strong>Paso 1 — Estimación (IC 95%):</strong> <span class="math display">\[168.25 \pm 2.365 \cdot \frac{4.06}{\sqrt{8}} = (164.9°, 171.6°)\]</span></p>
+<p><strong>Paso 2 — Contraste (<span class="math inline">\(H_0: \mu = 170°\)</span>):</strong> <span class="math display">\[t = \frac{168.25 - 170}{4.06/\sqrt{8}} = \frac{-1.75}{1.435} = -1.22\]</span></p>
+<p><strong>Paso 3 — Decisión:</strong> - <span class="math inline">\(|t| = 1.22 &lt; t_{0.025; 7} = 2.365\)</span> → <strong>No se rechaza <span class="math inline">\(H_0\)</span></strong> - <span class="math inline">\(170° \in (164.9°, 171.6°)\)</span> ✓ → El IC ya contenía el valor de referencia</p>
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Importante</strong></p>
+</div>
+<div class="callout-content">
+<p><strong>Regla general — dualidad IC/test:</strong> <span class="math display">\[\mu_0 \in \text{IC}_{1-\alpha} \;\Longleftrightarrow\; \text{No se rechaza } H_0: \mu = \mu_0 \text{ a nivel } \alpha\]</span></p>
+<p>El <strong>IC es más informativo</strong> que el test: da todo el rango de valores compatibles con los datos, no solo una decisión binaria. El Tema 4 desarrolla en profundidad la teoría de contrastes de hipótesis.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="resumen-visual-de-la-muestra-a-la-decisión-clínica" class="slide level2 center">
+<h2>Resumen visual: De la muestra a la decisión clínica</h2>
+<p><strong>Ejemplo de fisioterapia (<span class="math inline">\(n=8\)</span>, <span class="math inline">\(\bar{x}=168.25°\)</span>, <span class="math inline">\(s=4.06°\)</span>):</strong></p>
+<div class="cell">
+<details class="code-fold">
+<summary>Mostrar código R</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar=</span><span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">6</span>,<span class="dv">2</span>,<span class="dv">1</span>))</span>
+<span id="cb31-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="cn">NA</span>, <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">162</span>, <span class="dv">174</span>), <span class="at">ylim=</span><span class="fu">c</span>(<span class="fl">0.5</span>, <span class="fl">3.5</span>), <span class="at">yaxt=</span><span class="st">"n"</span>, <span class="at">ylab=</span><span class="st">""</span>, <span class="at">bty=</span><span class="st">"n"</span>,</span>
+<span id="cb31-3"><a aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab=</span><span class="st">"Grados de flexión de hombro"</span>, <span class="at">main=</span><span class="st">"IC 95% y valor de referencia clínico"</span>)</span>
+<span id="cb31-4"><a aria-hidden="true" tabindex="-1"></a>ic_lo <span class="ot">&lt;-</span> <span class="fl">164.9</span>; ic_hi <span class="ot">&lt;-</span> <span class="fl">171.6</span>; xbar <span class="ot">&lt;-</span> <span class="fl">168.25</span>; mu0 <span class="ot">&lt;-</span> <span class="dv">170</span></span>
+<span id="cb31-5"><a aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(<span class="fu">c</span>(ic_lo, ic_hi), <span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>), <span class="at">lwd=</span><span class="dv">6</span>, <span class="at">col=</span><span class="st">"steelblue"</span>)</span>
+<span id="cb31-6"><a aria-hidden="true" tabindex="-1"></a><span class="fu">points</span>(xbar, <span class="dv">2</span>, <span class="at">pch=</span><span class="dv">19</span>, <span class="at">cex=</span><span class="dv">2</span>, <span class="at">col=</span><span class="st">"darkblue"</span>)</span>
+<span id="cb31-7"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(xbar, <span class="fl">2.4</span>, <span class="fu">expression</span>(<span class="fu">bar</span>(x) <span class="sc">==</span> <span class="fl">168.25</span>), <span class="at">cex=</span><span class="fl">1.1</span>)</span>
+<span id="cb31-8"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(ic_lo, <span class="fl">1.7</span>, <span class="st">"164.9°"</span>, <span class="at">cex=</span><span class="fl">0.9</span>); <span class="fu">text</span>(ic_hi, <span class="fl">1.7</span>, <span class="st">"171.6°"</span>, <span class="at">cex=</span><span class="fl">0.9</span>)</span>
+<span id="cb31-9"><a aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v=</span>mu0, <span class="at">col=</span><span class="st">"darkgreen"</span>, <span class="at">lwd=</span><span class="dv">3</span>, <span class="at">lty=</span><span class="dv">2</span>)</span>
+<span id="cb31-10"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(mu0, <span class="fl">2.8</span>, <span class="fu">expression</span>(H[<span class="dv">0</span>]<span class="sc">:</span> mu <span class="sc">==</span> <span class="dv">170</span>), <span class="at">col=</span><span class="st">"darkgreen"</span>, <span class="at">cex=</span><span class="fl">1.1</span>)</span>
+<span id="cb31-11"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="dv">168</span>, <span class="fl">3.3</span>, <span class="fu">expression</span>(mu[<span class="dv">0</span>] <span class="sc">*</span> <span class="st">" está en "</span> <span class="sc">*</span> IC[<span class="dv">95</span> <span class="sc">~</span> <span class="st">"%"</span>] <span class="sc">*</span> <span class="st">"  →  No se rechaza "</span> <span class="sc">*</span> H[<span class="dv">0</span>]), <span class="at">cex=</span><span class="fl">1.1</span>, <span class="at">font=</span><span class="dv">2</span>)</span>
+<span id="cb31-12"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="dv">162</span>, <span class="fl">0.8</span>, <span class="st">"← Rechazaría H₀"</span>, <span class="at">col=</span><span class="st">"grey50"</span>, <span class="at">cex=</span><span class="fl">0.8</span>)</span>
+<span id="cb31-13"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="dv">173</span>, <span class="fl">0.8</span>, <span class="st">"Rechazaría H₀ →"</span>, <span class="at">col=</span><span class="st">"grey50"</span>, <span class="at">cex=</span><span class="fl">0.8</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+
+</div>
+<img data-src="T03_Estimacion_IC_files/figure-revealjs/unnamed-chunk-16-1.png" width="864" class="r-stretch"></section>
+<section id="bioestatr-ics-y-tamaño-muestral" class="slide level2 center">
+<h2>BioEstatR — Ics y tamaño muestral</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Mostrar código R</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(BioEstatR)</span>
+<span id="cb32-2"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-3"><a aria-hidden="true" tabindex="-1"></a><span class="co"># ICs</span></span>
+<span id="cb32-4"><a aria-hidden="true" tabindex="-1"></a><span class="fu">icm</span>(<span class="at">x =</span> datos, <span class="at">nivel =</span> <span class="fl">0.95</span>)              <span class="co"># media</span></span>
+<span id="cb32-5"><a aria-hidden="true" tabindex="-1"></a><span class="fu">icm</span>(<span class="at">m =</span> <span class="dv">145</span>, <span class="at">s =</span> <span class="dv">12</span>, <span class="at">n =</span> <span class="dv">40</span>, <span class="at">nivel =</span> <span class="fl">0.95</span>)</span>
+<span id="cb32-6"><a aria-hidden="true" tabindex="-1"></a><span class="fu">icp</span>(<span class="at">x =</span> <span class="dv">18</span>, <span class="at">n =</span> <span class="dv">40</span>, <span class="at">nivel =</span> <span class="fl">0.95</span>)         <span class="co"># proporción (4 métodos)</span></span>
+<span id="cb32-7"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-8"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Tamaño muestral</span></span>
+<span id="cb32-9"><a aria-hidden="true" tabindex="-1"></a><span class="fu">nm</span>(<span class="at">d =</span> <span class="dv">3</span>, <span class="at">s =</span> <span class="dv">12</span>, <span class="at">alfa =</span> <span class="fl">0.05</span>)            <span class="co"># para media</span></span>
+<span id="cb32-10"><a aria-hidden="true" tabindex="-1"></a><span class="fu">np</span>(<span class="at">x =</span> <span class="dv">18</span>, <span class="at">n =</span> <span class="dv">40</span>, <span class="at">d =</span> <span class="fl">0.05</span>, <span class="at">conf =</span> <span class="fl">0.95</span>) <span class="co"># para proporción</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+</section>
+<section id="resumen-tema-3" class="slide level2 center">
+<h2>Resumen — Tema 3</h2>
+<ul>
+<li class="fragment"><strong>Teorema Central del Límite (TCL):</strong> <span class="math inline">\(\bar{X} \approx N(\mu, \sigma/\sqrt{n})\)</span> para <span class="math inline">\(n\)</span> grande → fundamento de toda la inferencia</li>
+<li class="fragment"><strong>Error estándar:</strong> <span class="math inline">\(SE = s/\sqrt{n}\)</span> cuantifica la precisión de <span class="math inline">\(\bar{x}\)</span> como estimador de <span class="math inline">\(\mu\)</span></li>
+<li class="fragment"><strong>IC para la media:</strong> <span class="math inline">\(\bar{x} \pm t_{n-1,\alpha/2} \cdot SE\)</span> — usamos <span class="math inline">\(t\)</span> cuando estimamos <span class="math inline">\(\sigma\)</span></li>
+<li class="fragment"><strong>IC para proporción:</strong> método de Wilson (recomendado), Agresti-Coull, Clopper-Pearson (exacto)</li>
+<li class="fragment"><strong>Interpretación correcta:</strong> “Si repitiéramos el estudio 100 veces, ~95 IC contendrían el verdadero parámetro”</li>
+<li class="fragment"><strong>Tamaño muestral:</strong> <span class="math inline">\(n = (z_{\alpha/2} \cdot \sigma / d)^2\)</span> — planificar antes de recoger datos</li>
+<li class="fragment"><strong>Dualidad IC/test:</strong> si el IC no contiene el valor nulo, el test rechaza <span class="math inline">\(H_0\)</span> → puente al Tema 4</li>
+</ul>
+</section>
+<section class="slide level2 smaller scrollable" id="references">
+
+<p><strong>Referencias complementarias del libro:</strong></p>
+<div class="reference-box">
+<p><strong>Referencias</strong></p>
+<ul>
+<li><span class="citation" data-cites="casella2002">(<a href="#/references" role="doc-biblioref" onclick="">Casella &amp; Berger, 2002</a>)</span> Casella, G. &amp; Berger, R. L. (2002). <em>Statistical Inference</em> (2nd ed.). Duxbury.</li>
+<li><span class="citation" data-cites="cramer1946">(<a href="#/references" role="doc-biblioref" onclick="">Cramér, 1946</a>)</span> Cramer, H. (1946). <em>Mathematical Methods of Statistics</em>. Princeton University Press.</li>
+<li><span class="citation" data-cites="bioestatr2026">(<a href="#/references" role="doc-biblioref" onclick="">Femia &amp; Luque-Fernández, 2026</a>)</span> Femia, P. &amp; Luque-Fernandez, M. A. (2026). <em>BioEstatR: Biostatistics Routines in R</em>. R package v1.0.0. Universidad de Granada. <a href="https://migariane.github.io/BioEstatR" class="uri">https://migariane.github.io/BioEstatR</a></li>
+<li><span class="citation" data-cites="luque2026">(<a href="#/references" role="doc-biblioref" onclick="">Luque-Fernández, 2026</a>)</span> Luque-Fernandez, M. A. (2026). <em>Matemáticas para la Estadística Médica con R</em>. Universidad de Granada. <a href="https://migariane.github.io/MatematicaEstadisticaMedicinaR" class="uri">https://migariane.github.io/MatematicaEstadisticaMedicinaR</a></li>
+<li><span class="citation" data-cites="newcombe1998">(<a href="#/references" role="doc-biblioref" onclick="">Newcombe, 1998</a>)</span> Newcombe, R. G. (1998). Two-sided confidence intervals for the single proportion. <em>Statistics in Medicine</em>, 17(8), 857–872.</li>
+<li><span class="citation" data-cites="wilson1927">(<a href="#/references" role="doc-biblioref" onclick="">Wilson, 1927</a>)</span> Wilson, E. B. (1927). Probable inference, the law of succession, and statistical inference. <em>JASA</em>, 22, 209–212.</li>
+</ul>
+</div>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-casella2002" class="csl-entry" role="listitem">
+Casella, G., &amp; Berger, R. L. (2002). <em>Statistical Inference</em> (2nd ed.). Duxbury.
+</div>
+<div id="ref-cramer1946" class="csl-entry" role="listitem">
+Cramér, H. (1946). <em>Mathematical Methods of Statistics</em>. Princeton University Press.
+</div>
+<div id="ref-bioestatr2026" class="csl-entry" role="listitem">
+Femia, P., &amp; Luque-Fernández, M. A. (2026). <em>BioEstatR: Biostatistics Routines in R</em>. <a href="https://migariane.github.io/BioEstatR">https://migariane.github.io/BioEstatR</a>
+</div>
+<div id="ref-luque2026" class="csl-entry" role="listitem">
+Luque-Fernández, M. A. (2026). <em>Matemáticas para la Estadística Médica con R</em>. Universidad de Granada. <a href="https://migariane.github.io/MatematicaEstadisticaMedicinaR">https://migariane.github.io/MatematicaEstadisticaMedicinaR</a>
+</div>
+<div id="ref-newcombe1998" class="csl-entry" role="listitem">
+Newcombe, R. G. (1998). Two-Sided Confidence Intervals for the Single Proportion: Comparison of Seven Methods. <em>Statistics in Medicine</em>, <em>17</em>(8), 857-872.
+</div>
+<div id="ref-wilson1927" class="csl-entry" role="listitem">
+Wilson, E. B. (1927). Probable Inference, the Law of Succession, and Statistical Inference. <em>Journal of the American Statistical Association</em>, <em>22</em>(158), 209-212.
+</div>
+</div>
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<p><img src="logo.png" class="slide-logo"></p>
+<div class="footer footer-default">
+<p><span style="font-size:0.5em">Bioestadística · Grado en Fisioterapia · UGR</span></p>
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': true,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: false,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: true,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'convex',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'fast',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1366,
+
+        height: 768,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 8.0e-2,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copiado");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copiado");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp("https:\/\/migariane\.github\.io\/BioestadisticaFisioterapia");
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>
