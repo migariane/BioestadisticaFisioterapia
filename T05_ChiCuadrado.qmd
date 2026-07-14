@@ -383,7 +383,7 @@ chi_crit <- qchisq(0.95, gl)
 p_val <- round(1 - pchisq(chi_exp, gl), 4)
 
 curve(dchisq(x, gl), 0, 22, lwd = 3, col = "steelblue",
-      main = "Distribucion Chi-cuadrado con gl = 6",
+      main = "Distribución χ² con gl = 6",
       xlab = "Chi-cuadrado", ylab = "Densidad")
 abline(v = chi_crit, col = "darkgreen", lwd = 2.5, lty = 2)
 abline(v = chi_exp, col = "#e74c3c", lwd = 3)

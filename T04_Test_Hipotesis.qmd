@@ -430,7 +430,7 @@ $$\text{Potencia} = 1 - \beta = P(\text{Rechazar } H_0 \mid H_1 \text{ cierta}) 
 
 *Si un estudio con n=10 no rechaza $H_0$, ¿podemos concluir que el tratamiento no funciona? ¿Por qué?*
 
-## Ejemplo de cálculo del p-valor desde la tabla t de Student
+## Ejemplo de cálculo del P-valor desde la tabla t de Student
 
 **Caso:** $t_{\text{exp}} = 2.40$ con gl = 10. Obtener P sin ordenador.
 
@@ -1139,7 +1139,7 @@ cat("n por grupo =", n, "→ n total =", 2*n)
 
 $$n \approx \frac{2(z_{1-\alpha/2} + z_{1-\beta})^2 \cdot s^2}{\delta^2}$$
 
-donde $z_{1-\alpha/2}$ y $z_{1-\beta}$ son los cuantiles de la Normal estandar.
+donde $z_{1-\alpha/2}$ y $z_{1-\beta}$ son los cuantiles de la Normal estándar.
 :::
 
 **¿Qué nos dice esta fórmula?** $n$ aumenta cuando: $\downarrow\delta$ (buscas diferencias pequeñas), $\uparrow s$ (los datos son más variables), $\uparrow 1-\beta$ (quieres más potencia), $\downarrow\alpha$ (eres más exigente).
@@ -1407,7 +1407,7 @@ text(col_x[3], 3.75, "mcnemar.test()", font = 2, cex = 0.8, col = "white")
 
 **Regla de oro para tu TFG/TFM:** Reporta siempre los 4 elementos: (1) P-valor exacto, (2) IC 95% del efecto, (3) tamaño del efecto (d de Cohen), (4) tu juicio sobre la **relevancia clínica** de la diferencia observada [@greenland2016].
 
-## Declaración asa sobre p-valores [@wasserstein2016]
+## Declaración ASA sobre p-valores [@wasserstein2016]
 
 ::: {.callout-warning}
 **La American Statistical Association (2016) publicó 6 principios sobre el uso correcto del P-valor:**
@@ -1420,7 +1420,7 @@ text(col_x[3], 3.75, "mcnemar.test()", font = 2, cex = 0.8, col = "white")
 5. **El P-valor NO mide** el tamaño del efecto ni la importancia clínica del resultado
 6. **Por sí solo, el P-valor no es una buena medida** de la evidencia sobre un modelo
 
-**Buena práctica en fisioterapia:** Reportar **siempre**: (1) P-valor exacto, (2) IC 95% para el efecto, (3) tamano del efecto (d de Cohen), y (4) juicio sobre la **relevancia clínica** de la diferencia observada [@greenland2016].
+**Buena práctica en fisioterapia:** Reportar **siempre**: (1) P-valor exacto, (2) IC 95% para el efecto, (3) tamaño del efecto (d de Cohen), y (4) juicio sobre la **relevancia clínica** de la diferencia observada [@greenland2016].
 
 ---
 
@@ -1535,6 +1535,16 @@ legend("bottomleft", c("Decisión", "Condición", "Test final"),
 
 ::: {.callout-tip}
 **Para este caso concreto:** Con $n_A=25$ y $n_B=28$, el **Teorema Central del Límite** nos protege parcialmente. Si la normalidad es dudosa pero $n$ es moderado, **Welch es una opción razonable**. Si los datos son claramente asimétricos o hay outliers → **Mann-Whitney** sin dudar.
+:::
+
+## Puente al Tema 5 {.center}
+
+::: {.connection}
+**Del contraste de hipótesis a los datos categóricos**
+
+Hemos aprendido a comparar grupos usando variables continuas (t-test, Wilcoxon) y binarias pareadas (McNemar). En el **Tema 5** abordaremos una situación aún más frecuente en la clínica: **tablas de contingencia** para variables cualitativas, donde exploraremos el test χ², odds ratio, riesgo relativo y el número necesario a tratar (NNT).
+
+**Concepto puente:** El test de McNemar (T04) es un caso particular de análisis de datos categóricos pareados. En T05 generalizaremos al análisis de tablas 2×2 y R×C.
 :::
 
 ## Referencias
