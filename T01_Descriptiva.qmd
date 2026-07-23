@@ -1369,10 +1369,10 @@ La flexión media fue de **108.1 ± 14.5 grados** (CV = 13.4%), con una mediana 
 ::: {.reference-box}
 **Referencias**
 
-- [@altman1990] Altman, D. G. (1990). *Practical Statistics for Medical Research*. Chapman & Hall/CRC.
-- [@bioestatr2026] Femia, P. & Luque-Fernandez, M. A. (2026). *BioEstatR: Biostatistics Routines in R*. R package v1.0.0. Universidad de Granada. <https://migariane.github.io/BioEstatR>
-- [@luque2026] Luque-Fernandez, M. A. (2026). *Matemáticas para la Estadística Médica con R*. Universidad de Granada. <https://migariane.github.io/MatematicaEstadisticaMedicinaR>
-- [@rosner2015] Rosner, B. (2015). *Fundamentals of Biostatistics* (8th ed.). Cengage Learning.
-- [@stevens1946] Stevens, S. S. (1946). On the theory of scales of measurement. *Science*, 103(2684), 677–680.
-- [@tukey1977] Tukey, J. W. (1977). *Exploratory Data Analysis*. Addison-Wesley.
+- [@Altman1990] Altman, D. G. (1990). *Practical Statistics for Medical Research*. Chapman & Hall/CRC.
+- [@Femia2026] Femia, P. & Luque-Fernandez, M. A. (2026). *BioEstatR: Biostatistics Routines in R*. R package v1.0.0. Universidad de Granada. <https://migariane.github.io/BioEstatR>
+- [@LuqueFernandez2026] Luque-Fernandez, M. A. (2026). *Matemáticas para la Estadística Médica con R*. Universidad de Granada. <https://migariane.github.io/MatematicaEstadisticaMedicinaR>
+- [@Rosner2015] Rosner, B. (2015). *Fundamentals of Biostatistics* (8th ed.). Cengage Learning.
+- [@Stevens1946] Stevens, S. S. (1946). On the theory of scales of measurement. *Science*, 103(2684), 677–680.
+- [@Tukey1977] Tukey, J. W. (1977). *Exploratory Data Analysis*. Addison-Wesley.
 :::

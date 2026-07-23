@@ -19,6 +19,16 @@ format:
     fig-width: 8
     fig-height: 5.2
     lang: es
+  pdf:
+    include-in-header:
+      text: |
+        \newcommand{\E}{\mathbb{E}}
+        \newcommand{\Var}{\operatorname{Var}}
+        \newcommand{\Cov}{\operatorname{Cov}}
+        \newcommand{\Corr}{\operatorname{Corr}}
+        \newcommand{\SE}{\operatorname{SE}}
+        \newcommand{\SD}{\operatorname{SD}}
+        \newcommand{\indep}{\perp\!\!\!\perp}
 execute:
   warning: false
   message: false
@@ -218,18 +228,6 @@ De los tres axiomas se deducen **todas** las reglas de la probabilidad:
 
 ::: {.callout-tip}
 **¿Por qué importa esto?** No necesitas memorizar las derivaciones — solo saber que TODO en probabilidad (complemento, unión, Bayes, distribuciones) se deduce lógicamente de estos tres axiomas. Son el "ADN" de la estadística.
-:::
-
-::: {.exercise}
-**⏸️ Pausa activa — Axiomas en acción**
-
-Lanzamos un dado equilibrado. Usando los axiomas de Kolmogorov:
-
-1. $P(\text{sacar un 3}) = ?$
-2. $P(\text{sacar 3 o 5}) = ?$ (eventos mutuamente excluyentes)
-3. $P(\text{no sacar 3}) = ?$ (regla del complemento)
-
-Discute con tu compañero: ¿cómo aplicarlas para calcular la probabilidad de que un paciente con lumbalgia tenga al menos uno de dos síntomas?
 :::
 
 ## Complemento
@@ -648,17 +646,7 @@ $$\underbrace{P(\theta)}_{\text{Distribución a priori}} \;\; \times \;\; \unde
 
 *En Fisioterapia:* La estadística bayesiana permite actualizar probabilidades diagnósticas con cada nueva prueba o signo clínico — el razonamiento clínico es inherentemente bayesiano.
 
-::: {.exercise}
-**⏸️ Pausa activa — Bayes en diagnóstico clínico**
-
-Un test diagnóstico para lesión de menisco tiene sensibilidad del 90% y especificidad del 85%. La prevalencia (probabilidad pre-test) es del 30%.
-
-1. Si el test da positivo, ¿cuál es el VPP? *(Pista: usa la fórmula de Bayes paso a paso)*
-2. ¿Cómo cambia el VPP si la prevalencia fuera del 5%?
-3. ¿Qué implicación clínica tiene esto para tu práctica como fisioterapeuta?
-
-Calculadlo en parejas y compartid vuestra interpretación.
-:::
+*El test tiene 99% de sensibilidad pero el VPP es solo 16.7%. ¿Qué cambiaría si la prevalencia fuera del 10% en lugar del 1%?*
 
 ---
 
@@ -678,10 +666,12 @@ Calculadlo en parejas y compartid vuestra interpretación.
 
 ---
 
+# De la Probabilidad a las Variables Aleatorias {.center}
+
 ![](logo.png){width="70px"}
 
 ::: {.connection}
-Hasta aquí hemos modelado **eventos** (A, B, intersecciones, condicionales). Ahora damos el salto a modelar **variables**: magnitudes clínicas que varían de paciente a paciente. Una variable aleatoria asigna un número a cada resultado incierto.
+Hasta aquí hemos modelado **eventos** (A, B, intersecciones, condicionales). Ahora damos el salto a modelar **variables**: magnitudes clínicas que varían de paciente a paciente. Una variable aleatoria asigna un número a cada resultado incierto.
 
 | **En T01 (Descriptiva)** | **En T02 (Probabilidad)** |
 |:--------------------------|:---------------------------|
@@ -728,15 +718,11 @@ Una **variable aleatoria (VA)** es una función que asigna un valor numérico 
 #| fig-height: 5
 x <- 0:3; px <- dbinom(x, 3, 0.5)
 bp <- barplot(px, names=x, col="lightgreen", ylim=c(0,0.45),
-        main="Función de Masa de Probabilidad — VA Discreta",
-        xlab="x (nº pacientes con mejora)", ylab="P(X = x)")
+        main="Función de Masa de Probabilidad — VA Discreta",
+        xlab="x (nº pacientes con mejoría)", ylab="P(X = x)")
 text(bp, px+0.02, paste0(px*8,"/8 = ", px), font=2, cex=0.95)
 abline(h=0, col="grey")
 ```
-
-::: {.callout-tip}
-**Lectura del código:** `dbinom(x, n, p)` calcula $P(X = x)$ para una Binomial con $n$ ensayos y probabilidad $p$. El primer argumento es el valor (o valores) de $X$; el segundo es $n$; el tercero es $p$. Aquí: `dbinom(0:3, 3, 0.5)` calcula $P(X=0), P(X=1), P(X=2), P(X=3)$ de una vez.
-:::
 
 **Verificación:** $\sum P(X=x) = 0.125+0.375+0.375+0.125 = 1.00$ ✓
 
@@ -1059,10 +1045,7 @@ text(0, 0.25, "68%", cex=1.2); text(0, 0.05, "95%", cex=1.2)
 ## Distribución Normal — Fórmula y propiedades
 
 ::: {.callout-note}
-**Definición técnica (no es necesario memorizarla):**
 $$f(x) = \frac{1}{\sigma\sqrt{2\pi}} \exp\left\{-\frac{(x-\mu)^2}{2\sigma^2}\right\}, \quad -\infty < x < \infty$$
-
-**Lo que importa entender:** La forma de campana, la simetría, y que $\mu$ centra la curva mientras $\sigma$ la ensancha o estrecha. R hará los cálculos por ti — el valor de esta fórmula es conceptual.
 
 - $\mu$ = media (centro de la campana), $\sigma$ = desviación típica (dispersión)
 - $E(X) = \mu$, $\text{Var}(X) = \sigma^2$
@@ -1170,19 +1153,7 @@ cat("Z-scores glucemia:", round(z_gluc, 2),
     "\nP(Z > 4) =", round(pnorm(4, lower.tail=FALSE), 6))
 ```
 
-::: {.exercise}
-**⏸️ Pausa activa — Z-scores en la clínica**
-
-Un paciente tiene presión arterial sistólica $X \sim N(130, 15^2)$ mmHg.
-
-1. ¿Cuál es el Z-score de un paciente con PA = 145 mmHg?
-2. ¿Qué percentil ocupa ese valor? *(Usa `pnorm(145, 130, 15)`)*
-3. Otro paciente tiene Z = -1.2 en fuerza de prensión manual. ¿Es más atípico que el anterior?
-
-Interpreta: ¿qué le dirías al paciente sobre su riesgo cardiovascular?
-:::
-
-## Estandarización y cálculo de probabilidades
+## Estandarización y cálculo de probabilidades
 
 **La clave práctica:** Para calcular cualquier probabilidad Normal, convertimos a Z y usamos $N(0,1)$:
 
@@ -1428,32 +1399,112 @@ cat("F(2) =", round(ppois(2,3),3), "| F(5) =", round(ppois(5,3),3),
     "| P(2<X≤5) =", round(ppois(5,3)-ppois(2,3),3))
 ```
 
-## Vista previa: t-Student, χ² y F
+## Distribución t-student — Origen y propiedades
 
-*Estas distribuciones las estudiaremos en detalle cuando las necesitemos en temas posteriores. Por ahora, solo reconocerlas.*
 
-::: {.decision-tree}
-| Distribución | Apariencia | ¿Dónde la usaremos? |
-|:------------|:----------|:-------------------|
-| **t-Student** | Simétrica, colas más pesadas que Normal | Tema 4 — Comparar medias de dos grupos (test t) |
-| **χ²** (Chi-cuadrado) | Asimétrica positiva, solo ≥ 0 | Tema 5 — Tablas de contingencia, asociación |
-| **F de Snedecor** | Asimétrica positiva, dos parámetros | Tema 6 — Comparar varianzas, regresión |
-:::
+*La distribución t-Student la usaremos en el Tema 4 para comparar medias de dos grupos de tratamiento en fisioterapia.*
+
+**William S. Gosset** (1908), químico de Guinness, publicó bajo el seudónimo **"Student"**. Descubrió que al estimar $\sigma$ con $s$, el cociente $\frac{\bar{x}-\mu}{s/\sqrt{n}}$ NO sigue una Normal, sino una distribución con **colas más pesadas**.
+
+$$T = \frac{\bar{X} - \mu}{S/\sqrt{n}} \sim t_{n-1}$$
+
+**Propiedades:**
+- **Simétrica** alrededor de 0 (como la Normal)
+- Colas **más pesadas** que la Normal → valores extremos más probables
+- Cuando $n \to \infty$, $t_{n-1} \to N(0,1)$
+- Un solo parámetro: grados de libertad ($gl = n-1$)
 
 ```{r}
-#| fig-height: 4
-par(mfrow=c(1,3), mar=c(3,3,2,1))
-curve(dt(x,5), -4, 4, lwd=3, col="steelblue", main="t-Student", ylab="")
-curve(dchisq(x,5), 0, 15, lwd=3, col="seagreen", main="χ²", ylab="")
-curve(df(x,5,5), 0, 5, lwd=3, col="coral", main="F", ylab="")
-par(mfrow=c(1,1))
+#| fig-height: 5
+curve(dnorm(x), -4, 4, lwd=3, col="steelblue", ylab="Densidad",
+      main="Normal vs t-Student (simétrica, colas pesadas)")
+curve(dt(x, 3), -4, 4, lwd=3, col="seagreen", add=TRUE)
+curve(dt(x, 10), -4, 4, lwd=3, col="darkgreen", add=TRUE)
+legend("topright", c("N(0,1)","t(3)","t(10)"), col=c("steelblue","coral","darkgreen"), lwd=3, bty="n")
 ```
 
-::: {.callout-important}
-**Para estudiantes:** La t es simétrica → el P-valor bilateral se calcula como $2 \times P(T > |t|)$. La χ² y F **no** son simétricas → el P-valor se calcula solo en la cola correspondiente. **Nunca** multipliques por 2 para χ² o F.
+**Uso principal:** IC para la media con $\sigma$ desconocida, tests t para una y dos muestras.
+
+## Distribución $\chi^2$ (Chi-Cuadrado) — Pearson
+
+
+*La distribución χ² la usaremos en el Tema 5 para analizar tablas de contingencia y estudiar la asociación entre tratamientos de fisioterapia y resultados clínicos.*
+
+**Karl Pearson** (1900). Surge como suma de $k$ normales estándar independientes al cuadrado:
+
+$$\chi^2_k = Z_1^2 + Z_2^2 + \cdots + Z_k^2 \sim \chi^2_k$$
+
+**Propiedades:**
+- **NO es simétrica** (asimétrica positiva, cola a la derecha)
+- Solo toma valores $\geq 0$
+- $E(\chi^2_k) = k$, $\text{Var}(\chi^2_k) = 2k$
+- Cuando $k \to \infty$, tiende a Normal
+
+```{r}
+#| fig-height: 5
+curve(dchisq(x, 1), 0, 15, lwd=3, col="seagreen", ylab="Densidad",
+      main=expression(paste(chi^2, " — Asimétrica, solo valores ≥ 0")))
+curve(dchisq(x, 3), 0, 15, lwd=3, col="darkgreen", add=TRUE)
+curve(dchisq(x, 6), 0, 15, lwd=3, col="steelblue", add=TRUE)
+legend("topright", c(expression(chi[1]^2),expression(chi[3]^2),expression(chi[6]^2)),
+       col=c("coral","darkgreen","steelblue"), lwd=3, bty="n")
+```
+
+**Uso principal:** Test $\chi^2$ para tablas de contingencia, test de bondad de ajuste.
+
+## Distribución F de snedecor
+
+
+*La distribución F la usaremos en el Tema 6 al evaluar modelos de regresión y comparar la variabilidad explicada por distintas variables clínicas.*
+
+**George W. Snedecor** (1934), nombrada en honor a **R.A. Fisher**. Surge como cociente de dos $\chi^2$ independientes divididas por sus grados de libertad:
+
+$$F_{k_1, k_2} = \frac{\chi^2_{k_1} / k_1}{\chi^2_{k_2} / k_2}$$
+
+**Propiedades:**
+- **NO es simétrica** (asimétrica positiva, como $\chi^2$)
+- Solo toma valores $\geq 0$
+- Dos parámetros: $gl_1$ (numerador) y $gl_2$ (denominador)
+
+```{r}
+#| fig-height: 5
+curve(df(x, 5, 5), 0, 5, lwd=3, col="steelblue", ylab="Densidad",
+      main="Distribución F — Asimétrica, dos parámetros")
+curve(df(x, 10, 5), 0, 5, lwd=3, col="seagreen", add=TRUE)
+curve(df(x, 5, 20), 0, 5, lwd=3, col="darkgreen", add=TRUE)
+legend("topright", c("F(5,5)","F(10,5)","F(5,20)"), col=c("steelblue","coral","darkgreen"), lwd=3, bty="n")
+```
+
+**Uso principal:** Test F para igualdad de varianzas, ANOVA, regresión (test F global).
+
+## Cálculo de p-valores — ¡cuidado con la asimetría!
+
+| Distribución | ¿Simétrica? | P-valor bilateral | Función R |
+|:------------|:----------:|:-----------------|:---------|
+| **Normal** | ✓ Sí | `2 * pnorm(-abs(z))` | `pnorm()` |
+| **t-Student** | ✓ Sí | `2 * pt(-abs(t), df)` | `pt()` |
+| **$\chi^2$** | ✗ **No** | **No tiene sentido bilateral** (test de una cola) | `pchisq()` |
+| **F** | ✗ **No** | Usar cola adecuada según $F_{obs}$ | `pf()` |
+
+**Para $\chi^2$ y F (asimétricas), el test es inherentemente unilateral** porque solo nos preocupan valores grandes del estadístico (discrepancias grandes de $H_0$).
+
+```{r}
+# P-valor para χ² (siempre cola derecha)
+chi_obs <- 13.87; gl <- 6
+p_chi <- pchisq(chi_obs, gl, lower.tail=FALSE)
+cat("χ² =", chi_obs, "gl =", gl, "→ P =", round(p_chi, 4))
+
+# P-valor para F (cola derecha si F > 1)
+F_obs <- 3.5; gl1 <- 5; gl2 <- 20
+p_F <- pf(F_obs, gl1, gl2, lower.tail=FALSE)
+cat("\nF =", F_obs, "gl =", gl1, ",", gl2, "→ P =", round(p_F, 4))
+```
+
+::: {.callout-warning}
+**Para estudiantes:** t es simétrica → P-valor bilateral se calcula como $2 \times P(T > |t|)$. $\chi^2$ y F **no** son simétricas → el P-valor se calcula solo en la cola correspondiente. **Nunca** multipliques por 2 para $\chi^2$ o F.
 :::
 
-## Guía rápida: ¿qué distribución uso en fisioterapia?
+## Guía rápida: ¿qué distribución uso en fisioterapia?
 
 | Situación clínica | Distribución | Parámetros | Función R |
 |:------------------|:------------|:-----------|:---------|
@@ -1637,14 +1688,6 @@ Un estudio sobre recuperación funcional tras accidente cerebrovascular reporta
 
 ## Resumen — Tema 2
 
-::: {.callout-important}
-**3 ideas clave para tu práctica clínica:**
-
-1. **La probabilidad cuantifica la incertidumbre diagnóstica** — desde los axiomas de Kolmogorov hasta el Teorema de Bayes, todo en este tema te da el lenguaje para tomar decisiones bajo incertidumbre.
-2. **El Teorema de Bayes actualiza diagnósticos con nueva evidencia** — el razonamiento clínico es inherentemente bayesiano: cada prueba modifica tu probabilidad de enfermedad.
-3. **La distribución Normal (y los Z-scores) es tu herramienta central** — para comparar pacientes con la población, interpretar percentiles, y entender la base de toda la inferencia estadística que viene en T3–T6.
-:::
-
 ::: {.incremental}
 - **Probabilidad** como herramienta para cuantificar incertidumbre clínica (Kolmogorov, Bayes)
 - **Probabilidad condicionada** → Teorema de Bayes → VPP y VPN: herramientas clave para interpretar pruebas diagnósticas
@@ -1661,8 +1704,8 @@ Un estudio sobre recuperación funcional tras accidente cerebrovascular reporta
 ::: {.reference-box}
 **Referencias**
 
-- [@bioestatr2026] Femia, P. & Luque-Fernández, M. A. (2026). *BioEstatR: Biostatistics Routines in R*. R package v1.0.0. Universidad de Granada. <https://migariane.github.io/BioEstatR>
-- [@kolmogorov1933] Kolmogorov, A. N. (1933). *Grundbegriffe der Wahrscheinlichkeitsrechnung*. Springer.
-- [@luque2026] Luque-Fernández, M. A. (2026). *Matemáticas para la Estadística Médica con R*. Cap. 3: Fundamentos de Probabilidad. Universidad de Granada. <https://migariane.github.io/MatematicaEstadisticaMedicinaR>
-- [@luque2026] Luque-Fernández, M. A. (2026). *Matemáticas para la Estadística Médica con R*. Cap. 4: Variables Aleatorias y Distribuciones. Universidad de Granada.
+- [@Femia2026] Femia, P. & Luque-Fernández, M. A. (2026). *BioEstatR: Biostatistics Routines in R*. R package v1.0.0. Universidad de Granada. <https://migariane.github.io/BioEstatR>
+- [@Kolmogorov1933] Kolmogorov, A. N. (1933). *Grundbegriffe der Wahrscheinlichkeitsrechnung*. Springer.
+- [@LuqueFernandez2026a] Luque-Fernández, M. A. (2026). *Matemáticas para la Estadística Médica con R*. Cap. 3: Fundamentos de Probabilidad. Universidad de Granada. <https://migariane.github.io/MatematicaEstadisticaMedicinaR>
+- [@LuqueFernandez2026b] Luque-Fernández, M. A. (2026). *Matemáticas para la Estadística Médica con R*. Cap. 4: Variables Aleatorias y Distribuciones. Universidad de Granada.
 :::

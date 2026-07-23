@@ -50,7 +50,7 @@ Dpto. Estadística e Investigación Operativa · Universidad de Granada
 3. Deducir matemáticamente el tamaño muestral a partir de la precisión deseada
 4. Construir e interpretar intervalos de confianza para una media y una proporción
 5. Calcular el tamaño muestral necesario para una precisión deseada
-6. Conectar la estimación por IC con el contraste de hipótesis (test $t$)
+6. Conectar la estimación por IC con el contraste de hipotesis (test $t$)
 :::
 
 ## Recordemos: Población y muestra
@@ -535,7 +535,7 @@ cat("n =", n, "xbar =", round(xbar,2), "s =", round(s,2),
 
 ```{r}
 #| eval: false
-# BioEstatR: icm(x = x, nivel = 0.95)  # Requiere el paquete BioEstatR instalado
+# BioEstatR: icm(x = x, nivel = 0.95)
 ```
 
 ## IC para la media — ¿qué afecta a su anchura?

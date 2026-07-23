@@ -560,10 +560,10 @@ rho_vals <- c(0, 0.5, 0.85, -0.85)
 labels <- c("r ≈ 0 (nula)", "r ≈ 0.5 (moderada)",
             "r ≈ 0.85 (fuerte+)", "r ≈ −0.85 (fuerte−)")
 
-requireNamespace("MASS", quietly = TRUE)
+library(MASS)
 for(i in 1:4){
   Sigma <- matrix(c(1,rho_vals[i],rho_vals[i],1),2,2)
-  d <- MASS::mvrnorm(50, c(0,0), Sigma)
+  d <- mvrnorm(50, c(0,0), Sigma)
   plot(d[,1], d[,2], pch=19, col="steelblue",
        main=labels[i], xlab="x", ylab="y")
   if(abs(rho_vals[i])>0) abline(lm(d[,2]~d[,1]), col="darkgreen", lwd=2)
@@ -601,7 +601,7 @@ n <- 50
 Z <- rnorm(n, 10, 3)
 X <- 0.7*Z + rnorm(n, 0, 2)   # X depende de Z
 Y <- 0.8*Z + rnorm(n, 0, 2)   # Y depende de Z
-# X e Y NO tienen relación causal directa, pero están correlacionadas
+# X e Y NO tienen relación causal directa, pero están correladas
 par(mfrow=c(1,2), mar=c(4,4,3,1))
 plot(X, Y, pch=19, col="steelblue", main="X vs Y: r = significativo")
 abline(lm(Y~X), col="darkgreen", lwd=2)
@@ -612,7 +612,7 @@ legend("topleft", c("X~Z","Y~Z"), col=c("coral","steelblue"), pch=19, bty="n")
 par(mfrow=c(1,1))
 ```
 
-**Lección:** X e Y están correlacionadas ($r \approx 0.54$, $P < 0.001$), pero **no hay relación causal** entre ellas. Ambas dependen de Z. En investigación clínica, **siempre considerar confusores**.
+**Lección:** X e Y están correladas ($r \approx 0.54$, $P < 0.001$), pero **no hay relación causal** entre ellas. Ambas dependen de Z. En investigación clínica, **siempre considerar confusores**.
 
 ::: {.callout-tip}
 **Actividad en pareja (3 min):** Buscad juntos un artículo científico en fisioterapia que use correlación o regresión. Identificad: (a) ¿qué variables se correlacionan? (b) ¿afirman causalidad los autores o solo asociación? (c) ¿se menciona algún posible confusor? Compartid un ejemplo con la clase.
@@ -998,13 +998,13 @@ Cuando tenemos **más de dos variables**, la matriz de correlaciones resume toda
 
 ```{r}
 #| fig-height: 5
-# Mismos 12 pacientes del diagrama de dispersión original, con variables adicionales
+# Datos ampliados: a las variables originales (IMC, % graso) se añaden Edad, Fuerza prensil (kg) y EVA dolor (0-10)
 datos_clinicos <- data.frame(
-  IMC   = c(20.36, 20.34, 20.05, 23.07, 23.94, 27.45, 22.17, 24.37, 22.18, 17.30, 21.72, 19.29),
-  Graso = c(17.36, 12.72, 11.65, 17.81, 19.34, 29.70, 24.19, 15.26, 28.41, 8.87, 25.62, 20.91),
-  Edad  = c(15, 16, 15, 17, 18, 19, 17, 18, 16, 15, 16, 15),
-  Fuerza = c(28, 30, 25, 40, 38, 45, 35, 42, 31, 22, 32, 34),
-  EVA   = c(3, 1, 0, 3, 5, 8, 7, 5, 2, 4, 6, 6)
+  IMC   = c(20.36, 20.34, 20.05, 23.94, 22.17, 21.72, 19.29, 23.07, 27.45, 24.91, 22.69, 21.15),
+  Graso = c(17.36, 12.72, 11.65, 19.34, 24.19, 25.62, 20.91, 17.81, 29.70, 25.43, 18.62, 23.15),
+  Edad  = c(15, 16, 15, 18, 17, 16, 15, 17, 19, 18, 16, 17),
+  Fuerza = c(28, 30, 25, 38, 35, 32, 22, 40, 45, 42, 31, 34),
+  EVA   = c(3, 1, 0, 5, 7, 6, 4, 3, 8, 5, 2, 6)
 )
 ```
 
@@ -1034,7 +1034,6 @@ round(R, 3)
 
 ```{r}
 #| fig-height: 4.5
-if (!requireNamespace("corrplot", quietly = TRUE)) install.packages("corrplot")
 colores <- colorRampPalette(c("#2166ac", "white", "#b2182b"))(200)
 corrplot::corrplot(R, method = "color", type = "upper",
                    col = colores, addCoef.col = "black",
@@ -1227,7 +1226,7 @@ Un fisioterapeuta investiga la relación entre el IMC (kg/m²) y el porcentaje d
 - [@bioestatr2026] — Femia, P. & Luque-Fernández, M. A. (2026). *BioEstatR: Biostatistics Routines in R*. R package. Universidad de Granada.
 - [@luque2026] — Luque-Fernández, M. A. (2026). *Matemáticas para la Estadística Médica con R*. Universidad de Granada.
 - [@pearson1895] — Pearson, K. (1895). Note on regression and inheritance in the case of two parents. *Proc. R. Soc. Lond.*, 58, 240–242.
-- [@spearman1904] — Spearman, C. (1904). The proof and measurement of association between two things. *Am. J. Psychol.*, 15(1), 72–101.
+- [@spearman1904] — Spearman, C. (1904). The proof and measurement of association between two things. *Am. J. Psychol.*, 15(1), 72101.
 - [@anscombe1973] — Anscombe, F. J. (1973). Graphs in statistical analysis. *Am. Stat.*, 27(1), 17–21.
 - [@gauss1809] — Gauss, C. F. (1809). *Theoria motus corporum coelestium*. (Mínimos cuadrados).
 - [@legendre1805] — Legendre, A. M. (1805). *Nouvelles méthodes pour la détermination des orbites des comètes*.
