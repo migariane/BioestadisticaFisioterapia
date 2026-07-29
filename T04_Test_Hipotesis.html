@@ -337,6 +337,7 @@
 <ul>
 <li><a href="#/diagrama-de-decision-ejercicio-clinico-paso-a-paso" id="/toc-diagrama-de-decision-ejercicio-clinico-paso-a-paso">Diagrama de decisión — Ejercicio clínico paso a paso</a></li>
 <li><a href="#/referencias" id="/toc-referencias">Referencias</a></li>
+
 </ul></li>
 </ul>
 </nav>
@@ -393,14 +394,12 @@
 <li>“El IC 95% fue (−0.5, 8.2)” → ¿es clínicamente relevante?</li>
 </ul>
 </div></div>
-<p><strong>“Lo que la estadística nos dice no es si un efecto existe, sino cuán sorprendentes son los datos si asumimos que no existe.”</strong> — Ronald Fisher <span class="citation" data-cites="fisher1925">(<a href="#/referencias" role="doc-biblioref" onclick="">Fisher, 1925</a>)</span></p>
+<p><strong>“Lo que la estadística nos dice no es si un efecto existe, sino cuán sorprendentes son los datos si asumimos que no existe.”</strong> — Ronald Fisher <span class="citation" data-cites="fisher1925">(<a href="#/references" role="doc-biblioref" onclick="">Fisher, 1925</a>)</span></p>
 </section></section>
 <section>
 <section id="marco-conceptual" class="title-slide slide level1 center">
 <h1>Marco Conceptual</h1>
 
-<img data-src="logo.png" width="90" class="r-stretch"><p><strong>Grado en Fisioterapia</strong></p>
-<p>CC BY 4.0 — Miguel Angel Luque-Fernández</p>
 </section>
 <section id="mapa-conceptual-el-universo-de-los-tests-de-hipotesis" class="slide level2 center">
 <h2>Mapa conceptual — El universo de los tests de hipótesis</h2>
@@ -732,7 +731,7 @@
 <p><strong>Nota</strong></p>
 </div>
 <div class="callout-content">
-<p>Procedimiento de <strong>Inferencia Estadistica</strong> para tomar una <strong>decisión</strong> sobre un parámetro poblacional usando información <strong>muestral</strong>.</p>
+<p>Procedimiento de <strong>Inferencia Estadística</strong> para tomar una <strong>decisión</strong> sobre un parámetro poblacional usando información <strong>muestral</strong>.</p>
 </div>
 </div>
 </div>
@@ -1010,7 +1009,8 @@ Caso b (mu0=230): t = -2.248 P = 0.0461</code></pre>
 </table>
 <p><strong>P NO es</strong> la probabilidad de que <span class="math inline">\(H_0\)</span> sea cierta. <strong>P ES</strong> la probabilidad de los datos si <span class="math inline">\(H_0\)</span> fuera cierta.</p>
 </div></div>
-<p><em>Un P=0.051 y un P=0.049, ¿son realmente diferentes en su interpretación clínica?</em></p>
+<p><em>Un P=0.051 y un P=0.049, ¿son realmente diferentes en su interpretación clínica?</em></p>
+<p><strong>Cálculo del P-valor para el ejemplo de flexión de rodilla</strong> (<span class="math inline">\(H_0: \mu=130°\)</span>, <span class="math inline">\(n=6\)</span>):</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Mostrar código R</summary>
@@ -1137,12 +1137,12 @@ mean of x
 <details class="code-fold">
 <summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a aria-hidden="true" tabindex="-1"></a>x<span class="ot">&lt;-</span><span class="dv">48</span>; n<span class="ot">&lt;-</span><span class="dv">287</span>; p0<span class="ot">&lt;-</span><span class="fl">0.22</span></span>
-<span id="cb18-2"><a aria-hidden="true" tabindex="-1"></a>z<span class="ot">&lt;-</span>(x <span class="sc">-</span> n<span class="sc">*</span>p0 <span class="sc">-</span> <span class="fl">0.5</span>)<span class="sc">/</span><span class="fu">sqrt</span>(n<span class="sc">*</span>p0<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>p0))</span>
+<span id="cb18-2"><a aria-hidden="true" tabindex="-1"></a>z<span class="ot">&lt;-</span>(<span class="fu">abs</span>(x <span class="sc">-</span> n<span class="sc">*</span>p0) <span class="sc">-</span> <span class="fl">0.5</span>)<span class="sc">/</span><span class="fu">sqrt</span>(n<span class="sc">*</span>p0<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>p0))</span>
 <span id="cb18-3"><a aria-hidden="true" tabindex="-1"></a>P<span class="ot">&lt;-</span><span class="dv">2</span><span class="sc">*</span><span class="fu">pnorm</span>(<span class="sc">-</span><span class="fu">abs</span>(z))</span>
 <span id="cb18-4"><a aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"z ="</span>, <span class="fu">round</span>(z,<span class="dv">3</span>), <span class="st">"P ="</span>, <span class="fu">round</span>(P,<span class="dv">4</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>z = -2.229 P = 0.0258</code></pre>
+<pre><code>z = 2.086 P = 0.037</code></pre>
 </div>
 </div>
 <p><strong>Conclusión:</strong> La prevalencia ha cambiado significativamente. IC 95% Wilson: (12.7%, 21.7%). El 22% de 2012 no esta en el IC → confirmación visual.</p>
@@ -1344,7 +1344,7 @@ Diferencia significativa: A &gt; B (P = 0.016)</code></pre>
 <p><strong>Nota</strong></p>
 </div>
 <div class="callout-content">
-<p><strong>Apareamiento:</strong> cada sujeto se mide <strong>dos veces</strong> (o dos sujetos se emparejan por caracteristicas). Las observaciones <strong>no son independientes</strong>: pertenecen al mismo individuo o par.</p>
+<p><strong>Apareamiento:</strong> cada sujeto se mide <strong>dos veces</strong> (o dos sujetos se emparejan por características). Las observaciones <strong>no son independientes</strong>: pertenecen al mismo individuo o par.</p>
 </div>
 </div>
 </div>
@@ -1463,13 +1463,13 @@ mean difference
 <details class="code-fold">
 <summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a aria-hidden="true" tabindex="-1"></a>n12<span class="ot">&lt;-</span><span class="dv">15</span>; n21<span class="ot">&lt;-</span><span class="dv">31</span></span>
-<span id="cb38-2"><a aria-hidden="true" tabindex="-1"></a>chi2<span class="ot">&lt;-</span>(<span class="fu">abs</span>(n12<span class="sc">-</span>n21)<span class="sc">-</span><span class="fl">0.5</span>)<span class="sc">^</span><span class="dv">2</span><span class="sc">/</span>(n12<span class="sc">+</span>n21)</span>
+<span id="cb38-2"><a aria-hidden="true" tabindex="-1"></a>chi2<span class="ot">&lt;-</span>(<span class="fu">abs</span>(n12<span class="sc">-</span>n21)<span class="sc">-</span><span class="dv">1</span>)<span class="sc">^</span><span class="dv">2</span><span class="sc">/</span>(n12<span class="sc">+</span>n21)</span>
 <span id="cb38-3"><a aria-hidden="true" tabindex="-1"></a>P<span class="ot">&lt;-</span><span class="fu">pchisq</span>(chi2,<span class="dv">1</span>,<span class="at">lower.tail=</span><span class="cn">FALSE</span>)</span>
 <span id="cb38-4"><a aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"chi2 ="</span>, <span class="fu">round</span>(chi2,<span class="dv">3</span>), <span class="st">"P ="</span>, <span class="fu">round</span>(P,<span class="dv">4</span>),</span>
 <span id="cb38-5"><a aria-hidden="true" tabindex="-1"></a>    <span class="st">"</span><span class="sc">\n</span><span class="st">Terapia B significativamente superior (P = 0.027)"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>chi2 = 5.223 P = 0.0223 
+<pre><code>chi2 = 4.891 P = 0.027 
 Terapia B significativamente superior (P = 0.027)</code></pre>
 </div>
 </div>
@@ -2182,7 +2182,7 @@ alternative hypothesis: true location shift is not equal to 0</code></pre>
 <span id="cb63-2"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Datos del ejemplo de terapias (n=166)</span></span>
 <span id="cb63-3"><a aria-hidden="true" tabindex="-1"></a><span class="fu">testmcnemar</span>(<span class="at">n =</span> <span class="fu">c</span>(<span class="dv">38</span>, <span class="dv">15</span>, <span class="dv">31</span>, <span class="dv">82</span>))</span>
 <span id="cb63-4"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb63-5"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Salida tipica:</span></span>
+<span id="cb63-5"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Salida típica:</span></span>
 <span id="cb63-6"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Test de McNemar para proporciones apareadas</span></span>
 <span id="cb63-7"><a aria-hidden="true" tabindex="-1"></a><span class="co"># χ² = 4.89, gl = 1, P = 0.027</span></span>
 <span id="cb63-8"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Diferencia: -9.5% (IC 95%: -17.4% a -1.7%)</span></span>
@@ -2418,7 +2418,7 @@ Omega² = 0.103 → 10.3 % varianza explicada</code></pre>
 <p><strong>Tip</strong></p>
 </div>
 <div class="callout-content">
-<p><strong>Para el estudiante:</strong> El P-valor dice si hay diferencia, pero <strong>no cuán grande es</strong>. El tamaño del efecto (d de Cohen) complementa al P-valor. Siempre reporta ambos <span class="citation" data-cites="cohen1988">(<a href="#/referencias" role="doc-biblioref" onclick="">Cohen, 1988</a>)</span>.</p>
+<p><strong>Para el estudiante:</strong> El P-valor dice si hay diferencia, pero <strong>no cuán grande es</strong>. El tamaño del efecto (d de Cohen) complementa al P-valor. Siempre reporta ambos <span class="citation" data-cites="cohen1988">(<a href="#/references" role="doc-biblioref" onclick="">Cohen, 1988</a>)</span>.</p>
 </div>
 </div>
 </div>
@@ -2679,10 +2679,10 @@ Omega² = 0.103 → 10.3 % varianza explicada</code></pre>
 </tr>
 </tbody>
 </table>
-<p><strong>Regla de oro para tu TFG/TFM:</strong> Reporta siempre los 4 elementos: (1) P-valor exacto, (2) IC 95% del efecto, (3) tamaño del efecto (d de Cohen), (4) tu juicio sobre la <strong>relevancia clínica</strong> de la diferencia observada <span class="citation" data-cites="greenland2016">(<a href="#/referencias" role="doc-biblioref" onclick="">Greenland et&nbsp;al., 2016</a>)</span>.</p>
+<p><strong>Regla de oro para tu TFG/TFM:</strong> Reporta siempre los 4 elementos: (1) P-valor exacto, (2) IC 95% del efecto, (3) tamaño del efecto (d de Cohen), (4) tu juicio sobre la <strong>relevancia clínica</strong> de la diferencia observada <span class="citation" data-cites="greenland2016">(<a href="#/references" role="doc-biblioref" onclick="">Greenland et&nbsp;al., 2016</a>)</span>.</p>
 </section>
 <section id="declaracion-asa-sobre-p-valores-wasserstein2016" class="slide level2 center">
-<h2>Declaración asa sobre p-valores <span class="citation" data-cites="wasserstein2016">(<a href="#/referencias" role="doc-biblioref" onclick="">Wasserstein &amp; Lazar, 2016</a>)</span></h2>
+<h2>Declaración asa sobre p-valores <span class="citation" data-cites="wasserstein2016">(<a href="#/references" role="doc-biblioref" onclick="">Wasserstein &amp; Lazar, 2016</a>)</span></h2>
 <div class="callout callout-warning callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -2704,7 +2704,6 @@ Omega² = 0.103 → 10.3 % varianza explicada</code></pre>
 <li><strong>El P-valor NO mide</strong> el tamaño del efecto ni la importancia clínica del resultado</li>
 <li><strong>Por sí solo, el P-valor no es una buena medida</strong> de la evidencia sobre un modelo</li>
 </ol>
-<p><strong>Buena práctica en fisioterapia:</strong> Reportar <strong>siempre</strong>: (1) P-valor exacto, (2) IC 95% para el efecto, (3) tamaño del efecto (d de Cohen), y (4) juicio sobre la <strong>relevancia clínica</strong> de la diferencia observada <span class="citation" data-cites="greenland2016">(<a href="#/referencias" role="doc-biblioref" onclick="">Greenland et&nbsp;al., 2016</a>)</span>.</p>
 </section>
 <section class="slide level2 center">
 
@@ -2826,24 +2825,30 @@ Omega² = 0.103 → 10.3 % varianza explicada</code></pre>
 </div>
 </div>
 </section>
-<section id="referencias" class="slide level2 smaller scrollable">
+<section id="referencias" class="slide level2 center">
 <h2>Referencias</h2>
 <div class="reference-box">
 <ul>
-<li><span class="citation" data-cites="bioestatr2026">(<a href="#/referencias" role="doc-biblioref" onclick="">Femia &amp; Luque-Fernández, 2026</a>)</span> — Femia, P. &amp; Luque-Fernández, M. A. (2026). <em>BioEstatR: Biostatistics Routines in R</em>. R package. Universidad de Granada.</li>
-<li><span class="citation" data-cites="luque2026">(<a href="#/referencias" role="doc-biblioref" onclick="">Luque-Fernández, 2026</a>)</span> — Luque-Fernández, M. A. (2026). <em>Matemáticas para la Estadística Médica con R</em>. Universidad de Granada.</li>
-<li><span class="citation" data-cites="student1908">(<a href="#/referencias" role="doc-biblioref" onclick="">Student (Gosset, 1908</a>)</span> — Student (Gosset, W. S.) (1908). The probable error of a mean. <em>Biometrika</em>, 6(1), 1–25.</li>
-<li><span class="citation" data-cites="neyman1933">(<a href="#/referencias" role="doc-biblioref" onclick="">Neyman &amp; Pearson, 1933</a>)</span> — Neyman, J. &amp; Pearson, E. S. (1933). On the problem of the most efficient tests. <em>Phil. Trans. R. Soc. A</em>, 231, 289–337.</li>
-<li><span class="citation" data-cites="fisher1925">(<a href="#/referencias" role="doc-biblioref" onclick="">Fisher, 1925</a>)</span> — Fisher, R. A. (1925). <em>Statistical Methods for Research Workers</em>. Oliver &amp; Boyd.</li>
-<li><span class="citation" data-cites="fisher1935">(<a href="#/referencias" role="doc-biblioref" onclick="">Fisher, 1935</a>)</span> — Fisher, R. A. (1935). <em>The Design of Experiments</em>. Oliver &amp; Boyd.</li>
-<li><span class="citation" data-cites="welch1947">(<a href="#/referencias" role="doc-biblioref" onclick="">Welch, 1947</a>)</span> — Welch, B. L. (1947). The generalization of Student’s problem. <em>Biometrika</em>, 34(1/2), 28–35.</li>
-<li><span class="citation" data-cites="wilcoxon1945">(<a href="#/referencias" role="doc-biblioref" onclick="">Wilcoxon, 1945</a>)</span> — Wilcoxon, F. (1945). Individual comparisons by ranking methods. <em>Biometrics Bulletin</em>, 1(6), 80–83.</li>
-<li><span class="citation" data-cites="mann1947">(<a href="#/referencias" role="doc-biblioref" onclick="">Mann &amp; Whitney, 1947</a>)</span> — Mann, H. B. &amp; Whitney, D. R. (1947). On a test of whether one of two random variables is stochastically larger. <em>Ann. Math. Stat.</em>, 18(1), 50–60.</li>
-<li><span class="citation" data-cites="wilks1938">(<a href="#/referencias" role="doc-biblioref" onclick="">Wilks, 1938</a>)</span> — Wilks, S. S. (1938). The large-sample distribution of the likelihood ratio. <em>Ann. Math. Stat.</em>, 9(1), 60–62.</li>
-<li><span class="citation" data-cites="cohen1988">(<a href="#/referencias" role="doc-biblioref" onclick="">Cohen, 1988</a>)</span> — Cohen, J. (1988). <em>Statistical Power Analysis for the Behavioral Sciences</em>. Lawrence Erlbaum.</li>
-<li><span class="citation" data-cites="wasserstein2016">(<a href="#/referencias" role="doc-biblioref" onclick="">Wasserstein &amp; Lazar, 2016</a>)</span> — Wasserstein, R. L. &amp; Lazar, N. A. (2016). The ASA’s statement on p-values. <em>The American Statistician</em>, 70(2), 129–133.</li>
-<li><span class="citation" data-cites="greenland2016">(<a href="#/referencias" role="doc-biblioref" onclick="">Greenland et&nbsp;al., 2016</a>)</span> — Greenland, S. et al.&nbsp;(2016). Statistical tests, P values, confidence intervals, and power. <em>Eur. J. Epidemiol.</em>, 31(4), 337–350.</li>
+<li><span class="citation" data-cites="bioestatr2026">(<a href="#/references" role="doc-biblioref" onclick="">Femia &amp; Luque-Fernández, 2026</a>)</span> — Femia, P. &amp; Luque-Fernández, M. A. (2026). <em>BioEstatR: Biostatistics Routines in R</em>. R package. Universidad de Granada.</li>
+<li><span class="citation" data-cites="luque2026">(<a href="#/references" role="doc-biblioref" onclick="">Luque-Fernández, 2026</a>)</span> — Luque-Fernández, M. A. (2026). <em>Matemáticas para la Estadística Médica con R</em>. Universidad de Granada.</li>
+<li><span class="citation" data-cites="student1908">(<a href="#/references" role="doc-biblioref" onclick="">Student (Gosset, 1908</a>)</span> — Student (Gosset, W. S.) (1908). The probable error of a mean. <em>Biometrika</em>, 6(1), 1–25.</li>
+<li><span class="citation" data-cites="neyman1933">(<a href="#/references" role="doc-biblioref" onclick="">Neyman &amp; Pearson, 1933</a>)</span> — Neyman, J. &amp; Pearson, E. S. (1933). On the problem of the most efficient tests. <em>Phil. Trans. R. Soc. A</em>, 231, 289–337.</li>
+<li><span class="citation" data-cites="fisher1925">(<a href="#/references" role="doc-biblioref" onclick="">Fisher, 1925</a>)</span> — Fisher, R. A. (1925). <em>Statistical Methods for Research Workers</em>. Oliver &amp; Boyd.</li>
+<li><span class="citation" data-cites="fisher1935">(<a href="#/references" role="doc-biblioref" onclick="">Fisher, 1935</a>)</span> — Fisher, R. A. (1935). <em>The Design of Experiments</em>. Oliver &amp; Boyd.</li>
+<li><span class="citation" data-cites="welch1947">(<a href="#/references" role="doc-biblioref" onclick="">Welch, 1947</a>)</span> — Welch, B. L. (1947). The generalization of Student’s problem. <em>Biometrika</em>, 34(1/2), 28–35.</li>
+<li><span class="citation" data-cites="wilcoxon1945">(<a href="#/references" role="doc-biblioref" onclick="">Wilcoxon, 1945</a>)</span> — Wilcoxon, F. (1945). Individual comparisons by ranking methods. <em>Biometrics Bulletin</em>, 1(6), 80–83.</li>
+<li><span class="citation" data-cites="mann1947">(<a href="#/references" role="doc-biblioref" onclick="">Mann &amp; Whitney, 1947</a>)</span> — Mann, H. B. &amp; Whitney, D. R. (1947). On a test of whether one of two random variables is stochastically larger. <em>Ann. Math. Stat.</em>, 18(1), 50–60.</li>
+<li><span class="citation" data-cites="wilks1938">(<a href="#/references" role="doc-biblioref" onclick="">Wilks, 1938</a>)</span> — Wilks, S. S. (1938). The large-sample distribution of the likelihood ratio. <em>Ann. Math. Stat.</em>, 9(1), 60–62.</li>
+<li><span class="citation" data-cites="cohen1988">(<a href="#/references" role="doc-biblioref" onclick="">Cohen, 1988</a>)</span> — Cohen, J. (1988). <em>Statistical Power Analysis for the Behavioral Sciences</em>. Lawrence Erlbaum.</li>
+<li><span class="citation" data-cites="wasserstein2016">(<a href="#/references" role="doc-biblioref" onclick="">Wasserstein &amp; Lazar, 2016</a>)</span> — Wasserstein, R. L. &amp; Lazar, N. A. (2016). The ASA’s statement on p-values. <em>The American Statistician</em>, 70(2), 129–133.</li>
+<li><span class="citation" data-cites="greenland2016">(<a href="#/references" role="doc-biblioref" onclick="">Greenland et&nbsp;al., 2016</a>)</span> — Greenland, S. et al.&nbsp;(2016). Statistical tests, P values, confidence intervals, and power. <em>Eur. J. Epidemiol.</em>, 31(4), 337–350.</li>
 </ul>
+</div>
+</section>
+<section class="slide level2 smaller scrollable" id="references">
+
+<div class="connection">
+<p><strong>Conexión T04→T05:</strong> Has aprendido a contrastar hipótesis sobre medias y proporciones. En el Tema 5 ampliarás este marco a tablas de contingencia: ¿hay asociación entre dos variables cualitativas?</p>
 </div>
 
 

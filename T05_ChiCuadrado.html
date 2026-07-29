@@ -315,8 +315,8 @@
 <li><a href="#/test-exacto-de-fisher-alternativa-para-muestras-pequeñas" id="/toc-test-exacto-de-fisher-alternativa-para-muestras-pequeñas">Test exacto de Fisher — Alternativa para muestras pequeñas</a></li>
 <li><a href="#/qué-hay-detrás-del-test-exacto-de-fisher" id="/toc-qué-hay-detrás-del-test-exacto-de-fisher">¿Qué Hay Detrás del Test Exacto de Fisher?</a></li>
 <li><a href="#/nnt-número-necesario-a-tratar" id="/toc-nnt-número-necesario-a-tratar">Nnt — Número necesario a tratar</a></li>
-<li><a href="#/confusión-confounding-y-paradoja-de-simpson" id="/toc-confusión-confounding-y-paradoja-de-simpson">Confusión (Confounding) y paradoja de simpson</a></li>
-<li><a href="#/paradoja-de-simpson-ejemplo-visual-en-fisioterapia" id="/toc-paradoja-de-simpson-ejemplo-visual-en-fisioterapia">Paradoja de simpson — Ejemplo visual en fisioterapia</a></li>
+<li><a href="#/confusión-confounding-y-paradoja-de-simpson" id="/toc-confusión-confounding-y-paradoja-de-simpson">Confusión (Confounding) y paradoja de Simpson</a></li>
+<li><a href="#/paradoja-de-simpson-ejemplo-visual-en-fisioterapia" id="/toc-paradoja-de-simpson-ejemplo-visual-en-fisioterapia">Paradoja de Simpson — Ejemplo visual en fisioterapia</a></li>
 
 </ul></li>
 <li><a href="#/resumen" id="/toc-resumen">Resumen</a>
@@ -326,7 +326,6 @@
 <li><a href="#/puente-al-tema-6-de-la-asociación-a-la-predicción" id="/toc-puente-al-tema-6-de-la-asociación-a-la-predicción">Puente al tema 6 — De la asociación a la predicción</a></li>
 <li><a href="#/ejercicio-clínico-análisis-de-tablas-22" id="/toc-ejercicio-clínico-análisis-de-tablas-22">Ejercicio clínico — Análisis de tablas 2×2</a></li>
 <li><a href="#/referencias" id="/toc-referencias">Referencias</a></li>
-
 <li><a href="#/ejercicio-clínico-tema-v" id="/toc-ejercicio-clínico-tema-v">Ejercicio Clínico — Tema V</a></li>
 
 </ul></li>
@@ -885,7 +884,7 @@
 <tr class="even">
 <td style="text-align: center;">2</td>
 <td style="text-align: center;">7.93</td>
-<td style="text-align: center;">25.28</td>
+<td style="text-align: center;">25.29</td>
 <td style="text-align: center;">86.79</td>
 </tr>
 <tr class="odd">
@@ -897,7 +896,7 @@
 <tr class="even">
 <td style="text-align: center;">4</td>
 <td style="text-align: center;">10.57</td>
-<td style="text-align: center;">33.72</td>
+<td style="text-align: center;">33.71</td>
 <td style="text-align: center;">115.71</td>
 </tr>
 </tbody>
@@ -924,7 +923,7 @@
 <details class="code-fold">
 <summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a>O <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">7</span>,<span class="dv">28</span>,<span class="dv">115</span>, <span class="dv">15</span>,<span class="dv">20</span>,<span class="dv">85</span>, <span class="dv">10</span>,<span class="dv">30</span>,<span class="dv">90</span>, <span class="dv">5</span>,<span class="dv">40</span>,<span class="dv">115</span>), <span class="at">nrow=</span><span class="dv">4</span>, <span class="at">byrow=</span><span class="cn">TRUE</span>)</span>
-<span id="cb3-2"><a aria-hidden="true" tabindex="-1"></a>E <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="fl">9.91</span>,<span class="fl">31.61</span>,<span class="fl">108.48</span>, <span class="fl">7.93</span>,<span class="fl">25.28</span>,<span class="fl">86.79</span>, <span class="fl">8.59</span>,<span class="fl">27.39</span>,<span class="fl">94.02</span>, <span class="fl">10.57</span>,<span class="fl">33.72</span>,<span class="fl">115.71</span>), <span class="at">nrow=</span><span class="dv">4</span>, <span class="at">byrow=</span><span class="cn">TRUE</span>)</span>
+<span id="cb3-2"><a aria-hidden="true" tabindex="-1"></a>E <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="fl">9.91</span>,<span class="fl">31.61</span>,<span class="fl">108.48</span>, <span class="fl">7.93</span>,<span class="fl">25.29</span>,<span class="fl">86.79</span>, <span class="fl">8.59</span>,<span class="fl">27.39</span>,<span class="fl">94.02</span>, <span class="fl">10.57</span>,<span class="fl">33.71</span>,<span class="fl">115.71</span>), <span class="at">nrow=</span><span class="dv">4</span>, <span class="at">byrow=</span><span class="cn">TRUE</span>)</span>
 <span id="cb3-3"><a aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-4"><a aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>), <span class="at">mar=</span><span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">4</span>,<span class="dv">3</span>,<span class="dv">1</span>))</span>
 <span id="cb3-5"><a aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>){</span>
@@ -993,11 +992,11 @@
 <span id="cb7-4"><a aria-hidden="true" tabindex="-1"></a>p_val <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="dv">1</span> <span class="sc">-</span> <span class="fu">pchisq</span>(chi_exp, gl), <span class="dv">4</span>)</span>
 <span id="cb7-5"><a aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-6"><a aria-hidden="true" tabindex="-1"></a><span class="fu">curve</span>(<span class="fu">dchisq</span>(x, gl), <span class="dv">0</span>, <span class="dv">22</span>, <span class="at">lwd =</span> <span class="dv">3</span>, <span class="at">col =</span> <span class="st">"steelblue"</span>,</span>
-<span id="cb7-7"><a aria-hidden="true" tabindex="-1"></a>      <span class="at">main =</span> <span class="st">"Distribucion Chi-cuadrado con gl = 6"</span>,</span>
+<span id="cb7-7"><a aria-hidden="true" tabindex="-1"></a>      <span class="at">main =</span> <span class="st">"Distribución Chi-cuadrado con gl = 6"</span>,</span>
 <span id="cb7-8"><a aria-hidden="true" tabindex="-1"></a>      <span class="at">xlab =</span> <span class="st">"Chi-cuadrado"</span>, <span class="at">ylab =</span> <span class="st">"Densidad"</span>)</span>
 <span id="cb7-9"><a aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v =</span> chi_crit, <span class="at">col =</span> <span class="st">"darkgreen"</span>, <span class="at">lwd =</span> <span class="fl">2.5</span>, <span class="at">lty =</span> <span class="dv">2</span>)</span>
 <span id="cb7-10"><a aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v =</span> chi_exp, <span class="at">col =</span> <span class="st">"coral"</span>, <span class="at">lwd =</span> <span class="dv">3</span>)</span>
-<span id="cb7-11"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Region de rechazo</span></span>
+<span id="cb7-11"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Región de rechazo</span></span>
 <span id="cb7-12"><a aria-hidden="true" tabindex="-1"></a>xr <span class="ot">&lt;-</span> <span class="fu">seq</span>(chi_crit, <span class="dv">22</span>, <span class="fl">0.01</span>)</span>
 <span id="cb7-13"><a aria-hidden="true" tabindex="-1"></a>yr <span class="ot">&lt;-</span> <span class="fu">dchisq</span>(xr, gl)</span>
 <span id="cb7-14"><a aria-hidden="true" tabindex="-1"></a><span class="fu">polygon</span>(<span class="fu">c</span>(xr, <span class="fu">rev</span>(xr)), <span class="fu">c</span>(yr, <span class="fu">rep</span>(<span class="dv">0</span>, <span class="fu">length</span>(yr))),</span>
@@ -1007,7 +1006,7 @@
 <span id="cb7-18"><a aria-hidden="true" tabindex="-1"></a>     <span class="st">"Chi-crit = 12.59"</span>, <span class="at">col =</span> <span class="st">"darkgreen"</span>, <span class="at">font =</span> <span class="dv">2</span>)</span>
 <span id="cb7-19"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(chi_exp, <span class="fu">dchisq</span>(chi_exp, gl) <span class="sc">+</span> <span class="fl">0.015</span>,</span>
 <span id="cb7-20"><a aria-hidden="true" tabindex="-1"></a>     <span class="fu">paste0</span>(<span class="st">"Chi2 = "</span>, chi_exp, <span class="st">"</span><span class="sc">\n</span><span class="st">P = "</span>, p_val), <span class="at">col =</span> <span class="st">"coral"</span>, <span class="at">font =</span> <span class="dv">2</span>)</span>
-<span id="cb7-21"><a aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"topright"</span>, <span class="fu">c</span>(<span class="st">"Region de rechazo (alfa = 0.05)"</span>, <span class="st">"Valor critico"</span>, <span class="st">"Chi2 observado"</span>),</span>
+<span id="cb7-21"><a aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"topright"</span>, <span class="fu">c</span>(<span class="st">"Región de rechazo (alfa = 0.05)"</span>, <span class="st">"Valor crítico"</span>, <span class="st">"Chi2 observado"</span>),</span>
 <span id="cb7-22"><a aria-hidden="true" tabindex="-1"></a>       <span class="at">fill =</span> <span class="fu">c</span>(<span class="fu">rgb</span>(<span class="fl">0.9</span>, <span class="fl">0.3</span>, <span class="fl">0.2</span>, <span class="fl">0.3</span>), <span class="cn">NA</span>, <span class="cn">NA</span>),</span>
 <span id="cb7-23"><a aria-hidden="true" tabindex="-1"></a>       <span class="at">border =</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="st">"darkgreen"</span>, <span class="st">"coral"</span>),</span>
 <span id="cb7-24"><a aria-hidden="true" tabindex="-1"></a>       <span class="at">lty =</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="dv">2</span>, <span class="dv">1</span>), <span class="at">lwd =</span> <span class="fu">c</span>(<span class="cn">NA</span>, <span class="fl">2.5</span>, <span class="dv">3</span>),</span>
@@ -1113,7 +1112,7 @@
 <p><strong>Tip</strong></p>
 </div>
 <div class="callout-content">
-<p><strong>Pregunta para reflexionar:</strong> ¿Qué tratamiento recomendarías descartar basándote solo en estos porcentajes? ¿Es suficiente esta evidencia para tomar una decisión clinica?</p>
+<p><strong>Pregunta para reflexionar:</strong> ¿Qué tratamiento recomendarías descartar basándote solo en estos porcentajes? ¿Es suficiente esta evidencia para tomar una decisión clínica?</p>
 </div>
 </div>
 </div>
@@ -1690,12 +1689,12 @@ Odds Ratio      O = 3.769</code></pre>
 <details class="code-fold">
 <summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a aria-hidden="true" tabindex="-1"></a>n12<span class="ot">&lt;-</span><span class="dv">15</span>; n21<span class="ot">&lt;-</span><span class="dv">31</span></span>
-<span id="cb21-2"><a aria-hidden="true" tabindex="-1"></a>z_exp <span class="ot">&lt;-</span> (<span class="fu">abs</span>(n12<span class="sc">-</span>n21)<span class="sc">-</span><span class="fl">0.5</span>)<span class="sc">/</span><span class="fu">sqrt</span>(n12<span class="sc">+</span>n21)</span>
+<span id="cb21-2"><a aria-hidden="true" tabindex="-1"></a>z_exp <span class="ot">&lt;-</span> (<span class="fu">abs</span>(n12<span class="sc">-</span>n21)<span class="sc">-</span><span class="dv">1</span>)<span class="sc">/</span><span class="fu">sqrt</span>(n12<span class="sc">+</span>n21)</span>
 <span id="cb21-3"><a aria-hidden="true" tabindex="-1"></a>P <span class="ot">&lt;-</span> <span class="dv">2</span><span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span><span class="fu">pnorm</span>(z_exp))</span>
 <span id="cb21-4"><a aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"zexp ="</span>, <span class="fu">round</span>(z_exp,<span class="dv">3</span>), <span class="st">"| P ="</span>, <span class="fu">round</span>(P,<span class="dv">4</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>zexp = 2.285 | P = 0.0223</code></pre>
+<pre><code>zexp = 2.212 | P = 0.027</code></pre>
 </div>
 </div>
 </section>
@@ -2231,7 +2230,7 @@ NNT = 4.2
 </div>
 </section>
 <section id="confusión-confounding-y-paradoja-de-simpson" class="slide level2 center">
-<h2>Confusión (Confounding) y paradoja de simpson</h2>
+<h2>Confusión (Confounding) y paradoja de Simpson</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="callout callout-note callout-titled callout-style-default">
@@ -2267,7 +2266,7 @@ NNT = 4.2
 <p><strong>Control del confounding:</strong> - <strong>En el diseño:</strong> aleatorización (elimina confusión conocida y desconocida), restricción, emparejamiento - <strong>En el análisis:</strong> estratificación (Mantel-Haenszel), ajuste por regresión</p>
 </section>
 <section id="paradoja-de-simpson-ejemplo-visual-en-fisioterapia" class="slide level2 center">
-<h2>Paradoja de simpson — Ejemplo visual en fisioterapia</h2>
+<h2>Paradoja de Simpson — Ejemplo visual en fisioterapia</h2>
 <p><strong>Contexto:</strong> Dos fisioterapeutas (A y B) tratan pacientes con lumbalgia. Comparan sus tasas de éxito.</p>
 <div class="cell">
 <details class="code-fold">
@@ -2515,9 +2514,6 @@ La odds de bajo peso es 3.77 veces mayor en madres fumadoras.</code></pre>
 </ul>
 </div>
 </section>
-<section class="slide level2 center">
-
-</section>
 <section id="ejercicio-clínico-tema-v" class="slide level2 center">
 <h2>Ejercicio Clínico — Tema V</h2>
 <p><strong>Contexto:</strong> Asociación tipo fisioterapia × mejoría (n=100). Manual: 35/50 mejoran. Ejercicio: 25/50.</p>
@@ -2545,7 +2541,7 @@ La odds de bajo peso es 3.77 veces mayor en madres fumadoras.</code></pre>
 <details class="code-fold">
 <summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a aria-hidden="true" tabindex="-1"></a>tabla <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(<span class="dv">35</span>, <span class="dv">25</span>, <span class="dv">15</span>, <span class="dv">25</span>), <span class="at">nrow=</span><span class="dv">2</span>,</span>
-<span id="cb35-2"><a aria-hidden="true" tabindex="-1"></a>                <span class="at">dimnames=</span><span class="fu">list</span>(<span class="fu">c</span>(<span class="st">"Manual"</span>,<span class="st">"Ejercicio"</span>), <span class="fu">c</span>(<span class="st">"Mejoria"</span>,<span class="st">"No mejoria"</span>)))</span>
+<span id="cb35-2"><a aria-hidden="true" tabindex="-1"></a>                <span class="at">dimnames=</span><span class="fu">list</span>(<span class="fu">c</span>(<span class="st">"Manual"</span>,<span class="st">"Ejercicio"</span>), <span class="fu">c</span>(<span class="st">"Mejoría"</span>,<span class="st">"No mejoria"</span>)))</span>
 <span id="cb35-3"><a aria-hidden="true" tabindex="-1"></a>chi <span class="ot">&lt;-</span> <span class="fu">chisq.test</span>(tabla, <span class="at">correct=</span><span class="cn">FALSE</span>)</span>
 <span id="cb35-4"><a aria-hidden="true" tabindex="-1"></a>OR <span class="ot">&lt;-</span> <span class="dv">35</span><span class="sc">*</span><span class="dv">25</span><span class="sc">/</span>(<span class="dv">15</span><span class="sc">*</span><span class="dv">25</span>)</span>
 <span id="cb35-5"><a aria-hidden="true" tabindex="-1"></a></span>
