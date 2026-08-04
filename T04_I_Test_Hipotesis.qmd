@@ -568,7 +568,7 @@ par(mfrow=c(1,1))
 
 ```
 
-**Salida:** $t=-0.43$, gl=5, $P=0.683$ → No significativo. IC 95%: (126.4°, 132.9°).
+**Salida:** $t=-0.43$, gl=5, $P=0.683$ → No significativo. IC 95%: (125.4°, 133.3°).
 
 ## Test para una proporción — Ejemplo detallado
 
@@ -591,7 +591,7 @@ cat("z =", round(z,3), "P =", round(P,4))
 
 **Conclusión:** La prevalencia ha cambiado significativamente. IC 95% Wilson: (12.7%, 21.7%). El 22% de 2012 no esta en el IC → confirmación visual.
 
-**Si los datos hubieran sido x=33, n=200:** $z=-1.79$, $0.07 < P < 0.08$ → NO significativo (indicios).
+**Si los datos hubieran sido x=34, n=200:** $z=-1.79$, $0.07 < P < 0.08$ → NO significativo (indicios).
 
 ## Test para una proporción
 
@@ -615,20 +615,18 @@ cat("z =", round(z,3), "P =", round(2*pnorm(-abs(z)),4),
 **Ejemplo: `testt(m = 129.33, s = 3.78, n = 6, m0 = 130)`**
 
 ```
-Test t para una muestra
-H0: mu = 130
-t = -0.432, gl = 5, P = 0.683
-IC 95% para mu: [126.4, 132.9]
-Estimación del efecto bruto: mu - 130 = -0.67
-IC 95% para el efecto: [-4.64, 3.31]
-Test de Shapiro-Wilk: W = 0.956, P = 0.789
+t-Test con una muestra
+n = 6.000, media = 129.330, d.t. = 3.780, sem = 1.543
+95%-IC(μ) = (125.363, 133.297)
+texp = 0.434, gl = 5
+p = 0.682 (bilateral H1: μ ≠ μ0) / 0.341 (unilateral H1: μ < μ0)
+95%-IC(μ-μ0) = (-4.637, 3.297)
 ```
 
 **Cómo leer la salida:**
-- **t y P:** estadístico y P-valor → P = 0.683 > 0.05 → NO rechazar H0
-- **IC 95%:** [126.4, 132.9] contiene 130 → compatible con H0
-- **Efecto bruto:** diferencia estimada = -0.67° (clínicamente irrelevante)
-- **Shapiro-Wilk:** P = 0.789 → normalidad OK
+- **t y P:** texp = 0.434, P = 0.682 > 0.05 → NO rechazar H0
+- **IC 95%:** (125.4, 133.3) contiene 130 → compatible con H0
+- **Efecto bruto:** IC 95% (−4.64, 3.30) incluye 0 → no significativo
 
 ::: {.callout-tip}
 **Para el estudiante:** `testt()` integra test + IC + normalidad en una salida. Si P > 0.05 y el IC contiene a μ₀ → no hay evidencia para rechazar H0.
@@ -656,7 +654,7 @@ testt(x = 47, n = 50, p0 = 0.95)
 **Contexto:** Flexión rodilla en 6 pacientes: 125°, 132°, 128°, 135°, 130°, 126°. Referencia: 130°.
 
 1. Formula $H_0$ y $H_1$
-2. Interpreta: $t=-0.43$, $gl=5$, $P=0.683$, IC 95% [126.4°, 132.9°]
+2. Interpreta: $t=-0.43$, $gl=5$, $P=0.683$, IC 95% [125.4°, 133.3°]
 3. ¿Conclusión clínica?
 
 ::: {.callout-tip}

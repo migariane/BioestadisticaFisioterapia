@@ -781,7 +781,7 @@ $\hat{p}_A = \frac{38+15}{166} = 0.319$ (31.9% responden a terapia A)
 
 $\hat{p}_B = \frac{38+31}{166} = 0.416$ (41.6% responden a terapia B)
 
-**Diferencia estimada:** $\hat{p}_A - \hat{p}_B = -0.095$ (−9.5 puntos porcentuales)
+**Diferencia estimada:** $\hat{p}_A - \hat{p}_B = -0.096$ (−9.6 puntos porcentuales)
 
 **IC 95% para la diferencia (Agresti-Min):**
 
@@ -793,7 +793,7 @@ IC <- c(d - z_a*se, d + z_a*se)
 cat("Diferencia =", round(d,4), "| IC95% = (", round(IC[1],4), ",", round(IC[2],4), ")")
 ```
 
-**Conclusión:** La terapia B tiene **mayor respuesta** que la A (diferencia −9.5%, IC 95%: −17.4% a −1.7%). Como el IC **no contiene al 0**, la diferencia es significativa ($P = 0.027$).
+**Conclusión:** La terapia B tiene **mayor respuesta** que la A (diferencia −9.6%, IC 95%: −17.5% a −1.8%). Como el IC **no contiene al 0**, la diferencia es significativa ($P = 0.027$).
 
 ---
 
@@ -872,7 +872,7 @@ cat("Diferencia =", round(d,4), "| IC95% = (", round(IC[1],4), ",", round(IC[2],
 | **OR** | Multiplicativa | **1** | IC contiene al 1 | IC no contiene al 1 |
 :::
 
-**Ejemplos con datos clínicos de fisioterapia:**
+**Ejemplos ilustrativos de interpretación de IC** (valores hipotéticos, salvo el caso real del OR):
 
 | Medida | Estimación | IC 95% | ¿Significativo? | Interpretación |
 |:-------|:----------:|:-------|:---------------:|---------------|

@@ -1116,7 +1116,7 @@ mean of x
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<img data-src="T04_I_Test_Hipotesis_files/figure-revealjs/unnamed-chunk-10-1.png" width="864" class="r-stretch"><p><strong>Salida:</strong> <span class="math inline">\(t=-0.43\)</span>, gl=5, <span class="math inline">\(P=0.683\)</span> → No significativo. IC 95%: (126.4°, 132.9°).</p>
+<img data-src="T04_I_Test_Hipotesis_files/figure-revealjs/unnamed-chunk-10-1.png" width="864" class="r-stretch"><p><strong>Salida:</strong> <span class="math inline">\(t=-0.43\)</span>, gl=5, <span class="math inline">\(P=0.683\)</span> → No significativo. IC 95%: (125.4°, 133.3°).</p>
 </section>
 <section id="test-para-una-proporción-ejemplo-detallado" class="slide level2 center">
 <h2>Test para una proporción — Ejemplo detallado</h2>
@@ -1138,7 +1138,7 @@ mean of x
 </div>
 </div>
 <p><strong>Conclusión:</strong> La prevalencia ha cambiado significativamente. IC 95% Wilson: (12.7%, 21.7%). El 22% de 2012 no esta en el IC → confirmación visual.</p>
-<p><strong>Si los datos hubieran sido x=33, n=200:</strong> <span class="math inline">\(z=-1.79\)</span>, <span class="math inline">\(0.07 &lt; P &lt; 0.08\)</span> → NO significativo (indicios).</p>
+<p><strong>Si los datos hubieran sido x=34, n=200:</strong> <span class="math inline">\(z=-1.79\)</span>, <span class="math inline">\(0.07 &lt; P &lt; 0.08\)</span> → NO significativo (indicios).</p>
 </section>
 <section id="test-para-una-proporción" class="slide level2 center">
 <h2>Test para una proporción</h2>
@@ -1174,14 +1174,13 @@ No significativo: 94% no difiere de 95% (P = 0.745)</code></pre>
 <section id="interpretación-de-la-salida-de-testt-en-bioestatr" class="slide level2 center">
 <h2>Interpretación de la salida de <code>testt()</code> en BioEstatR</h2>
 <p><strong>Ejemplo: <code>testt(m = 129.33, s = 3.78, n = 6, m0 = 130)</code></strong></p>
-<pre><code>Test t para una muestra
-H0: mu = 130
-t = -0.432, gl = 5, P = 0.683
-IC 95% para mu: [126.4, 132.9]
-Estimación del efecto bruto: mu - 130 = -0.67
-IC 95% para el efecto: [-4.64, 3.31]
-Test de Shapiro-Wilk: W = 0.956, P = 0.789</code></pre>
-<p><strong>Cómo leer la salida:</strong> - <strong>t y P:</strong> estadístico y P-valor → P = 0.683 &gt; 0.05 → NO rechazar H0 - <strong>IC 95%:</strong> [126.4, 132.9] contiene 130 → compatible con H0 - <strong>Efecto bruto:</strong> diferencia estimada = -0.67° (clínicamente irrelevante) - <strong>Shapiro-Wilk:</strong> P = 0.789 → normalidad OK</p>
+<pre><code>t-Test con una muestra
+n = 6.000, media = 129.330, d.t. = 3.780, sem = 1.543
+95%-IC(μ) = (125.363, 133.297)
+texp = 0.434, gl = 5
+p = 0.682 (bilateral H1: μ ≠ μ0) / 0.341 (unilateral H1: μ &lt; μ0)
+95%-IC(μ-μ0) = (-4.637, 3.297)</code></pre>
+<p><strong>Cómo leer la salida:</strong> - <strong>t y P:</strong> texp = 0.434, P = 0.682 &gt; 0.05 → NO rechazar H0 - <strong>IC 95%:</strong> (125.4, 133.3) contiene 130 → compatible con H0 - <strong>Efecto bruto:</strong> IC 95% (−4.64, 3.30) incluye 0 → no significativo</p>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1218,7 +1217,7 @@ Test de Shapiro-Wilk: W = 0.956, P = 0.789</code></pre>
 <p><strong>Contexto:</strong> Flexión rodilla en 6 pacientes: 125°, 132°, 128°, 135°, 130°, 126°. Referencia: 130°.</p>
 <ol type="1">
 <li>Formula <span class="math inline">\(H_0\)</span> y <span class="math inline">\(H_1\)</span></li>
-<li>Interpreta: <span class="math inline">\(t=-0.43\)</span>, <span class="math inline">\(gl=5\)</span>, <span class="math inline">\(P=0.683\)</span>, IC 95% [126.4°, 132.9°]</li>
+<li>Interpreta: <span class="math inline">\(t=-0.43\)</span>, <span class="math inline">\(gl=5\)</span>, <span class="math inline">\(P=0.683\)</span>, IC 95% [125.4°, 133.3°]</li>
 <li>¿Conclusión clínica?</li>
 </ol>
 <div class="callout callout-tip callout-titled callout-style-default">

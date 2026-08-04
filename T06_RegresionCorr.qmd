@@ -143,11 +143,10 @@ plot(imc, graso, pch=19, col="steelblue", cex=1.5,
 
 :::
 
-## Diagnóstico visual: Patrones típicos (I)
+## Diagnóstico visual: Patrones típicos
 
 ```{r}
-#| fig-height: 5.5
-par(mfrow=c(2,2), mar=c(4,4,3,1))
+par(mfrow=c(2,3), mar=c(4,4,3,1))
 set.seed(123); n <- 50
 
 # 1. Relación lineal directa
@@ -167,18 +166,8 @@ plot(x,y3,pch=19,col="seagreen",main="No lineal (curva)",xlab="x",ylab="y")
 # 4. Sin relación
 y4 <- rnorm(n,0,1)
 plot(x,y4,pch=19,col="grey50",main="Sin relación",xlab="x",ylab="y")
-par(mfrow=c(1,1))
-```
-
-## Diagnóstico visual: Patrones típicos (II)
-
-```{r}
-#| fig-height: 5.2
-par(mfrow=c(1,2), mar=c(4,4,3,1))
-set.seed(123); n <- 50
 
 # 5. Heterocedasticidad
-x <- rnorm(n)
 y5 <- x + rnorm(n,0,abs(x)*0.8)
 plot(x,y5,pch=19,col="seagreen",main="Heterocedasticidad",xlab="x",ylab="y")
 
@@ -222,7 +211,7 @@ par(mfrow=c(1,1))
 ## ¿Cómo Funciona la Regresión? — Intuición Visual
 
 ```{r}
-#| fig-height: 5.5
+#| fig-height: 5
 set.seed(123); n <- 30
 x <- runif(n, 4, 14)
 y <- 2 + 0.6*x + rnorm(n, 0, 2)
@@ -308,7 +297,7 @@ Toda la regresión lineal se construye sobre **tres cantidades fundamentales** q
 **Intuición geométrica:** $S_{xx}$ es la suma de distancias horizontales al cuadrado. $S_{yy}$ es la suma de distancias verticales al cuadrado. $S_{xy}$ es el producto de ambas: positivo si $x$ e $y$ se mueven en la misma dirección, negativo si van en direcciones opuestas.
 
 ```{r}
-#| fig-height: 5.2
+#| fig-height: 4.5
 x <- c(4,5,8,10,12); y <- c(2,3,5,6,7)
 par(mfrow=c(1,3), mar=c(4,4,3,1))
 # Sxx
@@ -455,7 +444,7 @@ cat("SC_res =", round(SC_res, 2), "| n-2 =", n-2,
 ## Interpretación de la pendiente — ¿qué significa $\beta_1$?
 
 ```{r}
-#| fig-height: 5.2
+#| fig-height: 5
 par(mfrow=c(1,3), mar=c(4,4,3,1))
 set.seed(123)
 
@@ -555,7 +544,6 @@ $$t = \frac{0.645 \sqrt{10}}{\sqrt{1 - 0.645^2}} = \frac{2.040}{0.764} = 2.67$$
 $$P = 2 \times P(T_{10} > 2.67) = 0.023$$
 
 **Conclusión:** $P = 0.023 < 0.05$ → **rechazamos** $H_0$. Existe evidencia suficiente para afirmar que la correlación entre IMC y porcentaje de grasa corporal es estadísticamente significativa en la población de adolescentes.
-:::
 
 ::: {.callout-tip}
 **En R:** `cor.test(x, y)` realiza el test completo: $t$, gl, P-valor e IC 95% para $\rho$ (vía transformación $z$ de Fisher). La función `cortest()` de BioEstatR ofrece la misma funcionalidad.
@@ -583,7 +571,6 @@ $$z = \frac{1}{2}\ln\left(\frac{1+r}{1-r}\right), \quad IC_{1-\alpha}(z_\rho) = 
 ## Visualización de diferentes fuerzas de correlación
 
 ```{r}
-#| fig-height: 5.5
 par(mfrow=c(2,2), mar=c(4,4,3,1)); set.seed(123)
 rho_vals <- c(0, 0.5, 0.85, -0.85)
 labels <- c("r ≈ 0 (nula)", "r ≈ 0.5 (moderada)",
@@ -771,9 +758,9 @@ $S_{xy} = 207 - \frac{39 \times 23}{5} = 207 - 179.4 = 27.6$
 $S_{xx} = 349 - \frac{39^2}{5} = 349 - 304.2 = 44.8$
 $\hat{\beta}_1 = \frac{27.6}{44.8} = 0.616$
 
-**Paso 3: $\hat{\beta}_0 = \bar{y} - \hat{\beta}_1\bar{x} = 4.6 - 0.616 \times 7.8 = 4.6 - 4.80 \approx -0.20$**
+**Paso 3: $\hat{\beta}_0 = \bar{y} - \hat{\beta}_1\bar{x} = 4.6 - 0.616 \times 7.8 = 4.6 - 4.80 \approx -0.21$** *(R ajusta $\hat{\beta}_0 = -0.21$ con los datos completos)*
 
-**Ecuación:** $\widehat{\text{EVA}} = -0.20 + 0.616 \times \text{Sesiones}$
+**Ecuación:** $\widehat{\text{EVA}} = -0.21 + 0.616 \times \text{Sesiones}$
 
 **Interpretación:** Por cada sesión adicional, la mejoría en EVA aumenta 0.62 puntos.
 
@@ -961,8 +948,9 @@ Cuando tenemos **más de dos variables**, la matriz de correlaciones resume toda
 **Ejemplo clínico — Datos simulados de 12 adolescentes (15–19 años):**
 
 ```{r}
-#| fig-height: 5.2
-# Datos ampliados: mismos 12 pacientes del ejemplo IMC-Graso con Edad, Fuerza prensil (kg) y EVA dolor (0-10)
+#| fig-height: 5
+# Datos ampliados simulados con las mismas variables del T06 más Edad, Fuerza prensil (kg) y EVA dolor (0-10)
+# ⚠️ Estos datos NO coinciden con los 12 pacientes del ejemplo IMC-Graso anterior
 datos_clinicos <- data.frame(
   IMC   = c(20.36, 20.34, 20.05, 23.94, 22.17, 21.72, 19.29, 23.07, 27.45, 24.91, 22.69, 21.15),
   Graso = c(17.36, 12.72, 11.65, 19.34, 24.19, 25.62, 20.91, 17.81, 29.70, 25.43, 18.62, 23.15),
@@ -1020,7 +1008,7 @@ $$y_i = \beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \cdots + \beta_k x_{ik} + \v
 
 ```{r}
 #| eval: false
-# Ejemplo: % graso ~ IMC + Edad (+ Fuerza)
+# Ejemplo: % graso ~ IMC + Edad
 modelo_mult <- lm(Graso ~ IMC + Edad, data = datos_clinicos)
 summary(modelo_mult)
 
@@ -1028,6 +1016,7 @@ summary(modelo_mult)
 library(BioEstatR)
 rlm(Graso ~ IMC + Edad, data = datos_clinicos)
 # rlm() produce: coeficientes + IC + R² ajustado + test F + gráficos de diagnóstico
+```
 
 - **$R^2$ ajustado:** penaliza por el número de predictores (mejor que $R^2$)
 - **Colinealidad:** predictores muy correlacionados → estimaciones inestables
@@ -1141,12 +1130,11 @@ rls(graso ~ imc, data = df)
 
 ---
 
-
-## La regresión como marco unificador de todo el curso
-
 **Referencias complementarias del libro:**
 
 - Luque-Fernández, M. A. (2026). *Matemáticas para la Estadística Médica con R*. Cap. 9-10: Regresión y Correlación (Semanas 9-10).
+
+## La regresión como marco unificador de todo el curso
 
 ::: {.callout-important}
 **Todo lo aprendido en los 6 temas converge en la regresión.** Cada test puede verse como un caso particular de un modelo de regresión.
@@ -1167,9 +1155,9 @@ rls(graso ~ imc, data = df)
 - En investigación clínica en fisioterapia, el análisis casi siempre culmina en un modelo de **regresión** (lineal, logística o de supervivencia)
 :::
 
+::: {.exercise}
 ## Ejercicio clínico — Regresión lineal en fisioterapia
 
-::: {.exercise}
 Un fisioterapeuta investiga la relación entre el IMC (kg/m²) y el porcentaje de masa grasa en 12 pacientes. Los datos están en `data/imc_graso.csv`. El modelo ajustado es:
 
 - $\hat{\beta}_0 = -12.42$, $\hat{\beta}_1 = 1.48$, $R^2 = 0.416$
@@ -1197,7 +1185,7 @@ Un fisioterapeuta investiga la relación entre el IMC (kg/m²) y el porcentaje d
 
 ---
 
-## Ejercicio Clínico — Tema VI {.small}
+## Ejercicio Clínico — Tema VI {.smaller}
 
 **Contexto:** Un fisioterapeuta mide la flexión lumbar (°) en 10 pacientes de distintas edades.
 
@@ -1272,10 +1260,8 @@ cat("R² =", round(s_flex$r.squared, 3),
 ```{r}
 #| eval: false
 # Datos
-imc <- c(20.36,20.34,20.05,23.94,22.17,21.72,
-         19.29,23.07,27.45,24.91,22.69,21.15)
-graso <- c(17.36,12.72,11.65,19.34,24.19,25.62,
-           20.91,17.81,29.70,25.43,18.62,23.15)
+imc <- c(22, 25, 28, 24, 30, 27, 26, 32, 29, 31)
+graso <- c(18, 22, 26, 20, 30, 24, 23, 33, 27, 31)
 
 
 # Correlación de Pearson
@@ -1339,3 +1325,5 @@ bptest(modelo)
 library(BioEstatR)
 rls(y = graso, x = imc)                   # Regresión lineal completa
 ```
+
+:::
