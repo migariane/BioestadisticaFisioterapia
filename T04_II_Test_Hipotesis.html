@@ -119,7 +119,7 @@
     div.csl-indent {
       margin-left: 2em;
     }  </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-84e496b1649940a15455be70d7a52673.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-41c66a2ec884fa48f4dd25a6beeb7670.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -395,13 +395,19 @@ mean of x mean of y
 <span id="cb5-17"><a aria-hidden="true" tabindex="-1"></a>       <span class="at">col=</span><span class="st">"darkgreen"</span>, <span class="at">lwd=</span><span class="dv">3</span>, <span class="at">code=</span><span class="dv">3</span>, <span class="at">angle=</span><span class="dv">90</span>, <span class="at">length=</span><span class="fl">0.15</span>)</span>
 <span id="cb5-18"><a aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h=</span><span class="dv">0</span>, <span class="at">col=</span><span class="st">"grey"</span>, <span class="at">lty=</span><span class="dv">2</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="T04_II_Test_Hipotesis_files/figure-revealjs/unnamed-chunk-1-1.svg"></p>
+</figure>
+</div>
+</div>
 <details class="code-fold">
 <summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<img data-src="T04_II_Test_Hipotesis_files/figure-revealjs/unnamed-chunk-1-1.png" width="864" class="r-stretch"><p><strong>IC 95% para la diferencia:</strong> <span class="math inline">\(\bar{x}_1 - \bar{x}_2 \pm t_{\alpha/2} \cdot SE\)</span>. Si contiene 0 → no significativo.</p>
+<p><strong>IC 95% para la diferencia:</strong> <span class="math inline">\(\bar{x}_1 - \bar{x}_2 \pm t_{\alpha/2} \cdot SE\)</span>. Si contiene 0 → no significativo.</p>
 </section>
 <section id="test-f-para-igualdad-de-varianzas" class="slide level2 center">
 <h2>Test F para igualdad de varianzas</h2>
@@ -436,9 +442,15 @@ ratio of variances
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">curve</span>(<span class="fu">df</span>(x,<span class="dv">5</span>,<span class="dv">5</span>), <span class="dv">0</span>, <span class="dv">4</span>, <span class="at">lwd=</span><span class="dv">3</span>, <span class="at">col=</span><span class="st">"steelblue"</span>, <span class="at">main=</span><span class="st">"Distribución F(5,5)"</span>)</span>
 <span id="cb10-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v=</span><span class="fu">c</span>(<span class="fu">qf</span>(<span class="fl">0.025</span>,<span class="dv">5</span>,<span class="dv">5</span>), <span class="fu">qf</span>(<span class="fl">0.975</span>,<span class="dv">5</span>,<span class="dv">5</span>)), <span class="at">col=</span><span class="st">"darkgreen"</span>, <span class="at">lty=</span><span class="dv">2</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="T04_II_Test_Hipotesis_files/figure-revealjs/unnamed-chunk-3-1.svg"></p>
+</figure>
 </div>
-<img data-src="T04_II_Test_Hipotesis_files/figure-revealjs/unnamed-chunk-3-1.png" width="864" class="r-stretch"></section>
+</div>
+</div>
+</section>
 <section id="test-para-dos-proporciones-independientes" class="slide level2 center">
 <h2>Test para dos proporciones independientes</h2>
 <p><span class="math display">\[\hat{p} = \frac{x_1+x_2}{n_1+n_2}; \quad Z = \frac{\hat{p}_1 - \hat{p}_2}{\sqrt{\hat{p}(1-\hat{p})(1/n_1+1/n_2)}}\]</span></p>
@@ -487,9 +499,15 @@ Diferencia significativa: A &gt; B (P = 0.016)</code></pre>
 <span id="cb13-5"><a aria-hidden="true" tabindex="-1"></a><span class="fu">axis</span>(<span class="dv">1</span>, <span class="at">at=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, <span class="at">labels=</span><span class="fu">c</span>(<span class="st">"Antes"</span>,<span class="st">"Después"</span>))</span>
 <span id="cb13-6"><a aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>) <span class="fu">lines</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>), <span class="fu">c</span>(a[i],d[i]), <span class="at">col=</span>i, <span class="at">lty=</span><span class="dv">2</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="T04_II_Test_Hipotesis_files/figure-revealjs/unnamed-chunk-5-1.svg"></p>
+</figure>
 </div>
-<img data-src="T04_II_Test_Hipotesis_files/figure-revealjs/unnamed-chunk-5-1.png" width="864" class="r-stretch"><p><strong>Todos los pacientes mejoran</strong> (líneas bajan) → evidencia clara de efecto.</p>
+</div>
+</div>
+<p><strong>Todos los pacientes mejoran</strong> (líneas bajan) → evidencia clara de efecto.</p>
 </section>
 <section id="test-pareado-para-medias" class="slide level2 center">
 <h2>Test pareado para medias</h2>
@@ -1206,13 +1224,19 @@ E[U]=15 | Var(U)=30 | Z=-2.373 | P=0.0176
 <span id="cb34-15"><a aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"bottomright"</span>, <span class="fu">c</span>(<span class="st">"A (Ejercicio)"</span>,<span class="st">"B (P.Seca)"</span>), </span>
 <span id="cb34-16"><a aria-hidden="true" tabindex="-1"></a>       <span class="at">col=</span><span class="fu">c</span>(<span class="st">"steelblue"</span>,<span class="st">"coral"</span>), <span class="at">lwd=</span><span class="dv">3</span>, <span class="at">bty=</span><span class="st">"n"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="T04_II_Test_Hipotesis_files/figure-revealjs/unnamed-chunk-13-1.svg"></p>
+</figure>
+</div>
+</div>
 <details class="code-fold">
 <summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<img data-src="T04_II_Test_Hipotesis_files/figure-revealjs/unnamed-chunk-13-1.png" width="864" class="r-stretch"><div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
@@ -1582,9 +1606,15 @@ Omega² = 0.103 → 10.3 % varianza explicada</code></pre>
 <span id="cb58-16"><a aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"topright"</span>, <span class="fu">c</span>(<span class="st">"Jóvenes"</span>,<span class="st">"Ancianos"</span>), <span class="at">col=</span><span class="fu">c</span>(<span class="st">"steelblue"</span>,<span class="st">"seagreen"</span>), </span>
 <span id="cb58-17"><a aria-hidden="true" tabindex="-1"></a>       <span class="at">lwd=</span><span class="dv">3</span>, <span class="at">bty=</span><span class="st">"n"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="T04_II_Test_Hipotesis_files/figure-revealjs/unnamed-chunk-20-1.svg"></p>
+</figure>
 </div>
-<img data-src="T04_II_Test_Hipotesis_files/figure-revealjs/unnamed-chunk-20-1.png" width="864" class="r-stretch"><div class="callout callout-tip callout-titled callout-style-default">
+</div>
+</div>
+<div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
@@ -1732,9 +1762,15 @@ Omega² = 0.103 → 10.3 % varianza explicada</code></pre>
 <span id="cb59-119"><a aria-hidden="true" tabindex="-1"></a><span class="fu">rect</span>(col_x[<span class="dv">3</span>]<span class="sc">-</span><span class="fl">1.5</span>, <span class="fl">2.5</span>, col_x[<span class="dv">3</span>]<span class="sc">+</span><span class="fl">1.5</span>, <span class="dv">5</span>, <span class="at">col =</span> <span class="st">"#27ae60"</span>, <span class="at">border =</span> <span class="cn">NA</span>)</span>
 <span id="cb59-120"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(col_x[<span class="dv">3</span>], <span class="fl">3.75</span>, <span class="st">"mcnemar.test()"</span>, <span class="at">font =</span> <span class="dv">2</span>, <span class="at">cex =</span> <span class="fl">0.8</span>, <span class="at">col =</span> <span class="st">"white"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="T04_II_Test_Hipotesis_files/figure-revealjs/unnamed-chunk-21-1.svg"></p>
+</figure>
 </div>
-<img data-src="T04_II_Test_Hipotesis_files/figure-revealjs/unnamed-chunk-21-1.png" width="864" class="r-stretch"></section>
+</div>
+</div>
+</section>
 <section id="paramétricos-vs-no-paramétricos-comparativa" class="slide level2 center">
 <h2>Paramétricos vs no paramétricos — Comparativa</h2>
 <table class="caption-top">
@@ -1985,9 +2021,15 @@ Omega² = 0.103 → 10.3 % varianza explicada</code></pre>
 <span id="cb60-67"><a aria-hidden="true" tabindex="-1"></a>       <span class="at">fill =</span> <span class="fu">c</span>(<span class="st">"#e8f8f5"</span>, <span class="st">"#fef9e7"</span>, <span class="st">"#27ae60"</span>),</span>
 <span id="cb60-68"><a aria-hidden="true" tabindex="-1"></a>       <span class="at">border =</span> <span class="fu">c</span>(<span class="st">"#1abc9c"</span>, <span class="st">"#f39c12"</span>, <span class="cn">NA</span>), <span class="at">cex =</span> <span class="fl">0.55</span>, <span class="at">bty =</span> <span class="st">"n"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="T04_II_Test_Hipotesis_files/figure-revealjs/unnamed-chunk-22-1.svg"></p>
+</figure>
 </div>
-<img data-src="T04_II_Test_Hipotesis_files/figure-revealjs/unnamed-chunk-22-1.png" width="864" class="r-stretch"><div class="callout callout-tip callout-titled callout-style-default">
+</div>
+</div>
+<div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
@@ -2069,7 +2111,7 @@ Omega² = 0.103 → 10.3 % varianza explicada</code></pre>
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="T04_II_Test_Hipotesis_files/figure-revealjs/unnamed-chunk-23-1.png" width="864"></p>
+<p><img data-src="T04_II_Test_Hipotesis_files/figure-revealjs/unnamed-chunk-23-1.svg"></p>
 </figure>
 </div>
 </div>

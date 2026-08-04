@@ -119,7 +119,7 @@
     div.csl-indent {
       margin-left: 2em;
     }  </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-84e496b1649940a15455be70d7a52673.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-41c66a2ec884fa48f4dd25a6beeb7670.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -334,8 +334,8 @@
 <section>
 <section id="teoría-de-la-estimación" class="title-slide slide level1 center">
 <h1>Teoría de la Estimación</h1>
-
-<img data-src="logo.png" width="90" class="r-stretch"><p><strong>Grado en Fisioterapia</strong></p>
+<p><img data-src="logo.png" width="90"></p>
+<p><strong>Grado en Fisioterapia</strong></p>
 <p><strong>CC BY 4.0</strong> · Miguel Angel Luque-Fernández</p>
 <p><a href="https://migariane.github.io">Miguel Angel Luque-Fernández</a> · <a href="https://maluque.netlify.app">maluque.netlify.app</a></p>
 <p>Dpto. Estadística e Investigación Operativa · Universidad de Granada</p>
@@ -628,13 +628,19 @@
 <span id="cb1-18"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="dv">800</span>, <span class="fl">0.003</span>, <span class="fu">paste0</span>(<span class="st">"Media = "</span>,<span class="fu">round</span>(<span class="fu">mean</span>(S2_correct),<span class="dv">0</span>),<span class="st">"</span><span class="sc">\n</span><span class="st">Sesgo ~ 0%"</span>),</span>
 <span id="cb1-19"><a aria-hidden="true" tabindex="-1"></a>     <span class="at">col=</span><span class="st">"#27ae60"</span>, <span class="at">font=</span><span class="dv">2</span>, <span class="at">cex=</span><span class="fl">0.8</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="T03_Estimacion_IC_files/figure-revealjs/unnamed-chunk-1-1.svg"></p>
+</figure>
+</div>
+</div>
 <details class="code-fold">
 <summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<img data-src="T03_Estimacion_IC_files/figure-revealjs/unnamed-chunk-1-1.png" width="864" class="r-stretch"><div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
@@ -874,13 +880,19 @@
 <span id="cb3-13"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">curve</span>(<span class="fu">dnorm</span>(x, <span class="dv">10</span>, <span class="fu">sqrt</span>((<span class="dv">20</span><span class="sc">^</span><span class="dv">2</span><span class="sc">/</span><span class="dv">12</span>)<span class="sc">/</span>n)), <span class="at">add=</span>T, <span class="at">col=</span><span class="st">"darkgreen"</span>, <span class="at">lwd=</span><span class="dv">2</span>)</span>
 <span id="cb3-14"><a aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="T03_Estimacion_IC_files/figure-revealjs/unnamed-chunk-2-1.svg"></p>
+</figure>
+</div>
+</div>
 <details class="code-fold">
 <summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<img data-src="T03_Estimacion_IC_files/figure-revealjs/unnamed-chunk-2-1.png" width="864" class="r-stretch"><p><strong>Con <span class="math inline">\(n=30\)</span> ya se aprecia la campana. Con <span class="math inline">\(n=100\)</span> es casi perfecta.</strong> <a href="https://watzile.shinyapps.io/TeoreCLT/">App interactiva TCL</a></p>
+<p><strong>Con <span class="math inline">\(n=30\)</span> ya se aprecia la campana. Con <span class="math inline">\(n=100\)</span> es casi perfecta.</strong> <a href="https://watzile.shinyapps.io/TeoreCLT/">App interactiva TCL</a></p>
 </section>
 <section id="teorema-central-del-límite-tcl" class="slide level2 center">
 <h2>Teorema central del límite (TCL)</h2>
@@ -1016,9 +1028,15 @@
 <span id="cb5-8"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">lines</span>(ic, <span class="fu">c</span>(i,i), <span class="at">col=</span>col, <span class="at">lwd=</span><span class="dv">3</span>); <span class="fu">points</span>(<span class="fu">mean</span>(m), i, <span class="at">pch=</span><span class="dv">19</span>, <span class="at">col=</span>col)}</span>
 <span id="cb5-9"><a aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"topright"</span>, <span class="fu">paste</span>(contiene,<span class="st">"/5 contienen μ"</span>), <span class="at">bty=</span><span class="st">"n"</span>, <span class="at">cex=</span><span class="fl">1.2</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="T03_Estimacion_IC_files/figure-revealjs/unnamed-chunk-3-1.svg"></p>
+</figure>
 </div>
-<img data-src="T03_Estimacion_IC_files/figure-revealjs/unnamed-chunk-3-1.png" width="864" class="r-stretch"><div class="callout callout-warning callout-titled callout-style-default">
+</div>
+</div>
+<div class="callout callout-warning callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
@@ -1200,13 +1218,19 @@ Precisión d = 3.08 mg/dL</code></pre>
 <span id="cb9-18"><a aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v=</span><span class="dv">95</span>, <span class="at">lty=</span><span class="dv">2</span>, <span class="at">col=</span><span class="st">"grey40"</span>)</span>
 <span id="cb9-19"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="dv">95</span>, <span class="fl">7.5</span>, <span class="st">"95%"</span>, <span class="at">col=</span><span class="st">"grey40"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="T03_Estimacion_IC_files/figure-revealjs/unnamed-chunk-6-1.svg"></p>
+</figure>
+</div>
+</div>
 <details class="code-fold">
 <summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<img data-src="T03_Estimacion_IC_files/figure-revealjs/unnamed-chunk-6-1.png" width="864" class="r-stretch"><p><em>Para recordar:</em> Más <span class="math inline">\(n\)</span> → IC más estrecho. Más confianza → IC más ancho. El precio de estar más seguro es perder precisión.</p>
+<p><em>Para recordar:</em> Más <span class="math inline">\(n\)</span> → IC más estrecho. Más confianza → IC más ancho. El precio de estar más seguro es perder precisión.</p>
 </section>
 <section id="visualización-del-ic-sobre-la-distribución-t-de-student" class="slide level2 center">
 <h2>Visualización del IC sobre la distribución <span class="math inline">\(t\)</span> de Student</h2>
@@ -1237,9 +1261,15 @@ Precisión d = 3.08 mg/dL</code></pre>
 <span id="cb11-22"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="sc">-</span><span class="fl">3.8</span>, <span class="fl">0.09</span>, <span class="fu">expression</span>(alpha<span class="sc">/</span><span class="dv">2</span> <span class="sc">==</span> <span class="fl">2.5</span><span class="sc">*</span><span class="st">"%"</span>), <span class="at">col =</span> <span class="st">"#e74c3c"</span>, <span class="at">cex =</span> <span class="fl">0.8</span>)</span>
 <span id="cb11-23"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="fl">3.8</span>, <span class="fl">0.09</span>, <span class="fu">expression</span>(alpha<span class="sc">/</span><span class="dv">2</span> <span class="sc">==</span> <span class="fl">2.5</span><span class="sc">*</span><span class="st">"%"</span>), <span class="at">col =</span> <span class="st">"#e74c3c"</span>, <span class="at">cex =</span> <span class="fl">0.8</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="T03_Estimacion_IC_files/figure-revealjs/unnamed-chunk-7-1.svg"></p>
+</figure>
 </div>
-<img data-src="T03_Estimacion_IC_files/figure-revealjs/unnamed-chunk-7-1.png" width="864" class="r-stretch"><div class="callout callout-note callout-titled callout-style-default">
+</div>
+</div>
+<div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
@@ -1514,9 +1544,15 @@ Clopper-Pearson es más ancho (conservador) pero garantiza cobertura ≥ 95%.</c
 <span id="cb28-13"><a aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>){<span class="fu">lines</span>(ics[i,], <span class="fu">c</span>(i,i), <span class="at">lwd=</span><span class="dv">4</span>, <span class="at">col=</span><span class="fu">c</span>(<span class="st">"steelblue"</span>,<span class="st">"darkgreen"</span>,<span class="st">"coral"</span>,<span class="st">"purple"</span>)[i])</span>
 <span id="cb28-14"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">points</span>(p_hat, i, <span class="at">pch=</span><span class="dv">19</span>, <span class="at">cex=</span><span class="fl">1.5</span>)}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="T03_Estimacion_IC_files/figure-revealjs/unnamed-chunk-14-1.svg"></p>
+</figure>
 </div>
-<img data-src="T03_Estimacion_IC_files/figure-revealjs/unnamed-chunk-14-1.png" width="864" class="r-stretch"><p><strong>Wilson (azul) es el recomendado. Los 4 convergen con <span class="math inline">\(n\)</span> grande.</strong></p>
+</div>
+</div>
+<p><strong>Wilson (azul) es el recomendado. Los 4 convergen con <span class="math inline">\(n\)</span> grande.</strong></p>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1708,9 +1744,15 @@ mu0 = 165 | t = 3.236 | Rechaza: TRUE | En IC: FALSE </code></pre>
 <span id="cb31-12"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="dv">162</span>, <span class="fl">0.8</span>, <span class="st">"← Rechazaría H₀"</span>, <span class="at">col=</span><span class="st">"grey50"</span>, <span class="at">cex=</span><span class="fl">0.8</span>)</span>
 <span id="cb31-13"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="dv">173</span>, <span class="fl">0.8</span>, <span class="st">"Rechazaría H₀ →"</span>, <span class="at">col=</span><span class="st">"grey50"</span>, <span class="at">cex=</span><span class="fl">0.8</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="T03_Estimacion_IC_files/figure-revealjs/unnamed-chunk-16-1.svg"></p>
+</figure>
 </div>
-<img data-src="T03_Estimacion_IC_files/figure-revealjs/unnamed-chunk-16-1.png" width="864" class="r-stretch"></section>
+</div>
+</div>
+</section>
 <section id="bioestatr-ics-y-tamaño-muestral" class="slide level2 center">
 <h2>BioEstatR — Ics y tamaño muestral</h2>
 <div class="cell">

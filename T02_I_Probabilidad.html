@@ -99,7 +99,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-84e496b1649940a15455be70d7a52673.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-41c66a2ec884fa48f4dd25a6beeb7670.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -310,8 +310,8 @@
 <section>
 <section id="probabilidad-y-variables-aleatorias" class="title-slide slide level1 center">
 <h1>Probabilidad y Variables Aleatorias</h1>
-
-<img data-src="logo.png" width="90" class="r-stretch"><p><strong>Grado en Fisioterapia</strong></p>
+<p><img data-src="logo.png" width="90"></p>
+<p><strong>Grado en Fisioterapia</strong></p>
 <p><strong>CC BY 4.0</strong> · Miguel Angel Luque-Fernández</p>
 <p><a href="https://migariane.github.io">Miguel Angel Luque-Fernández</a> · <a href="https://maluque.netlify.app">maluque.netlify.app</a></p>
 <p>Dpto. Estadística e Investigación Operativa · Universidad de Granada</p>
@@ -486,13 +486,19 @@ P(&gt;4) = 0.3333333</code></pre>
 <span id="cb3-7"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">abline</span>(<span class="at">h=</span><span class="fl">0.5</span>, <span class="at">col=</span><span class="st">"darkgreen"</span>, <span class="at">lty=</span><span class="dv">2</span>)</span>
 <span id="cb3-8"><a aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="T02_I_Probabilidad_files/figure-revealjs/unnamed-chunk-2-1.svg"></p>
+</figure>
+</div>
+</div>
 <details class="code-fold">
 <summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<img data-src="T02_I_Probabilidad_files/figure-revealjs/unnamed-chunk-2-1.png" width="864" class="r-stretch"></section>
+</section>
 <section id="axiomas-de-kolmogorov-1933" class="slide level2 center">
 <h2>Axiomas de Kolmogorov (1933)</h2>
 <ol type="1">
@@ -653,9 +659,15 @@ P(&gt;4) = 0.3333333</code></pre>
 <span id="cb7-9"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>( <span class="dv">0</span>,<span class="sc">-</span><span class="fl">0.3</span>, <span class="st">"Ambas</span><span class="sc">\n</span><span class="st">(10)"</span>, <span class="at">font=</span><span class="dv">2</span>, <span class="at">cex=</span><span class="fl">0.9</span>)</span>
 <span id="cb7-10"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="sc">-</span><span class="dv">2</span>, <span class="sc">-</span><span class="fl">1.5</span>, <span class="st">"P(HTA∪DM) = 0.40+0.30-0.10 = 0.60"</span>, <span class="at">pos=</span><span class="dv">4</span>, <span class="at">cex=</span><span class="fl">0.85</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="T02_I_Probabilidad_files/figure-revealjs/unnamed-chunk-4-1.svg"></p>
+</figure>
 </div>
-<img data-src="T02_I_Probabilidad_files/figure-revealjs/unnamed-chunk-4-1.png" width="864" class="r-stretch"><p><span class="math display">\[P(\text{HTA} \cup \text{DM}) = \frac{40}{100} + \frac{30}{100} - \frac{10}{100} = 0.60\]</span></p>
+</div>
+</div>
+<p><span class="math display">\[P(\text{HTA} \cup \text{DM}) = \frac{40}{100} + \frac{30}{100} - \frac{10}{100} = 0.60\]</span></p>
 <div class="cell">
 <details class="code-fold">
 <summary>Mostrar código R</summary>
@@ -718,13 +730,19 @@ P(&gt;4) = 0.3333333</code></pre>
 <span id="cb10-45"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="dv">0</span>, <span class="fl">0.2</span>, <span class="fu">bquote</span>(A <span class="sc">*</span> .(I) <span class="sc">*</span> B), <span class="at">cex=</span><span class="fl">1.4</span>, <span class="at">font=</span><span class="dv">2</span>, <span class="at">col=</span><span class="st">"white"</span>)</span>
 <span id="cb10-46"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="dv">0</span>, <span class="sc">-</span><span class="fl">1.45</span>, <span class="fu">bquote</span>(<span class="fu">P</span>(A <span class="sc">*</span> .(I) <span class="sc">*</span> B) <span class="sc">==</span> <span class="st">" solo zona roja"</span>), <span class="at">cex=</span><span class="fl">0.75</span>, <span class="at">col=</span><span class="st">"grey40"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="T02_I_Probabilidad_files/figure-revealjs/unnamed-chunk-6-1.svg"></p>
+</figure>
+</div>
+</div>
 <details class="code-fold">
 <summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<img data-src="T02_I_Probabilidad_files/figure-revealjs/unnamed-chunk-6-1.png" width="864" class="r-stretch"><div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
@@ -807,13 +825,19 @@ P(&gt;4) = 0.3333333</code></pre>
 <span id="cb12-18"><a aria-hidden="true" tabindex="-1"></a><span class="fu">polygon</span>(<span class="fl">0.6</span><span class="sc">*</span><span class="fu">cos</span>(theta), <span class="fl">0.6</span><span class="sc">*</span><span class="fu">sin</span>(theta), <span class="at">col=</span><span class="fu">rgb</span>(<span class="dv">0</span>,<span class="fl">0.6</span>,<span class="dv">0</span>,<span class="fl">0.4</span>), <span class="at">border=</span><span class="st">"darkgreen"</span>, <span class="at">lwd=</span><span class="dv">2</span>)</span>
 <span id="cb12-19"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="dv">0</span>,<span class="dv">0</span>,<span class="st">"Recuperados</span><span class="sc">\n</span><span class="st">32/80</span><span class="sc">\n</span><span class="st">= 40%"</span>,<span class="at">font=</span><span class="dv">2</span>,<span class="at">cex=</span><span class="dv">1</span>,<span class="at">col=</span><span class="st">"darkgreen"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="T02_I_Probabilidad_files/figure-revealjs/unnamed-chunk-7-1.svg"></p>
+</figure>
+</div>
+</div>
 <details class="code-fold">
 <summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<img data-src="T02_I_Probabilidad_files/figure-revealjs/unnamed-chunk-7-1.png" width="864" class="r-stretch"><p><strong>La probabilidad condicional reduce el espacio muestral al subconjunto condicionante.</strong></p>
+<p><strong>La probabilidad condicional reduce el espacio muestral al subconjunto condicionante.</strong></p>
 </section>
 <section id="probabilidad-condicional" class="slide level2 center">
 <h2>Probabilidad condicional</h2>
@@ -976,9 +1000,15 @@ P(Recuperado | Hombre) = 0.4</code></pre>
 <span id="cb16-66"><a aria-hidden="true" tabindex="-1"></a>     <span class="st">"P(Recuperación) = 0.90 × 0.60  +  0.70 × 0.30  +  0.40 × 0.10  =  0.79"</span>,</span>
 <span id="cb16-67"><a aria-hidden="true" tabindex="-1"></a>     <span class="at">cex=</span><span class="fl">1.25</span>, <span class="at">font=</span><span class="dv">2</span>, <span class="at">col=</span>col_A_bord)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="T02_I_Probabilidad_files/figure-revealjs/unnamed-chunk-9-1.svg" alt="Diagrama de la probabilidad total mostrando el espacio muestral Omega particionado en tres regiones B1 B2 B3 (riesgo bajo 60%, moderado 30%, alto 10%) con una elipse central representando el evento A (recuperación). Las intersecciones A∩B1, A∩B2, A∩B3 muestran las probabilidades condicionadas. Debajo aparece la fórmula completa de la probabilidad total con el cálculo numérico P=0.79."></p>
+</figure>
 </div>
-<img data-src="T02_I_Probabilidad_files/figure-revealjs/unnamed-chunk-9-1.png" alt="Diagrama de la probabilidad total mostrando el espacio muestral Omega particionado en tres regiones B1 B2 B3 (riesgo bajo 60%, moderado 30%, alto 10%) con una elipse central representando el evento A (recuperación). Las intersecciones A∩B1, A∩B2, A∩B3 muestran las probabilidades condicionadas. Debajo aparece la fórmula completa de la probabilidad total con el cálculo numérico P=0.79." width="1536" class="r-stretch"></section>
+</div>
+</div>
+</section>
 <section id="probabilidad-total-ejemplo-recuperación-en-fisioterapia" class="slide level2 center">
 <h2>Probabilidad total — Ejemplo: Recuperación en fisioterapia</h2>
 <p><strong>Contexto clínico:</strong> Tres grupos de riesgo en rehabilitación de lumbalgia:</p>
@@ -1035,9 +1065,15 @@ P(Recuperado | Hombre) = 0.4</code></pre>
 <span id="cb17-6"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(bp, aporte<span class="fl">+0.02</span>, aporte, <span class="at">font=</span><span class="dv">2</span>, <span class="at">cex=</span><span class="fl">1.2</span>)</span>
 <span id="cb17-7"><a aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h=</span><span class="fl">0.79</span>, <span class="at">col=</span><span class="st">"steelblue"</span>, <span class="at">lwd=</span><span class="dv">2</span>, <span class="at">lty=</span><span class="dv">2</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="T02_I_Probabilidad_files/figure-revealjs/unnamed-chunk-10-1.svg"></p>
+</figure>
 </div>
-<img data-src="T02_I_Probabilidad_files/figure-revealjs/unnamed-chunk-10-1.png" width="864" class="r-stretch"><div class="cell">
+</div>
+</div>
+<div class="cell">
 <details class="code-fold">
 <summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"P(Recuperación) ="</span>, <span class="fl">0.6</span><span class="sc">*</span><span class="fl">0.9+0.3</span><span class="sc">*</span><span class="fl">0.7+0.1</span><span class="sc">*</span><span class="fl">0.4</span>, <span class="st">"→ 79% de los pacientes se recuperan"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
@@ -1140,13 +1176,19 @@ P(D | +) = 0.1667
 <span id="cb22-22"><a aria-hidden="true" tabindex="-1"></a><span class="fu">rect</span>(<span class="dv">6</span>, <span class="dv">3</span>, <span class="dv">9</span>, <span class="dv">6</span>, <span class="at">col=</span><span class="fu">rgb</span>(<span class="dv">0</span>,<span class="dv">0</span>,<span class="dv">1</span>,<span class="fl">0.1</span>), <span class="at">border=</span><span class="st">"steelblue"</span>)</span>
 <span id="cb22-23"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="fl">7.5</span>, <span class="fl">4.5</span>, <span class="fu">paste0</span>(<span class="st">"VPN</span><span class="sc">\n</span><span class="st">"</span>, <span class="fu">round</span>(vn<span class="sc">/</span>(vn<span class="sc">+</span>fn)<span class="sc">*</span><span class="dv">100</span>,<span class="dv">1</span>), <span class="st">"%"</span>), <span class="at">font=</span><span class="dv">2</span>, <span class="at">cex=</span><span class="fl">0.8</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="T02_I_Probabilidad_files/figure-revealjs/unnamed-chunk-12-1.svg"></p>
+</figure>
+</div>
+</div>
 <details class="code-fold">
 <summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<img data-src="T02_I_Probabilidad_files/figure-revealjs/unnamed-chunk-12-1.png" width="864" class="r-stretch"><div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout callout-warning callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
@@ -1280,8 +1322,13 @@ P(D | +) = 0.1667
 </section>
 <section id="respiro-visual-incertidumbre-en-la-práctica-clínica" class="slide level2 center">
 <h2>Respiro visual — Incertidumbre en la práctica clínica</h2>
-
-<img data-src="https://images.unsplash.com/photo-1645005512968-0c1fe99f0093?w=800.png" class="r-stretch quarto-figure-center"><p class="caption">Fisioterapeuta evaluando a un paciente</p><p><em>Cada paciente es único. La probabilidad nos da el lenguaje para cuantificar la incertidumbre clínica y tomar decisiones informadas.</em></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="https://images.unsplash.com/photo-1645005512968-0c1fe99f0093?w=800.png"></p>
+<figcaption>Fisioterapeuta evaluando a un paciente</figcaption>
+</figure>
+</div>
+<p><em>Cada paciente es único. La probabilidad nos da el lenguaje para cuantificar la incertidumbre clínica y tomar decisiones informadas.</em></p>
 </section>
 <section class="slide level2 center">
 
@@ -1289,8 +1336,8 @@ P(D | +) = 0.1667
 <section>
 <section id="de-la-probabilidad-a-las-variables-aleatorias-1" class="title-slide slide level1 center">
 <h1>De la Probabilidad a las Variables Aleatorias</h1>
-
-<img data-src="logo.png" width="70" class="r-stretch"><div class="connection">
+<p><img data-src="logo.png" width="70"></p>
+<div class="connection">
 <p>Hasta aquí hemos modelado <strong>eventos</strong> (A, B, intersecciones, condicionales). Ahora damos el salto a modelar <strong>variables</strong>: magnitudes clínicas que varían de paciente a paciente. Una variable aleatoria asigna un número a cada resultado incierto.</p>
 <table class="caption-top">
 <colgroup>
@@ -1420,9 +1467,15 @@ P(D | +) = 0.1667
 <span id="cb24-5"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(bp, px<span class="fl">+0.02</span>, <span class="fu">paste0</span>(px<span class="sc">*</span><span class="dv">8</span>,<span class="st">"/8 = "</span>, px), <span class="at">font=</span><span class="dv">2</span>, <span class="at">cex=</span><span class="fl">0.95</span>)</span>
 <span id="cb24-6"><a aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h=</span><span class="dv">0</span>, <span class="at">col=</span><span class="st">"grey"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="T02_I_Probabilidad_files/figure-revealjs/unnamed-chunk-13-1.svg"></p>
+</figure>
 </div>
-<img data-src="T02_I_Probabilidad_files/figure-revealjs/unnamed-chunk-13-1.png" width="864" class="r-stretch"><p><strong>Verificación:</strong> <span class="math inline">\(\sum P(X=x) = 0.125+0.375+0.375+0.125 = 1.00\)</span> ✓</p>
+</div>
+</div>
+<p><strong>Verificación:</strong> <span class="math inline">\(\sum P(X=x) = 0.125+0.375+0.375+0.125 = 1.00\)</span> ✓</p>
 </section>
 <section id="esperanza-matemática-va-discreta" class="slide level2 center">
 <h2>Esperanza matemática — Va discreta</h2>
@@ -1575,9 +1628,15 @@ Verificación: n·p·(1-p) = 0.75</code></pre>
 <span id="cb27-8"><a aria-hidden="true" tabindex="-1"></a><span class="fu">points</span>(<span class="dv">22</span>, <span class="fu">pnorm</span>(<span class="dv">22</span>, mu, sigma), <span class="at">pch=</span><span class="dv">19</span>, <span class="at">col=</span><span class="st">"darkgreen"</span>, <span class="at">cex=</span><span class="fl">1.5</span>)</span>
 <span id="cb27-9"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="dv">22</span>, <span class="fu">pnorm</span>(<span class="dv">22</span>,mu,sigma)<span class="sc">+</span><span class="fl">0.05</span>, <span class="fu">paste0</span>(<span class="st">"F(22) = "</span>, <span class="fu">round</span>(<span class="fu">pnorm</span>(<span class="dv">22</span>,mu,sigma),<span class="dv">3</span>)), <span class="at">col=</span><span class="st">"darkgreen"</span>, <span class="at">font=</span><span class="dv">2</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="T02_I_Probabilidad_files/figure-revealjs/unnamed-chunk-15-1.svg"></p>
+</figure>
 </div>
-<img data-src="T02_I_Probabilidad_files/figure-revealjs/unnamed-chunk-15-1.png" width="864" class="r-stretch"><p><span class="math display">\[F(22) = P(X \leq 22) = \Phi\left(\frac{22-30}{8}\right) = \Phi(-1) = 0.159\]</span></p>
+</div>
+</div>
+<p><span class="math display">\[F(22) = P(X \leq 22) = \Phi\left(\frac{22-30}{8}\right) = \Phi(-1) = 0.159\]</span></p>
 </section>
 <section id="f.d.a.-va-discreta-vs-va-continua" class="slide level2 center">
 <h2>f.d.a. — VA Discreta vs VA Continua</h2>
@@ -1600,13 +1659,19 @@ Verificación: n·p·(1-p) = 0.75</code></pre>
 <span id="cb28-14"><a aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="fl">0.5</span>,<span class="dv">1</span>), <span class="at">lty=</span><span class="dv">3</span>, <span class="at">col=</span><span class="st">"grey"</span>); <span class="fu">abline</span>(<span class="at">v=</span><span class="dv">0</span>, <span class="at">lty=</span><span class="dv">3</span>, <span class="at">col=</span><span class="st">"grey"</span>)</span>
 <span id="cb28-15"><a aria-hidden="true" tabindex="-1"></a><span class="fu">points</span>(<span class="dv">0</span>, <span class="fl">0.5</span>, <span class="at">pch=</span><span class="dv">19</span>, <span class="at">col=</span><span class="st">"darkgreen"</span>, <span class="at">cex=</span><span class="fl">1.5</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="T02_I_Probabilidad_files/figure-revealjs/unnamed-chunk-16-1.svg"></p>
+</figure>
+</div>
+</div>
 <details class="code-fold">
 <summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<img data-src="T02_I_Probabilidad_files/figure-revealjs/unnamed-chunk-16-1.png" width="864" class="r-stretch"><p><strong>VA Discreta:</strong> <span class="math inline">\(F(x) = \sum_{x_i \leq x} P(X=x_i)\)</span> → <strong>función escalonada</strong>, salta en cada valor posible</p>
+<p><strong>VA Discreta:</strong> <span class="math inline">\(F(x) = \sum_{x_i \leq x} P(X=x_i)\)</span> → <strong>función escalonada</strong>, salta en cada valor posible</p>
 <p><strong>VA Continua:</strong> <span class="math inline">\(F(x) = \int_{-\infty}^x f(t)dt\)</span> → <strong>función continua suave</strong>, sin saltos</p>
 </section>
 <section id="función-de-densidad-va-continua" class="slide level2 center">
@@ -1655,9 +1720,15 @@ Verificación: n·p·(1-p) = 0.75</code></pre>
 <span id="cb30-11"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="dv">150</span>, <span class="fl">0.003</span>, <span class="fu">paste</span>(<span class="st">"P(130≤X≤170) ="</span>,</span>
 <span id="cb30-12"><a aria-hidden="true" tabindex="-1"></a>    <span class="fu">round</span>(<span class="fu">pnorm</span>(<span class="dv">170</span>,<span class="dv">150</span>,<span class="dv">20</span>)<span class="sc">-</span><span class="fu">pnorm</span>(<span class="dv">130</span>,<span class="dv">150</span>,<span class="dv">20</span>),<span class="dv">3</span>)), <span class="at">font=</span><span class="dv">2</span>, <span class="at">cex=</span><span class="fl">1.1</span>, <span class="at">col=</span><span class="st">"darkgreen"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="T02_I_Probabilidad_files/figure-revealjs/unnamed-chunk-17-1.svg"></p>
+</figure>
 </div>
-<img data-src="T02_I_Probabilidad_files/figure-revealjs/unnamed-chunk-17-1.png" width="864" class="r-stretch"></section>
+</div>
+</div>
+</section>
 <section id="esperanza-y-varianza-va-continua" class="slide level2 center">
 <h2>Esperanza y varianza — Va continua</h2>
 <div class="callout callout-note callout-titled callout-style-default">
@@ -1702,9 +1773,15 @@ Var(X) teórica = 400   Var(X) simulada = 398.9
 <span id="cb33-8"><a aria-hidden="true" tabindex="-1"></a>       <span class="at">col=</span><span class="fu">c</span>(<span class="st">"steelblue"</span>,<span class="st">"seagreen"</span>), <span class="at">lwd=</span><span class="dv">3</span>, <span class="at">bty=</span><span class="st">"n"</span>, <span class="at">cex=</span><span class="fl">1.2</span>)</span>
 <span id="cb33-9"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="dv">150</span>, <span class="fl">0.04</span>, <span class="fu">expression</span>(mu<span class="sc">==</span><span class="dv">150</span>), <span class="at">pos=</span><span class="dv">1</span>, <span class="at">cex=</span><span class="fl">1.1</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="T02_I_Probabilidad_files/figure-revealjs/unnamed-chunk-19-1.svg"></p>
+</figure>
 </div>
-<img data-src="T02_I_Probabilidad_files/figure-revealjs/unnamed-chunk-19-1.png" width="864" class="r-stretch"><p><strong>Interpretación:</strong> Ambas tienen la misma esperanza (<span class="math inline">\(\mu=150°\)</span>), pero la distribución naranja (<span class="math inline">\(\sigma=25\)</span>) tiene <strong>mayor dispersión</strong> que la azul (<span class="math inline">\(\sigma=10\)</span>).</p>
+</div>
+</div>
+<p><strong>Interpretación:</strong> Ambas tienen la misma esperanza (<span class="math inline">\(\mu=150°\)</span>), pero la distribución naranja (<span class="math inline">\(\sigma=25\)</span>) tiene <strong>mayor dispersión</strong> que la azul (<span class="math inline">\(\sigma=10\)</span>).</p>
 </section>
 <section id="comparativa-discreta-vs-continua-conceptos-análogos" class="slide level2 center">
 <h2>Comparativa: Discreta vs continua — Conceptos análogos</h2>
@@ -1771,13 +1848,19 @@ Var(X) teórica = 400   Var(X) simulada = 398.9
 <span id="cb34-7"><a aria-hidden="true" tabindex="-1"></a><span class="fu">curve</span>(<span class="fu">dnorm</span>(x), <span class="sc">-</span><span class="dv">4</span>, <span class="dv">4</span>, <span class="at">lwd=</span><span class="dv">3</span>, <span class="at">col=</span><span class="st">"seagreen"</span>,</span>
 <span id="cb34-8"><a aria-hidden="true" tabindex="-1"></a>      <span class="at">main=</span><span class="st">"VA Continua: Normal(0,1)"</span>, <span class="at">xlab=</span><span class="st">"x"</span>, <span class="at">ylab=</span><span class="st">"f(x)"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
-
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="T02_I_Probabilidad_files/figure-revealjs/unnamed-chunk-20-1.svg"></p>
+</figure>
+</div>
+</div>
 <details class="code-fold">
 <summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<img data-src="T02_I_Probabilidad_files/figure-revealjs/unnamed-chunk-20-1.png" width="864" class="r-stretch"></section>
+</section>
 <section id="las-cuatro-funciones-de-r-para-distribuciones" class="slide level2 center">
 <h2>Las cuatro funciones de R para distribuciones</h2>
 <table class="caption-top">
@@ -1883,7 +1966,7 @@ Var(X) teórica = 400   Var(X) simulada = 398.9
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="T02_I_Probabilidad_files/figure-revealjs/unnamed-chunk-21-1.png" width="864"></p>
+<p><img data-src="T02_I_Probabilidad_files/figure-revealjs/unnamed-chunk-21-1.svg"></p>
 </figure>
 </div>
 </div>
