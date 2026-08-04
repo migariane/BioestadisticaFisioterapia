@@ -1,51 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://migariane.github.io/BioestadisticaFisioterapia/T01_Descriptiva.html</loc>
-    <lastmod>2026-07-29T11:58:53.636Z</lastmod>
-  </url>
-  <url>
-    <loc>https://migariane.github.io/BioestadisticaFisioterapia/T01_I_Descriptiva.html</loc>
-    <lastmod>2026-07-27T09:11:04.397Z</lastmod>
-  </url>
-  <url>
-    <loc>https://migariane.github.io/BioestadisticaFisioterapia/T01_II_Descriptiva.html</loc>
-    <lastmod>2026-07-27T09:11:04.373Z</lastmod>
-  </url>
-  <url>
-    <loc>https://migariane.github.io/BioestadisticaFisioterapia/T02_I_Probabilidad.html</loc>
-    <lastmod>2026-07-29T11:58:53.648Z</lastmod>
-  </url>
-  <url>
-    <loc>https://migariane.github.io/BioestadisticaFisioterapia/T02_Probabilidad.html</loc>
-    <lastmod>2026-07-29T11:58:53.642Z</lastmod>
-  </url>
-  <url>
-    <loc>https://migariane.github.io/BioestadisticaFisioterapia/T03_clean.html</loc>
-    <lastmod>2026-07-27T09:11:04.506Z</lastmod>
-  </url>
-  <url>
-    <loc>https://migariane.github.io/BioestadisticaFisioterapia/T04_Test_Hipotesis.html</loc>
-    <lastmod>2026-07-29T11:58:53.675Z</lastmod>
-  </url>
-  <url>
-    <loc>https://migariane.github.io/BioestadisticaFisioterapia/T04_I_Test_Hipotesis.html</loc>
-    <lastmod>2026-07-27T09:11:04.526Z</lastmod>
+    <loc>https://migariane.github.io/BioestadisticaFisioterapia/T06_RegresionCorr.html</loc>
+    <lastmod>2026-08-03T23:46:56.053Z</lastmod>
   </url>
   <url>
     <loc>https://migariane.github.io/BioestadisticaFisioterapia/T04_II_Test_Hipotesis.html</loc>
-    <lastmod>2026-07-27T09:11:04.514Z</lastmod>
+    <lastmod>2026-08-03T23:46:56.048Z</lastmod>
   </url>
   <url>
-    <loc>https://migariane.github.io/BioestadisticaFisioterapia/T05_ChiCuadrado.html</loc>
-    <lastmod>2026-07-29T11:58:53.685Z</lastmod>
+    <loc>https://migariane.github.io/BioestadisticaFisioterapia/T03_Estimacion_IC.html</loc>
+    <lastmod>2026-08-03T23:46:56.046Z</lastmod>
   </url>
   <url>
-    <loc>https://migariane.github.io/BioestadisticaFisioterapia/T06_RegresionCorr.html</loc>
-    <lastmod>2026-07-29T11:49:51.442Z</lastmod>
+    <loc>https://migariane.github.io/BioestadisticaFisioterapia/T02_I_Probabilidad.html</loc>
+    <lastmod>2026-08-03T23:46:56.044Z</lastmod>
+  </url>
+  <url>
+    <loc>https://migariane.github.io/BioestadisticaFisioterapia/T01_I_Descriptiva.html</loc>
+    <lastmod>2026-08-03T23:46:56.040Z</lastmod>
   </url>
   <url>
     <loc>https://migariane.github.io/BioestadisticaFisioterapia/index.html</loc>
-    <lastmod>2026-07-29T11:58:53.693Z</lastmod>
+    <lastmod>2026-08-03T23:46:56.035Z</lastmod>
+  </url>
+  <url>
+    <loc>https://migariane.github.io/BioestadisticaFisioterapia/T01_II_Descriptiva.html</loc>
+    <lastmod>2026-08-03T23:46:56.037Z</lastmod>
+  </url>
+  <url>
+    <loc>https://migariane.github.io/BioestadisticaFisioterapia/T02_II_Probabilidad.html</loc>
+    <lastmod>2026-08-03T23:46:56.042Z</lastmod>
+  </url>
+  <url>
+    <loc>https://migariane.github.io/BioestadisticaFisioterapia/T04_I_Test_Hipotesis.html</loc>
+    <lastmod>2026-08-03T23:46:56.050Z</lastmod>
+  </url>
+  <url>
+    <loc>https://migariane.github.io/BioestadisticaFisioterapia/T05_ChiCuadrado.html</loc>
+    <lastmod>2026-08-03T23:46:56.051Z</lastmod>
   </url>
 </urlset>

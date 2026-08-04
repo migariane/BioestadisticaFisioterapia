@@ -9,7 +9,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.9.38">
 
-  <meta name="author" content="Miguel Angel Luque-Fernández">
+  <meta name="author" content="Miguel Angel Luque-Fernández">
   <meta name="dcterms.date" content="2026-01-01">
   <title>Bioestadística para Fisioterapia – Probabilidad y Variables Aleatorias con R</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -234,13 +234,13 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-<a href="https://migariane.github.io">Miguel Angel Luque-Fernández</a> 
+<a href="https://migariane.github.io">Miguel Angel Luque-Fernández</a> 
 </div>
 <div class="quarto-title-author-email">
 <a href="mailto:mluquefe@ugr.es">mluquefe@ugr.es</a>
 </div>
         <p class="quarto-title-affiliation">
-            Dpto. Estadística e Investigación Operativa, Universidad de Granada
+            Dpto. Estadística e Investigación Operativa, Universidad de Granada
           </p>
     </div>
 </div>
@@ -254,46 +254,46 @@
 <ul>
 <li><a href="#/de-la-descripción-al-modelo" id="/toc-de-la-descripción-al-modelo">De la descripción al modelo</a></li>
 <li><a href="#/objetivos-de-aprendizaje-tema-2" id="/toc-objetivos-de-aprendizaje-tema-2">Objetivos de aprendizaje — Tema 2</a></li>
-<li><a href="#/las-tres-caras-de-la-probabilidad-frecuentista-axiomatica-y-bayesiana" id="/toc-las-tres-caras-de-la-probabilidad-frecuentista-axiomatica-y-bayesiana">Las tres caras de la probabilidad — Frecuentista, axiomática y Bayesiana</a></li>
-<li><a href="#/introduccion-a-la-probabilidad" id="/toc-introduccion-a-la-probabilidad">Introducción a la probabilidad</a></li>
-<li><a href="#/por-que-necesito-la-probabilidad-como-fisioterapeuta" id="/toc-por-que-necesito-la-probabilidad-como-fisioterapeuta">¿Por Qué Necesito la Probabilidad como Fisioterapeuta?</a></li>
+<li><a href="#/las-tres-caras-de-la-probabilidad-frecuentista-axiomática-y-bayesiana" id="/toc-las-tres-caras-de-la-probabilidad-frecuentista-axiomática-y-bayesiana">Las tres caras de la probabilidad — Frecuentista, axiomática y Bayesiana</a></li>
+<li><a href="#/introducción-a-la-probabilidad" id="/toc-introducción-a-la-probabilidad">Introducción a la probabilidad</a></li>
+<li><a href="#/por-qué-necesito-la-probabilidad-como-fisioterapeuta" id="/toc-por-qué-necesito-la-probabilidad-como-fisioterapeuta">¿Por Qué Necesito la Probabilidad como Fisioterapeuta?</a></li>
 <li><a href="#/concepto-frecuentista-de-probabilidad-y-regla-de-laplace" id="/toc-concepto-frecuentista-de-probabilidad-y-regla-de-laplace">Concepto frecuentista de probabilidad y regla de Laplace</a></li>
-<li><a href="#/ley-de-los-grandes-numeros" id="/toc-ley-de-los-grandes-numeros">Ley de los grandes números</a></li>
+<li><a href="#/ley-de-los-grandes-números" id="/toc-ley-de-los-grandes-números">Ley de los grandes números</a></li>
 <li><a href="#/axiomas-de-kolmogorov-1933" id="/toc-axiomas-de-kolmogorov-1933">Axiomas de Kolmogorov (1933)</a></li>
 <li><a href="#/de-los-axiomas-a-las-propiedades" id="/toc-de-los-axiomas-a-las-propiedades">De los axiomas a las propiedades</a></li>
 <li><a href="#/complemento" id="/toc-complemento">Complemento</a></li>
-<li><a href="#/union-de-eventos-regla-de-la-suma" id="/toc-union-de-eventos-regla-de-la-suma">Unión de eventos — Regla de la suma</a></li>
-<li><a href="#/diagramas-de-venn-complemento-union-e-interseccion" id="/toc-diagramas-de-venn-complemento-union-e-interseccion">Diagramas de Venn — Complemento, unión e intersección</a></li>
-<li><a href="#/inclusion-exclusion-para-tres-eventos" id="/toc-inclusion-exclusion-para-tres-eventos">Inclusión-exclusión para tres eventos</a></li>
-<li><a href="#/probabilidad-condicional-visualizacion-con-diagrama-de-venn" id="/toc-probabilidad-condicional-visualizacion-con-diagrama-de-venn">Probabilidad condicional — Visualización con diagrama de Venn</a></li>
+<li><a href="#/unión-de-eventos-regla-de-la-suma" id="/toc-unión-de-eventos-regla-de-la-suma">Unión de eventos — Regla de la suma</a></li>
+<li><a href="#/diagramas-de-venn-complemento-unión-e-intersección" id="/toc-diagramas-de-venn-complemento-unión-e-intersección">Diagramas de Venn — Complemento, unión e intersección</a></li>
+<li><a href="#/inclusión-exclusión-para-tres-eventos" id="/toc-inclusión-exclusión-para-tres-eventos">Inclusión-exclusión para tres eventos</a></li>
+<li><a href="#/probabilidad-condicional-visualización-con-diagrama-de-venn" id="/toc-probabilidad-condicional-visualización-con-diagrama-de-venn">Probabilidad condicional — Visualización con diagrama de Venn</a></li>
 <li><a href="#/probabilidad-condicional" id="/toc-probabilidad-condicional">Probabilidad condicional</a></li>
 <li><a href="#/independencia-de-eventos" id="/toc-independencia-de-eventos">Independencia de eventos</a></li>
-<li><a href="#/probabilidad-total-visualizacion-particion-del-espacio-muestral" id="/toc-probabilidad-total-visualizacion-particion-del-espacio-muestral">Probabilidad total — Visualización: Partición del espacio muestral</a></li>
-<li><a href="#/probabilidad-total-ejemplo-recuperacion-en-fisioterapia" id="/toc-probabilidad-total-ejemplo-recuperacion-en-fisioterapia">Probabilidad total — Ejemplo: Recuperación en fisioterapia</a></li>
+<li><a href="#/probabilidad-total-visualización-partición-del-espacio-muestral" id="/toc-probabilidad-total-visualización-partición-del-espacio-muestral">Probabilidad total — Visualización: Partición del espacio muestral</a></li>
+<li><a href="#/probabilidad-total-ejemplo-recuperación-en-fisioterapia" id="/toc-probabilidad-total-ejemplo-recuperación-en-fisioterapia">Probabilidad total — Ejemplo: Recuperación en fisioterapia</a></li>
 <li><a href="#/teorema-de-la-probabilidad-total" id="/toc-teorema-de-la-probabilidad-total">Teorema de la probabilidad total</a></li>
 <li><a href="#/teorema-de-bayes" id="/toc-teorema-de-bayes">Teorema de Bayes</a></li>
-<li><a href="#/bayes-ejemplo-test-diagnostico" id="/toc-bayes-ejemplo-test-diagnostico">Bayes — Ejemplo: Test diagnóstico</a></li>
-<li><a href="#/teorema-de-bayes-perspectiva-historica" id="/toc-teorema-de-bayes-perspectiva-historica">Teorema de Bayes — Perspectiva histórica</a></li>
-<li><a href="#/del-teorema-de-bayes-a-la-estadistica-bayesiana" id="/toc-del-teorema-de-bayes-a-la-estadistica-bayesiana">Del teorema de Bayes a la estadística Bayesiana</a></li>
+<li><a href="#/bayes-ejemplo-test-diagnóstico" id="/toc-bayes-ejemplo-test-diagnóstico">Bayes — Ejemplo: Test diagnóstico</a></li>
+<li><a href="#/teorema-de-bayes-perspectiva-histórica" id="/toc-teorema-de-bayes-perspectiva-histórica">Teorema de Bayes — Perspectiva histórica</a></li>
+<li><a href="#/del-teorema-de-bayes-a-la-estadística-bayesiana" id="/toc-del-teorema-de-bayes-a-la-estadística-bayesiana">Del teorema de Bayes a la estadística Bayesiana</a></li>
 
 </ul></li>
 <li><a href="#/de-la-probabilidad-a-las-variables-aleatorias" id="/toc-de-la-probabilidad-a-las-variables-aleatorias">De la Probabilidad a las Variables Aleatorias</a>
 <ul>
-<li><a href="#/respiro-visual-incertidumbre-en-la-practica-clinica" id="/toc-respiro-visual-incertidumbre-en-la-practica-clinica">Respiro visual — Incertidumbre en la práctica clínica</a></li>
+<li><a href="#/respiro-visual-incertidumbre-en-la-práctica-clínica" id="/toc-respiro-visual-incertidumbre-en-la-práctica-clínica">Respiro visual — Incertidumbre en la práctica clínica</a></li>
 
 </ul></li>
 <li><a href="#/de-la-probabilidad-a-las-variables-aleatorias-1" id="/toc-de-la-probabilidad-a-las-variables-aleatorias-1">De la Probabilidad a las Variables Aleatorias</a>
 <ul>
-<li><a href="#/variable-aleatoria-definicion" id="/toc-variable-aleatoria-definicion">Variable aleatoria — Definición</a></li>
-<li><a href="#/funcion-de-masa-de-probabilidad-va-discreta" id="/toc-funcion-de-masa-de-probabilidad-va-discreta">Función de masa de probabilidad — Va discreta</a></li>
-<li><a href="#/esperanza-matematica-va-discreta" id="/toc-esperanza-matematica-va-discreta">Esperanza matemática — Va discreta</a></li>
+<li><a href="#/variable-aleatoria-definición" id="/toc-variable-aleatoria-definición">Variable aleatoria — Definición</a></li>
+<li><a href="#/función-de-masa-de-probabilidad-va-discreta" id="/toc-función-de-masa-de-probabilidad-va-discreta">Función de masa de probabilidad — Va discreta</a></li>
+<li><a href="#/esperanza-matemática-va-discreta" id="/toc-esperanza-matemática-va-discreta">Esperanza matemática — Va discreta</a></li>
 <li><a href="#/varianza-va-discreta" id="/toc-varianza-va-discreta">Varianza — Va discreta</a></li>
-<li><a href="#/funcion-de-distribucion-acumulativa-f.d.a." id="/toc-funcion-de-distribucion-acumulativa-f.d.a.">Función de distribución acumulativa (f.d.a.)</a></li>
-<li><a href="#/f.d.a.-de-la-normal-calculo-de-probabilidades" id="/toc-f.d.a.-de-la-normal-calculo-de-probabilidades">f.d.a. de la Normal — Cálculo de Probabilidades</a></li>
+<li><a href="#/función-de-distribución-acumulativa-f.d.a." id="/toc-función-de-distribución-acumulativa-f.d.a.">Función de distribución acumulativa (f.d.a.)</a></li>
+<li><a href="#/f.d.a.-de-la-normal-cálculo-de-probabilidades" id="/toc-f.d.a.-de-la-normal-cálculo-de-probabilidades">f.d.a. de la Normal — Cálculo de Probabilidades</a></li>
 <li><a href="#/f.d.a.-va-discreta-vs-va-continua" id="/toc-f.d.a.-va-discreta-vs-va-continua">f.d.a. — VA Discreta vs VA Continua</a></li>
-<li><a href="#/funcion-de-densidad-va-continua" id="/toc-funcion-de-densidad-va-continua">Función de densidad — Va continua</a></li>
+<li><a href="#/función-de-densidad-va-continua" id="/toc-función-de-densidad-va-continua">Función de densidad — Va continua</a></li>
 <li><a href="#/esperanza-y-varianza-va-continua" id="/toc-esperanza-y-varianza-va-continua">Esperanza y varianza — Va continua</a></li>
-<li><a href="#/comparativa-discreta-vs-continua-conceptos-analogos" id="/toc-comparativa-discreta-vs-continua-conceptos-analogos">Comparativa: Discreta vs continua — Conceptos análogos</a></li>
+<li><a href="#/comparativa-discreta-vs-continua-conceptos-análogos" id="/toc-comparativa-discreta-vs-continua-conceptos-análogos">Comparativa: Discreta vs continua — Conceptos análogos</a></li>
 <li><a href="#/las-cuatro-funciones-de-r-para-distribuciones" id="/toc-las-cuatro-funciones-de-r-para-distribuciones">Las cuatro funciones de R para distribuciones</a></li>
 <li><a href="#/ejercicio-clínico-tema-ii-parte-i" id="/toc-ejercicio-clínico-tema-ii-parte-i">Ejercicio Clínico — Tema II (Parte I)</a></li>
 
@@ -312,9 +312,9 @@
 <h1>Probabilidad y Variables Aleatorias</h1>
 
 <img data-src="logo.png" width="90" class="r-stretch"><p><strong>Grado en Fisioterapia</strong></p>
-<p><strong>CC BY 4.0</strong> · Miguel Angel Luque-Fernández</p>
-<p><a href="https://migariane.github.io">Miguel Angel Luque-Fernández</a> · <a href="https://maluque.netlify.app">maluque.netlify.app</a></p>
-<p>Dpto. Estadística e Investigación Operativa · Universidad de Granada</p>
+<p><strong>CC BY 4.0</strong> · Miguel Angel Luque-Fernández</p>
+<p><a href="https://migariane.github.io">Miguel Angel Luque-Fernández</a> · <a href="https://maluque.netlify.app">maluque.netlify.app</a></p>
+<p>Dpto. Estadística e Investigación Operativa · Universidad de Granada</p>
 </section>
 <section id="de-la-descripción-al-modelo" class="slide level2 center">
 <h2>De la descripción al modelo</h2>
@@ -359,21 +359,21 @@
 <p><strong>Tip</strong></p>
 </div>
 <div class="callout-content">
-<p><strong>Al finalizar este tema sabrás:</strong></p>
+<p><strong>Al finalizar este tema sabrás:</strong></p>
 </div>
 </div>
 </div>
 <ol type="1">
-<li class="fragment">Distinguir los enfoques frecuentista, axiomático y bayesiano de la probabilidad</li>
-<li class="fragment">Aplicar las reglas básicas: complemento, unión, intersección, probabilidad condicional</li>
-<li class="fragment">Usar el Teorema de Bayes para actualizar diagnósticos clínicos</li>
-<li class="fragment">Identificar qué distribución (Normal, Binomial, Poisson) modela cada situación clínica</li>
+<li class="fragment">Distinguir los enfoques frecuentista, axiomático y bayesiano de la probabilidad</li>
+<li class="fragment">Aplicar las reglas básicas: complemento, unión, intersección, probabilidad condicional</li>
+<li class="fragment">Usar el Teorema de Bayes para actualizar diagnósticos clínicos</li>
+<li class="fragment">Identificar qué distribución (Normal, Binomial, Poisson) modela cada situación clínica</li>
 <li class="fragment">Calcular probabilidades con <code>pnorm()</code>, <code>pbinom()</code>, <code>ppois()</code> y sus equivalentes BioEstatR</li>
 <li class="fragment">Interpretar Z-scores para comparar mediciones de distintos pacientes</li>
 </ol>
 </section>
-<section id="las-tres-caras-de-la-probabilidad-frecuentista-axiomatica-y-bayesiana" class="slide level2 center">
-<h2>Las tres caras de la probabilidad — Frecuentista, axiomática y Bayesiana</h2>
+<section id="las-tres-caras-de-la-probabilidad-frecuentista-axiomática-y-bayesiana" class="slide level2 center">
+<h2>Las tres caras de la probabilidad — Frecuentista, axiomática y Bayesiana</h2>
 <p><strong>Tres enfoques complementarios para definir la probabilidad:</strong></p>
 <table class="caption-top">
 <colgroup>
@@ -385,7 +385,7 @@
 <thead>
 <tr class="header">
 <th style="text-align: left;">Enfoque</th>
-<th style="text-align: left;">Definición</th>
+<th style="text-align: left;">Definición</th>
 <th style="text-align: left;">Fundador(es)</th>
 <th style="text-align: left;">Uso en Fisioterapia</th>
 </tr>
@@ -395,55 +395,55 @@
 <td style="text-align: left;"><strong>Frecuentista</strong></td>
 <td style="text-align: left;"><span class="math inline">\(P(A) = \lim_{n\to\infty} n_A/n\)</span></td>
 <td style="text-align: left;">von Mises, Fisher</td>
-<td style="text-align: left;">Estimar tasas de recuperación poblacionales</td>
+<td style="text-align: left;">Estimar tasas de recuperación poblacionales</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><strong>Axiomática</strong></td>
 <td style="text-align: left;"><span class="math inline">\(P\)</span> satisface 3 axiomas (Kolmogorov 1933)</td>
 <td style="text-align: left;">Kolmogorov</td>
-<td style="text-align: left;">Base matemática de TODA la estadística</td>
+<td style="text-align: left;">Base matemática de TODA la estadística</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><strong>Bayesiana</strong></td>
 <td style="text-align: left;"><span class="math inline">\(P(A \mid B) = \frac{P(B \mid A)P(A)}{P(B)}\)</span></td>
 <td style="text-align: left;">Bayes, Laplace</td>
-<td style="text-align: left;">Actualizar diagnósticos con evidencia clínica</td>
+<td style="text-align: left;">Actualizar diagnósticos con evidencia clínica</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Relación entre los tres enfoques:</strong> - El enfoque <strong>frecuentista</strong> define probabilidad como frecuencia relativa a largo plazo → <span class="math inline">\(P(A) = \lim_{n\to\infty} n_A/n\)</span> - Kolmogorov demostró que esta definición satisface los <strong>axiomas</strong> de la teoría de la probabilidad → base matemática rigurosa - El enfoque <strong>bayesiano</strong> usa esos mismos axiomas pero interpreta <span class="math inline">\(P(A)\)</span> como grado de creencia, actualizable con el Teorema de Bayes</p>
-<p><strong>En Fisioterapia:</strong> usamos el enfoque frecuentista para estudios poblacionales, el bayesiano para razonamiento clínico, y ambos descansan sobre los axiomas de Kolmogorov.</p>
+<p><strong>Relación entre los tres enfoques:</strong> - El enfoque <strong>frecuentista</strong> define probabilidad como frecuencia relativa a largo plazo → <span class="math inline">\(P(A) = \lim_{n\to\infty} n_A/n\)</span> - Kolmogorov demostró que esta definición satisface los <strong>axiomas</strong> de la teoría de la probabilidad → base matemática rigurosa - El enfoque <strong>bayesiano</strong> usa esos mismos axiomas pero interpreta <span class="math inline">\(P(A)\)</span> como grado de creencia, actualizable con el Teorema de Bayes</p>
+<p><strong>En Fisioterapia:</strong> usamos el enfoque frecuentista para estudios poblacionales, el bayesiano para razonamiento clínico, y ambos descansan sobre los axiomas de Kolmogorov.</p>
 </section>
-<section id="introduccion-a-la-probabilidad" class="slide level2 center">
-<h2>Introducción a la probabilidad</h2>
+<section id="introducción-a-la-probabilidad" class="slide level2 center">
+<h2>Introducción a la probabilidad</h2>
 <ul>
-<li class="fragment">La probabilidad es una <strong>medida numérica</strong> de la posibilidad de que ocurra un evento</li>
+<li class="fragment">La probabilidad es una <strong>medida numérica</strong> de la posibilidad de que ocurra un evento</li>
 <li class="fragment">Se denota como <span class="math inline">\(P(A)\)</span>, donde <span class="math inline">\(A\)</span> es el evento</li>
-<li class="fragment">Se expresa como un número entre <strong>0</strong> (imposibilidad) y <strong>1</strong> (certeza)</li>
-<li class="fragment">El enfoque <strong>frecuentista</strong>: <span class="math inline">\(P(A)\)</span> es el límite de la frecuencia relativa cuando <span class="math inline">\(n \to \infty\)</span></li>
+<li class="fragment">Se expresa como un número entre <strong>0</strong> (imposibilidad) y <strong>1</strong> (certeza)</li>
+<li class="fragment">El enfoque <strong>frecuentista</strong>: <span class="math inline">\(P(A)\)</span> es el límite de la frecuencia relativa cuando <span class="math inline">\(n \to \infty\)</span></li>
 </ul>
 </section>
-<section id="por-que-necesito-la-probabilidad-como-fisioterapeuta" class="slide level2 center">
-<h2>¿Por Qué Necesito la Probabilidad como Fisioterapeuta?</h2>
+<section id="por-qué-necesito-la-probabilidad-como-fisioterapeuta" class="slide level2 center">
+<h2>¿Por Qué Necesito la Probabilidad como Fisioterapeuta?</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><strong>Cada día tomas decisiones bajo incertidumbre:</strong></p>
+<p><strong>Cada día tomas decisiones bajo incertidumbre:</strong></p>
 <ul>
-<li>Un paciente con lumbalgia: ¿probabilidad de que mejore con ejercicio terapéutico?</li>
+<li>Un paciente con lumbalgia: ¿probabilidad de que mejore con ejercicio terapéutico?</li>
 <li>Un test de Lasegue positivo: ¿probabilidad de que realmente tenga hernia discal?</li>
-<li>Lees un artículo: “El tratamiento A es significativamente mejor que B (P = 0.03)”. ¿Es fiable?</li>
+<li>Lees un artículo: “El tratamiento A es significativamente mejor que B (P = 0.03)”. ¿Es fiable?</li>
 </ul>
 </div><div class="column" style="width:50%;">
 <p><strong>La probabilidad te da las herramientas para:</strong></p>
 <ul>
-<li><strong>Cuantificar</strong> la incertidumbre clínica</li>
+<li><strong>Cuantificar</strong> la incertidumbre clínica</li>
 <li><strong>Actualizar</strong> tus creencias con nueva evidencia (Bayes)</li>
-<li><strong>Interpretar</strong> críticamente la literatura científica</li>
+<li><strong>Interpretar</strong> críticamente la literatura científica</li>
 <li><strong>Comunicar</strong> riesgos a tus pacientes de forma comprensible</li>
 </ul>
 </div></div>
-<p><strong>“La estadística es el arte de tomar decisiones en presencia de incertidumbre.”</strong> — Stephen Senn</p>
-<p><strong>Experimento aleatorio:</strong> Proceso que puede repetirse bajo condiciones idénticas, tiene al menos dos resultados posibles, y cuyo resultado no puede predecirse con certeza.</p>
+<p><strong>“La estadística es el arte de tomar decisiones en presencia de incertidumbre.”</strong> — Stephen Senn</p>
+<p><strong>Experimento aleatorio:</strong> Proceso que puede repetirse bajo condiciones idénticas, tiene al menos dos resultados posibles, y cuyo resultado no puede predecirse con certeza.</p>
 <p><strong>Espacio muestral (<span class="math inline">\(\Omega\)</span>):</strong> Conjunto de todos los resultados posibles.</p>
 <p><strong>Evento (<span class="math inline">\(A\)</span>):</strong> Subconjunto del espacio muestral.</p>
 </section>
@@ -458,7 +458,7 @@
 <p><span class="math inline">\(P(3) = 1/6\)</span> <span class="math inline">\(P(\text{par}) = 3/6 = 1/2\)</span> <span class="math inline">\(P(&gt;4) = 2/6\)</span></p>
 <div class="cell">
 <details class="code-fold">
-<summary>Mostrar código R</summary>
+<summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a aria-hidden="true" tabindex="-1"></a>P_3 <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">6</span>; P_par <span class="ot">&lt;-</span> <span class="dv">3</span><span class="sc">/</span><span class="dv">6</span>; P_mayor_4 <span class="ot">&lt;-</span> <span class="dv">2</span><span class="sc">/</span><span class="dv">6</span></span>
 <span id="cb1-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"P(3) ="</span>, P_3, <span class="st">"</span><span class="sc">\n</span><span class="st">P(par) ="</span>, P_par, <span class="st">"</span><span class="sc">\n</span><span class="st">P(&gt;4) ="</span>, P_mayor_4)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
@@ -470,25 +470,25 @@ P(&gt;4) = 0.3333333</code></pre>
 </div>
 </div></div>
 </section>
-<section id="ley-de-los-grandes-numeros" class="slide level2 center">
-<h2>Ley de los grandes números</h2>
-<p>La frecuencia relativa converge a la probabilidad teórica cuando <span class="math inline">\(n \to \infty\)</span>.</p>
-<p><strong>Simulación:</strong> Aleatorización de pacientes a Fisioterapia Manual (FM) vs Ejercicio Terapéutico (ET).</p>
+<section id="ley-de-los-grandes-números" class="slide level2 center">
+<h2>Ley de los grandes números</h2>
+<p>La frecuencia relativa converge a la probabilidad teórica cuando <span class="math inline">\(n \to \infty\)</span>.</p>
+<p><strong>Simulación:</strong> Aleatorización de pacientes a Fisioterapia Manual (FM) vs Ejercicio Terapéutico (ET).</p>
 <div class="cell">
 <details class="code-fold">
-<summary>Mostrar código R</summary>
+<summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
 <span id="cb3-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>), <span class="at">mar=</span><span class="fu">c</span>(<span class="dv">3</span>,<span class="dv">3</span>,<span class="dv">2</span>,<span class="dv">1</span>))</span>
 <span id="cb3-3"><a aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(n <span class="cf">in</span> <span class="fu">c</span>(<span class="dv">10</span>, <span class="dv">100</span>, <span class="dv">500</span>, <span class="dv">1000</span>, <span class="dv">5000</span>, <span class="dv">10000</span>)){</span>
 <span id="cb3-4"><a aria-hidden="true" tabindex="-1"></a>  asign <span class="ot">&lt;-</span> <span class="fu">rbinom</span>(n, <span class="dv">1</span>, <span class="fl">0.5</span>)</span>
 <span id="cb3-5"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot</span>(<span class="fu">cumsum</span>(asign)<span class="sc">/</span>(<span class="dv">1</span><span class="sc">:</span>n), <span class="at">type=</span><span class="st">"l"</span>, <span class="at">col=</span><span class="st">"steelblue"</span>, <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>),</span>
-<span id="cb3-6"><a aria-hidden="true" tabindex="-1"></a>       <span class="at">main=</span><span class="fu">paste</span>(<span class="st">"n ="</span>,n), <span class="at">xlab=</span><span class="st">"Ensayos"</span>, <span class="at">ylab=</span><span class="st">"Proporción FM"</span>)</span>
+<span id="cb3-6"><a aria-hidden="true" tabindex="-1"></a>       <span class="at">main=</span><span class="fu">paste</span>(<span class="st">"n ="</span>,n), <span class="at">xlab=</span><span class="st">"Ensayos"</span>, <span class="at">ylab=</span><span class="st">"Proporción FM"</span>)</span>
 <span id="cb3-7"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">abline</span>(<span class="at">h=</span><span class="fl">0.5</span>, <span class="at">col=</span><span class="st">"darkgreen"</span>, <span class="at">lty=</span><span class="dv">2</span>)</span>
 <span id="cb3-8"><a aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 
 <details class="code-fold">
-<summary>Mostrar código R</summary>
+<summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
@@ -497,7 +497,7 @@ P(&gt;4) = 0.3333333</code></pre>
 <h2>Axiomas de Kolmogorov (1933)</h2>
 <ol type="1">
 <li class="fragment"><strong>No negatividad:</strong> <span class="math inline">\(P(A) \geq 0\)</span> para todo evento <span class="math inline">\(A\)</span></li>
-<li class="fragment"><strong>Normalización:</strong> <span class="math inline">\(P(\Omega) = 1\)</span></li>
+<li class="fragment"><strong>Normalización:</strong> <span class="math inline">\(P(\Omega) = 1\)</span></li>
 <li class="fragment"><strong>Aditividad:</strong> Si <span class="math inline">\(A_1, A_2, \ldots\)</span> son mutuamente excluyentes: <span class="math inline">\(P(\bigcup_i A_i) = \sum_i P(A_i)\)</span></li>
 </ol>
 <div class="callout callout-tip callout-titled callout-style-default">
@@ -509,15 +509,15 @@ P(&gt;4) = 0.3333333</code></pre>
 <p><strong>Tip</strong></p>
 </div>
 <div class="callout-content">
-<p><strong>¿Qué significa esto?</strong> Los tres axiomas son el “contrato” mínimo que debe cumplir cualquier probabilidad. Todo lo demás (complemento, unión, Bayes…) se deduce de ellos. No necesitas memorizarlos — solo entender que son la base lógica de todo lo que sigue.</p>
+<p><strong>¿Qué significa esto?</strong> Los tres axiomas son el “contrato” mínimo que debe cumplir cualquier probabilidad. Todo lo demás (complemento, unión, Bayes…) se deduce de ellos. No necesitas memorizarlos — solo entender que son la base lógica de todo lo que sigue.</p>
 </div>
 </div>
 </div>
-<p><strong>Ejemplo clínico — Diagnósticos excluyentes en consulta de fisioterapia:</strong></p>
+<p><strong>Ejemplo clínico — Diagnósticos excluyentes en consulta de fisioterapia:</strong></p>
 <table class="caption-top">
 <thead>
 <tr class="header">
-<th>Diagnóstico</th>
+<th>Diagnóstico</th>
 <th>Frecuencia</th>
 <th>Probabilidad</th>
 </tr>
@@ -572,8 +572,8 @@ P(&gt;4) = 0.3333333</code></pre>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Regla</th>
-<th style="text-align: left;">Fórmula</th>
-<th style="text-align: left;">Derivación</th>
+<th style="text-align: left;">Fórmula</th>
+<th style="text-align: left;">Derivación</th>
 </tr>
 </thead>
 <tbody>
@@ -583,7 +583,7 @@ P(&gt;4) = 0.3333333</code></pre>
 <td style="text-align: left;"><span class="math inline">\(A \cup \bar{A} = \Omega\)</span>, <span class="math inline">\(A \cap \bar{A} = \emptyset\)</span> ⇒ <span class="math inline">\(P(A) + P(\bar{A}) = P(\Omega) = 1\)</span></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Probabilidad del vacío</td>
+<td style="text-align: left;">Probabilidad del vacío</td>
 <td style="text-align: left;"><span class="math inline">\(P(\emptyset) = 0\)</span></td>
 <td style="text-align: left;"><span class="math inline">\(\emptyset = \bar{\Omega}\)</span> ⇒ <span class="math inline">\(P(\emptyset) = 1 - P(\Omega) = 0\)</span></td>
 </tr>
@@ -593,9 +593,9 @@ P(&gt;4) = 0.3333333</code></pre>
 <td style="text-align: left;"><span class="math inline">\(P(A) = 1 - P(\bar{A}) \leq 1\)</span> pues <span class="math inline">\(P(\bar{A}) \geq 0\)</span></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Unión general</td>
+<td style="text-align: left;">Unión general</td>
 <td style="text-align: left;"><span class="math inline">\(P(A \cup B) = P(A) + P(B) - P(A \cap B)\)</span></td>
-<td style="text-align: left;">Partición: <span class="math inline">\(A \cup B = A \cup (B \cap \bar{A})\)</span>, con <span class="math inline">\(A\)</span> y <span class="math inline">\(B \cap \bar{A}\)</span> excluyentes</td>
+<td style="text-align: left;">Partición: <span class="math inline">\(A \cup B = A \cup (B \cap \bar{A})\)</span>, con <span class="math inline">\(A\)</span> y <span class="math inline">\(B \cap \bar{A}\)</span> excluyentes</td>
 </tr>
 </tbody>
 </table>
@@ -615,15 +615,15 @@ P(&gt;4) = 0.3333333</code></pre>
 </section>
 <section id="complemento" class="slide level2 center">
 <h2>Complemento</h2>
-<p><em>En clínica, a menudo es más fácil calcular la probabilidad de que algo NO ocurra. La regla del complemento nos permite obtener una probabilidad a partir de la otra.</em></p>
+<p><em>En clínica, a menudo es más fácil calcular la probabilidad de que algo NO ocurra. La regla del complemento nos permite obtener una probabilidad a partir de la otra.</em></p>
 <div class="framed">
 <p><span class="math display">\[P(\bar{A}) = 1 - P(A)\]</span></p>
 </div>
-<p><strong>Ejemplo clínico:</strong> El 30% de pacientes en consulta de fisioterapia tienen HTA.</p>
+<p><strong>Ejemplo clínico:</strong> El 30% de pacientes en consulta de fisioterapia tienen HTA.</p>
 <p><span class="math display">\[P(\text{HTA}) = 0.30 \quad \Rightarrow \quad P(\text{no HTA}) = 1 - 0.30 = 0.70\]</span></p>
 <div class="cell">
 <details class="code-fold">
-<summary>Mostrar código R</summary>
+<summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"P(no HTA) ="</span>, <span class="dv">1</span> <span class="sc">-</span> <span class="fl">0.30</span>, <span class="st">"→ El 70% no presentan HTA"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
@@ -631,17 +631,17 @@ P(&gt;4) = 0.3333333</code></pre>
 </div>
 </div>
 </section>
-<section id="union-de-eventos-regla-de-la-suma" class="slide level2 center">
-<h2>Unión de eventos — Regla de la suma</h2>
-<p><em>Cuando nos preguntamos por la probabilidad de que ocurra al menos uno de varios eventos clínicos, necesitamos la regla de la suma.</em></p>
+<section id="unión-de-eventos-regla-de-la-suma" class="slide level2 center">
+<h2>Unión de eventos — Regla de la suma</h2>
+<p><em>Cuando nos preguntamos por la probabilidad de que ocurra al menos uno de varios eventos clínicos, necesitamos la regla de la suma.</em></p>
 <div class="framed">
 <p><span class="math display">\[P(A \cup B) = P(A) + P(B) - P(A \cap B)\]</span></p>
 </div>
-<p><strong>Ejemplo clínico — Comorbilidad en 100 pacientes de fisioterapia:</strong></p>
+<p><strong>Ejemplo clínico — Comorbilidad en 100 pacientes de fisioterapia:</strong></p>
 <p>40 con HTA, 30 con Diabetes tipo 2, 10 con ambas condiciones.</p>
 <div class="cell">
 <details class="code-fold">
-<summary>Mostrar código R</summary>
+<summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">2</span>,<span class="dv">2</span>))</span>
 <span id="cb7-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="cn">NA</span>, <span class="at">xlim=</span><span class="fu">c</span>(<span class="sc">-</span><span class="fl">2.2</span>,<span class="fl">2.2</span>), <span class="at">ylim=</span><span class="fu">c</span>(<span class="sc">-</span><span class="fl">1.8</span>,<span class="fl">1.8</span>), <span class="at">axes=</span>F, <span class="at">xlab=</span><span class="st">""</span>, <span class="at">ylab=</span><span class="st">""</span>,</span>
 <span id="cb7-3"><a aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">"Diagrama de Venn: Comorbilidad HTA y DM"</span>)</span>
@@ -658,7 +658,7 @@ P(&gt;4) = 0.3333333</code></pre>
 <img data-src="T02_I_Probabilidad_files/figure-revealjs/unnamed-chunk-4-1.png" width="864" class="r-stretch"><p><span class="math display">\[P(\text{HTA} \cup \text{DM}) = \frac{40}{100} + \frac{30}{100} - \frac{10}{100} = 0.60\]</span></p>
 <div class="cell">
 <details class="code-fold">
-<summary>Mostrar código R</summary>
+<summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"P(HTA ∪ DM) ="</span>, <span class="dv">40</span><span class="sc">/</span><span class="dv">100</span> <span class="sc">+</span> <span class="dv">30</span><span class="sc">/</span><span class="dv">100</span> <span class="sc">-</span> <span class="dv">10</span><span class="sc">/</span><span class="dv">100</span>, <span class="st">"→ 60 pacientes"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
@@ -666,20 +666,20 @@ P(&gt;4) = 0.3333333</code></pre>
 </div>
 </div>
 </section>
-<section id="diagramas-de-venn-complemento-union-e-interseccion" class="slide level2 center">
-<h2>Diagramas de Venn — Complemento, unión e intersección</h2>
+<section id="diagramas-de-venn-complemento-unión-e-intersección" class="slide level2 center">
+<h2>Diagramas de Venn — Complemento, unión e intersección</h2>
 <div class="cell">
 <details class="code-fold">
-<summary>Mostrar código R</summary>
+<summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">3</span>), <span class="at">mar=</span><span class="fu">c</span>(<span class="fl">2.5</span>, <span class="dv">3</span>, <span class="fl">3.5</span>, <span class="dv">1</span>))</span>
 <span id="cb10-2"><a aria-hidden="true" tabindex="-1"></a>theta <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">2</span><span class="sc">*</span>pi, <span class="at">length=</span><span class="dv">400</span>)</span>
 <span id="cb10-3"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-4"><a aria-hidden="true" tabindex="-1"></a><span class="co"># arcos para la lente de intersección</span></span>
+<span id="cb10-4"><a aria-hidden="true" tabindex="-1"></a><span class="co"># arcos para la lente de intersección</span></span>
 <span id="cb10-5"><a aria-hidden="true" tabindex="-1"></a>a <span class="ot">&lt;-</span> <span class="fu">acos</span>(<span class="fl">0.35</span>)</span>
 <span id="cb10-6"><a aria-hidden="true" tabindex="-1"></a>ang_r <span class="ot">&lt;-</span> <span class="fu">seq</span>(pi<span class="sc">-</span>a, pi<span class="sc">+</span>a, <span class="at">length=</span><span class="dv">200</span>)</span>
 <span id="cb10-7"><a aria-hidden="true" tabindex="-1"></a>ang_l <span class="ot">&lt;-</span> <span class="fu">seq</span>(<span class="sc">-</span>a, a, <span class="at">length=</span><span class="dv">200</span>)</span>
 <span id="cb10-8"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-9"><a aria-hidden="true" tabindex="-1"></a><span class="co"># símbolos ∪ ∩ y fuente Unicode</span></span>
+<span id="cb10-9"><a aria-hidden="true" tabindex="-1"></a><span class="co"># símbolos ∪ ∩ y fuente Unicode</span></span>
 <span id="cb10-10"><a aria-hidden="true" tabindex="-1"></a>U <span class="ot">&lt;-</span> <span class="fu">intToUtf8</span>(<span class="dv">8746</span>)</span>
 <span id="cb10-11"><a aria-hidden="true" tabindex="-1"></a>I <span class="ot">&lt;-</span> <span class="fu">intToUtf8</span>(<span class="dv">8745</span>)</span>
 <span id="cb10-12"><a aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">family =</span> <span class="st">""</span>)   <span class="co"># fuente del sistema por defecto</span></span>
@@ -692,9 +692,9 @@ P(&gt;4) = 0.3333333</code></pre>
 <span id="cb10-19"><a aria-hidden="true" tabindex="-1"></a><span class="fu">polygon</span>(<span class="fu">cos</span>(theta), <span class="fu">sin</span>(theta), <span class="at">col=</span><span class="st">"white"</span>, <span class="at">border=</span><span class="st">"#2e86c1"</span>, <span class="at">lwd=</span><span class="fl">3.5</span>)</span>
 <span id="cb10-20"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="st">"A"</span>, <span class="at">cex=</span><span class="fl">2.5</span>, <span class="at">font=</span><span class="dv">2</span>, <span class="at">col=</span><span class="st">"#2e86c1"</span>)</span>
 <span id="cb10-21"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="fl">1.3</span>, <span class="fl">1.25</span>, <span class="fu">expression</span>(<span class="fu">bar</span>(A)), <span class="at">cex=</span><span class="fl">1.8</span>, <span class="at">col=</span><span class="st">"#2e86c1"</span>, <span class="at">font=</span><span class="dv">2</span>)</span>
-<span id="cb10-22"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="dv">0</span>, <span class="sc">-</span><span class="fl">1.45</span>, <span class="st">"P(Ā) = zona coloreada fuera de A"</span>, <span class="at">cex=</span><span class="fl">0.75</span>, <span class="at">col=</span><span class="st">"grey40"</span>)</span>
+<span id="cb10-22"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="dv">0</span>, <span class="sc">-</span><span class="fl">1.45</span>, <span class="st">"P(Ā) = zona coloreada fuera de A"</span>, <span class="at">cex=</span><span class="fl">0.75</span>, <span class="at">col=</span><span class="st">"grey40"</span>)</span>
 <span id="cb10-23"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-24"><a aria-hidden="true" tabindex="-1"></a><span class="co"># ── Panel 2: UNIÓN — todo verde (círculos + intersección)</span></span>
+<span id="cb10-24"><a aria-hidden="true" tabindex="-1"></a><span class="co"># ── Panel 2: UNIÓN — todo verde (círculos + intersección)</span></span>
 <span id="cb10-25"><a aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="cn">NA</span>, <span class="at">xlim=</span><span class="fu">c</span>(<span class="sc">-</span><span class="fl">1.5</span>,<span class="fl">1.5</span>), <span class="at">ylim=</span><span class="fu">c</span>(<span class="sc">-</span><span class="fl">1.5</span>,<span class="fl">1.5</span>), <span class="at">axes=</span>F, <span class="at">xlab=</span><span class="st">""</span>, <span class="at">ylab=</span><span class="st">""</span>,</span>
 <span id="cb10-26"><a aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="fu">bquote</span>(<span class="fu">bold</span>(<span class="st">"Union:"</span>) <span class="sc">~</span> <span class="fu">P</span>(A <span class="sc">*</span> .(U) <span class="sc">*</span> B) <span class="sc">==</span> <span class="fu">P</span>(A) <span class="sc">+</span> <span class="fu">P</span>(B) <span class="sc">-</span> <span class="fu">P</span>(A <span class="sc">*</span> .(I) <span class="sc">*</span> B)),</span>
 <span id="cb10-27"><a aria-hidden="true" tabindex="-1"></a>     <span class="at">cex.main=</span><span class="fl">1.05</span>)</span>
@@ -704,9 +704,9 @@ P(&gt;4) = 0.3333333</code></pre>
 <span id="cb10-31"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>( <span class="fl">0.85</span>, <span class="dv">0</span>, <span class="st">"B"</span>, <span class="at">cex=</span><span class="dv">2</span>, <span class="at">font=</span><span class="dv">2</span>, <span class="at">col=</span><span class="st">"#1e8449"</span>)</span>
 <span id="cb10-32"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="dv">0</span>, <span class="sc">-</span><span class="fl">1.45</span>, <span class="fu">bquote</span>(<span class="fu">P</span>(A <span class="sc">*</span> .(U) <span class="sc">*</span> B) <span class="sc">==</span> <span class="st">" toda la zona verde"</span>), <span class="at">cex=</span><span class="fl">0.75</span>, <span class="at">col=</span><span class="st">"grey40"</span>)</span>
 <span id="cb10-33"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-34"><a aria-hidden="true" tabindex="-1"></a><span class="co"># ── Panel 3: INTERSECCIÓN ──</span></span>
+<span id="cb10-34"><a aria-hidden="true" tabindex="-1"></a><span class="co"># ── Panel 3: INTERSECCIÓN ──</span></span>
 <span id="cb10-35"><a aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="cn">NA</span>, <span class="at">xlim=</span><span class="fu">c</span>(<span class="sc">-</span><span class="fl">1.5</span>,<span class="fl">1.5</span>), <span class="at">ylim=</span><span class="fu">c</span>(<span class="sc">-</span><span class="fl">1.5</span>,<span class="fl">1.5</span>), <span class="at">axes=</span>F, <span class="at">xlab=</span><span class="st">""</span>, <span class="at">ylab=</span><span class="st">""</span>,</span>
-<span id="cb10-36"><a aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="fu">bquote</span>(<span class="fu">bold</span>(<span class="st">"Intersección:"</span>) <span class="sc">~</span> <span class="fu">P</span>(A <span class="sc">*</span> .(I) <span class="sc">*</span> B)),</span>
+<span id="cb10-36"><a aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="fu">bquote</span>(<span class="fu">bold</span>(<span class="st">"Intersección:"</span>) <span class="sc">~</span> <span class="fu">P</span>(A <span class="sc">*</span> .(I) <span class="sc">*</span> B)),</span>
 <span id="cb10-37"><a aria-hidden="true" tabindex="-1"></a>     <span class="at">cex.main=</span><span class="fl">1.05</span>)</span>
 <span id="cb10-38"><a aria-hidden="true" tabindex="-1"></a><span class="fu">polygon</span>(<span class="sc">-</span><span class="fl">0.35</span><span class="sc">+</span><span class="fu">cos</span>(theta), <span class="fu">sin</span>(theta), <span class="at">col=</span><span class="st">"white"</span>, <span class="at">border=</span><span class="st">"#2c3e50"</span>, <span class="at">lwd=</span><span class="fl">2.5</span>)</span>
 <span id="cb10-39"><a aria-hidden="true" tabindex="-1"></a><span class="fu">polygon</span>( <span class="fl">0.35</span><span class="sc">+</span><span class="fu">cos</span>(theta), <span class="fu">sin</span>(theta), <span class="at">col=</span><span class="st">"white"</span>, <span class="at">border=</span><span class="st">"#2c3e50"</span>, <span class="at">lwd=</span><span class="fl">2.5</span>)</span>
@@ -720,7 +720,7 @@ P(&gt;4) = 0.3333333</code></pre>
 </details>
 
 <details class="code-fold">
-<summary>Mostrar código R</summary>
+<summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
@@ -733,19 +733,19 @@ P(&gt;4) = 0.3333333</code></pre>
 <p><strong>Tip</strong></p>
 </div>
 <div class="callout-content">
-<p><strong>Para el estudiante:</strong> <span class="math inline">\(\cup\)</span> = unión = <strong>O</strong> (A o B ocurre, o ambos). <span class="math inline">\(\cap\)</span> = intersección = <strong>Y</strong> (A y B ocurren simultáneamente). El complemento <span class="math inline">\(\bar{A}\)</span> = todo lo que <strong>NO</strong> es A. En la figura: <strong>azul</strong> = complemento <span class="math inline">\(\bar{A}\)</span>, <strong>verde</strong> = unión <span class="math inline">\(A \cup B\)</span>, <strong>rojo</strong> = intersección <span class="math inline">\(A \cap B\)</span>.</p>
+<p><strong>Para el estudiante:</strong> <span class="math inline">\(\cup\)</span> = unión = <strong>O</strong> (A o B ocurre, o ambos). <span class="math inline">\(\cap\)</span> = intersección = <strong>Y</strong> (A y B ocurren simultáneamente). El complemento <span class="math inline">\(\bar{A}\)</span> = todo lo que <strong>NO</strong> es A. En la figura: <strong>azul</strong> = complemento <span class="math inline">\(\bar{A}\)</span>, <strong>verde</strong> = unión <span class="math inline">\(A \cup B\)</span>, <strong>rojo</strong> = intersección <span class="math inline">\(A \cap B\)</span>.</p>
 </div>
 </div>
 </div>
 </section>
-<section id="inclusion-exclusion-para-tres-eventos" class="slide level2 center">
-<h2>Inclusión-exclusión para tres eventos</h2>
+<section id="inclusión-exclusión-para-tres-eventos" class="slide level2 center">
+<h2>Inclusión-exclusión para tres eventos</h2>
 <p><span class="math display">\[P(A \cup B \cup C) = P(A)+P(B)+P(C) - P(A \cap B)-P(A \cap C)-P(B \cap C) + P(A \cap B \cap C)\]</span></p>
-<p><strong>Ejemplo clínico — Tres comorbilidades (n=100 pacientes de fisioterapia):</strong></p>
+<p><strong>Ejemplo clínico — Tres comorbilidades (n=100 pacientes de fisioterapia):</strong></p>
 <table class="caption-top">
 <thead>
 <tr class="header">
-<th>Condición</th>
+<th>Condición</th>
 <th>n</th>
 <th>Intersecciones</th>
 <th>n</th>
@@ -781,12 +781,12 @@ P(&gt;4) = 0.3333333</code></pre>
 <p><span class="math display">\[|A \cup B \cup C| = 40 + 30 + 20 - (10 + 8 + 5) + 3 = 90 - 23 + 3 = 70\]</span></p>
 <p><strong>70 de cada 100 pacientes presentan al menos una de las tres condiciones.</strong></p>
 </section>
-<section id="probabilidad-condicional-visualizacion-con-diagrama-de-venn" class="slide level2 center">
-<h2>Probabilidad condicional — Visualización con diagrama de Venn</h2>
-<p><strong>Recuperación de lumbalgia según sexo (n=200):</strong></p>
+<section id="probabilidad-condicional-visualización-con-diagrama-de-venn" class="slide level2 center">
+<h2>Probabilidad condicional — Visualización con diagrama de Venn</h2>
+<p><strong>Recuperación de lumbalgia según sexo (n=200):</strong></p>
 <div class="cell">
 <details class="code-fold">
-<summary>Mostrar código R</summary>
+<summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>), <span class="at">mar=</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">3</span>,<span class="dv">2</span>))</span>
 <span id="cb12-2"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Panel 1: P(Recuperado | Mujer)</span></span>
 <span id="cb12-3"><a aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="cn">NA</span>, <span class="at">xlim=</span><span class="fu">c</span>(<span class="sc">-</span><span class="fl">1.5</span>,<span class="fl">1.5</span>), <span class="at">ylim=</span><span class="fu">c</span>(<span class="sc">-</span><span class="fl">1.5</span>,<span class="fl">1.5</span>), <span class="at">axes=</span>F, <span class="at">xlab=</span><span class="st">""</span>, <span class="at">ylab=</span><span class="st">""</span>,</span>
@@ -809,7 +809,7 @@ P(&gt;4) = 0.3333333</code></pre>
 </details>
 
 <details class="code-fold">
-<summary>Mostrar código R</summary>
+<summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
@@ -818,7 +818,7 @@ P(&gt;4) = 0.3333333</code></pre>
 <section id="probabilidad-condicional" class="slide level2 center">
 <h2>Probabilidad condicional</h2>
 <p><span class="math display">\[P(A \mid B) = \frac{P(A \cap B)}{P(B)}, \quad P(B) &gt; 0\]</span></p>
-<p><strong>Ejemplo clínico — Recuperación de lumbalgia según sexo (n=200):</strong></p>
+<p><strong>Ejemplo clínico — Recuperación de lumbalgia según sexo (n=200):</strong></p>
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -853,7 +853,7 @@ P(&gt;4) = 0.3333333</code></pre>
 <p><span class="math display">\[P(R \mid \text{Hombre}) = \frac{32/200}{80/200} = \frac{32}{80} = 0.40\]</span></p>
 <div class="cell">
 <details class="code-fold">
-<summary>Mostrar código R</summary>
+<summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"P(Recuperado | Mujer)  ="</span>, <span class="dv">72</span><span class="sc">/</span><span class="dv">120</span>,</span>
 <span id="cb14-2"><a aria-hidden="true" tabindex="-1"></a>    <span class="st">"</span><span class="sc">\n</span><span class="st">P(Recuperado | Hombre) ="</span>, <span class="dv">32</span><span class="sc">/</span><span class="dv">80</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
@@ -865,15 +865,15 @@ P(Recuperado | Hombre) = 0.4</code></pre>
 </section>
 <section id="independencia-de-eventos" class="slide level2 center">
 <h2>Independencia de eventos</h2>
-<p><em>Cuando dos eventos no se influyen mutuamente, podemos simplificar los cálculos. Pero necesitamos un criterio formal para determinarlo.</em></p>
+<p><em>Cuando dos eventos no se influyen mutuamente, podemos simplificar los cálculos. Pero necesitamos un criterio formal para determinarlo.</em></p>
 <p><span class="math inline">\(A\)</span> y <span class="math inline">\(B\)</span> son <strong>independientes</strong> si <span class="math inline">\(P(A \cap B) = P(A) \cdot P(B)\)</span>, o equivalentemente si <span class="math inline">\(P(A \mid B) = P(A)\)</span>.</p>
-<p><strong>Ejemplo clínico — Ejercicio Terapéutico y Mejoría (n=100):</strong></p>
+<p><strong>Ejemplo clínico — Ejercicio Terapéutico y Mejoría (n=100):</strong></p>
 <table class="caption-top">
 <thead>
 <tr class="header">
 <th></th>
-<th>Mejoría (<span class="math inline">\(M\)</span>)</th>
-<th>No mejoría</th>
+<th>Mejoría (<span class="math inline">\(M\)</span>)</th>
+<th>No mejoría</th>
 <th>Total</th>
 </tr>
 </thead>
@@ -899,18 +899,18 @@ P(Recuperado | Hombre) = 0.4</code></pre>
 </tbody>
 </table>
 <p><span class="math inline">\(P(M) = 50/100 = 0.50\)</span> <span class="math inline">\(P(M \mid E) = 30/50 = 0.60\)</span></p>
-<p><span class="math inline">\(P(M \mid E) = 0.60 \neq 0.50 = P(M)\)</span> → <strong>NO son independientes.</strong> El ejercicio terapéutico está <strong>asociado</strong> con la mejoría.</p>
+<p><span class="math inline">\(P(M \mid E) = 0.60 \neq 0.50 = P(M)\)</span> → <strong>NO son independientes.</strong> El ejercicio terapéutico está <strong>asociado</strong> con la mejoría.</p>
 </section>
-<section id="probabilidad-total-visualizacion-particion-del-espacio-muestral" class="slide level2 center">
-<h2>Probabilidad total — Visualización: Partición del espacio muestral</h2>
-<p>El espacio muestral <span class="math inline">\(\Omega\)</span> se <strong>particiona</strong> en <span class="math inline">\(B_1, B_2, B_3\)</span> (excluyentes, <span class="math inline">\(\cup B_i = \Omega\)</span>). El evento <span class="math inline">\(A\)</span> se distribuye a través de todas las particiones:</p>
+<section id="probabilidad-total-visualización-partición-del-espacio-muestral" class="slide level2 center">
+<h2>Probabilidad total — Visualización: Partición del espacio muestral</h2>
+<p>El espacio muestral <span class="math inline">\(\Omega\)</span> se <strong>particiona</strong> en <span class="math inline">\(B_1, B_2, B_3\)</span> (excluyentes, <span class="math inline">\(\cup B_i = \Omega\)</span>). El evento <span class="math inline">\(A\)</span> se distribuye a través de todas las particiones:</p>
 <p><span class="math display">\[P(A) = P(A \mid B_1) \cdot P(B_1) + P(A \mid B_2) \cdot P(B_2) + P(A \mid B_3) \cdot P(B_3)\]</span></p>
 <div class="cell">
 <details class="code-fold">
-<summary>Mostrar código R</summary>
+<summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar=</span><span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">5</span>, <span class="dv">2</span>), <span class="at">bg=</span><span class="st">"white"</span>)</span>
 <span id="cb16-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="cn">NA</span>, <span class="at">xlim=</span><span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.5</span>, <span class="fl">16.5</span>), <span class="at">ylim=</span><span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.8</span>, <span class="dv">11</span>), <span class="at">axes=</span>F, <span class="at">xlab=</span><span class="st">""</span>, <span class="at">ylab=</span><span class="st">""</span>,</span>
-<span id="cb16-3"><a aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">"Teorema de la Probabilidad Total — Partición de Ω y Evento A"</span>)</span>
+<span id="cb16-3"><a aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">"Teorema de la Probabilidad Total — Partición de Ω y Evento A"</span>)</span>
 <span id="cb16-4"><a aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb16-5"><a aria-hidden="true" tabindex="-1"></a><span class="co"># colores verde-azul</span></span>
 <span id="cb16-6"><a aria-hidden="true" tabindex="-1"></a>col_O_fill  <span class="ot">&lt;-</span> <span class="st">"#f8fafb"</span></span>
@@ -925,7 +925,7 @@ P(Recuperado | Hombre) = 0.4</code></pre>
 <span id="cb16-15"><a aria-hidden="true" tabindex="-1"></a>col_A_bord  <span class="ot">&lt;-</span> <span class="st">"#0f2a4a"</span></span>
 <span id="cb16-16"><a aria-hidden="true" tabindex="-1"></a>col_lbl     <span class="ot">&lt;-</span> <span class="st">"#0d3b66"</span></span>
 <span id="cb16-17"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-18"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Ω — rectángulo exterior</span></span>
+<span id="cb16-18"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Ω — rectángulo exterior</span></span>
 <span id="cb16-19"><a aria-hidden="true" tabindex="-1"></a>xL <span class="ot">&lt;-</span> <span class="fl">0.5</span>; xR <span class="ot">&lt;-</span> <span class="fl">15.5</span>; yB <span class="ot">&lt;-</span> <span class="fl">0.3</span>; yT <span class="ot">&lt;-</span> <span class="fl">10.0</span></span>
 <span id="cb16-20"><a aria-hidden="true" tabindex="-1"></a><span class="fu">rect</span>(xL, yB, xR, yT, <span class="at">col=</span>col_O_fill, <span class="at">border=</span>col_O_bord, <span class="at">lwd=</span><span class="dv">4</span>)</span>
 <span id="cb16-21"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="fl">1.2</span>, yT <span class="sc">-</span> <span class="fl">0.25</span>, <span class="fu">expression</span>(Omega), <span class="at">cex=</span><span class="fl">2.0</span>, <span class="at">font=</span><span class="dv">2</span>, <span class="at">col=</span>col_O_bord)</span>
@@ -954,7 +954,7 @@ P(Recuperado | Hombre) = 0.4</code></pre>
 <span id="cb16-44"><a aria-hidden="true" tabindex="-1"></a>x_ell <span class="ot">&lt;-</span> cx <span class="sc">+</span> rx<span class="sc">*</span><span class="fu">cos</span>(theta)</span>
 <span id="cb16-45"><a aria-hidden="true" tabindex="-1"></a>y_ell <span class="ot">&lt;-</span> cy <span class="sc">+</span> ry<span class="sc">*</span><span class="fu">sin</span>(theta)</span>
 <span id="cb16-46"><a aria-hidden="true" tabindex="-1"></a><span class="fu">polygon</span>(x_ell, y_ell, <span class="at">col=</span>col_A_fill, <span class="at">border=</span>col_A_bord, <span class="at">lwd=</span><span class="dv">4</span>)</span>
-<span id="cb16-47"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(cx, cy, <span class="st">"Evento A</span><span class="sc">\n</span><span class="st">(Recuperación)"</span>, <span class="at">cex=</span><span class="fl">1.3</span>, <span class="at">col=</span>col_A_bord, <span class="at">font=</span><span class="dv">2</span>)</span>
+<span id="cb16-47"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(cx, cy, <span class="st">"Evento A</span><span class="sc">\n</span><span class="st">(Recuperación)"</span>, <span class="at">cex=</span><span class="fl">1.3</span>, <span class="at">col=</span>col_A_bord, <span class="at">font=</span><span class="dv">2</span>)</span>
 <span id="cb16-48"><a aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb16-49"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Etiquetas: intersecciones y probabilidades condicionadas</span></span>
 <span id="cb16-50"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(xL <span class="sc">+</span> w<span class="sc">*</span><span class="fl">0.30</span>, cy <span class="sc">+</span> <span class="fl">0.9</span>, <span class="fu">expression</span>(A <span class="sc">*</span> <span class="st">" ∩ "</span> <span class="sc">*</span> B[<span class="dv">1</span>] <span class="sc">*</span> <span class="st">":"</span>), <span class="at">cex=</span><span class="fl">1.25</span>, <span class="at">col=</span>col_A_bord, <span class="at">font=</span><span class="dv">2</span>)</span>
@@ -966,22 +966,22 @@ P(Recuperado | Hombre) = 0.4</code></pre>
 <span id="cb16-56"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(b2r <span class="sc">+</span> w<span class="sc">*</span><span class="fl">0.05</span>, cy <span class="sc">+</span> <span class="fl">0.9</span>, <span class="fu">expression</span>(A <span class="sc">*</span> <span class="st">" ∩ "</span> <span class="sc">*</span> B[<span class="dv">3</span>] <span class="sc">*</span> <span class="st">":"</span>), <span class="at">cex=</span><span class="fl">1.15</span>, <span class="at">col=</span>col_A_bord, <span class="at">font=</span><span class="dv">2</span>)</span>
 <span id="cb16-57"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(b2r <span class="sc">+</span> w<span class="sc">*</span><span class="fl">0.05</span>, cy <span class="sc">-</span> <span class="fl">0.6</span>, <span class="fu">expression</span>(<span class="fu">P</span>(A <span class="sc">*</span> <span class="st">"|"</span> <span class="sc">*</span> B[<span class="dv">3</span>]) <span class="sc">==</span> <span class="fl">0.40</span>), <span class="at">cex=</span><span class="fl">1.15</span>, <span class="at">col=</span>col_lbl)</span>
 <span id="cb16-58"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-59"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Fórmula de probabilidad total (debajo de Ω)</span></span>
+<span id="cb16-59"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Fórmula de probabilidad total (debajo de Ω)</span></span>
 <span id="cb16-60"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>((xL <span class="sc">+</span> xR)<span class="sc">/</span><span class="dv">2</span>, yB <span class="sc">-</span> <span class="fl">0.35</span>,</span>
 <span id="cb16-61"><a aria-hidden="true" tabindex="-1"></a>     <span class="fu">expression</span>(<span class="fu">P</span>(A) <span class="sc">==</span> <span class="fu">P</span>(A <span class="sc">*</span> <span class="st">"|"</span> <span class="sc">*</span> B[<span class="dv">1</span>]) <span class="sc">*</span> <span class="st">" · "</span> <span class="sc">*</span> <span class="fu">P</span>(B[<span class="dv">1</span>]) <span class="sc">~+</span><span class="er">~</span></span>
 <span id="cb16-62"><a aria-hidden="true" tabindex="-1"></a>                        <span class="fu">P</span>(A <span class="sc">*</span> <span class="st">"|"</span> <span class="sc">*</span> B[<span class="dv">2</span>]) <span class="sc">*</span> <span class="st">" · "</span> <span class="sc">*</span> <span class="fu">P</span>(B[<span class="dv">2</span>]) <span class="sc">~+</span><span class="er">~</span></span>
 <span id="cb16-63"><a aria-hidden="true" tabindex="-1"></a>                        <span class="fu">P</span>(A <span class="sc">*</span> <span class="st">"|"</span> <span class="sc">*</span> B[<span class="dv">3</span>]) <span class="sc">*</span> <span class="st">" · "</span> <span class="sc">*</span> <span class="fu">P</span>(B[<span class="dv">3</span>])),</span>
 <span id="cb16-64"><a aria-hidden="true" tabindex="-1"></a>     <span class="at">cex=</span><span class="fl">1.4</span>, <span class="at">col=</span>col_A_bord, <span class="at">font=</span><span class="dv">2</span>)</span>
 <span id="cb16-65"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>((xL <span class="sc">+</span> xR)<span class="sc">/</span><span class="dv">2</span>, yB <span class="sc">-</span> <span class="fl">0.8</span>,</span>
-<span id="cb16-66"><a aria-hidden="true" tabindex="-1"></a>     <span class="st">"P(Recuperación) = 0.90 × 0.60  +  0.70 × 0.30  +  0.40 × 0.10  =  0.79"</span>,</span>
+<span id="cb16-66"><a aria-hidden="true" tabindex="-1"></a>     <span class="st">"P(Recuperación) = 0.90 × 0.60  +  0.70 × 0.30  +  0.40 × 0.10  =  0.79"</span>,</span>
 <span id="cb16-67"><a aria-hidden="true" tabindex="-1"></a>     <span class="at">cex=</span><span class="fl">1.25</span>, <span class="at">font=</span><span class="dv">2</span>, <span class="at">col=</span>col_A_bord)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 
 </div>
-<img data-src="T02_I_Probabilidad_files/figure-revealjs/unnamed-chunk-9-1.png" alt="Diagrama de la probabilidad total mostrando el espacio muestral Omega particionado en tres regiones B1 B2 B3 (riesgo bajo 60%, moderado 30%, alto 10%) con una elipse central representando el evento A (recuperación). Las intersecciones A∩B1, A∩B2, A∩B3 muestran las probabilidades condicionadas. Debajo aparece la fórmula completa de la probabilidad total con el cálculo numérico P=0.79." width="1536" class="r-stretch"></section>
-<section id="probabilidad-total-ejemplo-recuperacion-en-fisioterapia" class="slide level2 center">
-<h2>Probabilidad total — Ejemplo: Recuperación en fisioterapia</h2>
-<p><strong>Contexto clínico:</strong> Tres grupos de riesgo en rehabilitación de lumbalgia:</p>
+<img data-src="T02_I_Probabilidad_files/figure-revealjs/unnamed-chunk-9-1.png" alt="Diagrama de la probabilidad total mostrando el espacio muestral Omega particionado en tres regiones B1 B2 B3 (riesgo bajo 60%, moderado 30%, alto 10%) con una elipse central representando el evento A (recuperación). Las intersecciones A∩B1, A∩B2, A∩B3 muestran las probabilidades condicionadas. Debajo aparece la fórmula completa de la probabilidad total con el cálculo numérico P=0.79." width="1536" class="r-stretch"></section>
+<section id="probabilidad-total-ejemplo-recuperación-en-fisioterapia" class="slide level2 center">
+<h2>Probabilidad total — Ejemplo: Recuperación en fisioterapia</h2>
+<p><strong>Contexto clínico:</strong> Tres grupos de riesgo en rehabilitación de lumbalgia:</p>
 <table class="caption-top">
 <colgroup>
 <col style="width: 10%">
@@ -1011,7 +1011,7 @@ P(Recuperado | Hombre) = 0.4</code></pre>
 <td style="text-align: center;">0.21</td>
 </tr>
 <tr class="odd">
-<td>Alto (múltiples comorbilidades)</td>
+<td>Alto (múltiples comorbilidades)</td>
 <td style="text-align: center;">0.10</td>
 <td style="text-align: center;">0.40</td>
 <td style="text-align: center;">0.04</td>
@@ -1026,11 +1026,11 @@ P(Recuperado | Hombre) = 0.4</code></pre>
 </table>
 <div class="cell">
 <details class="code-fold">
-<summary>Mostrar código R</summary>
+<summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a aria-hidden="true" tabindex="-1"></a>aporte <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">0.54</span>, <span class="fl">0.21</span>, <span class="fl">0.04</span>)</span>
 <span id="cb17-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(aporte) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Bajo</span><span class="sc">\n</span><span class="st">(0.60×0.90)"</span>, <span class="st">"Moderado</span><span class="sc">\n</span><span class="st">(0.30×0.70)"</span>, <span class="st">"Alto</span><span class="sc">\n</span><span class="st">(0.10×0.40)"</span>)</span>
 <span id="cb17-3"><a aria-hidden="true" tabindex="-1"></a>bp <span class="ot">&lt;-</span> <span class="fu">barplot</span>(aporte, <span class="at">col=</span><span class="fu">c</span>(<span class="st">"darkgreen"</span>,<span class="st">"gold"</span>,<span class="st">"coral"</span>),</span>
-<span id="cb17-4"><a aria-hidden="true" tabindex="-1"></a>        <span class="at">main=</span><span class="st">"Aportes a P(Recuperación) = 0.79"</span>,</span>
+<span id="cb17-4"><a aria-hidden="true" tabindex="-1"></a>        <span class="at">main=</span><span class="st">"Aportes a P(Recuperación) = 0.79"</span>,</span>
 <span id="cb17-5"><a aria-hidden="true" tabindex="-1"></a>        <span class="at">ylab=</span><span class="st">"Probabilidad"</span>, <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="fl">0.6</span>))</span>
 <span id="cb17-6"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(bp, aporte<span class="fl">+0.02</span>, aporte, <span class="at">font=</span><span class="dv">2</span>, <span class="at">cex=</span><span class="fl">1.2</span>)</span>
 <span id="cb17-7"><a aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h=</span><span class="fl">0.79</span>, <span class="at">col=</span><span class="st">"steelblue"</span>, <span class="at">lwd=</span><span class="dv">2</span>, <span class="at">lty=</span><span class="dv">2</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
@@ -1039,11 +1039,11 @@ P(Recuperado | Hombre) = 0.4</code></pre>
 </div>
 <img data-src="T02_I_Probabilidad_files/figure-revealjs/unnamed-chunk-10-1.png" width="864" class="r-stretch"><div class="cell">
 <details class="code-fold">
-<summary>Mostrar código R</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"P(Recuperación) ="</span>, <span class="fl">0.6</span><span class="sc">*</span><span class="fl">0.9+0.3</span><span class="sc">*</span><span class="fl">0.7+0.1</span><span class="sc">*</span><span class="fl">0.4</span>, <span class="st">"→ 79% de los pacientes se recuperan"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<summary>Mostrar código R</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"P(Recuperación) ="</span>, <span class="fl">0.6</span><span class="sc">*</span><span class="fl">0.9+0.3</span><span class="sc">*</span><span class="fl">0.7+0.1</span><span class="sc">*</span><span class="fl">0.4</span>, <span class="st">"→ 79% de los pacientes se recuperan"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>P(Recuperación) = 0.79 → 79% de los pacientes se recuperan</code></pre>
+<pre><code>P(Recuperación) = 0.79 → 79% de los pacientes se recuperan</code></pre>
 </div>
 </div>
 </section>
@@ -1060,7 +1060,7 @@ P(Recuperado | Hombre) = 0.4</code></pre>
 <div class="callout-content">
 <p>Si <span class="math inline">\(B_1, B_2, \ldots, B_k\)</span> son <strong>mutuamente excluyentes</strong> y cubren todo el espacio muestral (<span class="math inline">\(\cup_i B_i = \Omega\)</span>), entonces para cualquier evento <span class="math inline">\(A\)</span>:</p>
 <p><span class="math display">\[P(A) = \sum_{i=1}^{k} P(A \mid B_i) \cdot P(B_i)\]</span></p>
-<p>La probabilidad total es la <strong>suma ponderada</strong> de las probabilidades condicionadas a cada estrato, usando como pesos las proporciones de cada estrato en la población.</p>
+<p>La probabilidad total es la <strong>suma ponderada</strong> de las probabilidades condicionadas a cada estrato, usando como pesos las proporciones de cada estrato en la población.</p>
 </div>
 </div>
 </div>
@@ -1076,7 +1076,7 @@ P(Recuperado | Hombre) = 0.4</code></pre>
 <p><strong>Importante</strong></p>
 </div>
 <div class="callout-content">
-<p>Permite <strong>actualizar</strong> la probabilidad de una hipótesis <span class="math inline">\(A\)</span> con nueva evidencia <span class="math inline">\(B\)</span>:</p>
+<p>Permite <strong>actualizar</strong> la probabilidad de una hipótesis <span class="math inline">\(A\)</span> con nueva evidencia <span class="math inline">\(B\)</span>:</p>
 <p><span class="math display">\[P(A \mid B) = \frac{P(B \mid A) \cdot P(A)}{P(B)}\]</span></p>
 <p>Usando Probabilidad Total en el denominador:</p>
 <p><span class="math display">\[P(A \mid B) = \frac{P(B \mid A) \cdot P(A)}{P(B \mid A) \cdot P(A) + P(B \mid NoA) \cdot P(NoA)}\]</span></p>
@@ -1090,8 +1090,8 @@ P(Recuperado | Hombre) = 0.4</code></pre>
 <li class="fragment"><span class="math inline">\(P(B)\)</span>: probabilidad total de <span class="math inline">\(B\)</span> (normalizador)</li>
 </ul>
 </section>
-<section id="bayes-ejemplo-test-diagnostico" class="slide level2 center">
-<h2>Bayes — Ejemplo: Test diagnóstico</h2>
+<section id="bayes-ejemplo-test-diagnóstico" class="slide level2 center">
+<h2>Bayes — Ejemplo: Test diagnóstico</h2>
 <p><strong>Enunciado:</strong> Prevalencia de enfermedad <span class="math inline">\(P(D)=0.01\)</span> (1%). Test con sensibilidad <span class="math inline">\(P(+ \mid D)=0.99\)</span> (99%) y especificidad <span class="math inline">\(P(- \mid NoD)=0.95\)</span> (95%).</p>
 <p><strong>Si una persona da positivo, ¿probabilidad de que tenga la enfermedad?</strong></p>
 <p><strong>Paso 1 — Probabilidad total de dar positivo:</strong></p>
@@ -1100,7 +1100,7 @@ P(Recuperado | Hombre) = 0.4</code></pre>
 <p><span class="math display">\[P(D \mid +) = \frac{P(+ \mid D) \cdot P(D)}{P(+)} = \frac{0.99 \times 0.01}{0.0594} = \frac{0.0099}{0.0594} = 0.1667\]</span></p>
 <div class="cell">
 <details class="code-fold">
-<summary>Mostrar código R</summary>
+<summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a aria-hidden="true" tabindex="-1"></a>P_D <span class="ot">&lt;-</span> <span class="fl">0.01</span>; P_NoD <span class="ot">&lt;-</span> <span class="fl">0.99</span></span>
 <span id="cb20-2"><a aria-hidden="true" tabindex="-1"></a>P_Pos_given_D <span class="ot">&lt;-</span> <span class="fl">0.99</span>; P_Pos_given_NoD <span class="ot">&lt;-</span> <span class="fl">0.05</span></span>
 <span id="cb20-3"><a aria-hidden="true" tabindex="-1"></a>P_Pos <span class="ot">&lt;-</span> (P_Pos_given_D <span class="sc">*</span> P_D) <span class="sc">+</span> (P_Pos_given_NoD <span class="sc">*</span> P_NoD)</span>
@@ -1115,7 +1115,7 @@ P(D | +) = 0.1667
 → Solo el 16.7% de los positivos tienen la enfermedad</code></pre>
 </div>
 <details class="code-fold">
-<summary>Mostrar código R</summary>
+<summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Visualización: matriz de confusión</span></span>
 <span id="cb22-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>), <span class="at">mar=</span><span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">4</span>,<span class="dv">3</span>,<span class="dv">1</span>))</span>
 <span id="cb22-3"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Panel 1: Barras de composición del test</span></span>
@@ -1142,7 +1142,7 @@ P(D | +) = 0.1667
 </details>
 
 <details class="code-fold">
-<summary>Mostrar código R</summary>
+<summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
@@ -1159,24 +1159,24 @@ P(D | +) = 0.1667
 </div>
 </div>
 </div>
-<p><em>Si P(Recuperado | Mujer) = 60% y P(Recuperado | Hombre) = 40%, ¿significa esto que el sexo causa la diferencia en recuperación? ¿Qué otra explicación podría haber?</em></p>
-<p><em>En el ejemplo, P(M | E) = 0.60 y P(M) = 0.50. ¿Qué necesitarías cambiar en la tabla para que Ejercicio y Mejoría fueran independientes?</em></p>
+<p><em>Si P(Recuperado | Mujer) = 60% y P(Recuperado | Hombre) = 40%, ¿significa esto que el sexo causa la diferencia en recuperación? ¿Qué otra explicación podría haber?</em></p>
+<p><em>En el ejemplo, P(M | E) = 0.60 y P(M) = 0.50. ¿Qué necesitarías cambiar en la tabla para que Ejercicio y Mejoría fueran independientes?</em></p>
 </section>
-<section id="teorema-de-bayes-perspectiva-historica" class="slide level2 center">
-<h2>Teorema de Bayes — Perspectiva histórica</h2>
+<section id="teorema-de-bayes-perspectiva-histórica" class="slide level2 center">
+<h2>Teorema de Bayes — Perspectiva histórica</h2>
 <div class="columns">
 <div class="column" style="width:55%;">
 <p><strong>Thomas Bayes (1701–1761)</strong></p>
 <ul>
-<li>Ministro presbiteriano y matemático inglés en Tunbridge Wells</li>
-<li>Su ensayo <em>“An Essay towards solving a Problem in the Doctrine of Chances”</em> fue publicado <strong>póstumamente en 1763</strong> por su amigo Richard Price</li>
-<li>Bayes abordó el problema inverso: conocidos los resultados, ¿cuál es la probabilidad de sus causas?</li>
+<li>Ministro presbiteriano y matemático inglés en Tunbridge Wells</li>
+<li>Su ensayo <em>“An Essay towards solving a Problem in the Doctrine of Chances”</em> fue publicado <strong>póstumamente en 1763</strong> por su amigo Richard Price</li>
+<li>Bayes abordó el problema inverso: conocidos los resultados, ¿cuál es la probabilidad de sus causas?</li>
 </ul>
 <p><strong>Pierre-Simon Laplace (1749–1827)</strong></p>
 <ul>
-<li>Redescubrió y generalizó el teorema de forma independiente (1774, 1812)</li>
-<li>Lo aplicó a problemas astronómicos, demográficos y jurídicos</li>
-<li>Formuló la versión moderna que usamos hoy con probabilidad total en el denominador</li>
+<li>Redescubrió y generalizó el teorema de forma independiente (1774, 1812)</li>
+<li>Lo aplicó a problemas astronómicos, demográficos y jurídicos</li>
+<li>Formuló la versión moderna que usamos hoy con probabilidad total en el denominador</li>
 </ul>
 </div><div class="column" style="width:45%;">
 <div class="callout callout-note callout-titled callout-style-default">
@@ -1188,7 +1188,7 @@ P(D | +) = 0.1667
 <p><strong>Nota</strong></p>
 </div>
 <div class="callout-content">
-<p><strong>Ironía histórica:</strong> Bayes nunca publicó su teorema en vida. Hoy lleva su nombre una rama entera de la estadística que él nunca imaginó.</p>
+<p><strong>Ironía histórica:</strong> Bayes nunca publicó su teorema en vida. Hoy lleva su nombre una rama entera de la estadística que él nunca imaginó.</p>
 </div>
 </div>
 </div>
@@ -1201,14 +1201,14 @@ P(D | +) = 0.1667
 <p><strong>Tip</strong></p>
 </div>
 <div class="callout-content">
-<p><strong>Dato clave:</strong> Laplace aplicó el teorema de Bayes para estimar la masa de Saturno y la población de Francia, mostrando que la inferencia probabilística inversa funciona tanto para el cosmos como para los censos.</p>
+<p><strong>Dato clave:</strong> Laplace aplicó el teorema de Bayes para estimar la masa de Saturno y la población de Francia, mostrando que la inferencia probabilística inversa funciona tanto para el cosmos como para los censos.</p>
 </div>
 </div>
 </div>
 </div></div>
 </section>
-<section id="del-teorema-de-bayes-a-la-estadistica-bayesiana" class="slide level2 center">
-<h2>Del teorema de Bayes a la estadística Bayesiana</h2>
+<section id="del-teorema-de-bayes-a-la-estadística-bayesiana" class="slide level2 center">
+<h2>Del teorema de Bayes a la estadística Bayesiana</h2>
 <div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1218,12 +1218,12 @@ P(D | +) = 0.1667
 <p><strong>Importante</strong></p>
 </div>
 <div class="callout-content">
-<p>El teorema de Bayes es la <strong>piedra angular</strong> de la estadística bayesiana: un paradigma donde la probabilidad representa <strong>grado de creencia</strong> (incertidumbre subjetiva), y no solo frecuencia a largo plazo.</p>
+<p>El teorema de Bayes es la <strong>piedra angular</strong> de la estadística bayesiana: un paradigma donde la probabilidad representa <strong>grado de creencia</strong> (incertidumbre subjetiva), y no solo frecuencia a largo plazo.</p>
 </div>
 </div>
 </div>
 <p><strong>El flujo bayesiano:</strong></p>
-<p><span class="math display">\[\underbrace{P(\theta)}_{\text{Distribución a priori}} \;\; \times \;\; \underbrace{P(\text{datos} \mid \theta)}_{\text{Verosimilitud}} \;\; \propto \;\; \underbrace{P(\theta \mid \text{datos})}_{\text{Distribución a posteriori}}\]</span></p>
+<p><span class="math display">\[\underbrace{P(\theta)}_{\text{Distribución a priori}} \;\; \times \;\; \underbrace{P(\text{datos} \mid \theta)}_{\text{Verosimilitud}} \;\; \propto \;\; \underbrace{P(\theta \mid \text{datos})}_{\text{Distribución a posteriori}}\]</span></p>
 <table class="caption-top">
 <colgroup>
 <col style="width: 20%">
@@ -1239,7 +1239,7 @@ P(D | +) = 0.1667
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Parámetro</strong> <span class="math inline">\(\theta\)</span></td>
+<td><strong>Parámetro</strong> <span class="math inline">\(\theta\)</span></td>
 <td>Fijo, desconocido</td>
 <td>Variable aleatoria</td>
 </tr>
@@ -1251,22 +1251,22 @@ P(D | +) = 0.1667
 <tr class="odd">
 <td><strong>Inferencia</strong></td>
 <td>Estimadores, IC, p-valores</td>
-<td>Distribución a posteriori, intervalos creíbles</td>
+<td>Distribución a posteriori, intervalos creíbles</td>
 </tr>
 <tr class="even">
-<td><strong>Información previa</strong></td>
+<td><strong>Información previa</strong></td>
 <td>No se incorpora formalmente</td>
-<td>Se modela explícitamente con la <em>priori</em></td>
+<td>Se modela explícitamente con la <em>priori</em></td>
 </tr>
 <tr class="odd">
-<td><strong>Interpretación IC</strong></td>
+<td><strong>Interpretación IC</strong></td>
 <td>“El 95% de los IC contienen <span class="math inline">\(\theta\)</span>”</td>
-<td>“Hay 95% de probabilidad de que <span class="math inline">\(\theta\)</span> esté en el intervalo”</td>
+<td>“Hay 95% de probabilidad de que <span class="math inline">\(\theta\)</span> esté en el intervalo”</td>
 </tr>
 </tbody>
 </table>
-<p><em>En Fisioterapia:</em> La estadística bayesiana permite actualizar probabilidades diagnósticas con cada nueva prueba o signo clínico — el razonamiento clínico es inherentemente bayesiano.</p>
-<p><em>El test tiene 99% de sensibilidad pero el VPP es solo 16.7%. ¿Qué cambiaría si la prevalencia fuera del 10% en lugar del 1%?</em></p>
+<p><em>En Fisioterapia:</em> La estadística bayesiana permite actualizar probabilidades diagnósticas con cada nueva prueba o signo clínico — el razonamiento clínico es inherentemente bayesiano.</p>
+<p><em>El test tiene 99% de sensibilidad pero el VPP es solo 16.7%. ¿Qué cambiaría si la prevalencia fuera del 10% en lugar del 1%?</em></p>
 </section>
 <section class="slide level2 center">
 
@@ -1275,13 +1275,13 @@ P(D | +) = 0.1667
 <section id="de-la-probabilidad-a-las-variables-aleatorias" class="title-slide slide level1 center">
 <h1>De la Probabilidad a las Variables Aleatorias</h1>
 <div class="connection">
-<p><strong>Conexión:</strong> Hasta ahora hemos cuantificado la incertidumbre de eventos clínicos mediante reglas de probabilidad. Las variables aleatorias nos permiten modelizar esa incertidumbre matemáticamente, asignando números a los resultados y describiendo su distribución.</p>
+<p><strong>Conexión:</strong> Hasta ahora hemos cuantificado la incertidumbre de eventos clínicos mediante reglas de probabilidad. Las variables aleatorias nos permiten modelizar esa incertidumbre matemáticamente, asignando números a los resultados y describiendo su distribución.</p>
 </div>
 </section>
-<section id="respiro-visual-incertidumbre-en-la-practica-clinica" class="slide level2 center">
-<h2>Respiro visual — Incertidumbre en la práctica clínica</h2>
+<section id="respiro-visual-incertidumbre-en-la-práctica-clínica" class="slide level2 center">
+<h2>Respiro visual — Incertidumbre en la práctica clínica</h2>
 
-<img data-src="https://images.unsplash.com/photo-1645005512968-0c1fe99f0093?w=800.png" class="r-stretch quarto-figure-center"><p class="caption">Fisioterapeuta evaluando a un paciente</p><p><em>Cada paciente es único. La probabilidad nos da el lenguaje para cuantificar la incertidumbre clínica y tomar decisiones informadas.</em></p>
+<img data-src="https://images.unsplash.com/photo-1645005512968-0c1fe99f0093?w=800.png" class="r-stretch quarto-figure-center"><p class="caption">Fisioterapeuta evaluando a un paciente</p><p><em>Cada paciente es único. La probabilidad nos da el lenguaje para cuantificar la incertidumbre clínica y tomar decisiones informadas.</em></p>
 </section>
 <section class="slide level2 center">
 
@@ -1291,7 +1291,7 @@ P(D | +) = 0.1667
 <h1>De la Probabilidad a las Variables Aleatorias</h1>
 
 <img data-src="logo.png" width="70" class="r-stretch"><div class="connection">
-<p>Hasta aquí hemos modelado <strong>eventos</strong> (A, B, intersecciones, condicionales). Ahora damos el salto a modelar <strong>variables</strong>: magnitudes clínicas que varían de paciente a paciente. Una variable aleatoria asigna un número a cada resultado incierto.</p>
+<p>Hasta aquí hemos modelado <strong>eventos</strong> (A, B, intersecciones, condicionales). Ahora damos el salto a modelar <strong>variables</strong>: magnitudes clínicas que varían de paciente a paciente. Una variable aleatoria asigna un número a cada resultado incierto.</p>
 <table class="caption-top">
 <colgroup>
 <col style="width: 49%">
@@ -1313,24 +1313,24 @@ P(D | +) = 0.1667
 <td style="text-align: left;"><span class="math inline">\(\sigma^2 = \Var(X)\)</span> — varianza poblacional</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(s\)</span> — desviación típica muestral</td>
-<td style="text-align: left;"><span class="math inline">\(\sigma = \SD(X)\)</span> — desviación típica poblacional</td>
+<td style="text-align: left;"><span class="math inline">\(s\)</span> — desviación típica muestral</td>
+<td style="text-align: left;"><span class="math inline">\(\sigma = \SD(X)\)</span> — desviación típica poblacional</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span class="math inline">\(\hat{p}\)</span> — proporción muestral</td>
+<td style="text-align: left;"><span class="math inline">\(\hat{p}\)</span> — proporción muestral</td>
 <td style="text-align: left;"><span class="math inline">\(p = P(X \in A)\)</span> — probabilidad poblacional</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">Describías <strong>tu muestra</strong></td>
-<td style="text-align: left;">Modelas <strong>la población</strong></td>
+<td style="text-align: left;">Describías <strong>tu muestra</strong></td>
+<td style="text-align: left;">Modelas <strong>la población</strong></td>
 </tr>
 </tbody>
 </table>
 </div>
 </section>
-<section id="variable-aleatoria-definicion" class="slide level2 center">
-<h2>Variable aleatoria — Definición</h2>
-<p><em>Para modelar matemáticamente la incertidumbre clínica, necesitamos asignar valores numéricos a los resultados inciertos: esto es una variable aleatoria.</em></p>
+<section id="variable-aleatoria-definición" class="slide level2 center">
+<h2>Variable aleatoria — Definición</h2>
+<p><em>Para modelar matemáticamente la incertidumbre clínica, necesitamos asignar valores numéricos a los resultados inciertos: esto es una variable aleatoria.</em></p>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1340,7 +1340,7 @@ P(D | +) = 0.1667
 <p><strong>Nota</strong></p>
 </div>
 <div class="callout-content">
-<p>Una <strong>variable aleatoria (VA)</strong> es una función que asigna un valor numérico a cada resultado de un experimento aleatorio.</p>
+<p>Una <strong>variable aleatoria (VA)</strong> es una función que asigna un valor numérico a cada resultado de un experimento aleatorio.</p>
 </div>
 </div>
 </div>
@@ -1354,7 +1354,7 @@ P(D | +) = 0.1667
 <thead>
 <tr class="header">
 <th>Tipo</th>
-<th>Descripción</th>
+<th>Descripción</th>
 <th>Ejemplo en Fisioterapia</th>
 </tr>
 </thead>
@@ -1362,7 +1362,7 @@ P(D | +) = 0.1667
 <tr class="odd">
 <td><strong>Discreta</strong></td>
 <td>Toma valores aislados (contables)</td>
-<td>Nº de sesiones hasta mejoría</td>
+<td>Nº de sesiones hasta mejoría</td>
 </tr>
 <tr class="even">
 <td><strong>Continua</strong></td>
@@ -1371,10 +1371,10 @@ P(D | +) = 0.1667
 </tr>
 </tbody>
 </table>
-<p><strong>Función de probabilidad / densidad:</strong> Describe el comportamiento probabilístico de la VA. Para discretas usamos la <strong>función de masa</strong> <span class="math inline">\(P(X=x)\)</span>. Para continuas, la <strong>función de densidad</strong> <span class="math inline">\(f(x)\)</span> donde el área bajo la curva entre <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span> es <span class="math inline">\(P(a \leq X \leq b)\)</span>.</p>
+<p><strong>Función de probabilidad / densidad:</strong> Describe el comportamiento probabilístico de la VA. Para discretas usamos la <strong>función de masa</strong> <span class="math inline">\(P(X=x)\)</span>. Para continuas, la <strong>función de densidad</strong> <span class="math inline">\(f(x)\)</span> donde el área bajo la curva entre <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span> es <span class="math inline">\(P(a \leq X \leq b)\)</span>.</p>
 </section>
-<section id="funcion-de-masa-de-probabilidad-va-discreta" class="slide level2 center">
-<h2>Función de masa de probabilidad — Va discreta</h2>
+<section id="función-de-masa-de-probabilidad-va-discreta" class="slide level2 center">
+<h2>Función de masa de probabilidad — Va discreta</h2>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1389,7 +1389,7 @@ P(D | +) = 0.1667
 </div>
 </div>
 <p><strong>Propiedades:</strong> (1) <span class="math inline">\(P(X = x) \geq 0\)</span> para todo <span class="math inline">\(x\)</span>; (2) <span class="math inline">\(\sum_x P(X = x) = 1\)</span></p>
-<p><strong>Ejemplo clínico:</strong> <span class="math inline">\(X\)</span> = nº de pacientes con mejoría en 3 tratados (<span class="math inline">\(p=0.5\)</span>)</p>
+<p><strong>Ejemplo clínico:</strong> <span class="math inline">\(X\)</span> = nº de pacientes con mejoría en 3 tratados (<span class="math inline">\(p=0.5\)</span>)</p>
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -1412,20 +1412,20 @@ P(D | +) = 0.1667
 </table>
 <div class="cell">
 <details class="code-fold">
-<summary>Mostrar código R</summary>
+<summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">3</span>; px <span class="ot">&lt;-</span> <span class="fu">dbinom</span>(x, <span class="dv">3</span>, <span class="fl">0.5</span>)</span>
 <span id="cb24-2"><a aria-hidden="true" tabindex="-1"></a>bp <span class="ot">&lt;-</span> <span class="fu">barplot</span>(px, <span class="at">names=</span>x, <span class="at">col=</span><span class="st">"seagreen"</span>, <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="fl">0.45</span>),</span>
-<span id="cb24-3"><a aria-hidden="true" tabindex="-1"></a>        <span class="at">main=</span><span class="st">"Función de Masa de Probabilidad — VA Discreta"</span>,</span>
-<span id="cb24-4"><a aria-hidden="true" tabindex="-1"></a>        <span class="at">xlab=</span><span class="st">"x (nº pacientes con mejoría)"</span>, <span class="at">ylab=</span><span class="st">"P(X = x)"</span>)</span>
+<span id="cb24-3"><a aria-hidden="true" tabindex="-1"></a>        <span class="at">main=</span><span class="st">"Función de Masa de Probabilidad — VA Discreta"</span>,</span>
+<span id="cb24-4"><a aria-hidden="true" tabindex="-1"></a>        <span class="at">xlab=</span><span class="st">"x (nº pacientes con mejoría)"</span>, <span class="at">ylab=</span><span class="st">"P(X = x)"</span>)</span>
 <span id="cb24-5"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(bp, px<span class="fl">+0.02</span>, <span class="fu">paste0</span>(px<span class="sc">*</span><span class="dv">8</span>,<span class="st">"/8 = "</span>, px), <span class="at">font=</span><span class="dv">2</span>, <span class="at">cex=</span><span class="fl">0.95</span>)</span>
 <span id="cb24-6"><a aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h=</span><span class="dv">0</span>, <span class="at">col=</span><span class="st">"grey"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 
 </div>
-<img data-src="T02_I_Probabilidad_files/figure-revealjs/unnamed-chunk-13-1.png" width="864" class="r-stretch"><p><strong>Verificación:</strong> <span class="math inline">\(\sum P(X=x) = 0.125+0.375+0.375+0.125 = 1.00\)</span> ✓</p>
+<img data-src="T02_I_Probabilidad_files/figure-revealjs/unnamed-chunk-13-1.png" width="864" class="r-stretch"><p><strong>Verificación:</strong> <span class="math inline">\(\sum P(X=x) = 0.125+0.375+0.375+0.125 = 1.00\)</span> ✓</p>
 </section>
-<section id="esperanza-matematica-va-discreta" class="slide level2 center">
-<h2>Esperanza matemática — Va discreta</h2>
+<section id="esperanza-matemática-va-discreta" class="slide level2 center">
+<h2>Esperanza matemática — Va discreta</h2>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1440,7 +1440,7 @@ P(D | +) = 0.1667
 </div>
 </div>
 </div>
-<p><strong>Ejemplo (mejoría en 3 pacientes):</strong></p>
+<p><strong>Ejemplo (mejoría en 3 pacientes):</strong></p>
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -1473,7 +1473,7 @@ P(D | +) = 0.1667
 </tbody>
 </table>
 <p><span class="math display">\[E(X) = 0 + \frac{3}{8} + \frac{6}{8} + \frac{3}{8} = \frac{12}{8} = 1.5\]</span></p>
-<p><strong>Interpretación:</strong> En promedio se espera que <strong>1.5 de cada 3 pacientes</strong> muestren mejoría.</p>
+<p><strong>Interpretación:</strong> En promedio se espera que <strong>1.5 de cada 3 pacientes</strong> muestren mejoría.</p>
 </section>
 <section id="varianza-va-discreta" class="slide level2 center">
 <h2>Varianza — Va discreta</h2>
@@ -1487,11 +1487,11 @@ P(D | +) = 0.1667
 </div>
 <div class="callout-content">
 <p><span class="math display">\[\text{Var}(X) = E[(X - \mu)^2] = \sum_i (x_i - \mu)^2 \cdot P(X=x_i)\]</span></p>
-<p>Fórmula alternativa: <span class="math inline">\(\text{Var}(X) = E(X^2) - [E(X)]^2\)</span></p>
+<p>Fórmula alternativa: <span class="math inline">\(\text{Var}(X) = E(X^2) - [E(X)]^2\)</span></p>
 </div>
 </div>
 </div>
-<p><strong>Ejemplo (mejoría, <span class="math inline">\(\mu = 1.5\)</span>):</strong></p>
+<p><strong>Ejemplo (mejoría, <span class="math inline">\(\mu = 1.5\)</span>):</strong></p>
 <table class="caption-top">
 <thead>
 <tr class="header">
@@ -1531,20 +1531,20 @@ P(D | +) = 0.1667
 <p><span class="math display">\[\text{Var}(X) = 0.281+0.094+0.094+0.281 = 0.75\]</span></p>
 <div class="cell">
 <details class="code-fold">
-<summary>Mostrar código R</summary>
+<summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">3</span>; px <span class="ot">&lt;-</span> <span class="fu">dbinom</span>(x, <span class="dv">3</span>, <span class="fl">0.5</span>)</span>
 <span id="cb25-2"><a aria-hidden="true" tabindex="-1"></a>mu <span class="ot">&lt;-</span> <span class="fu">sum</span>(x<span class="sc">*</span>px)</span>
 <span id="cb25-3"><a aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"E(X) ="</span>, mu, <span class="st">"  Var(X) ="</span>, <span class="fu">sum</span>((x<span class="sc">-</span>mu)<span class="sc">^</span><span class="dv">2</span><span class="sc">*</span>px),</span>
-<span id="cb25-4"><a aria-hidden="true" tabindex="-1"></a>    <span class="st">"</span><span class="sc">\n</span><span class="st">Verificación: n·p·(1-p) ="</span>, <span class="dv">3</span><span class="sc">*</span><span class="fl">0.5</span><span class="sc">*</span><span class="fl">0.5</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb25-4"><a aria-hidden="true" tabindex="-1"></a>    <span class="st">"</span><span class="sc">\n</span><span class="st">Verificación: n·p·(1-p) ="</span>, <span class="dv">3</span><span class="sc">*</span><span class="fl">0.5</span><span class="sc">*</span><span class="fl">0.5</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>E(X) = 1.5   Var(X) = 0.75 
-Verificación: n·p·(1-p) = 0.75</code></pre>
+Verificación: n·p·(1-p) = 0.75</code></pre>
 </div>
 </div>
 </section>
-<section id="funcion-de-distribucion-acumulativa-f.d.a." class="slide level2 center">
-<h2>Función de distribución acumulativa (f.d.a.)</h2>
+<section id="función-de-distribución-acumulativa-f.d.a." class="slide level2 center">
+<h2>Función de distribución acumulativa (f.d.a.)</h2>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1560,15 +1560,15 @@ Verificación: n·p·(1-p) = 0.75</code></pre>
 </div>
 </div>
 </section>
-<section id="f.d.a.-de-la-normal-calculo-de-probabilidades" class="slide level2 center">
-<h2>f.d.a. de la Normal — Cálculo de Probabilidades</h2>
+<section id="f.d.a.-de-la-normal-cálculo-de-probabilidades" class="slide level2 center">
+<h2>f.d.a. de la Normal — Cálculo de Probabilidades</h2>
 <div class="cell">
 <details class="code-fold">
-<summary>Mostrar código R</summary>
+<summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a aria-hidden="true" tabindex="-1"></a>mu <span class="ot">&lt;-</span> <span class="dv">30</span>; sigma <span class="ot">&lt;-</span> <span class="dv">8</span></span>
 <span id="cb27-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">curve</span>(<span class="fu">pnorm</span>(x, mu, sigma), mu<span class="dv">-24</span>, mu<span class="sc">+</span><span class="dv">24</span>, <span class="at">lwd=</span><span class="dv">3</span>, <span class="at">col=</span><span class="st">"steelblue"</span>,</span>
 <span id="cb27-3"><a aria-hidden="true" tabindex="-1"></a>      <span class="at">main=</span><span class="fu">expression</span>(<span class="fu">paste</span>(<span class="st">"f.d.a. Normal: F(x) = P(X ≤ x),  N(30,"</span>, <span class="dv">8</span><span class="sc">^</span><span class="dv">2</span>, <span class="st">")"</span>)),</span>
-<span id="cb27-4"><a aria-hidden="true" tabindex="-1"></a>      <span class="at">xlab=</span><span class="st">"Fuerza de prensión (kg)"</span>, <span class="at">ylab=</span><span class="st">"F(x)"</span>)</span>
+<span id="cb27-4"><a aria-hidden="true" tabindex="-1"></a>      <span class="at">xlab=</span><span class="st">"Fuerza de prensión (kg)"</span>, <span class="at">ylab=</span><span class="st">"F(x)"</span>)</span>
 <span id="cb27-5"><a aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="fl">0.5</span>,<span class="dv">1</span>), <span class="at">lty=</span><span class="dv">3</span>, <span class="at">col=</span><span class="st">"grey"</span>); <span class="fu">abline</span>(<span class="at">v=</span>mu, <span class="at">lty=</span><span class="dv">2</span>, <span class="at">col=</span><span class="st">"darkgreen"</span>)</span>
 <span id="cb27-6"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Marcar F(22)</span></span>
 <span id="cb27-7"><a aria-hidden="true" tabindex="-1"></a><span class="fu">arrows</span>(<span class="dv">22</span>, <span class="dv">0</span>, <span class="dv">22</span>, <span class="fu">pnorm</span>(<span class="dv">22</span>, mu, sigma), <span class="at">col=</span><span class="st">"darkgreen"</span>, <span class="at">lwd=</span><span class="dv">2</span>, <span class="at">length=</span><span class="fl">0.1</span>)</span>
@@ -1583,7 +1583,7 @@ Verificación: n·p·(1-p) = 0.75</code></pre>
 <h2>f.d.a. — VA Discreta vs VA Continua</h2>
 <div class="cell">
 <details class="code-fold">
-<summary>Mostrar código R</summary>
+<summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>), <span class="at">mar=</span><span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">4</span>,<span class="dv">3</span>,<span class="dv">1</span>))</span>
 <span id="cb28-2"><a aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb28-3"><a aria-hidden="true" tabindex="-1"></a><span class="co"># DISCRETA: Binomial(10, 0.4) — funcion escalonada</span></span>
@@ -1593,7 +1593,7 @@ Verificación: n·p·(1-p) = 0.75</code></pre>
 <span id="cb28-7"><a aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab=</span><span class="st">"x"</span>, <span class="at">ylab=</span><span class="st">"F(x)"</span>, <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>), <span class="at">xlim=</span><span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.5</span>,<span class="fl">10.5</span>))</span>
 <span id="cb28-8"><a aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="fl">0.5</span>,<span class="dv">1</span>), <span class="at">lty=</span><span class="dv">3</span>, <span class="at">col=</span><span class="st">"grey"</span>); <span class="fu">points</span>(x_d, Fx_d, <span class="at">pch=</span><span class="dv">19</span>, <span class="at">col=</span><span class="st">"steelblue"</span>, <span class="at">cex=</span><span class="fl">1.2</span>)</span>
 <span id="cb28-9"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-10"><a aria-hidden="true" tabindex="-1"></a><span class="co"># CONTINUA: Normal(0,1) — función continua</span></span>
+<span id="cb28-10"><a aria-hidden="true" tabindex="-1"></a><span class="co"># CONTINUA: Normal(0,1) — función continua</span></span>
 <span id="cb28-11"><a aria-hidden="true" tabindex="-1"></a><span class="fu">curve</span>(<span class="fu">pnorm</span>(x), <span class="sc">-</span><span class="dv">4</span>, <span class="dv">4</span>, <span class="at">lwd=</span><span class="dv">3</span>, <span class="at">col=</span><span class="st">"seagreen"</span>,</span>
 <span id="cb28-12"><a aria-hidden="true" tabindex="-1"></a>      <span class="at">main=</span><span class="st">"f.d.a. Continua — Normal(0,1)"</span>,</span>
 <span id="cb28-13"><a aria-hidden="true" tabindex="-1"></a>      <span class="at">xlab=</span><span class="st">"x"</span>, <span class="at">ylab=</span><span class="st">"F(x)"</span>, <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1</span>))</span>
@@ -1602,15 +1602,15 @@ Verificación: n·p·(1-p) = 0.75</code></pre>
 </details>
 
 <details class="code-fold">
-<summary>Mostrar código R</summary>
+<summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<img data-src="T02_I_Probabilidad_files/figure-revealjs/unnamed-chunk-16-1.png" width="864" class="r-stretch"><p><strong>VA Discreta:</strong> <span class="math inline">\(F(x) = \sum_{x_i \leq x} P(X=x_i)\)</span> → <strong>función escalonada</strong>, salta en cada valor posible</p>
-<p><strong>VA Continua:</strong> <span class="math inline">\(F(x) = \int_{-\infty}^x f(t)dt\)</span> → <strong>función continua suave</strong>, sin saltos</p>
+<img data-src="T02_I_Probabilidad_files/figure-revealjs/unnamed-chunk-16-1.png" width="864" class="r-stretch"><p><strong>VA Discreta:</strong> <span class="math inline">\(F(x) = \sum_{x_i \leq x} P(X=x_i)\)</span> → <strong>función escalonada</strong>, salta en cada valor posible</p>
+<p><strong>VA Continua:</strong> <span class="math inline">\(F(x) = \int_{-\infty}^x f(t)dt\)</span> → <strong>función continua suave</strong>, sin saltos</p>
 </section>
-<section id="funcion-de-densidad-va-continua" class="slide level2 center">
-<h2>Función de densidad — Va continua</h2>
+<section id="función-de-densidad-va-continua" class="slide level2 center">
+<h2>Función de densidad — Va continua</h2>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1620,12 +1620,12 @@ Verificación: n·p·(1-p) = 0.75</code></pre>
 <p><strong>Nota</strong></p>
 </div>
 <div class="callout-content">
-<p><span class="math display">\[P(a \leq X \leq b) = \text{área bajo } f(x) \text{ entre } a \text{ y } b\]</span></p>
-<p>La probabilidad es el <strong>área bajo la curva</strong> de la función de densidad <span class="math inline">\(f(x)\)</span>.</p>
+<p><span class="math display">\[P(a \leq X \leq b) = \text{área bajo } f(x) \text{ entre } a \text{ y } b\]</span></p>
+<p>La probabilidad es el <strong>área bajo la curva</strong> de la función de densidad <span class="math inline">\(f(x)\)</span>.</p>
 </div>
 </div>
 </div>
-<p><strong>Propiedades:</strong> (1) <span class="math inline">\(f(x) \geq 0\)</span>; (2) área total bajo <span class="math inline">\(f(x)\)</span> = 1; (3) <span class="math inline">\(P(X=c) = 0\)</span> para cualquier <span class="math inline">\(c\)</span></p>
+<p><strong>Propiedades:</strong> (1) <span class="math inline">\(f(x) \geq 0\)</span>; (2) área total bajo <span class="math inline">\(f(x)\)</span> = 1; (3) <span class="math inline">\(P(X=c) = 0\)</span> para cualquier <span class="math inline">\(c\)</span></p>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1635,18 +1635,18 @@ Verificación: n·p·(1-p) = 0.75</code></pre>
 <p><strong>Tip</strong></p>
 </div>
 <div class="callout-content">
-<p><strong>Notación:</strong> El símbolo <span class="math inline">\(\int_a^b f(x)dx\)</span> significa “área bajo la curva <span class="math inline">\(f(x)\)</span> entre <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span>”. En este curso <strong>siempre usaremos R</strong> (<code>pnorm</code>, <code>dnorm</code>, <code>pt</code>, <code>pchisq</code>) en lugar de calcular integrales a mano.</p>
+<p><strong>Notación:</strong> El símbolo <span class="math inline">\(\int_a^b f(x)dx\)</span> significa “área bajo la curva <span class="math inline">\(f(x)\)</span> entre <span class="math inline">\(a\)</span> y <span class="math inline">\(b\)</span>”. En este curso <strong>siempre usaremos R</strong> (<code>pnorm</code>, <code>dnorm</code>, <code>pt</code>, <code>pchisq</code>) en lugar de calcular integrales a mano.</p>
 </div>
 </div>
 </div>
 <div class="cell">
 <details class="code-fold">
-<summary>Mostrar código R</summary>
+<summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
 <span id="cb30-2"><a aria-hidden="true" tabindex="-1"></a>ROM <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">500</span>, <span class="at">mean=</span><span class="dv">150</span>, <span class="at">sd=</span><span class="dv">20</span>)</span>
 <span id="cb30-3"><a aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(ROM, <span class="at">col=</span><span class="st">"steelblue"</span>, <span class="at">border=</span><span class="st">"white"</span>, <span class="at">breaks=</span><span class="dv">25</span>, <span class="at">freq=</span><span class="cn">FALSE</span>,</span>
 <span id="cb30-4"><a aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">"f.d.p. — ROM de Hombro (n=500)"</span>,</span>
-<span id="cb30-5"><a aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab=</span><span class="st">"Grados de flexión"</span>, <span class="at">ylab=</span><span class="st">"Densidad de probabilidad f(x)"</span>, <span class="at">cex.lab=</span><span class="fl">1.1</span>)</span>
+<span id="cb30-5"><a aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab=</span><span class="st">"Grados de flexión"</span>, <span class="at">ylab=</span><span class="st">"Densidad de probabilidad f(x)"</span>, <span class="at">cex.lab=</span><span class="fl">1.1</span>)</span>
 <span id="cb30-6"><a aria-hidden="true" tabindex="-1"></a><span class="fu">curve</span>(<span class="fu">dnorm</span>(x, <span class="dv">150</span>, <span class="dv">20</span>), <span class="at">add=</span><span class="cn">TRUE</span>, <span class="at">col=</span><span class="st">"darkgreen"</span>, <span class="at">lwd=</span><span class="dv">3</span>)</span>
 <span id="cb30-7"><a aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb30-8"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Sombrear P(130 ≤ X ≤ 170)</span></span>
@@ -1676,23 +1676,23 @@ Verificación: n·p·(1-p) = 0.75</code></pre>
 <p><strong>Ejemplo — ROM de hombro (<span class="math inline">\(\mu=150\)</span>, <span class="math inline">\(\sigma=20\)</span>):</strong></p>
 <div class="cell">
 <details class="code-fold">
-<summary>Mostrar código R</summary>
+<summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
 <span id="cb31-2"><a aria-hidden="true" tabindex="-1"></a>ROM <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">10000</span>, <span class="dv">150</span>, <span class="dv">20</span>)</span>
-<span id="cb31-3"><a aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"E(X) teórica = 150°   E(X) simulada ="</span>, <span class="fu">round</span>(<span class="fu">mean</span>(ROM),<span class="dv">1</span>), <span class="st">"°"</span>,</span>
-<span id="cb31-4"><a aria-hidden="true" tabindex="-1"></a>    <span class="st">"</span><span class="sc">\n</span><span class="st">Var(X) teórica = 400   Var(X) simulada ="</span>, <span class="fu">round</span>(<span class="fu">var</span>(ROM),<span class="dv">1</span>),</span>
-<span id="cb31-5"><a aria-hidden="true" tabindex="-1"></a>    <span class="st">"</span><span class="sc">\n</span><span class="st">σ teórica = 20°   σ simulada ="</span>, <span class="fu">round</span>(<span class="fu">sd</span>(ROM),<span class="dv">1</span>), <span class="st">"°"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb31-3"><a aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"E(X) teórica = 150°   E(X) simulada ="</span>, <span class="fu">round</span>(<span class="fu">mean</span>(ROM),<span class="dv">1</span>), <span class="st">"°"</span>,</span>
+<span id="cb31-4"><a aria-hidden="true" tabindex="-1"></a>    <span class="st">"</span><span class="sc">\n</span><span class="st">Var(X) teórica = 400   Var(X) simulada ="</span>, <span class="fu">round</span>(<span class="fu">var</span>(ROM),<span class="dv">1</span>),</span>
+<span id="cb31-5"><a aria-hidden="true" tabindex="-1"></a>    <span class="st">"</span><span class="sc">\n</span><span class="st">σ teórica = 20°   σ simulada ="</span>, <span class="fu">round</span>(<span class="fu">sd</span>(ROM),<span class="dv">1</span>), <span class="st">"°"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>E(X) teórica = 150°   E(X) simulada = 150 ° 
-Var(X) teórica = 400   Var(X) simulada = 398.9 
-σ teórica = 20°   σ simulada = 20 °</code></pre>
+<pre><code>E(X) teórica = 150°   E(X) simulada = 150 ° 
+Var(X) teórica = 400   Var(X) simulada = 398.9 
+σ teórica = 20°   σ simulada = 20 °</code></pre>
 </div>
 </div>
 <div class="cell">
 <details class="code-fold">
-<summary>Mostrar código R</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Comparación de dos VA continuas con distinta dispersión</span></span>
+<summary>Mostrar código R</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Comparación de dos VA continuas con distinta dispersión</span></span>
 <span id="cb33-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">curve</span>(<span class="fu">dnorm</span>(x, <span class="dv">150</span>, <span class="dv">10</span>), <span class="dv">110</span>, <span class="dv">190</span>, <span class="at">col=</span><span class="st">"steelblue"</span>, <span class="at">lwd=</span><span class="dv">3</span>,</span>
 <span id="cb33-3"><a aria-hidden="true" tabindex="-1"></a>      <span class="at">main=</span><span class="fu">expression</span>(<span class="fu">paste</span>(<span class="st">"Dos VA Normales: misma "</span>, mu, <span class="st">", distinta "</span>, sigma)),</span>
 <span id="cb33-4"><a aria-hidden="true" tabindex="-1"></a>      <span class="at">xlab=</span><span class="st">"Grados ROM"</span>, <span class="at">ylab=</span><span class="st">"f(x)"</span>, <span class="at">cex.lab=</span><span class="fl">1.1</span>)</span>
@@ -1704,10 +1704,10 @@ Var(X) teórica = 400   Var(X) simulada = 398.9
 </details>
 
 </div>
-<img data-src="T02_I_Probabilidad_files/figure-revealjs/unnamed-chunk-19-1.png" width="864" class="r-stretch"><p><strong>Interpretación:</strong> Ambas tienen la misma esperanza (<span class="math inline">\(\mu=150°\)</span>), pero la distribución naranja (<span class="math inline">\(\sigma=25\)</span>) tiene <strong>mayor dispersión</strong> que la azul (<span class="math inline">\(\sigma=10\)</span>).</p>
+<img data-src="T02_I_Probabilidad_files/figure-revealjs/unnamed-chunk-19-1.png" width="864" class="r-stretch"><p><strong>Interpretación:</strong> Ambas tienen la misma esperanza (<span class="math inline">\(\mu=150°\)</span>), pero la distribución naranja (<span class="math inline">\(\sigma=25\)</span>) tiene <strong>mayor dispersión</strong> que la azul (<span class="math inline">\(\sigma=10\)</span>).</p>
 </section>
-<section id="comparativa-discreta-vs-continua-conceptos-analogos" class="slide level2 center">
-<h2>Comparativa: Discreta vs continua — Conceptos análogos</h2>
+<section id="comparativa-discreta-vs-continua-conceptos-análogos" class="slide level2 center">
+<h2>Comparativa: Discreta vs continua — Conceptos análogos</h2>
 <table class="caption-top">
 <colgroup>
 <col style="width: 31%">
@@ -1723,7 +1723,7 @@ Var(X) teórica = 400   Var(X) simulada = 398.9
 </thead>
 <tbody>
 <tr class="odd">
-<td><strong>Función de probabilidad</strong></td>
+<td><strong>Función de probabilidad</strong></td>
 <td>f.m.p.: <span class="math inline">\(P(X=x)\)</span></td>
 <td>f.d.p.: <span class="math inline">\(f(x)\)</span></td>
 </tr>
@@ -1743,7 +1743,7 @@ Var(X) teórica = 400   Var(X) simulada = 398.9
 <td><span class="math inline">\(F(x) = \int_{-\infty}^x f(t)\,dt\)</span></td>
 </tr>
 <tr class="odd">
-<td><strong>Normalización</strong></td>
+<td><strong>Normalización</strong></td>
 <td><span class="math inline">\(\sum_x P(X=x) = 1\)</span></td>
 <td><span class="math inline">\(\int_{-\infty}^{\infty} f(x)\,dx = 1\)</span></td>
 </tr>
@@ -1761,7 +1761,7 @@ Var(X) teórica = 400   Var(X) simulada = 398.9
 </table>
 <div class="cell">
 <details class="code-fold">
-<summary>Mostrar código R</summary>
+<summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>), <span class="at">mar=</span><span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">4</span>,<span class="dv">3</span>,<span class="dv">1</span>))</span>
 <span id="cb34-2"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Discreta: Binomial</span></span>
 <span id="cb34-3"><a aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">10</span></span>
@@ -1773,7 +1773,7 @@ Var(X) teórica = 400   Var(X) simulada = 398.9
 </details>
 
 <details class="code-fold">
-<summary>Mostrar código R</summary>
+<summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
@@ -1790,8 +1790,8 @@ Var(X) teórica = 400   Var(X) simulada = 398.9
 <thead>
 <tr class="header">
 <th>Prefijo</th>
-<th>Función</th>
-<th>Fórmula</th>
+<th>Función</th>
+<th>Fórmula</th>
 <th>Ejemplo (Normal)</th>
 </tr>
 </thead>
@@ -1804,7 +1804,7 @@ Var(X) teórica = 400   Var(X) simulada = 398.9
 </tr>
 <tr class="even">
 <td><code>p</code></td>
-<td>Distribución acumulada</td>
+<td>Distribución acumulada</td>
 <td><span class="math inline">\(F(x) = P(X \leq x)\)</span></td>
 <td><code>pnorm(q, mean, sd)</code></td>
 </tr>
@@ -1831,7 +1831,7 @@ Var(X) teórica = 400   Var(X) simulada = 398.9
 <p><strong>Tip</strong></p>
 </div>
 <div class="callout-content">
-<p>Este patrón se repite para todas las distribuciones: <code>dbinom</code>, <code>pbinom</code>, <code>qbinom</code>, <code>rbinom</code>; <code>dpois</code>, <code>ppois</code>, <code>qpois</code>, <code>rpois</code>, etc.</p>
+<p>Este patrón se repite para todas las distribuciones: <code>dbinom</code>, <code>pbinom</code>, <code>qbinom</code>, <code>rbinom</code>; <code>dpois</code>, <code>ppois</code>, <code>qpois</code>, <code>rpois</code>, etc.</p>
 </div>
 </div>
 </div>
@@ -1859,7 +1859,7 @@ Var(X) teórica = 400   Var(X) simulada = 398.9
 </ol>
 <div class="cell">
 <details class="code-fold">
-<summary>Mostrar código R</summary>
+<summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a aria-hidden="true" tabindex="-1"></a>prev <span class="ot">&lt;-</span> <span class="fl">0.15</span>; sens <span class="ot">&lt;-</span> <span class="fl">0.90</span>; spec <span class="ot">&lt;-</span> <span class="fl">0.85</span></span>
 <span id="cb36-2"><a aria-hidden="true" tabindex="-1"></a>vpp <span class="ot">&lt;-</span> (sens<span class="sc">*</span>prev) <span class="sc">/</span> (sens<span class="sc">*</span>prev <span class="sc">+</span> (<span class="dv">1</span><span class="sc">-</span>spec)<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>prev))</span>
 <span id="cb36-3"><a aria-hidden="true" tabindex="-1"></a>vpn <span class="ot">&lt;-</span> (spec<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>prev)) <span class="sc">/</span> (spec<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>prev)<span class="sc">+</span>(<span class="dv">1</span><span class="sc">-</span>sens)<span class="sc">*</span>prev)</span>
@@ -1888,7 +1888,7 @@ Var(X) teórica = 400   Var(X) simulada = 398.9
 </div>
 </div>
 <details class="code-fold">
-<summary>Mostrar código R</summary>
+<summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>))</span>
 <span id="cb37-2"><a aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb37-3"><a aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"VPP ="</span>, <span class="fu">round</span>(vpp<span class="sc">*</span><span class="dv">100</span>,<span class="dv">1</span>), <span class="st">"%</span><span class="sc">\n</span><span class="st">VPN ="</span>, <span class="fu">round</span>(vpn<span class="sc">*</span><span class="dv">100</span>,<span class="dv">1</span>), <span class="st">"%"</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
@@ -1914,7 +1914,7 @@ VPN = 98 %</code></pre>
 <h2>Probabilidad básica</h2>
 <div class="cell">
 <details class="code-fold">
-<summary>Mostrar código R</summary>
+<summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Regla de Laplace</span></span>
 <span id="cb39-2"><a aria-hidden="true" tabindex="-1"></a>P_3 <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">6</span>          <span class="co"># P(sacar un 3 en un dado)</span></span>
 <span id="cb39-3"><a aria-hidden="true" tabindex="-1"></a>P_par <span class="ot">&lt;-</span> <span class="dv">3</span><span class="sc">/</span><span class="dv">6</span>        <span class="co"># P(sacar par)</span></span>
@@ -1933,7 +1933,7 @@ VPN = 98 %</code></pre>
 <h2>Probabilidad condicional y Bayes</h2>
 <div class="cell">
 <details class="code-fold">
-<summary>Mostrar código R</summary>
+<summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Probabilidad condicional</span></span>
 <span id="cb40-2"><a aria-hidden="true" tabindex="-1"></a>P_R_given_M <span class="ot">&lt;-</span> <span class="dv">72</span><span class="sc">/</span><span class="dv">120</span>     <span class="co"># P(Recuperado | Mujer) = 0.60</span></span>
 <span id="cb40-3"><a aria-hidden="true" tabindex="-1"></a>P_R_given_H <span class="ot">&lt;-</span> <span class="dv">32</span><span class="sc">/</span><span class="dv">80</span>      <span class="co"># P(Recuperado | Hombre) = 0.40</span></span>
@@ -1954,7 +1954,7 @@ VPN = 98 %</code></pre>
 <h2>Variables aleatorias</h2>
 <div class="cell">
 <details class="code-fold">
-<summary>Mostrar código R</summary>
+<summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># VA Discreta — Binomial</span></span>
 <span id="cb41-2"><a aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">0</span><span class="sc">:</span><span class="dv">3</span></span>
 <span id="cb41-3"><a aria-hidden="true" tabindex="-1"></a>px <span class="ot">&lt;-</span> <span class="fu">dbinom</span>(x, <span class="dv">3</span>, <span class="fl">0.5</span>)   <span class="co"># P(X = x)</span></span>

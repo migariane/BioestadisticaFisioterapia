@@ -316,14 +316,12 @@
 <li><a href="#/bandas-de-confianza-y-predicción" id="/toc-bandas-de-confianza-y-predicción">Bandas de confianza y predicción</a></li>
 <li><a href="#/matriz-de-correlaciones-múltiples-variables-clínicas" id="/toc-matriz-de-correlaciones-múltiples-variables-clínicas">Matriz de correlaciones — Múltiples variables clínicas</a></li>
 <li><a href="#/introducción-a-la-regresión-múltiple" id="/toc-introducción-a-la-regresión-múltiple">Introducción a la regresión múltiple</a></li>
-<li><a href="#/r2-ajustado-penalización-por-número-de-predictores" id="/toc-r2-ajustado-penalización-por-número-de-predictores"><span class="math inline">\(R^2\)</span> Ajustado — Penalización por Número de Predictores</a></li>
 <li><a href="#/selección-de-modelos-y-sobreajuste" id="/toc-selección-de-modelos-y-sobreajuste">Selección de modelos y sobreajuste</a></li>
 <li><a href="#/r-base-vs-bioestatr-comparativa-para-regresión" id="/toc-r-base-vs-bioestatr-comparativa-para-regresión">R base vs BioEstatR — Comparativa para regresión</a></li>
 
 </ul></li>
 <li><a href="#/resumen" id="/toc-resumen">Resumen</a>
 <ul>
-
 <li><a href="#/la-regresión-como-marco-unificador-de-todo-el-curso" id="/toc-la-regresión-como-marco-unificador-de-todo-el-curso">La regresión como marco unificador de todo el curso</a></li>
 <li><a href="#/ejercicio-clínico-regresión-lineal-en-fisioterapia" id="/toc-ejercicio-clínico-regresión-lineal-en-fisioterapia">Ejercicio clínico — Regresión lineal en fisioterapia</a></li>
 <li><a href="#/referencias" id="/toc-referencias">Referencias</a></li>
@@ -370,7 +368,7 @@
 <li class="fragment">Evaluar el ajuste del modelo con <span class="math inline">\(R^2\)</span> y gráficos de residuos</li>
 <li class="fragment">Distinguir entre IC (media) e IP (individuo) para predicciones</li>
 <li class="fragment">Recordar que correlación no implica causalidad</li>
-<li class="fragment">Usar <code>rls()</code> y <code>rlsm()</code> de BioEstatR para regresión en una línea</li>
+<li class="fragment">Usar <code>rls()</code> y <code>rlm()</code> de BioEstatR para regresión en una línea</li>
 </ol>
 </section>
 <section id="motivación-imc-y-porcentaje-de-masa-grasa" class="slide level2 center">
@@ -1607,8 +1605,8 @@ sample estimates:
 <p><span class="math inline">\(\sum x = 39\)</span>, <span class="math inline">\(\sum y = 23\)</span>, <span class="math inline">\(n = 5\)</span> <span class="math inline">\(\bar{x} = 7.8\)</span>, <span class="math inline">\(\bar{y} = 4.6\)</span> <span class="math inline">\(\sum x^2 = 16+25+64+100+144 = 349\)</span> <span class="math inline">\(\sum xy = 8+15+40+60+84 = 207\)</span></p>
 <p><strong>Paso 2: <span class="math inline">\(\hat{\beta}_1 = \frac{S_{xy}}{S_{xx}} = \frac{\sum xy - (\sum x)(\sum y)/n}{\sum x^2 - (\sum x)^2/n}\)</span></strong></p>
 <p><span class="math inline">\(S_{xy} = 207 - \frac{39 \times 23}{5} = 207 - 179.4 = 27.6\)</span> <span class="math inline">\(S_{xx} = 349 - \frac{39^2}{5} = 349 - 304.2 = 44.8\)</span> <span class="math inline">\(\hat{\beta}_1 = \frac{27.6}{44.8} = 0.616\)</span></p>
-<p><strong>Paso 3: <span class="math inline">\(\hat{\beta}_0 = \bar{y} - \hat{\beta}_1\bar{x} = 4.6 - 0.616 \times 7.8 = 4.6 - 4.80 \approx -0.21\)</span></strong></p>
-<p><strong>Ecuación:</strong> <span class="math inline">\(\widehat{\text{EVA}} = -0.21 + 0.616 \times \text{Sesiones}\)</span></p>
+<p><strong>Paso 3: <span class="math inline">\(\hat{\beta}_0 = \bar{y} - \hat{\beta}_1\bar{x} = 4.6 - 0.616 \times 7.8 = 4.6 - 4.80 \approx -0.20\)</span></strong></p>
+<p><strong>Ecuación:</strong> <span class="math inline">\(\widehat{\text{EVA}} = -0.20 + 0.616 \times \text{Sesiones}\)</span></p>
 <p><strong>Interpretación:</strong> Por cada sesión adicional, la mejoría en EVA aumenta 0.62 puntos.</p>
 <div class="cell">
 <details class="code-fold">
@@ -1937,15 +1935,14 @@ P = 5e-04</code></pre>
 <div class="cell">
 <details class="code-fold">
 <summary>Mostrar código R</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Datos ampliados simulados con las mismas variables del T06 más Edad, Fuerza prensil (kg) y EVA dolor (0-10)</span></span>
-<span id="cb59-2"><a aria-hidden="true" tabindex="-1"></a><span class="co"># ⚠️ Estos datos NO coinciden con los 12 pacientes del ejemplo IMC-Graso anterior</span></span>
-<span id="cb59-3"><a aria-hidden="true" tabindex="-1"></a>datos_clinicos <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb59-4"><a aria-hidden="true" tabindex="-1"></a>  <span class="at">IMC   =</span> <span class="fu">c</span>(<span class="fl">20.36</span>, <span class="fl">20.34</span>, <span class="fl">20.05</span>, <span class="fl">23.94</span>, <span class="fl">22.17</span>, <span class="fl">21.72</span>, <span class="fl">19.29</span>, <span class="fl">23.07</span>, <span class="fl">27.45</span>, <span class="fl">24.91</span>, <span class="fl">22.69</span>, <span class="fl">21.15</span>),</span>
-<span id="cb59-5"><a aria-hidden="true" tabindex="-1"></a>  <span class="at">Graso =</span> <span class="fu">c</span>(<span class="fl">17.36</span>, <span class="fl">12.72</span>, <span class="fl">11.65</span>, <span class="fl">19.34</span>, <span class="fl">24.19</span>, <span class="fl">25.62</span>, <span class="fl">20.91</span>, <span class="fl">17.81</span>, <span class="fl">29.70</span>, <span class="fl">25.43</span>, <span class="fl">18.62</span>, <span class="fl">23.15</span>),</span>
-<span id="cb59-6"><a aria-hidden="true" tabindex="-1"></a>  <span class="at">Edad  =</span> <span class="fu">c</span>(<span class="dv">15</span>, <span class="dv">16</span>, <span class="dv">15</span>, <span class="dv">18</span>, <span class="dv">17</span>, <span class="dv">16</span>, <span class="dv">15</span>, <span class="dv">17</span>, <span class="dv">19</span>, <span class="dv">18</span>, <span class="dv">16</span>, <span class="dv">17</span>),</span>
-<span id="cb59-7"><a aria-hidden="true" tabindex="-1"></a>  <span class="at">Fuerza =</span> <span class="fu">c</span>(<span class="dv">28</span>, <span class="dv">30</span>, <span class="dv">25</span>, <span class="dv">38</span>, <span class="dv">35</span>, <span class="dv">32</span>, <span class="dv">22</span>, <span class="dv">40</span>, <span class="dv">45</span>, <span class="dv">42</span>, <span class="dv">31</span>, <span class="dv">34</span>),</span>
-<span id="cb59-8"><a aria-hidden="true" tabindex="-1"></a>  <span class="at">EVA   =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">6</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">8</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">6</span>)</span>
-<span id="cb59-9"><a aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Datos ampliados: mismos 12 pacientes del ejemplo IMC-Graso con Edad, Fuerza prensil (kg) y EVA dolor (0-10)</span></span>
+<span id="cb59-2"><a aria-hidden="true" tabindex="-1"></a>datos_clinicos <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb59-3"><a aria-hidden="true" tabindex="-1"></a>  <span class="at">IMC   =</span> <span class="fu">c</span>(<span class="fl">20.36</span>, <span class="fl">20.34</span>, <span class="fl">20.05</span>, <span class="fl">23.94</span>, <span class="fl">22.17</span>, <span class="fl">21.72</span>, <span class="fl">19.29</span>, <span class="fl">23.07</span>, <span class="fl">27.45</span>, <span class="fl">24.91</span>, <span class="fl">22.69</span>, <span class="fl">21.15</span>),</span>
+<span id="cb59-4"><a aria-hidden="true" tabindex="-1"></a>  <span class="at">Graso =</span> <span class="fu">c</span>(<span class="fl">17.36</span>, <span class="fl">12.72</span>, <span class="fl">11.65</span>, <span class="fl">19.34</span>, <span class="fl">24.19</span>, <span class="fl">25.62</span>, <span class="fl">20.91</span>, <span class="fl">17.81</span>, <span class="fl">29.70</span>, <span class="fl">25.43</span>, <span class="fl">18.62</span>, <span class="fl">23.15</span>),</span>
+<span id="cb59-5"><a aria-hidden="true" tabindex="-1"></a>  <span class="at">Edad  =</span> <span class="fu">c</span>(<span class="dv">15</span>, <span class="dv">16</span>, <span class="dv">15</span>, <span class="dv">18</span>, <span class="dv">17</span>, <span class="dv">16</span>, <span class="dv">15</span>, <span class="dv">17</span>, <span class="dv">19</span>, <span class="dv">18</span>, <span class="dv">16</span>, <span class="dv">17</span>),</span>
+<span id="cb59-6"><a aria-hidden="true" tabindex="-1"></a>  <span class="at">Fuerza =</span> <span class="fu">c</span>(<span class="dv">28</span>, <span class="dv">30</span>, <span class="dv">25</span>, <span class="dv">38</span>, <span class="dv">35</span>, <span class="dv">32</span>, <span class="dv">22</span>, <span class="dv">40</span>, <span class="dv">45</span>, <span class="dv">42</span>, <span class="dv">31</span>, <span class="dv">34</span>),</span>
+<span id="cb59-7"><a aria-hidden="true" tabindex="-1"></a>  <span class="at">EVA   =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">6</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">8</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">6</span>)</span>
+<span id="cb59-8"><a aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <p><strong>Matriz de correlaciones de Pearson:</strong></p>
@@ -2068,29 +2065,30 @@ P = 5e-04</code></pre>
 <div class="cell">
 <details class="code-fold">
 <summary>Mostrar código R</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Ejemplo: % graso ~ IMC + edad + sexo</span></span>
-<span id="cb62-2"><a aria-hidden="true" tabindex="-1"></a>modelo_mult <span class="ot">&lt;-</span> <span class="fu">lm</span>(graso <span class="sc">~</span> imc <span class="sc">+</span> edad <span class="sc">+</span> sexo, <span class="at">data =</span> df)</span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Ejemplo: % graso ~ IMC + Edad (+ Fuerza)</span></span>
+<span id="cb62-2"><a aria-hidden="true" tabindex="-1"></a>modelo_mult <span class="ot">&lt;-</span> <span class="fu">lm</span>(Graso <span class="sc">~</span> IMC <span class="sc">+</span> Edad, <span class="at">data =</span> datos_clinicos)</span>
 <span id="cb62-3"><a aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(modelo_mult)</span>
 <span id="cb62-4"><a aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb62-5"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Con BioEstatR — todo en un solo comando</span></span>
 <span id="cb62-6"><a aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(BioEstatR)</span>
-<span id="cb62-7"><a aria-hidden="true" tabindex="-1"></a><span class="fu">rlm</span>(graso <span class="sc">~</span> imc <span class="sc">+</span> edad <span class="sc">+</span> sexo, <span class="at">data =</span> df)</span>
-<span id="cb62-8"><a aria-hidden="true" tabindex="-1"></a><span class="co"># rlm() produce: coeficientes + IC + R² ajustado + test F + gráficos de diagnóstico</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb62-7"><a aria-hidden="true" tabindex="-1"></a><span class="fu">rlm</span>(Graso <span class="sc">~</span> IMC <span class="sc">+</span> Edad, <span class="at">data =</span> datos_clinicos)</span>
+<span id="cb62-8"><a aria-hidden="true" tabindex="-1"></a><span class="co"># rlm() produce: coeficientes + IC + R² ajustado + test F + gráficos de diagnóstico</span></span>
+<span id="cb62-9"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-10"><a aria-hidden="true" tabindex="-1"></a><span class="sc">-</span> <span class="er">**$</span>R<span class="sc">^</span><span class="dv">2</span><span class="sc">$</span> ajustado<span class="sc">:</span><span class="er">**</span> penaliza por el número de <span class="fu">predictores</span> (mejor que <span class="sc">$</span>R<span class="sc">^</span><span class="dv">2</span><span class="sc">$</span>)</span>
+<span id="cb62-11"><a aria-hidden="true" tabindex="-1"></a><span class="sc">-</span> <span class="er">**</span>Colinealidad<span class="sc">:</span><span class="er">**</span> predictores muy correlacionados → estimaciones inestables</span>
+<span id="cb62-12"><a aria-hidden="true" tabindex="-1"></a><span class="sc">-</span> <span class="er">**</span>Selección de variables<span class="sc">:</span><span class="er">**</span> stepwise, AIC, o mejor, <span class="sc">**</span>criterio clínico<span class="sc">**</span></span>
+<span id="cb62-13"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-14"><a aria-hidden="true" tabindex="-1"></a><span class="do">## $R^2$ Ajustado — Penalización por Número de Predictores</span></span>
+<span id="cb62-15"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-16"><a aria-hidden="true" tabindex="-1"></a><span class="er">:::</span> {.formula<span class="sc">-</span>box}</span>
+<span id="cb62-17"><a aria-hidden="true" tabindex="-1"></a><span class="sc">$</span><span class="er">$</span>R<span class="sc">^</span><span class="dv">2</span>_{\text{adj}} <span class="ot">=</span> <span class="dv">1</span> <span class="sc">-</span> \frac{(<span class="dv">1</span><span class="sc">-</span>R<span class="sc">^</span><span class="dv">2</span>)(n<span class="dv">-1</span>)}{n<span class="sc">-</span>k<span class="dv">-1</span>}<span class="sc">$</span><span class="er">$</span></span>
+<span id="cb62-18"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-19"><a aria-hidden="true" tabindex="-1"></a>donde <span class="sc">$</span>k<span class="sc">$</span> <span class="er">=</span> número de predictores.</span>
+<span id="cb62-20"><a aria-hidden="true" tabindex="-1"></a><span class="sc">:::</span></span>
+<span id="cb62-21"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb62-22"><a aria-hidden="true" tabindex="-1"></a><span class="er">**</span>¿Por qué ajustar?<span class="sc">**</span> El <span class="sc">$</span>R<span class="sc">^</span><span class="dv">2</span><span class="sc">$</span> ordinario <span class="sc">**</span>siempre crece<span class="sc">**</span> al añadir variables, incluso si son irrelevantes. El <span class="sc">$</span>R<span class="sc">^</span><span class="dv">2</span>_{\text{adj}}<span class="sc">$</span> penaliza la complejidad innecesaria.</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<ul>
-<li><strong><span class="math inline">\(R^2\)</span> ajustado:</strong> penaliza por el número de predictores (mejor que <span class="math inline">\(R^2\)</span>)</li>
-<li><strong>Colinealidad:</strong> predictores muy correlacionados → estimaciones inestables</li>
-<li><strong>Selección de variables:</strong> stepwise, AIC, o mejor, <strong>criterio clínico</strong></li>
-</ul>
-</section>
-<section id="r2-ajustado-penalización-por-número-de-predictores" class="slide level2 center">
-<h2><span class="math inline">\(R^2\)</span> Ajustado — Penalización por Número de Predictores</h2>
-<div class="formula-box">
-<p><span class="math display">\[R^2_{\text{adj}} = 1 - \frac{(1-R^2)(n-1)}{n-k-1}\]</span></p>
-<p>donde <span class="math inline">\(k\)</span> = número de predictores.</p>
-</div>
-<p><strong>¿Por qué ajustar?</strong> El <span class="math inline">\(R^2\)</span> ordinario <strong>siempre crece</strong> al añadir variables, incluso si son irrelevantes. El <span class="math inline">\(R^2_{\text{adj}}\)</span> penaliza la complejidad innecesaria.</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Mostrar código R</summary>
@@ -2381,15 +2379,12 @@ max  5.880  1.432
 <li class="fragment"><p><strong>Correlación <span class="math inline">\(\neq\)</span> causalidad:</strong> solo el muestreo tipo II permite inferencia causal</p></li>
 </ol>
 </section>
-<section class="slide level2 center">
-
+<section id="la-regresión-como-marco-unificador-de-todo-el-curso" class="slide level2 center">
+<h2>La regresión como marco unificador de todo el curso</h2>
 <p><strong>Referencias complementarias del libro:</strong></p>
 <ul>
 <li>Luque-Fernández, M. A. (2026). <em>Matemáticas para la Estadística Médica con R</em>. Cap. 9-10: Regresión y Correlación (Semanas 9-10).</li>
 </ul>
-</section>
-<section id="la-regresión-como-marco-unificador-de-todo-el-curso" class="slide level2 center">
-<h2>La regresión como marco unificador de todo el curso</h2>
 <div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -2451,8 +2446,9 @@ max  5.880  1.432
 </div>
 </div>
 </section>
-<section id="ejercicio-clínico-regresión-lineal-en-fisioterapia" class="slide level2 exercise center">
+<section id="ejercicio-clínico-regresión-lineal-en-fisioterapia" class="slide level2 center">
 <h2>Ejercicio clínico — Regresión lineal en fisioterapia</h2>
+<div class="exercise">
 <p>Un fisioterapeuta investiga la relación entre el IMC (kg/m²) y el porcentaje de masa grasa en 12 pacientes. Los datos están en <code>data/imc_graso.csv</code>. El modelo ajustado es:</p>
 <ul>
 <li><span class="math inline">\(\hat{\beta}_0 = -12.42\)</span>, <span class="math inline">\(\hat{\beta}_1 = 1.48\)</span>, <span class="math inline">\(R^2 = 0.416\)</span></li>
@@ -2464,6 +2460,7 @@ max  5.880  1.432
 <li>Predice el % de grasa para un paciente con IMC = 28 usando la ecuación: <span class="math inline">\(\hat{y} = -12.42 + 1.48 \times 28\)</span>.</li>
 <li>¿Puedes afirmar que el IMC <strong>causa</strong> un aumento del % de grasa? ¿Por qué?</li>
 </ol>
+</div>
 </section>
 <section id="referencias" class="slide level2 center">
 <h2>Referencias</h2>
@@ -2481,7 +2478,7 @@ max  5.880  1.432
 </ul>
 </div>
 </section>
-<section id="ejercicio-clínico-tema-vi" class="slide level2 smaller center">
+<section id="ejercicio-clínico-tema-vi" class="slide level2 small center">
 <h2>Ejercicio Clínico — Tema VI</h2>
 <p><strong>Contexto:</strong> Un fisioterapeuta mide la flexión lumbar (°) en 10 pacientes de distintas edades.</p>
 <div class="small">
@@ -2636,20 +2633,22 @@ P = 8.15e-06</code></pre>
 <details class="code-fold">
 <summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb81"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Datos</span></span>
-<span id="cb81-2"><a aria-hidden="true" tabindex="-1"></a>imc <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">22</span>, <span class="dv">25</span>, <span class="dv">28</span>, <span class="dv">24</span>, <span class="dv">30</span>, <span class="dv">27</span>, <span class="dv">26</span>, <span class="dv">32</span>, <span class="dv">29</span>, <span class="dv">31</span>)</span>
-<span id="cb81-3"><a aria-hidden="true" tabindex="-1"></a>graso <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">18</span>, <span class="dv">22</span>, <span class="dv">26</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">24</span>, <span class="dv">23</span>, <span class="dv">33</span>, <span class="dv">27</span>, <span class="dv">31</span>)</span>
-<span id="cb81-4"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb81-5"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb81-6"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Correlación de Pearson</span></span>
-<span id="cb81-7"><a aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(imc, graso)</span>
-<span id="cb81-8"><a aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(imc, graso)                      <span class="co"># Test de significación</span></span>
-<span id="cb81-9"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb81-10"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Correlación de Spearman (no paramétrica)</span></span>
-<span id="cb81-11"><a aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(imc, graso, <span class="at">method =</span> <span class="st">"spearman"</span>)</span>
-<span id="cb81-12"><a aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(imc, graso, <span class="at">method =</span> <span class="st">"spearman"</span>)</span>
-<span id="cb81-13"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb81-14"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Matriz de correlación</span></span>
-<span id="cb81-15"><a aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(<span class="fu">cbind</span>(imc, graso))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb81-2"><a aria-hidden="true" tabindex="-1"></a>imc <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">20.36</span>,<span class="fl">20.34</span>,<span class="fl">20.05</span>,<span class="fl">23.94</span>,<span class="fl">22.17</span>,<span class="fl">21.72</span>,</span>
+<span id="cb81-3"><a aria-hidden="true" tabindex="-1"></a>         <span class="fl">19.29</span>,<span class="fl">23.07</span>,<span class="fl">27.45</span>,<span class="fl">24.91</span>,<span class="fl">22.69</span>,<span class="fl">21.15</span>)</span>
+<span id="cb81-4"><a aria-hidden="true" tabindex="-1"></a>graso <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="fl">17.36</span>,<span class="fl">12.72</span>,<span class="fl">11.65</span>,<span class="fl">19.34</span>,<span class="fl">24.19</span>,<span class="fl">25.62</span>,</span>
+<span id="cb81-5"><a aria-hidden="true" tabindex="-1"></a>           <span class="fl">20.91</span>,<span class="fl">17.81</span>,<span class="fl">29.70</span>,<span class="fl">25.43</span>,<span class="fl">18.62</span>,<span class="fl">23.15</span>)</span>
+<span id="cb81-6"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb81-7"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb81-8"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Correlación de Pearson</span></span>
+<span id="cb81-9"><a aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(imc, graso)</span>
+<span id="cb81-10"><a aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(imc, graso)                      <span class="co"># Test de significación</span></span>
+<span id="cb81-11"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb81-12"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Correlación de Spearman (no paramétrica)</span></span>
+<span id="cb81-13"><a aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(imc, graso, <span class="at">method =</span> <span class="st">"spearman"</span>)</span>
+<span id="cb81-14"><a aria-hidden="true" tabindex="-1"></a><span class="fu">cor.test</span>(imc, graso, <span class="at">method =</span> <span class="st">"spearman"</span>)</span>
+<span id="cb81-15"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb81-16"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Matriz de correlación</span></span>
+<span id="cb81-17"><a aria-hidden="true" tabindex="-1"></a><span class="fu">cor</span>(<span class="fu">cbind</span>(imc, graso))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 </section>

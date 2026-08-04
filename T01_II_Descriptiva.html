@@ -98,7 +98,27 @@
     code span.va { color: #111111; } /* Variable */
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
-  </style>
+    /* CSS for citations */
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+      margin-bottom: 0em;
+    }
+    .hanging-indent div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }  </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-84e496b1649940a15455be70d7a52673.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -841,14 +861,16 @@ Se cumple H ≤ G ≤ x̄: TRUE</code></pre>
 <details class="code-fold">
 <summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">12</span>, <span class="dv">15</span>, <span class="dv">18</span>, <span class="dv">21</span>)</span>
-<span id="cb17-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Q1 ="</span>, <span class="fu">quantile</span>(x, <span class="fl">0.25</span>), <span class="st">"</span><span class="sc">\n</span><span class="st">Q2 ="</span>, <span class="fu">quantile</span>(x, <span class="fl">0.50</span>),</span>
-<span id="cb17-3"><a aria-hidden="true" tabindex="-1"></a>    <span class="st">"</span><span class="sc">\n</span><span class="st">Q3 ="</span>, <span class="fu">quantile</span>(x, <span class="fl">0.75</span>), <span class="st">"</span><span class="sc">\n</span><span class="st">RIQ ="</span>, <span class="fu">IQR</span>(x))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb17-2"><a aria-hidden="true" tabindex="-1"></a><span class="co"># type=2: método manual del curso (promedio de los dos valores centrales)</span></span>
+<span id="cb17-3"><a aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Q1 ="</span>, <span class="fu">quantile</span>(x, <span class="fl">0.25</span>, <span class="at">type=</span><span class="dv">2</span>), <span class="st">"</span><span class="sc">\n</span><span class="st">Q2 ="</span>, <span class="fu">quantile</span>(x, <span class="fl">0.50</span>, <span class="at">type=</span><span class="dv">2</span>),</span>
+<span id="cb17-4"><a aria-hidden="true" tabindex="-1"></a>    <span class="st">"</span><span class="sc">\n</span><span class="st">Q3 ="</span>, <span class="fu">quantile</span>(x, <span class="fl">0.75</span>, <span class="at">type=</span><span class="dv">2</span>),</span>
+<span id="cb17-5"><a aria-hidden="true" tabindex="-1"></a>    <span class="st">"</span><span class="sc">\n</span><span class="st">RIQ ="</span>, <span class="fu">diff</span>(<span class="fu">quantile</span>(x, <span class="fu">c</span>(<span class="fl">0.25</span>, <span class="fl">0.75</span>), <span class="at">type=</span><span class="dv">2</span>)))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>Q1 = 6.5 
+<pre><code>Q1 = 6 
 Q2 = 10 
-Q3 = 15.75 
-RIQ = 9.25</code></pre>
+Q3 = 16.5 
+RIQ = 10.5</code></pre>
 </div>
 </div>
 </div>
@@ -1229,23 +1251,27 @@ RIQ = 9.25</code></pre>
 <span id="cb26-27"><a aria-hidden="true" tabindex="-1"></a>       <span class="at">col=</span><span class="fu">c</span>(<span class="st">"steelblue"</span>,<span class="st">"seagreen"</span>,<span class="st">"coral"</span>), <span class="at">lwd=</span><span class="dv">3</span>, <span class="at">bty=</span><span class="st">"n"</span>, <span class="at">cex=</span><span class="fl">0.7</span>)</span>
 <span id="cb26-28"><a aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-29"><a aria-hidden="true" tabindex="-1"></a><span class="co"># ── Panel 2: Curtosis con valores numéricos ──</span></span>
-<span id="cb26-30"><a aria-hidden="true" tabindex="-1"></a>dx <span class="ot">&lt;-</span> <span class="fu">density</span>(<span class="fu">rt</span>(<span class="dv">100000</span>, <span class="dv">4</span>), <span class="at">adjust=</span><span class="fl">1.2</span>, <span class="at">from=</span><span class="sc">-</span><span class="dv">5</span>, <span class="at">to=</span><span class="dv">5</span>)</span>
-<span id="cb26-31"><a aria-hidden="true" tabindex="-1"></a>dy <span class="ot">&lt;-</span> <span class="fu">density</span>(<span class="fu">rnorm</span>(<span class="dv">100000</span>), <span class="at">adjust=</span><span class="fl">1.2</span>, <span class="at">from=</span><span class="sc">-</span><span class="dv">5</span>, <span class="at">to=</span><span class="dv">5</span>)</span>
-<span id="cb26-32"><a aria-hidden="true" tabindex="-1"></a>dz <span class="ot">&lt;-</span> <span class="fu">density</span>(<span class="fu">runif</span>(<span class="dv">100000</span>, <span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>), <span class="at">adjust=</span><span class="fl">1.2</span>, <span class="at">from=</span><span class="sc">-</span><span class="dv">5</span>, <span class="at">to=</span><span class="dv">5</span>)</span>
-<span id="cb26-33"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Calcular exceso de curtosis</span></span>
-<span id="cb26-34"><a aria-hidden="true" tabindex="-1"></a>g2_lepto <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">mean</span>((<span class="fu">rt</span>(<span class="dv">100000</span>,<span class="dv">4</span>)<span class="sc">-</span><span class="dv">0</span>)<span class="sc">^</span><span class="dv">4</span>)<span class="sc">/</span><span class="dv">1</span><span class="sc">^</span><span class="dv">4</span> <span class="sc">-</span> <span class="dv">3</span>, <span class="dv">1</span>)</span>
-<span id="cb26-35"><a aria-hidden="true" tabindex="-1"></a>g2_meso  <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">mean</span>((<span class="fu">rnorm</span>(<span class="dv">100000</span>,<span class="dv">0</span>,<span class="dv">1</span>)<span class="sc">-</span><span class="dv">0</span>)<span class="sc">^</span><span class="dv">4</span>)<span class="sc">/</span><span class="dv">1</span><span class="sc">^</span><span class="dv">4</span> <span class="sc">-</span> <span class="dv">3</span>, <span class="dv">1</span>)</span>
-<span id="cb26-36"><a aria-hidden="true" tabindex="-1"></a>g2_plati <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">mean</span>((<span class="fu">runif</span>(<span class="dv">100000</span>,<span class="sc">-</span><span class="dv">2</span>,<span class="dv">2</span>)<span class="sc">-</span><span class="dv">0</span>)<span class="sc">^</span><span class="dv">4</span>)<span class="sc">/</span>((<span class="dv">2</span><span class="sc">-</span>(<span class="sc">-</span><span class="dv">2</span>))<span class="sc">^</span><span class="dv">2</span><span class="sc">/</span><span class="dv">12</span>) <span class="sc">-</span> <span class="dv">3</span>, <span class="dv">1</span>)</span>
-<span id="cb26-37"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-38"><a aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dx, <span class="at">col=</span><span class="st">"coral"</span>, <span class="at">lwd=</span><span class="dv">3</span>, <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>, <span class="fu">max</span>(dx<span class="sc">$</span>y,dy<span class="sc">$</span>y,dz<span class="sc">$</span>y)<span class="sc">*</span><span class="fl">1.15</span>),</span>
-<span id="cb26-39"><a aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">"Curtosis (Exceso de curtosis)"</span>, <span class="at">xlab=</span><span class="st">"Valor estandarizado"</span>, <span class="at">ylab=</span><span class="st">"Densidad"</span>)</span>
-<span id="cb26-40"><a aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(dy, <span class="at">col=</span><span class="st">"steelblue"</span>, <span class="at">lwd=</span><span class="dv">3</span>)</span>
-<span id="cb26-41"><a aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(dz, <span class="at">col=</span><span class="st">"seagreen"</span>, <span class="at">lwd=</span><span class="dv">3</span>)</span>
-<span id="cb26-42"><a aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"topright"</span>,</span>
-<span id="cb26-43"><a aria-hidden="true" tabindex="-1"></a>       <span class="fu">c</span>(<span class="fu">paste0</span>(<span class="st">"Leptocúrtica (exc="</span>, g2_lepto, <span class="st">")"</span>),</span>
-<span id="cb26-44"><a aria-hidden="true" tabindex="-1"></a>         <span class="fu">paste0</span>(<span class="st">"Mesocúrtica (exc="</span>, g2_meso, <span class="st">")"</span>),</span>
-<span id="cb26-45"><a aria-hidden="true" tabindex="-1"></a>         <span class="fu">paste0</span>(<span class="st">"Platicúrtica (exc="</span>, g2_plati, <span class="st">")"</span>)),</span>
-<span id="cb26-46"><a aria-hidden="true" tabindex="-1"></a>       <span class="at">col=</span><span class="fu">c</span>(<span class="st">"coral"</span>,<span class="st">"steelblue"</span>,<span class="st">"seagreen"</span>), <span class="at">lwd=</span><span class="dv">3</span>, <span class="at">bty=</span><span class="st">"n"</span>, <span class="at">cex=</span><span class="fl">0.7</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb26-30"><a aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb26-31"><a aria-hidden="true" tabindex="-1"></a>xl <span class="ot">&lt;-</span> <span class="fu">rt</span>(<span class="dv">100000</span>, <span class="dv">8</span>)          <span class="co"># t(8): leptocúrtica (exceso teórico = 1.5)</span></span>
+<span id="cb26-32"><a aria-hidden="true" tabindex="-1"></a>xm <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">100000</span>)          <span class="co"># Normal: mesocúrtica (exceso = 0)</span></span>
+<span id="cb26-33"><a aria-hidden="true" tabindex="-1"></a>xp <span class="ot">&lt;-</span> <span class="fu">runif</span>(<span class="dv">100000</span>, <span class="sc">-</span><span class="dv">2</span>, <span class="dv">2</span>)   <span class="co"># Uniforme: platicúrtica (exceso = -1.2)</span></span>
+<span id="cb26-34"><a aria-hidden="true" tabindex="-1"></a>dx <span class="ot">&lt;-</span> <span class="fu">density</span>(xl, <span class="at">adjust=</span><span class="fl">1.2</span>, <span class="at">from=</span><span class="sc">-</span><span class="dv">5</span>, <span class="at">to=</span><span class="dv">5</span>)</span>
+<span id="cb26-35"><a aria-hidden="true" tabindex="-1"></a>dy <span class="ot">&lt;-</span> <span class="fu">density</span>(xm, <span class="at">adjust=</span><span class="fl">1.2</span>, <span class="at">from=</span><span class="sc">-</span><span class="dv">5</span>, <span class="at">to=</span><span class="dv">5</span>)</span>
+<span id="cb26-36"><a aria-hidden="true" tabindex="-1"></a>dz <span class="ot">&lt;-</span> <span class="fu">density</span>(xp, <span class="at">adjust=</span><span class="fl">1.2</span>, <span class="at">from=</span><span class="sc">-</span><span class="dv">5</span>, <span class="at">to=</span><span class="dv">5</span>)</span>
+<span id="cb26-37"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Exceso de curtosis = E[((X-μ)/σ)^4] - 3</span></span>
+<span id="cb26-38"><a aria-hidden="true" tabindex="-1"></a>g2_lepto <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">mean</span>(((xl<span class="sc">-</span><span class="fu">mean</span>(xl))<span class="sc">/</span><span class="fu">sd</span>(xl))<span class="sc">^</span><span class="dv">4</span>) <span class="sc">-</span> <span class="dv">3</span>, <span class="dv">1</span>)</span>
+<span id="cb26-39"><a aria-hidden="true" tabindex="-1"></a>g2_meso  <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">mean</span>(((xm<span class="sc">-</span><span class="fu">mean</span>(xm))<span class="sc">/</span><span class="fu">sd</span>(xm))<span class="sc">^</span><span class="dv">4</span>) <span class="sc">-</span> <span class="dv">3</span>, <span class="dv">1</span>)</span>
+<span id="cb26-40"><a aria-hidden="true" tabindex="-1"></a>g2_plati <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">mean</span>(((xp<span class="sc">-</span><span class="fu">mean</span>(xp))<span class="sc">/</span><span class="fu">sd</span>(xp))<span class="sc">^</span><span class="dv">4</span>) <span class="sc">-</span> <span class="dv">3</span>, <span class="dv">1</span>)</span>
+<span id="cb26-41"><a aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-42"><a aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(dx, <span class="at">col=</span><span class="st">"coral"</span>, <span class="at">lwd=</span><span class="dv">3</span>, <span class="at">ylim=</span><span class="fu">c</span>(<span class="dv">0</span>, <span class="fu">max</span>(dx<span class="sc">$</span>y,dy<span class="sc">$</span>y,dz<span class="sc">$</span>y)<span class="sc">*</span><span class="fl">1.15</span>),</span>
+<span id="cb26-43"><a aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">"Curtosis (Exceso de curtosis)"</span>, <span class="at">xlab=</span><span class="st">"Valor estandarizado"</span>, <span class="at">ylab=</span><span class="st">"Densidad"</span>)</span>
+<span id="cb26-44"><a aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(dy, <span class="at">col=</span><span class="st">"steelblue"</span>, <span class="at">lwd=</span><span class="dv">3</span>)</span>
+<span id="cb26-45"><a aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(dz, <span class="at">col=</span><span class="st">"seagreen"</span>, <span class="at">lwd=</span><span class="dv">3</span>)</span>
+<span id="cb26-46"><a aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"topright"</span>,</span>
+<span id="cb26-47"><a aria-hidden="true" tabindex="-1"></a>       <span class="fu">c</span>(<span class="fu">paste0</span>(<span class="st">"Leptocúrtica (exc="</span>, g2_lepto, <span class="st">")"</span>),</span>
+<span id="cb26-48"><a aria-hidden="true" tabindex="-1"></a>         <span class="fu">paste0</span>(<span class="st">"Mesocúrtica (exc="</span>, g2_meso, <span class="st">")"</span>),</span>
+<span id="cb26-49"><a aria-hidden="true" tabindex="-1"></a>         <span class="fu">paste0</span>(<span class="st">"Platicúrtica (exc="</span>, g2_plati, <span class="st">")"</span>)),</span>
+<span id="cb26-50"><a aria-hidden="true" tabindex="-1"></a>       <span class="at">col=</span><span class="fu">c</span>(<span class="st">"coral"</span>,<span class="st">"steelblue"</span>,<span class="st">"seagreen"</span>), <span class="at">lwd=</span><span class="dv">3</span>, <span class="at">bty=</span><span class="st">"n"</span>, <span class="at">cex=</span><span class="fl">0.7</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 
 <details class="code-fold">
@@ -1288,7 +1314,7 @@ RIQ = 9.25</code></pre>
 <span id="cb28-5"><a aria-hidden="true" tabindex="-1"></a><span class="fu">grid</span>(<span class="at">col=</span><span class="st">"grey80"</span>)</span>
 <span id="cb28-6"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Añadir percentiles clave</span></span>
 <span id="cb28-7"><a aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">h=</span><span class="fu">c</span>(<span class="fl">0.25</span>,<span class="fl">0.5</span>,<span class="fl">0.75</span>), <span class="at">col=</span><span class="fu">c</span>(<span class="st">"darkgreen"</span>,<span class="st">"coral"</span>,<span class="st">"darkgreen"</span>), <span class="at">lty=</span><span class="dv">3</span>, <span class="at">lwd=</span><span class="fl">1.5</span>)</span>
-<span id="cb28-8"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="dv">138</span>, <span class="fl">0.52</span>, <span class="st">"Me = 124"</span>, <span class="at">col=</span><span class="st">"coral"</span>, <span class="at">cex=</span><span class="fl">0.8</span>, <span class="at">font=</span><span class="dv">2</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb28-8"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="dv">138</span>, <span class="fl">0.52</span>, <span class="st">"Me = 124.5"</span>, <span class="at">col=</span><span class="st">"coral"</span>, <span class="at">cex=</span><span class="fl">0.8</span>, <span class="at">font=</span><span class="dv">2</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 
 </div>
@@ -1439,7 +1465,7 @@ Shapiro-Wilk: W = 0.983 , P = 0.9774</code></pre>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<img data-src="T01_II_Descriptiva_files/figure-revealjs/unnamed-chunk-14-1.png" width="864" class="r-stretch"><p><strong>Interpretación de la salida:</strong> <span class="math inline">\(n=8\)</span>, <span class="math inline">\(\bar{x}=129.5°\)</span>, <span class="math inline">\(s=3.2°\)</span>, <span class="math inline">\(Me=129.5°\)</span>, <span class="math inline">\(CV=2.5\%\)</span> (muy homogéneo), <span class="math inline">\(RIQ=4.5°\)</span>, asimetría <span class="math inline">\(\approx 0\)</span> (simétrica), Shapiro-Wilk <span class="math inline">\(P &gt; 0.05\)</span> (compatible con normalidad).</p>
+<img data-src="T01_II_Descriptiva_files/figure-revealjs/unnamed-chunk-14-1.png" width="864" class="r-stretch"><p><strong>Interpretación de la salida:</strong> <span class="math inline">\(n=8\)</span>, <span class="math inline">\(\bar{x}=129.5°\)</span>, <span class="math inline">\(s=3.2°\)</span>, <span class="math inline">\(Me=129.5°\)</span>, <span class="math inline">\(CV=2.5\%\)</span> (muy homogéneo), <span class="math inline">\(RIQ=3.75°\)</span>, asimetría <span class="math inline">\(\approx 0\)</span> (simétrica), Shapiro-Wilk <span class="math inline">\(P &gt; 0.05\)</span> (compatible con normalidad).</p>
 </section>
 <section id="r-base-vs-bioestatr-resumen-de-funciones" class="slide level2 center">
 <h2>R base vs BioEstatR — Resumen de funciones</h2>
@@ -1695,7 +1721,7 @@ Q1 = 99.5 °  |  Q3 = 121.9 °  |  Mín = 80 °  |  Máx = 139.9 °</code></pre>
 </div>
 <div class="callout-content">
 <p><strong>ROM de rodilla post-artroplastia (n=40):</strong></p>
-<p>La flexión media fue de <strong>108.1 ± 14.5 grados</strong> (CV = 13.4%), con una mediana de <strong>106.3 grados</strong> (RIQ: 95.7 – 120.0). La distribución fue aproximadamente simétrica (asimetría = 0.12). El test de Shapiro-Wilk (W = 0.982, P = 0.771) indica que los datos son compatibles con una distribución Normal.</p>
+<p>La flexión media fue de <strong>109.7 ± 15.6 grados</strong> (CV = 14.2%), con una mediana de <strong>109.0 grados</strong> (RIQ: 99.5 – 121.9). La distribución fue aproximadamente simétrica (asimetría = 0.07). El test de Shapiro-Wilk (W = 0.977, P = 0.589) indica que los datos son compatibles con una distribución Normal.</p>
 </div>
 </div>
 </div>
@@ -1874,12 +1900,12 @@ Q1 = 99.5 °  |  Q3 = 121.9 °  |  Mín = 80 °  |  Máx = 139.9 °</code></pre>
 <div class="reference-box">
 <p><strong>Referencias</strong></p>
 <ul>
-<li><span class="citation" data-cites="Altman1990">(<a href="" role="doc-biblioref" onclick="return false;"><strong>Altman1990?</strong></a>)</span> Altman, D. G. (1990). <em>Practical Statistics for Medical Research</em>. Chapman &amp; Hall/CRC.</li>
-<li><span class="citation" data-cites="Femia2026">(<a href="" role="doc-biblioref" onclick="return false;"><strong>Femia2026?</strong></a>)</span> Femia, P. &amp; Luque-Fernandez, M. A. (2026). <em>BioEstatR: Biostatistics Routines in R</em>. R package v1.0.0. Universidad de Granada. <a href="https://migariane.github.io/BioEstatR" class="uri">https://migariane.github.io/BioEstatR</a></li>
-<li><span class="citation" data-cites="LuqueFernandez2026">(<a href="" role="doc-biblioref" onclick="return false;"><strong>LuqueFernandez2026?</strong></a>)</span> Luque-Fernandez, M. A. (2026). <em>Matemáticas para la Estadística Médica con R</em>. Universidad de Granada. <a href="https://migariane.github.io/MatematicaEstadisticaMedicinaR" class="uri">https://migariane.github.io/MatematicaEstadisticaMedicinaR</a></li>
-<li><span class="citation" data-cites="Rosner2015">(<a href="" role="doc-biblioref" onclick="return false;"><strong>Rosner2015?</strong></a>)</span> Rosner, B. (2015). <em>Fundamentals of Biostatistics</em> (8th ed.). Cengage Learning.</li>
-<li><span class="citation" data-cites="Stevens1946">(<a href="" role="doc-biblioref" onclick="return false;"><strong>Stevens1946?</strong></a>)</span> Stevens, S. S. (1946). On the theory of scales of measurement. <em>Science</em>, 103(2684), 677–680.</li>
-<li><span class="citation" data-cites="Tukey1977">(<a href="" role="doc-biblioref" onclick="return false;"><strong>Tukey1977?</strong></a>)</span> Tukey, J. W. (1977). <em>Exploratory Data Analysis</em>. Addison-Wesley.</li>
+<li><span class="citation" data-cites="altman1990">(<a href="#/visualización-de-forma" role="doc-biblioref" onclick="">Altman, 1990</a>)</span> Altman, D. G. (1990). <em>Practical Statistics for Medical Research</em>. Chapman &amp; Hall/CRC.</li>
+<li><span class="citation" data-cites="bioestatr2026">(<a href="#/visualización-de-forma" role="doc-biblioref" onclick="">Femia &amp; Luque-Fernández, 2026</a>)</span> Femia, P. &amp; Luque-Fernandez, M. A. (2026). <em>BioEstatR: Biostatistics Routines in R</em>. R package v1.0.0. Universidad de Granada. <a href="https://migariane.github.io/BioEstatR" class="uri">https://migariane.github.io/BioEstatR</a></li>
+<li><span class="citation" data-cites="luque2026">(<a href="#/visualización-de-forma" role="doc-biblioref" onclick="">Luque-Fernández, 2026</a>)</span> Luque-Fernandez, M. A. (2026). <em>Matemáticas para la Estadística Médica con R</em>. Universidad de Granada. <a href="https://migariane.github.io/MatematicaEstadisticaMedicinaR" class="uri">https://migariane.github.io/MatematicaEstadisticaMedicinaR</a></li>
+<li><span class="citation" data-cites="rosner2015">(<a href="#/visualización-de-forma" role="doc-biblioref" onclick="">Rosner, 2015</a>)</span> Rosner, B. (2015). <em>Fundamentals of Biostatistics</em> (8th ed.). Cengage Learning.</li>
+<li><span class="citation" data-cites="stevens1946">(<a href="#/visualización-de-forma" role="doc-biblioref" onclick="">Stevens, 1946</a>)</span> Stevens, S. S. (1946). On the theory of scales of measurement. <em>Science</em>, 103(2684), 677–680.</li>
+<li><span class="citation" data-cites="tukey1977">(<a href="#/visualización-de-forma" role="doc-biblioref" onclick="">Tukey, 1977</a>)</span> Tukey, J. W. (1977). <em>Exploratory Data Analysis</em>. Addison-Wesley.</li>
 </ul>
 </div>
 </section>
@@ -1997,7 +2023,7 @@ Q1 = 99.5 °  |  Q3 = 121.9 °  |  Mín = 80 °  |  Máx = 139.9 °</code></pre>
 </details>
 </div>
 </section>
-<section id="visualización-de-forma" class="slide level2 center">
+<section id="visualización-de-forma" class="slide level2 smaller scrollable">
 <h2>Visualización de forma</h2>
 <div class="cell">
 <details class="code-fold">
@@ -2019,6 +2045,26 @@ Q1 = 99.5 °  |  Q3 = 121.9 °  |  Mín = 80 °  |  Máx = 139.9 °</code></pre>
 </div>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-altman1990" class="csl-entry" role="listitem">
+Altman, D. G. (1990). <em>Practical Statistics for Medical Research</em>. Chapman; Hall/CRC.
+</div>
+<div id="ref-bioestatr2026" class="csl-entry" role="listitem">
+Femia, P., &amp; Luque-Fernández, M. A. (2026). <em>BioEstatR: Biostatistics Routines in R</em>. <a href="https://migariane.github.io/BioEstatR">https://migariane.github.io/BioEstatR</a>
+</div>
+<div id="ref-luque2026" class="csl-entry" role="listitem">
+Luque-Fernández, M. A. (2026). <em>Matemáticas para la Estadística Médica con R</em>. Universidad de Granada. <a href="https://migariane.github.io/MatematicaEstadisticaMedicinaR">https://migariane.github.io/MatematicaEstadisticaMedicinaR</a>
+</div>
+<div id="ref-rosner2015" class="csl-entry" role="listitem">
+Rosner, B. (2015). <em>Fundamentals of Biostatistics</em> (8th ed.). Cengage Learning.
+</div>
+<div id="ref-stevens1946" class="csl-entry" role="listitem">
+Stevens, S. S. (1946). On the Theory of Scales of Measurement. <em>Science</em>, <em>103</em>(2684), 677-680.
+</div>
+<div id="ref-tukey1977" class="csl-entry" role="listitem">
+Tukey, J. W. (1977). <em>Exploratory Data Analysis</em>. Addison-Wesley.
+</div>
+</div>
 </section></section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
