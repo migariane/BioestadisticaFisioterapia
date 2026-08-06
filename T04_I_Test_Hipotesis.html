@@ -6,8 +6,8 @@
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.38">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
 
   <meta name="author" content="Miguel Angel Luque-Fernández">
   <meta name="dcterms.date" content="2026-01-01">
@@ -21,10 +21,13 @@
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
     */
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -254,7 +257,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-<a href="https://migariane.github.io">Miguel Angel Luque-Fernández</a> 
+<a href="https://migariane.github.io">Miguel Angel Luque-Fernández</a>
 </div>
 <div class="quarto-title-author-email">
 <a href="mailto:mluquefe@ugr.es">mluquefe@ugr.es</a>
@@ -1159,22 +1162,22 @@ mean of x
 <p><strong>Contexto:</strong> Prevalencia de tabaquismo en estudiantes. En 2012 era del 22%. En 2013: n=287, x=48 fumadores. ¿Ha cambiado?</p>
 <p><strong>Paso 1 — Hipótesis:</strong> <span class="math inline">\(H_0: p = 0.22\)</span> vs <span class="math inline">\(H_1: p \neq 0.22\)</span></p>
 <p><strong>Paso 2 — Condiciones:</strong> <span class="math inline">\(np_0 = 287 \times 0.22 = 63.14 &gt; 5\)</span> ✓; <span class="math inline">\(nq_0 = 287 \times 0.78 = 223.86 &gt; 5\)</span> ✓</p>
-<p><strong>Paso 3 — Estadístico:</strong> <span class="math inline">\(z = \frac{x - np_0 - 0.5}{\sqrt{np_0q_0}} = \frac{48 - 63.14 - 0.5}{\sqrt{287 \times 0.22 \times 0.78}} = -2.09\)</span></p>
+<p><strong>Paso 3 — Estadístico:</strong> <span class="math inline">\(z = \frac{x - np_0 + 0.5}{\sqrt{np_0q_0}} = \frac{48 - 63.14 + 0.5}{\sqrt{287 \times 0.22 \times 0.78}} = -2.09\)</span></p>
 <p><strong>Paso 4 — P-valor:</strong> <span class="math inline">\(0.03 &lt; P &lt; 0.04\)</span> → <strong>Rechazamos H0</strong> (<span class="math inline">\(P &lt; 0.05\)</span>)</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a aria-hidden="true" tabindex="-1"></a>x<span class="ot">&lt;-</span><span class="dv">48</span>; n<span class="ot">&lt;-</span><span class="dv">287</span>; p0<span class="ot">&lt;-</span><span class="fl">0.22</span></span>
-<span id="cb19-2"><a aria-hidden="true" tabindex="-1"></a>z<span class="ot">&lt;-</span>(x <span class="sc">-</span> n<span class="sc">*</span>p0 <span class="sc">-</span> <span class="fl">0.5</span>)<span class="sc">/</span><span class="fu">sqrt</span>(n<span class="sc">*</span>p0<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>p0))</span>
+<span id="cb19-2"><a aria-hidden="true" tabindex="-1"></a>z<span class="ot">&lt;-</span>(x <span class="sc">-</span> n<span class="sc">*</span>p0 <span class="sc">+</span> <span class="fl">0.5</span>)<span class="sc">/</span><span class="fu">sqrt</span>(n<span class="sc">*</span>p0<span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span>p0))</span>
 <span id="cb19-3"><a aria-hidden="true" tabindex="-1"></a>P<span class="ot">&lt;-</span><span class="dv">2</span><span class="sc">*</span><span class="fu">pnorm</span>(<span class="sc">-</span><span class="fu">abs</span>(z))</span>
 <span id="cb19-4"><a aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"z ="</span>, <span class="fu">round</span>(z,<span class="dv">3</span>), <span class="st">"P ="</span>, <span class="fu">round</span>(P,<span class="dv">4</span>))</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
-<pre><code>z = -2.229 P = 0.0258</code></pre>
+<pre><code>z = -2.086 P = 0.037</code></pre>
 </div>
 </div>
 <p><strong>Conclusión:</strong> La prevalencia ha cambiado significativamente. IC 95% Wilson: (12.7%, 21.7%). El 22% de 2012 no esta en el IC → confirmación visual.</p>
-<p><strong>Si los datos hubieran sido x=34, n=200:</strong> <span class="math inline">\(z=-1.79\)</span>, <span class="math inline">\(0.07 &lt; P &lt; 0.08\)</span> → NO significativo (indicios).</p>
+<p><strong>Si los datos hubieran sido x=34, n=200:</strong> <span class="math inline">\(z=-1.62\)</span>, <span class="math inline">\(0.10 &lt; P &lt; 0.11\)</span> → NO significativo (indicios).</p>
 </section>
 <section id="test-para-una-proporción" class="slide level2 center">
 <h2>Test para una proporción</h2>
@@ -1577,7 +1580,7 @@ Fisher, R. A. (1925). <em>Statistical Methods for Research Workers</em>. Oliver;
         margin: 8.0e-2,
 
         math: {
-          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],

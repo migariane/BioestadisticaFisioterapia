@@ -6,8 +6,8 @@
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.38">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
 
   <meta name="author" content="Miguel Angel Luque-Fernández">
   <meta name="dcterms.date" content="2026-01-01">
@@ -21,10 +21,13 @@
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
     */
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -254,7 +257,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-<a href="https://migariane.github.io">Miguel Angel Luque-Fernández</a> 
+<a href="https://migariane.github.io">Miguel Angel Luque-Fernández</a>
 </div>
 <div class="quarto-title-author-email">
 <a href="mailto:mluquefe@ugr.es">mluquefe@ugr.es</a>
@@ -2654,7 +2657,7 @@ max  5.880  1.432
 <ol type="1">
 <li>Relación <strong>lineal inversa</strong>: a más edad, menor flexión lumbar</li>
 <li><span class="math inline">\(\hat{\beta}_1 = -0.65\)</span> (IC 95%: <span class="math inline">\([-0.80, -0.50]\)</span>) → por cada año más de edad, la flexión lumbar disminuye <strong>0.65°</strong> en promedio (<span class="math inline">\(P &lt; 0.001\)</span>)</li>
-<li><span class="math inline">\(\hat{Y}(50) = 87.5 - 0.65 \times 50 = 55.1°\)</span></li>
+<li>Usando los coeficientes sin redondear, <span class="math inline">\(\hat{Y}(50) = 87.5461 - 0.64897 \times 50 \approx 55.1°\)</span></li>
 <li><span class="math inline">\(R^2 = 0.927\)</span> → el <strong>92.7%</strong> de la variabilidad en flexión lumbar se explica por la edad</li>
 </ol>
 <div class="cell">
@@ -3018,7 +3021,7 @@ Spearman, C. (1904). The Proof and Measurement of Association Between Two Things
         margin: 8.0e-2,
 
         math: {
-          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],

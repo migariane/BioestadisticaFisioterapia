@@ -6,8 +6,8 @@
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.38">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
 
   <meta name="author" content="Miguel Angel Luque-Fernández">
   <meta name="dcterms.date" content="2026-01-01">
@@ -21,10 +21,13 @@
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
     */
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -254,7 +257,7 @@
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-<a href="https://migariane.github.io">Miguel Angel Luque-Fernández</a> 
+<a href="https://migariane.github.io">Miguel Angel Luque-Fernández</a>
 </div>
 <div class="quarto-title-author-email">
 <a href="mailto:mluquefe@ugr.es">mluquefe@ugr.es</a>
@@ -439,8 +442,8 @@ ratio of variances
 <div class="cell">
 <details class="code-fold">
 <summary>Mostrar código R</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">curve</span>(<span class="fu">df</span>(x,<span class="dv">5</span>,<span class="dv">5</span>), <span class="dv">0</span>, <span class="dv">4</span>, <span class="at">lwd=</span><span class="dv">3</span>, <span class="at">col=</span><span class="st">"steelblue"</span>, <span class="at">main=</span><span class="st">"Distribución F(5,5)"</span>)</span>
-<span id="cb10-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v=</span><span class="fu">c</span>(<span class="fu">qf</span>(<span class="fl">0.025</span>,<span class="dv">5</span>,<span class="dv">5</span>), <span class="fu">qf</span>(<span class="fl">0.975</span>,<span class="dv">5</span>,<span class="dv">5</span>)), <span class="at">col=</span><span class="st">"darkgreen"</span>, <span class="at">lty=</span><span class="dv">2</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a aria-hidden="true" tabindex="-1"></a><span class="fu">curve</span>(<span class="fu">df</span>(x,<span class="dv">5</span>,<span class="dv">6</span>), <span class="dv">0</span>, <span class="dv">4</span>, <span class="at">lwd=</span><span class="dv">3</span>, <span class="at">col=</span><span class="st">"steelblue"</span>, <span class="at">main=</span><span class="st">"Distribución F(5,6)"</span>)</span>
+<span id="cb10-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v=</span><span class="fu">c</span>(<span class="fu">qf</span>(<span class="fl">0.025</span>,<span class="dv">5</span>,<span class="dv">6</span>), <span class="fu">qf</span>(<span class="fl">0.975</span>,<span class="dv">5</span>,<span class="dv">6</span>)), <span class="at">col=</span><span class="st">"darkgreen"</span>, <span class="at">lty=</span><span class="dv">2</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output-display">
 <div>
@@ -511,7 +514,7 @@ Diferencia significativa: A &gt; B (P = 0.016)</code></pre>
 </section>
 <section id="test-pareado-para-medias" class="slide level2 center">
 <h2>Test pareado para medias</h2>
-<p><span class="math inline">\(d_i = x_{i1} - x_{i2}\)</span>; <span class="math inline">\(t = \bar{d}/(s_d/\sqrt{n}) \sim t_{n-1}\)</span></p>
+<p><span class="math inline">\(d_i = x_{i,\text{después}} - x_{i,\text{antes}}\)</span>; <span class="math inline">\(t = \bar{d}/(s_d/\sqrt{n}) \sim t_{n-1}\)</span></p>
 <p><strong>Ejemplo — EVA-dolor pre/post fisioterapia (n=5):</strong></p>
 <table class="caption-top">
 <thead>
@@ -555,24 +558,24 @@ Diferencia significativa: A &gt; B (P = 0.016)</code></pre>
 <details class="code-fold">
 <summary>Mostrar código R</summary>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a aria-hidden="true" tabindex="-1"></a>a<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="dv">7</span>,<span class="dv">8</span>,<span class="dv">6</span>,<span class="dv">9</span>,<span class="dv">7</span>); d<span class="ot">&lt;-</span><span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">5</span>,<span class="dv">3</span>,<span class="dv">6</span>,<span class="dv">5</span>)</span>
-<span id="cb14-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(a, d, <span class="at">paired=</span><span class="cn">TRUE</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb14-2"><a aria-hidden="true" tabindex="-1"></a><span class="fu">t.test</span>(d, a, <span class="at">paired=</span><span class="cn">TRUE</span>)</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 <div class="cell-output cell-output-stdout">
 <pre><code>
     Paired t-test
 
-data:  a and d
-t = 14, df = 4, p-value = 0.000151
+data:  d and a
+t = -14, df = 4, p-value = 0.000151
 alternative hypothesis: true mean difference is not equal to 0
 95 percent confidence interval:
- 2.244711 3.355289
+ -3.355289 -2.244711
 sample estimates:
 mean difference 
-            2.8 </code></pre>
+           -2.8 </code></pre>
 </div>
 <details class="code-fold">
 <summary>Mostrar código R</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># BioEstatR: testt(m = a, m1 = d, par = TRUE)</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a aria-hidden="true" tabindex="-1"></a><span class="co"># BioEstatR: testt(m = d, m1 = a, par = TRUE)</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
 <p><span class="math inline">\(\bar{d}=-2.8\)</span>, <span class="math inline">\(t=-14.0\)</span>, <span class="math inline">\(P&lt;0.001\)</span> → Reducción significativa del dolor.</p>
@@ -1525,7 +1528,7 @@ mean of x mean of y
  467.0809  371.5617 </code></pre>
 </div>
 </div>
-<p><strong>Paso 4 — Interpretación:</strong> La diferencia observada en la simulación (~95.5 pg/mL) es significativa (P = 0.015, t de Student; F no significativo → varianzas asumibles). El IC 95% para <span class="math inline">\(\mu_1 - \mu_2\)</span> es (20.6, 170.4) y no contiene 0.</p>
+<p><strong>Paso 4 — Interpretación:</strong> La diferencia observada en la simulación (~95.5 pg/mL) es significativa (P = 0.015, t de Student; F no significativo → varianzas asumibles). El IC 95% para <span class="math inline">\(\mu_1 - \mu_2\)</span> es (19.6, 171.4) y no contiene 0.</p>
 </section>
 <section id="tamaño-del-efecto-d-de-cohen-y-omega-cuadrado" class="slide level2 center">
 <h2>Tamaño del efecto — D de cohen y omega Cuadrado</h2>
@@ -2454,7 +2457,7 @@ Wilks, S. S. (1938). The Large-Sample Distribution of the Likelihood Ratio for T
         margin: 8.0e-2,
 
         math: {
-          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
