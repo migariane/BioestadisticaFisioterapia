@@ -33,7 +33,7 @@
   </clipPath>
 </defs>
 <g clip-path='url(#cpMC4wMHwzMjQuMDB8MC4wMHwzNjAuMDA=)'>
-<text x='183.60' y='26.75' text-anchor='middle' style='font-size: 14.40px; font-weight: bold; font-family: "Arial";' textLength='198.17px' lengthAdjust='spacingAndGlyphs'>Sin correccion: S'2 = Suma/n</text>
+<text x='183.60' y='26.75' text-anchor='middle' style='font-size: 14.40px; font-weight: bold; font-family: "Arial";' textLength='198.17px' lengthAdjust='spacingAndGlyphs'>Sin corrección: S'2 = Suma/n</text>
 <text x='183.60' y='357.12' text-anchor='middle' style='font-size: 12.00px; font-family: "Arial";' textLength='98.48px' lengthAdjust='spacingAndGlyphs'>Varianza estimada</text>
 <text transform='translate(11.52,172.80) rotate(-90)' text-anchor='middle' style='font-size: 12.00px; font-family: "Arial";' textLength='56.69px' lengthAdjust='spacingAndGlyphs'>Frequency</text>
 </g>
@@ -120,7 +120,7 @@
   </clipPath>
 </defs>
 <g clip-path='url(#cpMzI0LjAwfDY0OC4wMHwwLjAwfDM2MC4wMA==)'>
-<text x='507.60' y='26.75' text-anchor='middle' style='font-size: 14.40px; font-weight: bold; font-family: "Arial";' textLength='222.73px' lengthAdjust='spacingAndGlyphs'>Con correccion: S2 = Suma/(n-1)</text>
+<text x='507.60' y='26.75' text-anchor='middle' style='font-size: 14.40px; font-weight: bold; font-family: "Arial";' textLength='222.73px' lengthAdjust='spacingAndGlyphs'>Con corrección: S2 = Suma/(n-1)</text>
 <text x='507.60' y='357.12' text-anchor='middle' style='font-size: 12.00px; font-family: "Arial";' textLength='98.48px' lengthAdjust='spacingAndGlyphs'>Varianza estimada</text>
 <text transform='translate(335.52,172.80) rotate(-90)' text-anchor='middle' style='font-size: 12.00px; font-family: "Arial";' textLength='56.69px' lengthAdjust='spacingAndGlyphs'>Frequency</text>
 </g>

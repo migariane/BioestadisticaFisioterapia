@@ -40,8 +40,8 @@
 <text x='518.40' y='277.92' text-anchor='middle' style='font-size: 12.00px; font-family: "Arial";' textLength='16.67px' lengthAdjust='spacingAndGlyphs'>0.6</text>
 <text x='614.40' y='277.92' text-anchor='middle' style='font-size: 12.00px; font-family: "Arial";' textLength='16.67px' lengthAdjust='spacingAndGlyphs'>0.7</text>
 <polygon points='115.20,252.00 633.60,252.00 633.60,57.60 115.20,57.60 ' style='stroke-width: 0.75;' />
-<text x='374.40' y='33.95' text-anchor='middle' style='font-size: 14.40px; font-weight: bold; font-family: "Arial";' textLength='140.75px' lengthAdjust='spacingAndGlyphs'>IC 95% — 4 Metodos</text>
-<text x='374.40' y='306.72' text-anchor='middle' style='font-size: 12.00px; font-family: "Arial";' textLength='117.39px' lengthAdjust='spacingAndGlyphs'>Proporcion de mejoria</text>
+<text x='374.40' y='33.95' text-anchor='middle' style='font-size: 14.40px; font-weight: bold; font-family: "Arial";' textLength='140.75px' lengthAdjust='spacingAndGlyphs'>IC 95% — 4 Métodos</text>
+<text x='374.40' y='306.72' text-anchor='middle' style='font-size: 12.00px; font-family: "Arial";' textLength='118.05px' lengthAdjust='spacingAndGlyphs'>Proporción de mejoría</text>
 <line x1='115.20' y1='222.30' x2='115.20' y2='87.30' style='stroke-width: 0.75;' />
 <line x1='115.20' y1='222.30' x2='108.00' y2='222.30' style='stroke-width: 0.75;' />
 <line x1='115.20' y1='177.30' x2='108.00' y2='177.30' style='stroke-width: 0.75;' />

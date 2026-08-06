@@ -364,7 +364,7 @@
 <li class="fragment">Deducir matemáticamente el tamaño muestral a partir de la precisión deseada</li>
 <li class="fragment">Construir e interpretar intervalos de confianza para una media y una proporción</li>
 <li class="fragment">Calcular el tamaño muestral necesario para una precisión deseada</li>
-<li class="fragment">Conectar la estimación por IC con el contraste de hipotesis (test <span class="math inline">\(t\)</span>)</li>
+<li class="fragment">Conectar la estimación por IC con el contraste de hipótesis (test <span class="math inline">\(t\)</span>)</li>
 </ol>
 </section>
 <section id="recordemos-población-y-muestra" class="slide level2 center">
@@ -491,7 +491,7 @@
 <td style="text-align: left;"><span class="math inline">\(\hat{\mu} = \bar{x}\)</span></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Desviación tipica <span class="math inline">\(\sigma\)</span></td>
+<td style="text-align: left;">Desviación típica <span class="math inline">\(\sigma\)</span></td>
 <td style="text-align: left;"><span class="math inline">\(\hat{\sigma} = s\)</span></td>
 </tr>
 <tr class="odd">
@@ -618,14 +618,14 @@
 <span id="cb1-5"><a aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-6"><a aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow=</span><span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>), <span class="at">mar=</span><span class="fu">c</span>(<span class="dv">4</span>,<span class="dv">4</span>,<span class="dv">3</span>,<span class="dv">1</span>))</span>
 <span id="cb1-7"><a aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(S2_prime, <span class="at">col=</span><span class="fu">rgb</span>(<span class="fl">0.9</span>,<span class="fl">0.3</span>,<span class="fl">0.2</span>,<span class="fl">0.4</span>), <span class="at">border=</span><span class="st">"white"</span>, <span class="at">breaks=</span><span class="dv">40</span>,</span>
-<span id="cb1-8"><a aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">"Sin correccion: S'2 = Suma/n"</span>,</span>
+<span id="cb1-8"><a aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">"Sin corrección: S'2 = Suma/n"</span>,</span>
 <span id="cb1-9"><a aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab=</span><span class="st">"Varianza estimada"</span>, <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1500</span>))</span>
 <span id="cb1-10"><a aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v=</span>sigma2, <span class="at">col=</span><span class="st">"darkgreen"</span>, <span class="at">lwd=</span><span class="dv">3</span>); <span class="fu">abline</span>(<span class="at">v=</span><span class="fu">mean</span>(S2_prime), <span class="at">col=</span><span class="st">"#e74c3c"</span>, <span class="at">lwd=</span><span class="dv">3</span>, <span class="at">lty=</span><span class="dv">2</span>)</span>
 <span id="cb1-11"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="dv">800</span>, <span class="fl">0.003</span>, <span class="fu">paste0</span>(<span class="st">"Media = "</span>,<span class="fu">round</span>(<span class="fu">mean</span>(S2_prime),<span class="dv">0</span>),<span class="st">"</span><span class="sc">\n</span><span class="st">Sesgo = -"</span>,<span class="fu">round</span>(<span class="dv">100</span><span class="sc">*</span>(<span class="dv">1</span><span class="sc">-</span><span class="fu">mean</span>(S2_prime)<span class="sc">/</span>sigma2),<span class="dv">1</span>),<span class="st">"%"</span>),</span>
 <span id="cb1-12"><a aria-hidden="true" tabindex="-1"></a>     <span class="at">col=</span><span class="st">"#e74c3c"</span>, <span class="at">font=</span><span class="dv">2</span>, <span class="at">cex=</span><span class="fl">0.8</span>)</span>
 <span id="cb1-13"><a aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-14"><a aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(S2_correct, <span class="at">col=</span><span class="fu">rgb</span>(<span class="fl">0.2</span>,<span class="fl">0.6</span>,<span class="fl">0.4</span>,<span class="fl">0.4</span>), <span class="at">border=</span><span class="st">"white"</span>, <span class="at">breaks=</span><span class="dv">40</span>,</span>
-<span id="cb1-15"><a aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">"Con correccion: S2 = Suma/(n-1)"</span>,</span>
+<span id="cb1-15"><a aria-hidden="true" tabindex="-1"></a>     <span class="at">main=</span><span class="st">"Con corrección: S2 = Suma/(n-1)"</span>,</span>
 <span id="cb1-16"><a aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab=</span><span class="st">"Varianza estimada"</span>, <span class="at">xlim=</span><span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">1500</span>))</span>
 <span id="cb1-17"><a aria-hidden="true" tabindex="-1"></a><span class="fu">abline</span>(<span class="at">v=</span>sigma2, <span class="at">col=</span><span class="st">"darkgreen"</span>, <span class="at">lwd=</span><span class="dv">3</span>); <span class="fu">abline</span>(<span class="at">v=</span><span class="fu">mean</span>(S2_correct), <span class="at">col=</span><span class="st">"#27ae60"</span>, <span class="at">lwd=</span><span class="dv">3</span>, <span class="at">lty=</span><span class="dv">2</span>)</span>
 <span id="cb1-18"><a aria-hidden="true" tabindex="-1"></a><span class="fu">text</span>(<span class="dv">800</span>, <span class="fl">0.003</span>, <span class="fu">paste0</span>(<span class="st">"Media = "</span>,<span class="fu">round</span>(<span class="fu">mean</span>(S2_correct),<span class="dv">0</span>),<span class="st">"</span><span class="sc">\n</span><span class="st">Sesgo ~ 0%"</span>),</span>
@@ -1408,7 +1408,7 @@ Precision d = 3.4 °</code></pre>
 Precisión: ± 14.7 pp</code></pre>
 </div>
 </div>
-<p><strong>Interpretación:</strong> Con 95% de confianza, entre 30.7% y 60.1% de pacientes mejoran.</p>
+<p><strong>Interpretación:</strong> Con 95% de confianza, entre 30.7% y 60.2% de pacientes mejoran.</p>
 </section>
 <section id="comparación-de-métodos" class="slide level2 center">
 <h2>Comparación de métodos</h2>
@@ -1423,11 +1423,11 @@ Precisión: ± 14.7 pp</code></pre>
 <tbody>
 <tr class="odd">
 <td><strong>Wilson</strong></td>
-<td>(0.307, 0.601)</td>
+<td>(0.307, 0.602)</td>
 </tr>
 <tr class="even">
 <td><strong>Wald ajustado</strong></td>
-<td>(0.308, 0.600)</td>
+<td>(0.307, 0.602)</td>
 </tr>
 <tr class="odd">
 <td><strong>Wald</strong></td>
@@ -1542,7 +1542,7 @@ Clopper-Pearson es más ancho (conservador) pero garantiza cobertura ≥ 95%.</c
 <span id="cb28-8"><a aria-hidden="true" tabindex="-1"></a>ics<span class="ot">&lt;-</span><span class="fu">rbind</span>(<span class="at">Wilson=</span>wilson, <span class="at">Wald_aj=</span>wald_adj, <span class="at">Wald=</span>wald, <span class="at">Exacto=</span>exacto)</span>
 <span id="cb28-9"><a aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mar=</span><span class="fu">c</span>(<span class="dv">5</span>,<span class="dv">8</span>,<span class="dv">4</span>,<span class="dv">1</span>))</span>
 <span id="cb28-10"><a aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="cn">NA</span>, <span class="at">xlim=</span><span class="fu">c</span>(<span class="fl">0.2</span>,<span class="fl">0.7</span>), <span class="at">ylim=</span><span class="fu">c</span>(<span class="fl">0.5</span>,<span class="fl">4.5</span>), <span class="at">yaxt=</span><span class="st">"n"</span>, <span class="at">ylab=</span><span class="st">""</span>,</span>
-<span id="cb28-11"><a aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab=</span><span class="st">"Proporcion de mejoria"</span>, <span class="at">main=</span><span class="st">"IC 95% — 4 Metodos"</span>)</span>
+<span id="cb28-11"><a aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab=</span><span class="st">"Proporción de mejoría"</span>, <span class="at">main=</span><span class="st">"IC 95% — 4 Métodos"</span>)</span>
 <span id="cb28-12"><a aria-hidden="true" tabindex="-1"></a><span class="fu">axis</span>(<span class="dv">2</span>, <span class="at">at=</span><span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>, <span class="at">labels=</span><span class="fu">rownames</span>(ics), <span class="at">las=</span><span class="dv">2</span>)</span>
 <span id="cb28-13"><a aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>){<span class="fu">lines</span>(ics[i,], <span class="fu">c</span>(i,i), <span class="at">lwd=</span><span class="dv">4</span>, <span class="at">col=</span><span class="fu">c</span>(<span class="st">"steelblue"</span>,<span class="st">"darkgreen"</span>,<span class="st">"coral"</span>,<span class="st">"purple"</span>)[i])</span>
 <span id="cb28-14"><a aria-hidden="true" tabindex="-1"></a>  <span class="fu">points</span>(p_hat, i, <span class="at">pch=</span><span class="dv">19</span>, <span class="at">cex=</span><span class="fl">1.5</span>)}</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>

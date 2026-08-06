@@ -302,7 +302,7 @@
 <li><a href="#/ejemplo-detallado-proteína-α-klotho-y-edad" id="/toc-ejemplo-detallado-proteína-α-klotho-y-edad">Ejemplo detallado — Proteína α-klotho y edad</a></li>
 <li><a href="#/tamaño-del-efecto-d-de-cohen-y-omega-cuadrado" id="/toc-tamaño-del-efecto-d-de-cohen-y-omega-cuadrado">Tamaño del efecto — D de cohen y omega Cuadrado</a></li>
 <li><a href="#/diagrama-de-decisión-qué-test-usar" id="/toc-diagrama-de-decisión-qué-test-usar">Diagrama de decisión — ¿qué test usar?</a></li>
-<li><a href="#/diagrama-visual-arbol-de-decisión" id="/toc-diagrama-visual-arbol-de-decisión">Diagrama visual — Arbol de decisión</a></li>
+<li><a href="#/diagrama-visual-árbol-de-decisión" id="/toc-diagrama-visual-árbol-de-decisión">Diagrama visual — Árbol de decisión</a></li>
 <li><a href="#/paramétricos-vs-no-paramétricos-comparativa" id="/toc-paramétricos-vs-no-paramétricos-comparativa">Paramétricos vs no paramétricos — Comparativa</a></li>
 <li><a href="#/precauciones-al-leer-p-valores-en-la-literatura-clínica" id="/toc-precauciones-al-leer-p-valores-en-la-literatura-clínica">Precauciones al leer p-valores en la literatura clínica</a></li>
 <li><a href="#/declaración-asa-sobre-p-valores-wasserstein2016" id="/toc-declaración-asa-sobre-p-valores-wasserstein2016">Declaración asa sobre p-valores <span class="citation" data-cites="wasserstein2016">(Wasserstein &amp; Lazar, 2016)</span></a></li>
@@ -485,12 +485,12 @@ Diferencia significativa: A &gt; B (P = 0.016)</code></pre>
 <p><strong>Nota</strong></p>
 </div>
 <div class="callout-content">
-<p><strong>Apareamiento:</strong> cada sujeto se mide <strong>dos veces</strong> (o dos sujetos se emparejan por caracteristicas). Las observaciones <strong>no son independientes</strong>: pertenecen al mismo individuo o par.</p>
+<p><strong>Apareamiento:</strong> cada sujeto se mide <strong>dos veces</strong> (o dos sujetos se emparejan por características). Las observaciones <strong>no son independientes</strong>: pertenecen al mismo individuo o par.</p>
 </div>
 </div>
 </div>
 <p><strong>¿Por qué aparear?</strong> Elimina la variabilidad <strong>entre sujetos</strong> → <strong>más potencia</strong> para detectar diferencias. Cada sujeto es su propio control.</p>
-<p><strong>Disenos típicos en fisioterapia:</strong> - <strong>Antes/Después:</strong> EVA-dolor pre y post tratamiento - <strong>Cross-over:</strong> mismo paciente recibe terapia A y B (orden aleatorizado) - <strong>Pares emparejados:</strong> dos pacientes con misma edad, sexo, gravedad → uno a cada tratamiento - <strong>Bilateral:</strong> medir miembro derecho vs izquierdo del mismo paciente</p>
+<p><strong>Diseños típicos en fisioterapia:</strong> - <strong>Antes/Después:</strong> EVA-dolor pre y post tratamiento - <strong>Cross-over:</strong> mismo paciente recibe terapia A y B (orden aleatorizado) - <strong>Pares emparejados:</strong> dos pacientes con misma edad, sexo, gravedad → uno a cada tratamiento - <strong>Bilateral:</strong> medir miembro derecho vs izquierdo del mismo paciente</p>
 <p><strong>Ejemplo visual:</strong> 5 pacientes medidos antes y después:</p>
 <div class="cell">
 <details class="code-fold">
@@ -1347,7 +1347,7 @@ alternative hypothesis: true location shift is not equal to 0</code></pre>
 <p><strong>Tip</strong></p>
 </div>
 <div class="callout-content">
-<p><strong>¿Y los empates? ¿Y la corrección por continuidad?</strong> <code>wilcox.test()</code> en R lo gestiona todo automáticamente: asigna rangos promedio cuando hay empates, corrige la varianza, y aplica corrección por continuidad para muestras pequenas. Tú solo necesitas interpretar el P-valor.</p>
+<p><strong>¿Y los empates? ¿Y la corrección por continuidad?</strong> <code>wilcox.test()</code> en R lo gestiona todo automáticamente: asigna rangos promedio cuando hay empates, corrige la varianza, y aplica corrección por continuidad para muestras pequeñas. Tú solo necesitas interpretar el P-valor.</p>
 <p><strong>¿Y si tengo 3 o más grupos?</strong> El test de <strong>Kruskal-Wallis</strong> (<code>kruskal.test()</code>) generaliza el Mann-Whitney para <span class="math inline">\(k \geq 3\)</span> grupos independientes. Es la alternativa no paramétrica al ANOVA.</p>
 </div>
 </div>
@@ -1363,10 +1363,10 @@ alternative hypothesis: true location shift is not equal to 0</code></pre>
 <span id="cb44-2"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Datos del ejemplo de terapias (n=166)</span></span>
 <span id="cb44-3"><a aria-hidden="true" tabindex="-1"></a><span class="fu">testmcnemar</span>(<span class="at">n =</span> <span class="fu">c</span>(<span class="dv">38</span>, <span class="dv">15</span>, <span class="dv">31</span>, <span class="dv">82</span>))</span>
 <span id="cb44-4"><a aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb44-5"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Salida tipica:</span></span>
+<span id="cb44-5"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Salida típica:</span></span>
 <span id="cb44-6"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Test de McNemar para proporciones apareadas</span></span>
 <span id="cb44-7"><a aria-hidden="true" tabindex="-1"></a><span class="co"># χ² = 4.89, gl = 1, P = 0.027</span></span>
-<span id="cb44-8"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Diferencia: -9.5% (IC 95%: -17.4% a -1.7%)</span></span>
+<span id="cb44-8"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Diferencia: -9.6% (IC 95%: -17.5% a -1.8%)</span></span>
 <span id="cb44-9"><a aria-hidden="true" tabindex="-1"></a><span class="co"># Conclusión: Terapia B significativamente superior</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
@@ -1429,7 +1429,7 @@ alternative hypothesis: true location shift is not equal to 0</code></pre>
 <div class="callout-content">
 <p><strong>Para detectar una diferencia <span class="math inline">\(\delta\)</span> con potencia <span class="math inline">\(1-\beta\)</span> y nivel <span class="math inline">\(\alpha\)</span>:</strong></p>
 <p><span class="math display">\[n \approx \frac{2(z_{1-\alpha/2} + z_{1-\beta})^2 \cdot s^2}{\delta^2}\]</span></p>
-<p>donde <span class="math inline">\(z_{1-\alpha/2}\)</span> y <span class="math inline">\(z_{1-\beta}\)</span> son los cuantiles de la Normal estandar.</p>
+<p>donde <span class="math inline">\(z_{1-\alpha/2}\)</span> y <span class="math inline">\(z_{1-\beta}\)</span> son los cuantiles de la Normal estándar.</p>
 </div>
 </div>
 </div>
@@ -1442,7 +1442,7 @@ alternative hypothesis: true location shift is not equal to 0</code></pre>
 <p><strong>Paso 3 — Despejar <span class="math inline">\(n\)</span>:</strong> <span class="math inline">\(z_{1-\beta} = \frac{\delta}{s\sqrt{2/n}} - z_{1-\alpha/2} \;\Rightarrow\; \sqrt{n} = \frac{(z_{1-\alpha/2} + z_{1-\beta})s\sqrt{2}}{\delta}\)</span></p>
 <p>Elevando al cuadrado: <span class="math inline">\(n = \frac{2(z_{1-\alpha/2} + z_{1-\beta})^2 s^2}{\delta^2}\)</span></p>
 <p><strong>Ejemplo numérico — Flexión de hombro:</strong> <span class="math inline">\(\delta=5°\)</span>, <span class="math inline">\(s=12°\)</span>, <span class="math inline">\(\alpha=0.05\)</span>, <span class="math inline">\(1-\beta=0.80\)</span>:</p>
-<p><span class="math inline">\(n = \frac{2(1.96 + 0.842)^2 \cdot 144}{25} = \frac{2 \cdot 7.85 \cdot 144}{25} = \frac{2260.6}{25} = 90.4 \to 91\)</span> por grupo</p>
+<p><span class="math inline">\(n = \frac{2(1.96 + 0.842)^2 \cdot 144}{25} = \frac{2 \cdot 7.85 \cdot 144}{25} = \frac{2260.8}{25} = 90.4 \to 91\)</span> por grupo</p>
 <div class="cell">
 <details class="code-fold">
 <summary>Mostrar código R</summary>
@@ -1639,8 +1639,8 @@ Omega² = 0.103 → 10.3 % varianza explicada</code></pre>
 <p>→ <strong>Categórica (mejoría sí/no, tipo de lesión):</strong> → ¿Cuántas muestras? → <strong>1 proporción:</strong> <code>prop.test(x, n, p=p0)</code> → <strong>2 proporciones independientes:</strong> <code>prop.test(c(x1,x2), c(n1,n2))</code> o χ² (Tema 5) → <strong>2 proporciones pareadas:</strong> <code>mcnemar.test()</code> (McNemar)</p>
 </div>
 </section>
-<section id="diagrama-visual-arbol-de-decisión" class="slide level2 center">
-<h2>Diagrama visual — Arbol de decisión</h2>
+<section id="diagrama-visual-árbol-de-decisión" class="slide level2 center">
+<h2>Diagrama visual — Árbol de decisión</h2>
 <div class="cell">
 <details class="code-fold">
 <summary>Mostrar código R</summary>
