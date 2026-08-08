@@ -17,12 +17,8 @@ exclude:
 
 website:
   title: "Bioestadística para Fisioterapia"
-  description: "Material docente interactivo de Bioestadística del Grado en Fisioterapia de la Universidad de Granada. Diapositivas con código R ejecutable, ejemplos clínicos reales y gráficos SVG de alta calidad."
   site-url: https://migariane.github.io/BioestadisticaFisioterapia
   repo-url: https://github.com/migariane/BioestadisticaFisioterapia
-  open-graph: true
-  twitter-card:
-    site: "@migariane"
   search: true
   page-navigation: true
   navbar:
@@ -69,9 +65,6 @@ website:
       <span style="opacity:0.7"><a href="https://www.ugr.es">UGR</a> · <a href="https://migariane.github.io">migariane</a></span>
 
 bibliography: references.bib
-knitr:
-  opts_chunk:
-    dev: "svglite"
 citeproc: true
 csl: https://raw.githubusercontent.com/citation-style-language/styles/master/apa.csl
 
@@ -108,14 +101,11 @@ format:
     fig-align: center
     fig-width: 8
     fig-height: 5
-    fig-format: svg
-    fig-dpi: 300
-    out-width: 100%
     lang: es
     width: 1366
     height: 768
     margin: 0.08
-    auto-stretch: false
+    auto-stretch: true
     center: true
     history: false
     html-math-method: mathjax
