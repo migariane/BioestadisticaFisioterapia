@@ -8,16 +8,14 @@ author:
     url: "https://migariane.github.io"
 date: "2026-08-08"
 license: "CC BY 4.0"
-keywords: "bioestadística, fisioterapia, estadística, universidad de granada, UGR, grado fisioterapia, slides, quarto, revealjs, R, material docente"
-
 format:
   revealjs:
     theme: [default, madrid-theme.scss]
     slide-number: false
     fig-align: center
     lang: es
-
 ---
+
 # Bioestadística para Fisioterapia {.center}
 
 ![](logo.png){width="100px"}
