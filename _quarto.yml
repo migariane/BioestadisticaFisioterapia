@@ -65,6 +65,9 @@ website:
       <span style="opacity:0.7"><a href="https://www.ugr.es">UGR</a> · <a href="https://migariane.github.io">migariane</a></span>
 
 bibliography: references.bib
+knitr:
+  opts_chunk:
+    dev: "svglite"
 citeproc: true
 csl: https://raw.githubusercontent.com/citation-style-language/styles/master/apa.csl
 
@@ -80,19 +83,7 @@ format:
     toc-depth: 2
     logo: logo.png
     footer: |
-      <nav style="display:flex;justify-content:center;gap:1em;flex-wrap:wrap;font-size:0.45em;opacity:0.85">
-        <a href="index.html">Inicio</a>
-        <a href="T01_I_Descriptiva.html">T1.I</a>
-        <a href="T01_II_Descriptiva.html">T1.II</a>
-        <a href="T02_I_Probabilidad.html">T2.I</a>
-        <a href="T02_II_Probabilidad.html">T2.II</a>
-        <a href="T03_Estimacion_IC.html">T3</a>
-        <a href="T04_I_Test_Hipotesis.html">T4.I</a>
-        <a href="T04_II_Test_Hipotesis.html">T4.II</a>
-        <a href="T05_ChiCuadrado.html">T5</a>
-        <a href="T06_RegresionCorr.html">T6</a>
-      </nav>
-      <span style="font-size:0.45em;opacity:0.6">Bioestadística · Grado en Fisioterapia · UGR</span>
+      <span style="font-size:0.5em">Bioestadística · Grado en Fisioterapia · UGR</span>
     code-fold: true
     code-summary: "Mostrar el código R"
     code-copy: true
@@ -101,11 +92,14 @@ format:
     fig-align: center
     fig-width: 8
     fig-height: 5
+    fig-format: svg
+    fig-dpi: 300
+    out-width: 100%
     lang: es
     width: 1366
     height: 768
     margin: 0.08
-    auto-stretch: true
+    auto-stretch: false
     center: true
     history: false
     html-math-method: mathjax
