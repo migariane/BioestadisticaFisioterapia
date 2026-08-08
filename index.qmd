@@ -6,7 +6,7 @@ author:
     affiliation: "Dpto. Estadística e Investigación Operativa, Universidad de Granada"
     email: "mluquefe@ugr.es"
     url: "https://migariane.github.io"
-date: "2026"
+date: "2026-08-08"
 license: "CC BY 4.0"
 keywords: "bioestadística, fisioterapia, estadística, universidad de granada, UGR, grado fisioterapia, slides, quarto, revealjs, R, material docente"
 
