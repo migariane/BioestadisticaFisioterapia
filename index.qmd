@@ -8,6 +8,8 @@ author:
     url: "https://migariane.github.io"
 date: "2026-08-08"
 license: "CC BY 4.0"
+description: "Material docente interactivo de Bioestadística del Grado en Fisioterapia de la Universidad de Granada. Diapositivas Quarto/RevealJS con código R ejecutable."
+keywords: "bioestadística, fisioterapia, estadística, universidad de granada, UGR, grado fisioterapia, slides, quarto, revealjs, R, material docente"
 format:
   revealjs:
     theme: [default, madrid-theme.scss]
