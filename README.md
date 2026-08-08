@@ -1,7 +1,7 @@
 # Bioestadística — Grado en Fisioterapia
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![Website](https://img.shields.io/badge/🌐-Slides-blue.svg)](https://migariane.github.io/BioestadisticaFisioterapia/)
+[![Website](https://img.shields.io/badge/-Slides-blue.svg)](https://migariane.github.io/BioestadisticaFisioterapia/)
 [![Quarto](https://img.shields.io/badge/Quarto-1.10-39729E.svg)](https://quarto.org)
 [![R](https://img.shields.io/badge/R-≥_4.0-276DC2.svg)](https://www.r-project.org)
 [![UGR](https://img.shields.io/badge/UGR-Fisioterapia-C5281A.svg)](https://www.ugr.es)
@@ -14,7 +14,7 @@ Material docente interactivo de la asignatura de **Bioestadística** del Grado e
 
 ---
 
-## 🎯 Objetivos de aprendizaje
+## Objetivos de aprendizaje
 
 Al finalizar el curso, el estudiante será capaz de:
 
@@ -27,7 +27,7 @@ Al finalizar el curso, el estudiante será capaz de:
 
 ---
 
-## 📚 Temario
+## Temario
 
 | # | Tema | Contenido |
 |:-:|:-----|:----------|
@@ -42,7 +42,7 @@ Cada tema incluye ejemplos clínicos reales (ROM, EVA, fuerza prensil, Barthel, 
 
 ---
 
-## 🚀 Uso
+## Uso
 
 ### Requisitos
 
@@ -76,31 +76,31 @@ quarto preview
 
 ---
 
-## 🏗 Estructura del proyecto
+## Estructura del proyecto
 
 ```
 BioestadisticaFisioterapia/
-├── 📄 index.qmd                   Página de inicio del curso
-├── 📄 _quarto.yml                 Configuración del proyecto Quarto
-├── 🎨 madrid-theme.scss           Tema visual personalizado
-├── 📚 references.bib              Bibliografía centralizada (BibTeX)
-├── 📐 pdf-macros.tex              Macros LaTeX / MathJax
-├── 🖼  logo.png                    Logo institucional UGR
-├── 📊 data/                       Datasets de ejemplo
-├── 📖 T01_I_Descriptiva.qmd       Tema 1 — Parte I
-├── 📖 T01_II_Descriptiva.qmd      Tema 1 — Parte II
-├── 📖 T02_I_Probabilidad.qmd      Tema 2 — Parte I
-├── 📖 T02_II_Probabilidad.qmd     Tema 2 — Parte II
-├── 📖 T03_Estimacion_IC.qmd       Tema 3
-├── 📖 T04_I_Test_Hipotesis.qmd    Tema 4 — Parte I
-├── 📖 T04_II_Test_Hipotesis.qmd   Tema 4 — Parte II
-├── 📖 T05_ChiCuadrado.qmd         Tema 5
-└── 📖 T06_RegresionCorr.qmd       Tema 6
+├── index.qmd                   Página de inicio del curso
+├── _quarto.yml                 Configuración del proyecto Quarto
+├── madrid-theme.scss           Tema visual personalizado
+├── references.bib              Bibliografía centralizada (BibTeX)
+├── pdf-macros.tex              Macros LaTeX / MathJax
+├── logo.png                    Logo institucional UGR
+├── data/                       Datasets de ejemplo
+├── T01_I_Descriptiva.qmd       Tema 1 — Parte I
+├── T01_II_Descriptiva.qmd      Tema 1 — Parte II
+├── T02_I_Probabilidad.qmd      Tema 2 — Parte I
+├── T02_II_Probabilidad.qmd     Tema 2 — Parte II
+├── T03_Estimacion_IC.qmd       Tema 3
+├── T04_I_Test_Hipotesis.qmd    Tema 4 — Parte I
+├── T04_II_Test_Hipotesis.qmd   Tema 4 — Parte II
+├── T05_ChiCuadrado.qmd         Tema 5
+└── T06_RegresionCorr.qmd       Tema 6
 ```
 
 ---
 
-## 🎨 Características técnicas
+## Características técnicas
 
 - **RevealJS** con transiciones fluidas y navegación lineal
 - **Tema visual personalizado** (`madrid-theme.scss`) con paleta institucional UGR
@@ -113,7 +113,7 @@ BioestadisticaFisioterapia/
 
 ---
 
-## 📝 Licencia
+## Licencia
 
 Este material está protegido bajo licencia [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/).
 
@@ -125,7 +125,7 @@ Puedes usar, adaptar y redistribuir libremente siempre que se cite la fuente ori
 
 ---
 
-## 📖 Recursos complementarios
+## Recursos complementarios
 
 | Recurso | Descripción |
 |:--------|:------------|
@@ -135,7 +135,7 @@ Puedes usar, adaptar y redistribuir libremente siempre que se cite la fuente ori
 
 ---
 
-## 🤝 Citación
+## Citación
 
 Si utilizas este material en tu docencia o investigación, por favor cítalo como:
 
