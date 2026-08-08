@@ -1,6 +1,8 @@
 ---
 title: "Contraste de Hipótesis"
 subtitle: "Tema IV (Parte II) — Dos Muestras, Tests No Paramétricos y Potencia"
+description: "Tests paramétricos y no paramétricos para comparación de grupos: t-Student, Welch, Wilcoxon, Mann-Whitney y McNemar. Tamaño del efecto con d de Cohen. Árboles de decisión clínica."
+
 author:
   - name: "Miguel Angel Luque-Fernández"
     affiliation: "Dpto. Estadística e Investigación Operativa, Universidad de Granada"
@@ -8,6 +10,8 @@ author:
     url: "https://migariane.github.io"
 date: "2026"
 license: "CC BY 4.0"
+keywords: "test t-Student, Welch, Wilcoxon, Mann-Whitney, tests no paramétricos, McNemar, tamaño del efecto, d de Cohen, comparación de medias, fisioterapia, bioestadística"
+
 format:
   revealjs:
     slide-number: c/t
@@ -24,9 +28,9 @@ execute:
   message: false
   echo: true
   eval: true
----
 
-# De una Muestra a Dos Muestras {.center}
+
+---# De una Muestra a Dos Muestras {.center}
 
 ## Test para dos medias independientes — Student y welch
 

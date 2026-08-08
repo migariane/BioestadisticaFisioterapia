@@ -1,6 +1,8 @@
 ---
 title: "Teoría de la Estimación"
 subtitle: "Tema III — Intervalos de Confianza"
+description: "Estimación puntual y por intervalos de confianza para medias y proporciones. Teorema Central del Límite, error estándar, tamaño muestral y aplicaciones en fisioterapia."
+
 author:
   - name: "Miguel Angel Luque-Fernández"
     affiliation: "Dpto. Estadística e Investigación Operativa, Universidad de Granada"
@@ -8,6 +10,8 @@ author:
     url: "https://migariane.github.io"
 date: "2026"
 license: "CC BY 4.0"
+keywords: "estimación estadística, intervalos de confianza, error estándar, teorema central del límite, tamaño muestral, proporciones, medias, fisioterapia, bioestadística"
+
 format:
   revealjs:
     slide-number: c/t
@@ -24,9 +28,9 @@ execute:
   message: false
   echo: true
   eval: true
----
 
-# Teoría de la Estimación {.center}
+
+---# Teoría de la Estimación {.center}
 
 ![](logo.png){width="90px"}
 

@@ -1,6 +1,8 @@
 ---
 title: "Probabilidad y Variables Aleatorias con R"
 subtitle: "Tema II (Parte I) — Fundamentos de Probabilidad y Variables Aleatorias"
+description: "Fundamentos de probabilidad para ciencias de la salud: axiomas, probabilidad condicionada, teorema de Bayes y variables aleatorias. Ejemplos clínicos con tests diagnósticos."
+
 author:
   - name: "Miguel Angel Luque-Fernández"
     affiliation: "Dpto. Estadística e Investigación Operativa, Universidad de Granada"
@@ -8,6 +10,8 @@ author:
     url: "https://migariane.github.io"
 date: "2026"
 license: "CC BY 4.0"
+keywords: "probabilidad, axiomas de Kolmogorov, teorema de Bayes, probabilidad condicionada, variables aleatorias, diagramas de Venn, espacio muestral, fisioterapia, bioestadística"
+
 format:
   revealjs:
     slide-number: c/t
@@ -34,9 +38,9 @@ execute:
   message: false
   echo: true
   eval: true
----
 
-# Probabilidad y Variables Aleatorias {.center}
+
+---# Probabilidad y Variables Aleatorias {.center}
 
 ![](logo.png){width="90px"}
 

@@ -1,6 +1,8 @@
 ---
 title: "Probabilidad y Variables Aleatorias con R"
 subtitle: "Tema II (Parte II) — La Distribución Normal, Modelos Discretos y Aproximaciones"
+description: "Distribuciones de probabilidad discretas y continuas: Binomial, Poisson, Normal, t-Student, χ² y F. Aplicaciones clínicas con z-scores y el Teorema Central del Límite."
+
 author:
   - name: "Miguel Angel Luque-Fernández"
     affiliation: "Dpto. Estadística e Investigación Operativa, Universidad de Granada"
@@ -8,6 +10,8 @@ author:
     url: "https://migariane.github.io"
 date: "2026"
 license: "CC BY 4.0"
+keywords: "distribuciones de probabilidad, binomial, Poisson, normal, t-Student, chi-cuadrado, F de Fisher, teorema central del límite, z-score, fisioterapia, bioestadística"
+
 format:
   revealjs:
     slide-number: c/t
@@ -34,9 +38,9 @@ execute:
   message: false
   echo: true
   eval: true
----
 
-# Herramientas Computacionales para Distribuciones {.center}
+
+---# Herramientas Computacionales para Distribuciones {.center}
 
 ::: {.connection}
 **Conexión:** R dispone de funciones específicas para cada distribución de probabilidad. Aprender a usarlas correctamente es tan importante como entender la teoría.

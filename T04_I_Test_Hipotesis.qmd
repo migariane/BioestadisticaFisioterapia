@@ -1,6 +1,8 @@
 ---
 title: "Contraste de Hipótesis"
 subtitle: "Tema IV (Parte I) — Fundamentos, Tests para Una Muestra y Normalidad"
+description: "Fundamentos del contraste de hipótesis: hipótesis nula y alternativa, errores tipo I y II, potencia estadística, p-valor. Tests de normalidad (Shapiro-Wilk) y t-Student."
+
 author:
   - name: "Miguel Angel Luque-Fernández"
     affiliation: "Dpto. Estadística e Investigación Operativa, Universidad de Granada"
@@ -8,6 +10,8 @@ author:
     url: "https://migariane.github.io"
 date: "2026"
 license: "CC BY 4.0"
+keywords: "contraste de hipótesis, hipótesis nula, p-valor, errores tipo I y II, potencia estadística, Neyman-Pearson, test t, Shapiro-Wilk, normalidad, fisioterapia, bioestadística"
+
 format:
   revealjs:
     slide-number: c/t
@@ -24,9 +28,9 @@ execute:
   message: false
   echo: true
   eval: true
----
 
-# Contraste de Hipótesis {.center}
+
+---# Contraste de Hipótesis {.center}
 
 ![](logo.png){width="90px"}
 

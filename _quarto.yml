@@ -17,8 +17,12 @@ exclude:
 
 website:
   title: "Bioestadística para Fisioterapia"
+  description: "Material docente interactivo de Bioestadística del Grado en Fisioterapia de la Universidad de Granada. Diapositivas con código R ejecutable, ejemplos clínicos reales y gráficos SVG de alta calidad."
   site-url: https://migariane.github.io/BioestadisticaFisioterapia
   repo-url: https://github.com/migariane/BioestadisticaFisioterapia
+  open-graph: true
+  twitter-card:
+    site: "@migariane"
   search: true
   page-navigation: true
   navbar:

@@ -1,6 +1,8 @@
 ---
 title: "Análisis de Datos Cualitativos"
 subtitle: "Tema V — Test Chi-Cuadrado, Tablas 2×2 y McNemar"
+description: "Análisis de datos categóricos en fisioterapia: test χ², tablas de contingencia, medidas de asociación (OR, RR, DR, NNT), test exacto de Fisher y McNemar."
+
 author:
   - name: "Miguel Angel Luque-Fernández"
     affiliation: "Dpto. Estadística e Investigación Operativa, Universidad de Granada"
@@ -8,6 +10,8 @@ author:
     url: "https://migariane.github.io"
 date: "2026"
 license: "CC BY 4.0"
+keywords: "chi-cuadrado, tablas de contingencia, odds ratio, riesgo relativo, diferencia de riesgos, NNT, test exacto de Fisher, asociación, variables categóricas, fisioterapia, bioestadística"
+
 format:
   revealjs:
     slide-number: c/t
@@ -24,9 +28,9 @@ execute:
   message: false
   echo: true
   eval: true
----
 
-# Análisis de Datos Cualitativos {.center}
+
+---# Análisis de Datos Cualitativos {.center}
 
 ![](logo.png){width="90px"}
 

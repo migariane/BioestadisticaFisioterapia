@@ -1,6 +1,8 @@
 ---
 title: "Regresión y Correlación"
 subtitle: "Tema VI — Modelos de Regresión Lineal Simple"
+description: "Regresión lineal simple y correlación en fisioterapia: coeficientes de Pearson y Spearman, estimación MCO, R², supuestos, diagnóstico de residuos y predicción. Incluye el cuarteto de Anscombe."
+
 author:
   - name: "Miguel Angel Luque-Fernández"
     affiliation: "Dpto. Estadística e Investigación Operativa, Universidad de Granada"
@@ -8,6 +10,8 @@ author:
     url: "https://migariane.github.io"
 date: "2026"
 license: "CC BY 4.0"
+keywords: "regresión lineal, correlación de Pearson, Spearman, R cuadrado, mínimos cuadrados, supuestos de regresión, diagnóstico de residuos, cuarteto de Anscombe, predicción, fisioterapia, bioestadística"
+
 format:
   revealjs:
     slide-number: c/t
@@ -24,9 +28,9 @@ execute:
   message: false
   echo: true
   eval: true
----
 
-# Regresión y Correlación {.center}
+
+---# Regresión y Correlación {.center}
 
 ![](logo.png){width="90px"}
 

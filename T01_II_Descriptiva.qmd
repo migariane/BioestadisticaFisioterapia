@@ -1,6 +1,8 @@
 ---
 title: "Estadística Descriptiva"
 subtitle: "Tema I (Parte II) — Medidas de Posición, Dispersión, Forma y Aplicación Práctica"
+description: "Medidas de posición, dispersión y forma para datos clínicos en fisioterapia. Cálculo e interpretación de media, mediana, varianza, desviación típica, percentiles, asimetría y curtosis con R."
+
 author:
   - name: "Miguel Angel Luque-Fernández"
     affiliation: "Dpto. Estadística e Investigación Operativa, Universidad de Granada"
@@ -8,6 +10,8 @@ author:
     url: "https://migariane.github.io"
 date: "2026"
 license: "CC BY 4.0"
+keywords: "medidas de tendencia central, media, mediana, moda, medidas de dispersión, varianza, desviación típica, rango intercuartílico, asimetría, curtosis, visualización, histograma, boxplot, fisioterapia, bioestadística"
+
 format:
   revealjs:
     slide-number: c/t
@@ -23,9 +27,9 @@ execute:
   message: false
   echo: true
   eval: true
----
 
-```{r}
+
+---```{r}
 #| label: setup
 #| include: false
 # Cargar BioEstatR si está disponible

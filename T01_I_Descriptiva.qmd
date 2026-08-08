@@ -1,6 +1,8 @@
 ---
 title: "Estadística Descriptiva"
 subtitle: "Tema I (Parte I) — Organización, Resumen y Visualización de Datos"
+description: "Fundamentos de estadística descriptiva aplicada a fisioterapia: tipos de variables, escalas de medida, organización y representación de datos clínicos. Incluye ejemplos con ROM, EVA y fuerza prensil."
+
 author:
   - name: "Miguel Angel Luque-Fernández"
     affiliation: "Dpto. Estadística e Investigación Operativa, Universidad de Granada"
@@ -8,6 +10,8 @@ author:
     url: "https://migariane.github.io"
 date: "2026"
 license: "CC BY 4.0"
+keywords: "estadística descriptiva, tipos de variables, escalas de medida, nominal, ordinal, continua, discreta, organización de datos, fisioterapia, bioestadística"
+
 format:
   revealjs:
     slide-number: c/t
@@ -23,9 +27,9 @@ execute:
   message: false
   echo: true
   eval: true
----
 
-```{r}
+
+---```{r}
 #| label: setup
 #| include: false
 # Cargar BioEstatR si está disponible
