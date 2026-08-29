@@ -1,0 +1,559 @@
+1
+Grado en Enfermería
+Tema III
+Teoría de la estimaciónESTADÍSTICA
+Universidad de GranadaPedro Femia Marzo (autor) & Miguel Angel Luque Fernandez (actualización)
+Unidad de Bioestadística –Facultad de Medicina
+
+2
+Recordemos que:
+-Loqueinteresa estudiar esalapoblación ←lapoblación ensuconjunto esinaccesible
+-Lapoblación hadecaracterizarse dealguna manera “operativa” ←parámetros poblacionales
+-Senecesita algún tipodetécnica quepermita extender lasconclusiones extraídas apartir deunao
+varias muestras atoda lapoblación ←Inferencia Estadística .
+Veremos dostipos deinferencia quepermiten darrespuesta adostipos deproblemas diferentes :
+Enambos -Seestudia alapoblación através desusparámetros
+-Eltamaño demuestra jugará unpapel relevante quesiempre habrá quetener encuenta→    ¿Cuál es el tiempo medio que tarda en hacer efecto un fármaco? Teoría de la Estimación
+→  El tratamiento A ¿es igual de efectivo que el tratamiento B? Teoría de los Contrastes de Hipótesis
+LaTeoría delaEstimación eslaparte delaInferencia Estadística quetrata dedeterminar elvalor de
+losparámetros poblacionales .
+Distinguiremos dosformas deestimación :
+•Estimación puntual
+•Estimación porintervalo←lomejor que sepuede decir delparámetro apartir delamuestra
+reduciendo lainformación aunsolo valor
+←lamejor manera deexplotar lainformación contenida enlamuestra de
+cara aconocer entre quévalores debe encontrarse elparámetro .Enlugar
+deunsolo valor, sedaunconjunto deellos.IntroducciónTeoría de la estimación
+3
+Enlaestimación puntual setrata deasignar alparámetro poblacional unúnico valor ;queserá un
+valor aproximado yquedepende delamuestra
+Unestimador deunparámetro esunafunción delasobservaciones delamuestra quepermite
+darvalores apropiados para eseparámetro .Conceptos de estimador y de estimación Estimación puntual
+En la práctica los estimadores habituales son ( método analógico ):
+Parámetros poblacionales de interés
+Media
+Desviación típica
+Proporciónm
+s
+pEstimadores puntuales
+Media muestral
+Desviación típica muestral
+Proporción muestral*
+ˆp=p
+ˆx=m
+ˆs=s
+* En adelante usaremos pen lugar de ppara mantener la misma notación que en los resúmenesCuando sehaya obtenido lamuestra ydeterminado unvalor para mapartir deella, sedice
+entonces queesevalor esunaestimación dem.Notación:seutiliza elacento circunflejo sobre elsímbolo delparámetro poblacional para aludir a
+suestimador
+ˆmeselestimador puntual dem
+Hay más métodos de
+estimación, como elmétodo
+demínimos cuadrados que
+veremos enelúltimo tema
+4
+Problema que presenta el uso de estimadores puntuales:
+Elproblema delosestimadores puntuales esquesolo danunaidea deloquepuede valer elparámetro que
+estimamos, sinconocer como debuena eslaaproximación ;esdecir, simplemente proporcionan unvalor (de
+losmuchos posibles) quepuede proponerse como valor delparámetro .
+Porejemplo :
+Considere lapoblación deestudiantes delaUniversidad de
+Granada .Estamos interesados eninvestigar elvalor delparámetro
+m=‘peso medio delos estudiantes delaUGR .’.Para ello
+seleccionamos aleatoriamente dos muestras de20estudiantes
+cada una yobtenemos elvalor delpeso medio encada caso .
+¿coincidirán lasdos medias muestrales ?¿cuál esmejor como
+estimación ?¿qué error secomete alasumir como valor demel
+ofrecido porunadeestas medias?
+Laestimación puntual supone reducir toda lainformación muestral aunsolo valor .Esobvio quedicho
+valor difícilmente coincidirá deforma exacta coneldelparámetro poblacional
+Intuitivamente una muestra detamaño grande espreferible aotra detamaño menor ¿por qué?(enla
+estimación puntual noseaprecia esto)Estimación puntual
+1
+2:   67
+¿
+:   71?x Kg
+x Kg=
+
+=m1
+2Muestra M
+Muestra M
+5Estimación por intervalo de confianza (IC)
+Laestimación porICconsiste enasignar alparámetro poblacional desconocido unintervalo devalores,
+digamos (a,b)entre loscuales está dicho parámetro conunacierta probabilidad quedenominaremos
+nivel deconfianza yqueserepresenta por(1–a).Deaquí queaseaelnivel deerror oprobabilidad
+dequeelintervalo obtenido nocontenga alparámetro .
+P( ) 1ab m  = − a
+Laconfianza deunintervalo debe interpretarse enelsentido siguiente :Por cada 100 intervalos que
+construyamos para estimar unmismo parámetro (apartir deotras tantas muestras aleatorias ypara unvalor
+aprefijado), enpromedio el(1−a)%delosintervalos obtenidos recogerán ensuinterior alverdadero valor del
+parámetro, mientras queela%restante, porcosas delazar, pueden resultar ‘equivocados’ .Enlapráctica se
+construye unúnico IC,asíque sielegimos unnivel deconfianza (1−a)%grande, porejemplo del95%,
+entonces nuestra esperanza esquedicho intervalo seaunodelos95decada 100‘acertados’ ynounodelos
+5decada 100(enpromedio) quenocontienen alvalor delparámetro .Laestimación porICimplica asumir que
+-Esprácticamente imposible (por improbable) quevalor único dado porelestimador puntual coincida
+conelvalor delparámetro poblacional
+-Esmejor darunconjunto devalores probables para elparámetro, enlugar deunosolo
+-Existe unerror deestimación queenlaestimación puntual nosepone demanifiesto
+Diremos entonces que (a,b)esunintervalo deconfianza para elparámetro mconstruido al
+(1−a)%deconfianza (oala%deerror) siseverificaque;
+6
+Ejemplo :Setrata deestudiar elnivel deglucosa ensangre enlapoblación cuyos valores aparecen enel
+recuadro sombreado (esta población espequeñísima, pero nos vale como ejemplo) .Seleccionamos deforma
+aleatoria 5muestras detamaño n=5yelaboramos, encada caso, elintervalo deconfianza para elnivel medio
+deglucemia (consideraremos unnivel deconfianza del95%).Observemos losresultados :
+•Lasestimaciones puntuales varían demuestra amuestra
+•Loscuatro primeros intervalos contienen alverdadero valor dela
+media (que, excepcionalmente, porconocer atoda lapoblación
+sabemos que vale 120),sinembargo, enla5ªmuestra los
+valores obtenidos son, porazar, más bajos delacuenta ydan
+lugar aunintervalo que ¡nocontiene am!•Los5intervalos tienen diferente amplitud ¿por qué?
+120
+m95 144M1
+M2
+M3
+M4
+M5Estimación por intervalo de confianza (IC)
+7
+Intervalos construidos a nivel de confianza del 95%
+P( ) 1 0.95ab m  = − a =
+mIntervalo que no contiene al 
+parámetro poblacional
+Enpromedio, por cada 100
+intervalos, ela%deellos no
+contienen alparámetro (por
+azar)
+Intervalo poco preciso
+(ancho)Intervalo muy preciso 
+(estrecho)Cuidado :Elparámetro no“cae”
+enelintervalo .Eselintervalo el
+queintenta contener alparámetro
+Para unICdado, seespera que
+esto ocurra con una probabilidad
+de1−a(laconfianza delintervalo)
+Además del nivel de confianza los 
+IC tienen un nivel de precisión: d 
+(su radio)
+1−a
+T odos los IC están 
+elaborados al mismo 
+nivel de confianzaInteresan intervalos fiables y
+precisos (estrechos →dpequeño) .
+x
+a
+bd 
+Elnivel deconfianza loestablece
+elinvestigador deantemano .La
+precisión no→habrá queestudiar
+dequédependeEstimación por intervalo de confianza (IC)
+8
+Definición :Nivel deconfianza (1−a)
+Llamamos nivel deconfianza (1−a)ala
+probabilidad deque unintervalo deconfianza
+contenga alverdadero valor delparámetro
+poblacional .
+9
+Intervalos de confianza a estudiar:
+( ) XN→ ms
+0.0000.0500.1000.1500.2000.2500.300
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+( ; ) X B n p→
+X→( ) Nms
+¿m
+¿m
+¿p
+•IC para la media mde una variable cuantitativa X
+•Xes una V A con distribución normal
+•Xes una V A con distribución desconocida
+•IC para el parámetro pasociado a la distribución binomial 
+(X es ahora una V AD)    Distinguimos dos casos:
+Losmétodos estadístico spermiten construir ICpara cualquier parámetro
+(eneladelante severá alguno más) .Siempre quesehable deestimar un
+parámetro debe pensarse enobtener suIC(nobasta conelestimador
+puntual)Estimación por intervalo de confianza (IC)
+10
+n
+x
+s
+
+  (tamaño muestral)
+  (media muestral)
+  (deviación típica muestral)
+Intervalos de confianza para la media de una variable cuantitativa
+2. Información muestral :1. ¿Qué se puede decir de la normalidad de la variable estudiada X ?
+La variable Xtiene distribución normal → Su media     tiene entonces distribución normal
+x
+La variable Xno tiene distribución normal → Su media     tiene distribución normal si n≥60 
+x(lo que sigue vale siempre)
+Si n≥60 → lo que sigue vale de forma aproximada (mejor cuanto mayor sea n)
+Si n<60 → no se puede estimar mcon los métodos que se exponen aquí
+3.  Nivel de confianza 1−a
+Lo fija el investigador de antemano. NO depende del tamaño muestral
+En general se establece al 95% ( a=0.05). Otros valores habituales son el 90% ( a=0.10) y el 99% 
+(a=0.01)Observe el detalle de que ses el estimador puntual de 
+s, que normalmente es un parámetro desconocido (si no 
+se conoce m, es muy raro conocer s)Estimación por intervalo de confianza (IC)
+11
+;1 ()nsxt
+na− m = IC
+, 1 , 1 P1nnssx t x t
+nna − a −−  m  + = − a
+4. Expresión del ICpara estimar m
+EquivalentementeSiXnormal, vale siempre, sinoes
+normal solo es válido como
+aproximación sin≥60(laaproximación
+quemejora cuanto mayor sean)Condición de validez
+¿Quién es          ?
+;1nta−
+50n=
+80n=
+(0,1)n
+tN→
+→
+Ladistribución t-student está vinculada aladistribución
+normal .Setrata deunanormal corregida porelhecho deno
+conocer syutilizar s(suestimador puntual) ensulugar .
+Elefecto delacorrección estanto mayor cuanto menor sea
+eltamaño demuestra .Para muestras grandes, latyla
+normal coinciden
+n-1son los grados de libertad de la distribución
+Para un aprefijado ¿quién es mayor zade la normal o tade 
+la t-student? Distribución t de studentIntervalos de confianza para la media de una variable cuantitativaEstimación por intervalo de confianza (IC)
+12
+Distribución t de student
+Para una confianza del 95% :
+Entonces
+De aquí se obtiene
+0.05;9 2.262 t =
+0.05a=
+(1 ) 0.95− a =
+10 1 9 . .n n g l=  − = =Supongamos una muestra de 10
+observaciones :¿Cómo obtener un valor            ?
+;1nta−
+Sinoaparecen losglque buscamos, lo
+correcto esinterpolar, pero aquí bastará
+con tomar losanteriores delatabla
+(nuncamás delosquetengamos)
+(0,1) n t N→   =Estimación por intervalo de confianza (IC)
+13
+# CUANTILES DISTRIBUCION T -STUDENT 
+qt(c(0.975), df=9, lower.tail =TRUE)
+[1] 2.262157
+https://www.geogebra.org/m/AHdhBiGA
+14
+;1nta−
+Fijar aimplica, para un tamaño de muestra dado, fijar
+;1nst
+na−d=
+Si eselintervalo para m, essuprecisión
+;1nsxt
+na−
+2
+;1piloton piloto
+deseadats
+na−d
+Tamaño mínimo de muestra para estimar m:5. Como garantizar una precisión 
+deseadad
+Esnecesario disponer deinformación previa =Muestra piloto queproporcione unaestimación dela
+variabilidad quesepuede encontrar enlapoblación
+Como lainformación dada porlamuestra piloto esuna variable aleatoria (s)lafórmula esuna
+aproximación cuyo resultado sedebe comprobar después
+Si ta a     d → Si aumenta el error, aumenta la precisión
+Si  y  nta    d   d 
+→ Si aumenta el tamaño de muestra aumenta la precisión
+→ Por otra parte, cuanto mayor sea la variabilidad, menor será la precisión (esto no es controlable)De qué depende la precisión
+/ x t s na−
+/ x t s na+
+ˆx=m
+d
+dIntervalos de confianza para la media de una variable cuantitativaEstimación por intervalo de confianza (IC)
+https://www.geogebra.org/m/Kcq3UxwZ
+15
+Intervalos construidos a nivel de confianza del 95%
+P( ) 1 0.95ab m  = − a =
+mSe espera, con un 95% de 
+probabilidad (= confianza ) que el 
+intervalo obtenido contenga a m
+Es decir, que sea uno de los 95 de 
+cada 100 intervalos que contienen al 
+verdadero valor del parámetro 
+poblacional
+;1nsxt
+na−+
+;1nsxt
+na−−
+xObservaciones:
+•Nunca decimos que la 
+media poblacional “cae” en 
+el intervalo (es el intervalo 
+el que pretende recoger al 
+valor de la media)
+•Una precisión grande es 
+un dpequeño , es decir, un 
+intervalo estrechoIntervalos de confianza para la media de una variable cuantitativaEstimación por intervalo de confianza (IC)
+16
+Ejemplo :
+Para determinar elnivel medio decolesterol enlapoblación deestudiantes universitarios deprimer añoenla
+UGR setomó unamuestra alazar de10deellos, enlaqueseobtuvieron losvalores siguientes (enmg/dl) :
+162,176,169,165,171,169,172,168,167,175
+Información muestral:
+Fijamos una confianza del 95%
+Entonces, con una confianza del 95%
+10; 169.40; 4.30n x s= = =
+0.05;9 0.05   y 2.262 t  a = =
+;1nsxt
+na− m 
+4.30169.40 2.262
+10 m 
+loqueseinterpreta diciendo queelnivel medio decolesterol enlosestudiantes deprimer curso de
+laUGR debedeserunvalor comprendido entre 166.32y172.48mg/dl conunaprobabilidad onivel
+deconfianza del95%.Laprecisión delaestimación esde3.08mg/dl4)2)
+3)
+5)1)Suponemos que el nivel de colesterol es una VAC con distribución normal
+¿Qué hayquehacer para tener unaprecisión de5mg/dl? →¡Nada! Laprecisión obtenida esmejor
+(mayor)
+¿Qué hayquehacer para tener unaprecisión de1mg/dl? →Aumentar eltamaño demuestra .Veamos
+acuanto :
+22
+;1 2.262 4.30951.0piloton piloto
+deseadats
+na−  = →  d  
+Senecesitarían 85individuos más.Esta fórmula
+esaproximada .Una vezaumentada lamuestra
+habría que comprobar que laprecisión esla
+deseada
+( ) 169.4 3.08 166.32;172.48 mg / dl mg / dl m    m Intervalos de confianza para la media de una variable cuantitativaEstimación por intervalo de confianza (IC)
+17
+Inform ación muestral :
+elestimador puntual delaproporción decasos queverifican
+lacaracterística deinterés es
+Obviamente estima puntualmente ala
+proporción complementaria .
+Enestos problemas, eluso deladistribución binomial puede
+resultar complicado (se habla demétodos exactos ).Lo
+habitual esquesixyn-xsonvalores suficientemente grandes
+seconstruya elintervalo deconfianza para putilizando la
+distribución normal (sehabla demétodos aproximados o
+asintóticos )
+,
+ 
+ n
+x
+nx
+
+−Tamaño de muestra =   de los cuales
+casos cumplen con la característica de i nterés
+casos no cumplen con la característica d e interés
+ˆ / p x n=Intervalo de confianza para la proporción binomial
+ˆˆ1 ( ) /q p n x n= − = −
+Población
+N→
+( )0.10 nN 
+1qp=−
+( ) 100%pA presente
+( ) 100%qA ausente
+Muestra
+de tamaño n
+X=nºdeobservaciones en
+lamuestra conApresente
+
+( , ) X B n p→Recordemos: 
+Modelo Binomial
+Pero, ¿cuánto vale p?Estimación por intervalo de confianza (IC)
+¿Qué relación tiene esta expresión con la frecuencia relativa?
+18
+Sihaycondiciones devalidez deben sercomprobarlas siempre
+Siempre sedebe indicar cuálhasidoelmétodo utilizado
+22
+21 0.5( 0.5) ( 0.5) 124zz xp x z xn z naa
+a
+a    +  +  −  + Fijado ade antemano consideramos tres métodos (en orden de preferencia)
+( ) 5  5x n x − Si y  
+Enestas expresiones zaeselvalor deladistribución normal correspondiente al(1-a)%deconfianza
+(observe queahora nohablamos degrados delibertad) .•Método de Wilson : ← Cuando se pueda usar e s el mejor
+ˆˆ(1 ) 1ˆ
+2ppp p znna −  + 
+( ) 20  20x n x − Si y  
+←Cuando sedan estas condiciones esuna
+aproximación quefunciona tanto mejor cuanto
+mayores sean xyn-x.Eselpeor delostres
+expuestos yuno delosque más seusan
+tradicionalmente•Método de Wald:
+1 ( 2)( 2)p ( 2)44x n xxznna  + − + +    ++  •Wald ajustado:   Válido siempre, pero es p referible el de Wilson cuando se puede aplicarIntervalo de confianza para la proporción binomialEstimación por intervalo de confianza (IC)
+19
+0.05 0.05 0.0 0.05 1.96 Z a = = +  =
+Para buscar unvalor deacondosdecimales se
+debe sumar laprimera columna (primer decimal) y
+laprimera fila(segundo decimal)Distribución normal estándar
+Para una confianza del 95% :
+Entonces
+Así que tenemos que
+0.05 1.96 z=
+0.05a=
+(1 ) 0.95− a =¿Cómo buscar un valor       ?
+za
+0.05
+97.51.96
+Pz=
+=
+0.05
+2.51.96
+Pz− = −
+=
+/2
+0.05 / 2a
+=
+/2
+0.05 / 2a
+=
+1
+0.95−a
+=
+Observe quezaeselpercentil 1-a/2
+deladistribución :Estimación por intervalo de confianza (IC)
+https://www.geogebra.org/m/upke9x5y
+20# CUANTILES DISTRIBUCION NORMAL
+# NC 90%
+qnorm (0.95)
+[1] 1.644854
+# NC 95% 
+qnorm (0.975)
+[1] 1.959964
+# NC 98%
+qnorm (0.99)
+[1] 2.326348
+# NC 99%
+ qnorm (0.995)
+[1] 2.575829# NC 95%
+qnorm (c(0.975), mean=0, sd=1, lower.tail =TRUE)
+[1] 1.959964
+21
+2
+20.25
+deseadaznad
+Obtenido elintervalo, quetendrá laforma (a,b),laprecisión delaestimación puede obtenerse
+como sigue sielintervalo essimétrico (métodos de
+Wald yWald ajustado) :
+Observación :ElICdeWilson noessimétrico yelvalor anterior esuna
+aproximación .Encualquier caso, laprecisión esunvalor expresable porcentualmente .
+Eltamaño mínimo demuestra para obtener unaprecisión deseada d,para aprefijado, puede
+determinarse deforma general oconsiderando lainformación dada porunamuestra piloto :
+()
+2ba−d=
+•Sin información previa (tamaño necesario en el peor de los casos):
+•Con información previa (muestra piloto):
+2
+2(1 )
+deseadaz p pna−d%%
+Laexpresión sininformación esexacta pornodepender deninguna
+muestra .Elprecio apagar esque normalmente dalugar aunnmuy
+grande .Siseusalainformación deunamuestra piloto, laestimación den
+noesexacta yhayquecomprobar queseobtiene laprecisión deseada .
+SielICcontiene a0.5,las dos expresiones coinciden, yla
+información noaporta ninguna ventaja para reducir nPrecisión del intervalo
+0.5 0.0 1.0
+0.6p=%
+0.5p=%
+0.37p=%a
+b
+c
+a
+ˆ/p x n=
+d
+d
+bTamaño de muestra
+p%
+es el valor del IC mas próximo a 0.5Intervalo de confianza para la proporción binomialEstimación por intervalo de confianza (IC)
+22
+Ejemplo :
+De150 estudiantes deprimer curso degrado universitario que sehan encuestado, 33fuman
+habitualmente .¿Cuál eslaprevalencia deltabaquismo eneste colectivo? .Sedesea obtener laestimación
+conunaprecisión del10%
+Valores muestrales :
+Laestimación puntual laprevalencia deltabaquismo vendrá dada porp
+Demodo queelporcentaje denofumadores estáestimado por
+150; 33; 150 33 117n x n x= = − = − =
+Fijamos el nivel de confianza al 95%
+0.05 0.05   y 1.96 Z  a = =1)
+2)
+ˆ / 33 /150 0.220 (22.0%) p x n= = =
+0.780 ( 78.0%) ˆˆ1qp = = − =
+22
+21.96 1.96 1 33 0.5(33 0.5) 1.96 (33 0.5) 1150 1.96 2 4 150p    +  +  −   + 
+22
+21.96 1.96 1 33 0.5(33 0.5) 1.96 (33 0.5) 1 0.15826150 1.96 2 4 150 − − + − + − − =   + 
+22
+21.96 1.96 1 33 0.5(33 0.5) 1.96 (33 0.5) 1 0.29642150 1.96 2 4 150 + + + + + + − =   + 
+Valide z y elección del método: Como x=33 y n-x=150 son mayores a 5, se puede utilizar el 
+método de Wilson3)
+Límite inferior:
+Límite superior:Intervalo de confianza para la proporción binomialEstimación por intervalo de confianza (IC)
+23
+Ejemplo (continuación) :
+Interpretación delosresultados :Laprevalencia deltabaquismo entre losestudiantes deprimer
+curso universitario es,conun95%deprobabilidad, unvalor quedebe estar comprendido entre
+el15.8%yel29.6%.Laprecisión delaestimación esdel6.9%←(0.29642 -0.15826 )/24)
+Respecto alaprecisión pedida deld=10%,nuestros resultados
+tienen unaprecisión mayor ,(6.9%esmayor precisión que10%)
+porlotanto nohayqueconsiderar ningún aumento deltamaño de
+muestra .Siquisiéramos unaprecisión del5%,entonces sique
+habría queconsiderar unaumento deltamaño demuestra5)
+6.9%
+10%5%
+Sinconsiderar lainformación previa :
+2 2
+220.25 1.96 0.253850.05deseada deseadazna  = →d
+2 2
+22(1 ) 1.96 0.296(0.704)3170.05deseadaz p pna−  = →d%%
+0.296
+1 0.704p
+p=
+−=%
+%
+Considerando lainformación previa :
+p%Eselvalor delIC=(0.158;0.296)
+más próximo a0.5
+Sinaprovechar lainformación dada porlamuestra pilotoIntervalo de confianza para la proporción binomialEstimación por intervalo de confianza (IC)
+Wilson95%-IC ( ) (15.8%;29.6%) p=
+Wald ajust 95%-IC ( ) (16.1%;29.3%) p=
+Wald 95%-IC ( ) (15.0%;29.0%) p=
+Solución por los otros métodos
+24
+Identifique claramente quéparámetro setrata deestimar .
+Identifique claramente lainformación muestral yelestimador puntual correspondiente .Proporcione
+laestimación puntual (einterprétela) .
+Establezca elnivel deconfianza (1−a)(sinohaymotivos para hacer otracosa consideramos el95%)
+Compruebe sisecumplen lascondiciones devalidez quepudiera haber, porejemplo, alestimar una
+media, lanormalidad delavariable osinoesnormal quen>60.Alestimar unaproporción quexyn-x
+sonmayores alvalor queesrequisito delafórmula quesevaya autilizar
+Escriba laexpresión delintervalo deconfianza yrealice loscálculos necesarios para obtenerlo .
+Interprete losresultados obtenidos ,indicando claramente
+-cuáleselintervalo (noolvide lasunidades demedida )
+-cuáleslaprecisión obtenida (también tiene unidades demedida)
+-elnivel deconfianza conquesehaconstruido .
+Sisetrata deobtener unaprecisión dada deantemano ddeseada compruebe silaprecisión obtenida es
+mayor :d<ddeseada deserasí,nohayquehacer nada más (lamuestra actual essuficiente) .Encaso
+contrario (sid≥ddeseada )sedebe determinar eltamaño demuestra necesario para cumplir conesta
+especificaciónUnposible esquema detrabajoEstimación por intervalo de confianza (IC)
+25
+ Ejemplos
+Estimación de medias (suponer que la v.a.es normal)EjerciciosEstimación por intervalo de confianza (IC)
+Estimación de proporciones
+Precisión
+Ej: n x Método Validez IC(-) IC(+) d IC(-) IC(+) d deseada (%) Con inf Sin inf
+113 42 Wilson Si 0.284 0.468 0.092 28.41% 46.81% 9.20% 5% 383 385
+Wald Si 0.278 0.465 0.094 27.82% 46.52% 9.35%
+Wald Ajustado Si 0.288 0.464 0.088 28.83% 46.38% 8.78%
+11 6 Wilson No 0.246 0.819 0.286 24.56% 81.86% 28.65% 7% 196 196
+Wald No 0.206 0.885 0.340 20.57% 88.52% 33.97%
+Wald Ajustado Si 0.281 0.786 0.252 28.09% 78.58% 25.25%
+30 24 Wilson Si 0.609 0.916 0.154 60.87% 91.60% 15.36% 7% 187 196
+Wald No 0.640 0.960 0.160 64.02% 95.98% 15.98%
+Wald Ajustado Si 0.622 0.907 0.143 62.21% 90.73% 14.26%
+150 103 Wilson Si 0.605 0.758 0.077 60.51% 75.85% 7.67% 10% 92 97
+Wald Si 0.609 0.764 0.078 60.91% 76.42% 7.76%
+Wald Ajustado Si 0.608 0.755 0.074 60.83% 75.54% 7.36%
+63 32 Wilson Si 0.380 0.635 0.127 38.01% 63.48% 12.73% 3% 1068 1068
+Wald Si 0.377 0.639 0.131 37.65% 63.93% 13.14%
+Wald Ajustado Si 0.388 0.627 0.120 38.78% 62.72% 11.97%321
+4
+5No es necesario aumentar nMuestra % Tamaño necesario

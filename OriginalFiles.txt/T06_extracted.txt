@@ -1,0 +1,579 @@
+1
+Grado en FsioterapiaESTADÍSTICA
+Universidad de GranadaPedro Femia Marzo (autor) & Miguel Angel Luque Fernandez ( update )
+Unidad de Bioestadística –Facultad de Medicina
+Tema VIII
+Regresión y correlación
+2
+Motivación
+•¿Existe  relación  entre  el IMC y el porcentaje  de masa  grasa ?
+•De ser así, ¿es intensa  la relación ? ¿existe  algún  modelo  que permita  caracterizar  tal relación ?
+•Sabiendo  el IMC de una persona  ¿es posible  hacer  algún  tipo de pronóstico  sobre  su % graso ?*
+•En tal caso ¿es fiable  tal pronóstico ?
+*ElIMC=peso (kg)/(talla (m))2esunamedida fácildecalcular, el%demasa grasa notanto, requiere lainstrumentación adecuada .# IMC % graso
+1 20,36 17,36
+2 20,34 12,72
+3  20,05 11,65
+4  23,07 17,81
+5  23,94 19,34
+6  27,45 29,70
+7  22,17 24,19
+8   24,37 15,26
+9   22,18 28,41
+10 17,30 8,87
+11  21,72 25,62
+12 19,29 20,91Problema :Acontinuación figuran lasmedidas delíndice demasa corporal (IMC) yelporcentaje depeso graso
+(determinado enlaboratorio) deuna muestra de12adolescentes (8hombres y5mujeres) con una edad
+comprendida entre 15y19años.
+Distribuciones marginalesRegresión y correlación
+3
+El primer paso: Diagrama de dispersión o nube de puntos
+Distribución ( marginal ) 
+del % grasoDistribución ( conjunta ) del %graso e IMC¿ Aporta alguna información sobre la distribución de una de las variables el hecho 
+de conocer qué valores toma la otra?Regresión y correlación
+4
+•Sedice quehaycorrelación sihayalgún tipodeasociación .Esdecir, cuando elcambio enunavariable se
+acompaña poruncambio“sistemático” enlaotra.Mediante uncoeficiente decorrelación secuantifica la
+fuerza delaasociación .
+•Porregresión sealude aunmodelo (=expresión matemática) quepermite caracterizar cómo cambia una
+delasvariables cuando cambia laotra.Unmodelo deregresión permite nosolo describir laforma del
+cambio, también pronosticar elvalor esperado deunadelasvariables apartir delvalor quetoma laotra.El primer paso: Diagrama de dispersión o nube de puntosRegresión y correlación
+El diagrama de dispersión permite hacer una primera valoración sobre ambas cuestiones. 
+5
+Rol de las variables  
+•Una variable  actúa  como  variable  explicativa ,  regresora  o independiente  (habitualmente  se indica  como  x)
+•La otra variable  es la variable  explicada  o dependiente  (habitualmente  se representa  por  y)
+Tipo de Muestreo
+Cada  individuo  aporta  una pareja  de datos  (muestras  apareadas ) solo que, en general,  se trata de variables  diferentes  
+(aunque  no necesariamente ). Hay dos formas  posibles  de obtener  los datos :
+•Muestreo  de tipo I (de una muestra  aleatoria  de individuos  se observan  ambas  variables)  ← observación  (es el caso  
+del ejemplo  que estamos  considerando ). Las dos variables  pueden  desempeñar  el rol de variable  explicativa . 
+•Muestreo  de tipo II (fijados  de antemano  los valores  de x, se observan  los de y) ←  experimentación  (el rol de las 
+variables  no es intercambiable )
+Ejemplo,  consideremos  niños  con edad  ≤ 12 meses  
+Relación causal unidireccional
+Edad peso
+x
+y
+Actividad hipofisaria Tiroxina plasmáticaInfluencia (causal) mutua
+x
+yEstatura Destreza motrizAsociación espuria
+x
+y
+x
+y
+EdadEstatura Destreza motriz
+y
+x
+y
+El muestreo  de tipo I solo permite  hablar  de asociación  (en el sentido  de covariación ), no de causalidad . Para  establecer  
+una relación  causal,  el muestreo  debe  ser de tipo II Asociación  no implica  causalidad
+Que dos variables  estén  asociadas  no supone  necesariamente  que una sea la causa  de la otra.Modelos de regresión
+Rol de las variables y tipos de muestreo
+6
+Que yse relacione con xse expresa, de la forma general: y = f (x) (esto es un modelo )
+Para establecer, o especificar, el modelo deberemos concretar la forma que toma  f (x)
+Encualquier caso, y=f(x)debe poder representar unarelación nodeterminista →paralos
+mismos valores dexnoseobservan necesariamente losmismos valores dey
+Modelos estadísticos
+-Seestablecen apartir delconocimiento intimo delproceso (ej.Ecuación deMichaelis -Menten )
+-Sondeterministas →para unmismo valor dexseobtiene siempre lamisma y
+-Experimentalmente nunca seobservarán losdatos exactamente como lospredice elmodelo mecanicista
+(A),siempre habrá error demedida yotros factores noasignables quehacen quelasobservaciones
+presenten cierta variabilidad entorno alvalor pronosticado pordicho modelo (B)
+(influencia de causas no 
+asignables)y= componente determinista +          componente aleatorio     
+(forma de la dependencia de 
+yrespecto a x)(A) En teoría
+(B) En la práctica
+•Elcomponente determinista puede corresponder aunmodelo mecanicista (sugerido porel
+conocimiento delmecanismo querelaciona lasvariables) oporunmodelo empírico (sugerido porlos
+propios datos, laforma quetoma lanube depuntos )
+•Elcomponente aleatorio eselresponsable delavariabilidad observada enlosdatos respecto al
+componente determinista .Engeneral (nosotros loharemos así), seasume quesetrata deunavariable
+aleatoria condistribución normal ymedia cero (loserrores porexceso secompensan conloserrores
+pordefecto)
+1
+0bxy
+bx=+
+1
+0bxy
+bx=++x             y 
+Para valores similares de x
+se observan diferentes 
+valores de yEfecto del componente 
+aleatorio Modelos de regresión
+El modelo de regresión como modelo estadístico
+Modelos mecanicistasEn el ámbito científico se presentan básicamente dos tipos de modelos:
+Se pueden expresar 
+7
+Lineal
+01y b b x=+ Polinómico
+012
+2 y b b x b x = + +Hiperbólico
+(Michaelis -Menten)
+1
+0bxy
+bx=+Potencial
+1
+0by b x=Sigmoidal
+(Hill)
+1
+0n
+nbxy
+bx=+Algunos modelos (con base determinista o sugeridos por los datos) de uso frecuenteRelación lineal inversa Relación lineal directaRelación no lineal
+(monotónica)Relación no lineal
+(no monotónica)
+Ausencia de relación Heterocedasticidad Observación influyente
+(pero que mantiene el modelo lineal)Observaciones atípicas
+(no mantienen el modelo lineal)Modelos de regresión
+Diagnóstico del diagrama de dispersión
+8
+Qué se debe observar en un diagrama de dispersión
+1.Sihayrelación onoentre lasvariables
+2.Encaso dehaber relación, sieslineal ono
+lineal
+3.Encaso dehaber relación lineal→alaumentar xaumenta o
+disminuye linealmente lamedia deypero, ¿cambia también la
+variabilidad deyalcambiar x(heterocedasticidad* )?
+Laheterocedasticidad esunfenómeno frecuente yperjudica lacalidad del
+modelo
+4.¿Hay puntos anómalos
+respecto almodelo que
+viene sugerido por la
+mayoría delosdatos?
+5. ¿Hay observaciones influyentes ?
+Elnivel deinfluencia deunaobservación viene dado porsudistancia
+alamedia delavariable explicativa, cuanto más alejada esté de ,
+más influyente resulta sobre elmodelo .
+y
+xheterocedasticidad homocedasticidad
+* -cedasticidad procede del griego skedasis que quiere decir dispersiónObservación anómala 
+(pero poco influyente)Observación
+influyente 
+(pero no anómala)
+xObservación 
+anómala e influyente 
+(afecta mucho al modelo)
+xModelos de regresión
+Diagnóstico del diagrama de dispersión
+9
+y
+01 yx= + +
+Ecuación general de la línea recta :
+y a b x=+
+b=pendiente (=inclinación delarecta)
+a= ordenada en el origen (valor de y cuando x=0)
+Punto de vista estadístico
+0b
+y
+x
+y
+0b
+0a
+0a
+0aDesde el punto de vista algebraico
+será el valor esperado de y(inferencia sobre y) dado un valor de x
+ˆy
+0bSeespera queelvalor promedio delcomponente aleatorio seacero (losexcesos
+secompensan con losdefectos ).Interesa estimar suvarianza yaque esla
+responsable delavariabilidad observada enlarespuesta respecto alcomponente
+determinista
+2
+
+22ˆRS=Losdosparámetros descritos constituyen elcomponente determinista delmodelo,
+quecaracteriza laforma enque ydepende dex.Además, elmodelo presenta un
+componente aleatorio queeselresponsable delavariabilidad observada enypara
+unmismo valor dex,ambos componentes sonaditivos2parámetros
+01 yx= + +
+componente 
+deterministaRespuesta =componente 
+aleatorio+
+Ajustar elmodelo estadístico consiste enestimar losparámetros queconstituyen el
+componente determinista para caracterizar cómo afecta xay
+01ˆˆ x a b x + = +
+(es la varianza residual )El Modelo de Regresión Lineal
+01ˆˆˆˆy x y a b x= + → = +
+10
+y
+0b
+y
+x
+y
+0b
+0a
+Interpretación de los parámetros
+Coeficiente de regresión : cuánto (y cómo) cambia y por 
+una unidad de aumento en x
+ˆy a b x=+
+Constante : cuánto vale y para x=0 según el modelo (no 
+siempre tiene sentido interpretarlo).
+El coeficiente más relevante es el coeficiente de regresión (la pendiente)
+0b
+0b
+Asociación lineal directa o positivaEl aumento en xva acompañado por un aumento en y
+El aumento en xva acompañado por una reducción en  y
+0b
+Asociación lineal inversa o negativa
+0b
+Los valores de yno tienen relación con los que toma x
+Falta de asociación lineal
+0a
+¡Cuidado! Uncoeficiente deregresión b=0nosetraduce necesariamente
+enindependencia entre lasvariables, soloenlafalta deasociación lineal
+-Eselmás simple (siunmodelo simple caracteriza bien losdatos, siempre espreferible a
+unomás complejo yconmás parámetros)
+-Muchas relaciones nolineales sepueden transformar enlineales
+-Enunintervalo devariación reducido, elcambio observado es“más omenos” linealRelevancia delmodelo linealEl Modelo de Regresión Lineal
+11
+y
+x
+A
+B¿Cuál de los dos es mejor modelo para caracterizar la 
+relación entre las dos variables, A o B?
+(),iixy
+(),jjxy
+ˆiy
+ˆjy
+()ˆi i ie y y=−
+()ˆi i ie y y=−
+Residuo i= (valor observado )i–(valor pronosticado por el modelo )i
+Lamejor recta, enelsentido deserlamás“próxima” atodos losdatos esaquella enlaque lasuma deresiduos al
+cuadrado eslamínima posible .Esdecir, :
+ˆy a b x=+ es aquella que verifica que                                     es el mínimo
+()22ˆi i ie y y=−Criterio de mínimos cudrados
+Además deestimar losdoscoeficientes delmodelo, será necesario estimar lavarianza deregresión ,que
+eslavarianza delosresiduos yestima alavarianza delcomponente aleatorio
+2
+Rs
+22ˆRs=El Modelo de Regresión Lineal
+Ajuste del modelo lineal. Método de mínimos cuadrados
+Ajustar el modelo lineal quiere decir estimar cuánto valen sus parámetros: los dos coeficientes de la recta ( ayb) y  
+la varianza de regresión (o varianza residual)
+12
+# IMC              % graso
+1 20,36 17,36
+2 20,34 12,72
+3  20,05 11,65
+4  23,07 17,81
+5  23,94 19,34
+6  27,45 29,70
+7  22,17 24,19
+8   24,37 15,26
+9   22,18 28,41
+10 17,30 8,87
+11  21,72 25,62
+12 19,29 20,91
+24.262=ix
+61. 58092=ix
+48. 5186=iiyx
+84.231=iy
+65. 49692=iy
+85.21=x
+32.19=y
+()676.2 163.72= =x x s s
+()678.6 591.442= =y y s s
+12=n
+()()()()22
+21 79.78xi
+i s nnxx xx −= =−=
+()()()22
+2)1( 50.490yi
+i s nnyy yy −= =−=
+1
+1ii
+ii xyxyxynns=−−
+*                                                  es la covarianza entre xe y
+Cálculos necesarios en el método de mínimos cuadrados
+Para x Para y
+Para x e y:
+() 120.01ii
+iixyxy x yn= − =El Modelo de Regresión Lineal
+Ajuste del modelo lineal. Método de mínimos cuadrados
+13
+# IMC              % graso
+1 20,36 17,36
+2 20,34 12,72
+3  20,05 11,65
+4  23,07 17,81
+5  23,94 19,34
+6  27,45 29,70
+7  22,17 24,19
+8   24,37 15,26
+9   22,18 28,41
+10 17,30 8,87
+11  21,72 25,62
+12 19,29 20,91
+24.262=ix
+61. 58092=ix
+48. 5186=iiyx
+84.231=iy
+65. 49692=iy
+85.21=x
+32.19=y
+163.72=xs
+591.442=ys
+12=n
+() 79.78=xx
+() 50.490=yy
+() 01.120=xy
+( ) 120.011.523( ) 78.79xybxx= = =
+ˆ 13.96 1.52 yx=− +
+xbay+=
+xbya−=→
+xbay+=ˆ
+96.13 85.2152.132.19 −=−=a
+96.13 52.1ˆ−= x y
+2
+2 1 ( )()2 ( )Rxys yyn xx
+=−−
+21 120.01490.50 30.77312 2 78.79= − =−Estimación de los coeficientes y de la varianza de regresión
+Varianza de regresiónEl Modelo de Regresión Lineal
+Ajuste del modelo lineal. Método de mínimos cuadrados
+( )2 1( ) ( )2Rs yy b xyn=−−
+( )1490.50 1.52 120.01 30.773
+12 2= −  =
+−
+o también:Modelo lineal estimado
+14
+A la pregunta: Se responde con: 
+•¿Es significativa la relación lineal entre xe y ?Test de regresión lineal ,  o también
+Test de correlación lineal (en realidad son el 
+mismo test)Inferencias con el modelo
+•¿Cuánto cambia ypor unidad de aumento en x ? IC para el coeficiente de regresión : IC()
+•¿Cuánto vale ypara un valor dado de x = x0? Pronósticos sobre  y|x=x0
+•¿Es intensa la asociación (lineal) entre  x ey ? Coeficiente de correlación lineal r 
+•¿Son buenos los pronósticos realizados con el 
+modelo de regresión lineal?Coeficiente de determinación R2(En cualquier caso, el paso preliminar es siempre el diagnóstico del diagrama de dispersión)
+•¿Cuál es la relación lineal entre x ey ? Expresión del modelo ajustado :
+xbay+=ˆ
+•¿Cuánto vale xpara un valor dado de y = y0? ¡¡ Pronósticos sobre  x|y=y0!!El Modelo de Regresión Lineal
+15
+Test de regresión lineal
+01
+11H : 0
+H : 0=
+
+01 yx= + +
+Para el modelo
+Hipótesisno hay asociación lineal (la recta es horizontal)
+exp2()
+() RRbbt xxs s xx==
+El nivel de significación pse 
+busca en la distribución t -
+Student con n-2 g.l.
+En el ejemplo:
+exp78.791.52 2.43730.77t==
+0.03 0.04 p
+() 10 . .glHay un cambio significativo en el % graso 
+al cambiar el IMC
+x
+y
+01H : 0=
+96.13 52.1ˆ−= x y
+IC para el coeficiente de regresiónEstadístico:
+2
+(1 ) 1 ; 2IC ( )()R
+nsbtxx−  − = 
+En el ejemplo:
+()95% 1IC ( ) 1.523 2.228 0.625 0.13; 2.92 =   =
+Porcada unidad deaumento enelIMC, el%graso aumenta (b>0)unvalor que
+debe sermayor a0.13unidades ymenor a2.92unidades conun95%de
+probabilidad (confianza)¿Hay relación lineal entre xe y ?
+¿Cuánto cambia ypor 
+unidad de aumento en x ?Inferencias con el modeloEl Modelo de Regresión Lineal
+Recuérdese que una vez hecho un t-test, el IC es inmediato:
+(el numerador sin el valor absoluto) 
+exp exp ;2n t t t− IC=numerador de la denominador de la    
+16
+x y
+xPronósticos
+o
+o
+minx
+maxx
+minxI II
+•Los pronósticos deben hacerse dentro delrango observado delavariable explicativa, esdecir, deben tener
+carácter interpolador ,nunca extrapolador (mas alládelrango observado nosabemos cómo eslarelación entre
+lasvariables)
+•Intervalos de confianza. Se puede hacer inferencia a dos niveles: 
+-respecto a valores medios esperados       bandas de confianza
+-respecto a valores individuales intervalos de predicción•Estimación puntual de un pronóstico: Para un valor              tal que                          el pronóstico dado por el 
+modelo de regresión lineal, es 
+0xx=
+m ax 0 m in xx x
+0 ˆ xbay+=
+•La precisión de estos pronósticos es mayor cuanto mayor sea la proximidad de      a la media
+0x
+x¿Cuánto vale ypara un valor dado de x= x0?Inferencias con el modeloEl Modelo de Regresión Lineal
+maxx
+El peligro de las extrapolaciones
+observado
+observado
+17
+Pronósticos (continuación)
+En el ejemplo, veamos diferentes situaciones:
+•¿Cuánto es el valor esperado del % graso para una persona de entre 15 y 19 años con un IMC=26? 
+La edad se encuentra en el rango observado
+IMC min< 26 < IMC maxEl modelo SI permite estimarlo
+ˆ 13.96 1.52 yx=− +
+·IMC 13.96 1.52 26 25.56=− +  =
+•¿Cuánto es el valor esperado del % graso para una persona de entre 30 años con un IMC=26? 
+La edad NO se encuentra en el rango observado El modelo NOpermite estimarlo
+•¿Cuánto es el valor esperado del % graso para una persona de entre 15 y 19 años con un IMC=32? 
+La edad se encuentra en el rango observado
+32 > IMC maxEl modelo NOpermite estimarlo¿Cuánto vale ypara un valor dado de x= x0?
+(solo damos la estimación 
+puntual, pero sería 
+procedente dar el 
+intervalo de confianza)Inferencias con el modeloEl Modelo de Regresión Lineal
+18
+Pronósticos sobre xdado un valor de y ¿Cuánto vale xpara un valor dado de y= y0?
+•Si el muestreo es de tipo I (las dos variables observadas)
+•Si el muestreo es de tipo II (los valores de la variable explicativa están fijados de antemano)
+No se puede elaborar el modelo de regresión de x|y  (ahora x no es una variable aleatoria)
+El problema se aborda mediante calibración lineal (no lo vemos aquí)Que se pueda hacer o no depende del tipo de muestreo:
+Se trata de invertir el rol de las variables (como xe yson variables aleatorias se puede hacer)
+() 79.78=xx
+() 50.490=yy
+() 01.120=xy
+Regresión dexsobre y(x|y)Regresión deysobre x(y|x)
+ˆ 13.96 1.52 yx=− +
+xbay+=
+xbya−=→
+xbay+=ˆ
+96.13 85.2152.132.19 −=−=a
+( ) 120.011.523( ) 78.79xybxx= = =Partiendo de:
+85.21=x
+32.19=y
+x a b y=+
+a x b y→ = −
+ˆx a b y=+
+21.85 0.245 19.32 17.12a= −  =
+( ) 120.010.245( ) 490.50xybyy= = =
+ˆ17.12 0.245xy=+
+Como antes, la inferencia
+solo se puede hacer si 
+min 0 maxy y yInferencias con el modeloEl Modelo de Regresión Lineal
+0ˆ17.12 0.245xy=+
+19
+Un coeficiente de correlación es un índice que mide la fuerza de asociación entre dos variables cuantitativasSe dice que entre dos variables (cuantitativas) hay correlación si hay asociación , es decir:
+•Sivalores altos (bajos) deunadelasvariables seacompañan convalores altos (bajos) delaotra.En
+este caso sedice quelacorrelación esdirecta opositiva
+•Sivalores altos (bajos) deunadelasvariables seacompañan devalores bajos (altos) delaotra.Ahora
+lacorrelación esinversa onegativa
+Silaasociación entre lasvariables esdetipo lineal, elcoeficiente adecuado esel
+coeficiente decorrelación lineal dePearson (r).Este coeficiente eselmás habitual
+ysealude aélsimplemente porrEn general se representa a estos coeficientes como:
+•r(rhodel alfabeto griego) para aludir a la fuerza de asociación poblacional
+•rpara aludir a su estimador muestral : 
+ˆr=r
+Silaasociación entre lasvariables esdetipo nolineal pero monotónica (siempre
+creciente odecreciente, sinforma deUodeUinvertida), elcoeficiente anterior noes
+adecuado, pero puede calcularse elcoeficiente decorrelación deSpearman (rS)
+ˆr=r
+ˆSSr=rCoeficientes de correlación de Pearson y de Spearman¿Es intensa la relación entre xe y ?
+•Sealude aélcomo coeficiente decorrelación noparamétrico (con frecuencia se
+usacuando lasvariables notienen distribución normal)
+•Noveremos sucálculo ,aunque lainterpretación sehace igual queladelcoeficiente
+dePearson (quitando ahora elcalificativo linealEl coeficiente de Pearson 
+no es válido aquíCorrelación y correlación lineal
+20
+De un coeficiente de correlación se debe interpretar: 
+11− rValores posibles (válido para el coeficiente rSde Spearman )
+0.92r=−
+0.92r=+
+1.0r=−
+1.0r=+
+0.0r
+0.84r=
+0.36r=
+0r→
+1r→
+Falta de asociación lineal
+Asociación lineal perfecta
+0r
+0rAsociación lineal positiva: cuando  
+xyZZ
+Asociación lineal negativa: cuando
+xyZ]
+Lafalta decorrelación lineal noeslomismo que la
+independencia (esta esunacondición mucho más fuerte) .La
+variable ynodepende dexen(a)pero sien(b),donde la
+dependencia esnolineal .Eneste último caso rnoesun
+coeficiente válido .(a)
+0.0r
+(b)Ni el coeficiente de correlación de 
+Pearson ni el de Spearman son 
+válidos aquí.(válido para el coeficiente rSde Spearman eliminando la palabra lineal )
+•Su signo Correlación lineal ¿Es intensa la relación lineal entre xe y ?
+•Su magnitud 
+21
+Estimación (puntual):
+()
+( )( )xyr
+xx yy=
+ˆrr=
+En el ejemplo:
+()78.79 xx=
+()490.50 yy=
+()120.01 xy=
+120.010.610
+78.79 490.50r==
+
+Test de correlación:
+0
+1H : 0
+H : 0r=
+r
+Hipótesisno hay asociación lineal (la recta de regresión es horizontal, es decir, 1=0)Elcoeficiente decorrelación tiene elmismo signo
+queelcoeficiente deregresión :queeselsigno de(xy)
+(elnumerador delacovarianza )
+2
+exp 2( 2)
+1nrtr−=−
+Se busca en la distribución t -Student con n-2 g.l.
+En el ejemplo:con
+2
+exp 2(12 2)0.612.431 0.61t−==−
+0.03 0.04 p
+() 10 . .gl
+¿Hay relación lineal entre xe y ?; 
+Estadístico:Este test es equivalente al testderegresión H0:1=0¿Es intensa la relación lineal entre xe y ?Correlación lineal
+22El Coeficiente de 
+Determinación
+()2 2Rr=
+2VERVT=
+()2 20.610 0.373 R==
+| 27.5yx=
+| 17.5yx=
+Variabilidad de y
+explicada por el 
+cambio en xVE
+VNE
+Variabilidad de yno 
+explicada por el 
+cambio en x
+VT = VE + VNE Variabilidad total de y:
+El coeficiente de determinación es la proporción de variabilidad observada en yque queda 
+explicada por su relación lineal con x
+En la práctica se puede calcular como el cuadrado del coeficiente de correlación lineal:
+En el ejemplo:Seexpresa como R2ysesuele utilizar como uníndice delacalidad delospronósticos dados porlarecta de
+regresión (sepuede expresar en%)yhabitualmente seconsidera como unamedida delacalidad delajuste dado
+porlarecta deregresión
+El37.3%delavariabilidad observada enelporcentaje graso viene
+determinada (oexplicada) porsurelación lineal con elIMC.El
+100‒37.3=62.7%restante esvariabilidad noexplicada¿Es bueno el modelo de regresión a la hora de realizar pronósticos sobre ydado x ?
+23
+Comentarios finales
+En la práctica, lo habitual es que en el análisis participen más de dos variables
+Diagrama de dispersión matricial
+ Matriz de correlaciones
+La correlación de una variable consigo misma es, lógicamente, r=1
+0 1 1ˆy b b x=+
+0 1 1 2 2ˆkk y b b x b x b x= + + + + K
+Modelo de regresión lineal simple (solo hay una variable explicativa)
+Modelo de regresión lineal múltiple (hay un conjunto de kvariables 
+explicativas o regresoras ) 
+o0o
+Fin de la asignatura

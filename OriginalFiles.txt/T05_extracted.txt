@@ -1,0 +1,1312 @@
+1
+Grado en Fisioterapia
+Tema VII
+Análisis de datos cualitativos
+Análisis de tablas de contingencia –Test c2ESTADÍSTICA
+Universidad de GranadaPedro Femia Marzo (autor) & Miguel Angel Luque Fernández ( update )
+Unidad de Bioestadística –Facultad de Medicina
+
+2
+Introducción
+•Sevanaestudiar doscaracteres cualitativos quepueden presentarse bajo diferentes modalidades
+•Laforma deabordar talestudio esmediante elrecuento (V.A.discreta) delasveces quesepresenta cada
+unadelasmodalidades encada carácter
+•Losrecuentos (frecuencias absolutas) sedeben normalizar enforma deproporciones (frecuencias relativas)
+•Elproblema principal consiste encomprobar silasproporciones observadas (información empírica) difiere de
+forma significativa deaquella proporciones esperadas bajo elsupuesto deunadeterminada teoría odeuna
+hipótesis
+Eltestc2
+•Debido aKarl Pearson, esunodelostestmás clásicos delaEstadística
+•Varias aplicaciones :
+I-Ajuste adistribuciones-Por ejemplo elajuste delosdatos empíricos aladistribución de
+frecuencias fenotípicas propuesta porlaTeoría deMendel
+-Hay untestdenormalidad basado enlapruebac2(obsoleto)
+II-Análisis detablas decontingencia .
+2tipos deproblemas :Nos centramos en este tipo de análisis
+-Test dehomogeneidad entre varias muestras
+-Test deindependencia dedosvariables cualitativas•Enlapráctica seresuelven igual
+Homogeneidad (entre muestras)
+Independencia (entre variables)•Son problemas diferentes
+No lo vamos a estudiar aquíAnálisis de datos cualitativos: el test c2
+3
+•Una tabla decontingencia esunatabla defrecuencias endonde sedispone lainformación (cruzada) dealmenos dos
+características cualitativas .Sehabla también detablas declasificación cruzada .
+Estado del paciente tras
+ el tratamiento
+1 7 28 115 150
+Tratamiento 2 15 20 85 120
+3 10 30 90 130
+4 5 40 115 160Peor Igual Mejor Total
+Ejemplo 1
+                           Naturaleza
+                                    del tumor
+Benigno Maligno Otros
+Localización Lóbulo frontal 23 9 6
+del tumor Lóbulo temporal 21 4 3
+Otras áreas 34 24 17
+141Ejemplo 2Seconsideran 4tratamientos quecuran una misma
+enfermedad .Seaplica cada uno deellos aotras
+tantas muestras independientes de150,120,130y
+160 enfermos respectivamente .T ras unperiodo de
+seguimiento seanota elestado decada paciente
+clasificándolo enpeor, igual omejor talycomo se
+presenta aladerecha .
+En un estudio  sobre  tumores  cerebrales  
+se desea  averiguar  si existe  asociación  
+entre  la localización  del tumor  y su 
+naturaleza . A tal efecto  se tomaron  al 
+azar una muestra  de 141 pacientes  
+afectados  de tumor  cerebral  y se les 
+clasificó  como  se indica  en la tabla  
+adjuntaFormato de los datos
+Tablas de contingencia. Notación y terminología
+4
+Estado del paciente tras
+ el tratamiento
+1 7 28 115 150
+Tratamiento 2 15 20 85 120
+3 10 30 90 130
+4 5 40 115 160Peor Igual Mejor Total
+Ejemplo 1
+•2 características: 
+-Por filas: el tipo de tratamiento (4 categorías)
+-Por columnas: el estado del paciente tras el tto. (3 categorías)
+•Se dice que es una tabla de contingencia 4 ×3
+•En el interior de la tabla aparecen las frecuencias (absolutas) 
+observadas de cada estado para cada tratamiento
+•Eneste caso haycuatro muestras independientes,
+tomadas en función de las modalidades del
+tratamiento :Setrata deuntest dehomogeneidad
+entre 4muestras independientes
+                           Naturaleza
+                                    del tumor
+Benigno Maligno Otros
+Localización Lóbulo frontal 23 9 6
+del tumor Lóbulo temporal 21 4 3
+Otras áreas 34 24 17
+141Ejemplo 2
+•2 características: 
+-Por filas: localización del tumor (3 categorías)
+-Por columnas: naturaleza del tumor (3 categorías)
+•Se dice que es una tabla de contingencia 3 ×3
+•En el interior de la tabla aparecen las 
+frecuencias (absolutas) observadas de cada 
+una de las modalidades de cada variable
+•Eneste caso hay una sola muestra (nose
+puede hablar dehomogeneidad) :Setrata deun
+test deindependencia entre dos variables
+cualitativasFormato de los datos
+Tablas de contingencia. Notación y terminología
+5
+12
+1 11 12 1 1
+2 21 22 2 2
+12
+12Variable 
+Variable c
+c
+c
+r r r rc r
+cB
+B B B Totales
+A O O O F
+A O O O FA
+A O O O F
+Totales C C C TK
+K
+K
+M M M O M M
+K
+K
+Tabla decontingencia r×c
+Frecuencia observada enlafilaiy
+enlacolumna j
+Total delacolumna j
+Total delafilai
+ijO
+jC
+iF
+T
+Total global
+Porcentajes observados derivados delatabla anterior →3tipos detablas deporcentajes
+1
+1 11 11 1 1 1 1
+11
+1/ / 1
+/ / 1
+/ / 1c
+Cc
+R R r r rc rc r
+cB B Totales
+A p O F p O F
+A p O F p O F
+Totales C T C T==
+==K
+K
+M M O M M
+K
+K
+Porcentajes porfilas
+1
+1 11 11 1 1 1 1
+1 1 1/ / /
+/ / /
+1 1 1C
+C C C
+R R R RC RC C RB B Totales
+A p O C p O C F T
+A p O C p O C F T
+Totales==
+==K
+K
+M M O M M
+K
+K Porcentajes porcolumnas
+1
+1 11 11 1 1 1
+11
+1/ / /
+/ / /
+/ / 1C
+CC
+R R R RC RC R
+CB B Totales
+A p O T p O T F T
+A p O T p O T F T
+Totales C T C T==
+==K
+K
+M M O M M
+K
+K
+Porcentajes totales(= rfilas y ccolumnas)Formato de los datos
+Tablas de contingencia. Notación y terminología
+6
+Ejemplo (Tabla decontingencia 2×2)
+20 26 46
+60 294 354
+: 80 320 400Total
+TotalSi No
+Bajo
+Normal
+Peso del 
+niño al 
+nacerMadre fumadora
+0.565 1
+0.169 0.831 1
+: 0.200 0.800 10.435Total
+TotalSi No
+Bajo
+Normal
+Peso del 
+niño al 
+nacerMadre fumadora
+Del total de niños con el peso bajo al nacer, 
+el 43.5% son hijos de madres fumadoras
+0.081 0.115
+0.750 0.919 0.885
+: 1 10.25
+10Total
+TotalSi No
+Bajo
+NormalPeso del 
+niño al 
+nacerMadre fumadora
+Del total de madres fumadoras, el 25% han 
+tenido un niño con el peso demasiado bajo
+0.065 0.115
+0.150 0.735 0.885
+: 0.200 0.800 10.050Total
+TotalSi No
+Bajo
+Normal
+Peso del 
+niño al 
+nacerMadre fumadora
+Del total de madres, el 5%eran fumadoras 
+y su hijo ha tenido el peso demasiado bajoFrecuencias observadas
+Proporciones observadas¿Esta asociado el 
+peso del niño con el 
+hábito de fumar de la 
+madre?Tablas de contingencia. Notación y terminología
+7
+Estado del paciente tras el tratamiento
+Tratamiento 1 7 28 115 150
+Tratamiento 2 15 20 85 120
+Tratamiento 3 10 30 90 130
+Tratamiento 4 5 40 115 160Peor Igual Mejor Total
+Test de homogeneidad  con tablas de contingencia (distintas a 2 ×2)
+11 12 13
+21 22 23
+31 22 33
+41 32 43Porcentajes por filas
+(según se han dispuesto las muestras)
+11
+21
+31
+41Peor Igual Mejor Total
+p p p
+p p p
+p p p
+p p p
+0 11 21 31 41
+12 22 32 42H:p p p p
+p p p p= = =
+= = =
+Laproporción delosqueempeoran
+eslamisma entodos losttos.
+Laproporción delosque quedan
+igual eslamisma entodos losttos.
+Laproporción delosquemejoran es
+también lamisma .Vaobligada, para
+cada filai:H0:Los cuatro tratamientos son equivalentes
+(homogéneos)
+H1:Almenos untratamiento esdiferente alosdemásHipótesis
+¿Qué supone H0?Valores observados e Hipótesis
+¿Qué forma tendá H1?
+1H : al menos un  para ij kjp p i k
+()3 1 21i i ip p p= − +
+8
+1
+211 12 13
+21 22 23
+3
+4
+131 32 33
+41
+324
+2439.91 31.61 108.48
+7.93 25.28 86.79
+8.59 27.Estado
+1 150
+2 12
+39 94.02
+10.57 33.72 115.70Tratamiento3 130
+4 160
+37 1181
+405 5Peor Igual Mejor Totales
+F
+F
+F
+FE E E
+E E E
+E E E
+Totales C C C TE E E=
+== = =
+= = =
+= =
+=
+= = ==
+= = =
+==
+60
+11 12 13 1
+21 22 23 2
+31 32 33 3
+41 42 43 4
+1 2 31 7 28 115 150
+2 15 20 85 120Tratamiento3 10 30 90 130
+4 5 40 115 160
+37 118 405 560Estado
+Peor Igual Mejor Totales
+O O O F
+O O O F
+O O O F
+O O O F
+Totales C C C T= = = =
+= = = =
+= = = =
+= = = =
+= = = =
+ij
+ijFCET=
+
+()()11
+11150 379.91;560FCET= = =
+K
+¿Contra qué se comparan las frecuencias observadas?
+Frecuencias esperadas (Eij)
+(Suponiendo cierta H0ymanteniendo
+fijoslostotales observados)Test de homogeneidad  con tablas de contingencia (distintas a 2 ×2)
+9
+•En el ejemplo :
+9.91 31.61 108.48
+7.93 25.28 86.7Estado
+1
+Trat. 2
+39
+8.59 27.39 94.02
+410.57 33.72 115.71ijE Peor Igual Mejor
+5 para todos los ,  el método es válido
+Se admitirían 2 valores 1< 5,pero no 3 (1 2 20% =2.4)ij
+ijE i j
+E
+Condiciones de validez (la prueba c2no es aplicable siempre)
+•No puede  haber  frecuencias  esperadas  demasiado  pequeñas . 
+El test solo es válido  si se verifica :
+ - Ninguna  Eij es inferior a 1
+ - No mas del 20% de las  Eij son inferiores  o iguales  a 5
+Frecuencias  esperadas  bajo H0Test de homogeneidad  con tablas de contingencia (distintas a 2 ×2)
+10
+()22
+2
+expij ij ij
+i j i j ij ijOE OTEE−
+= = − c
+2 2 2
+2
+exp7 28 115560 13.879.91 31.61 115.71c= + + + − = L
+Obtención de la cantidad experimental. El estadístico c2
+Obtención del nivel de significación
+En el ejemplo  P < 0.05 por lo tanto  no se puede  asumir  
+que todos  los tratamientos  sean  iguales  (homogéneos) . 
+Al menos  hay uno diferente .En la distribución c2 con los grados de libertad:En el ejemplo :
+El test c2 es un test omnibus , es decir , permite  detectar  si algún  tratamiento  es diferente  al resto,  pero no dice ni cuantos  
+ni cuales  son distintos . En caso  de ser significativo , las causas  de la significación  se pueden  analizar  mediante  diferentes  
+métodos :
+- Análisis  de la tabla  de porcentajes  →método  fácil, pero relativamente  subjetivo
+- Análisis  de los residuos  estandarizados  → Los da SPSS ; método  objetivo  y muy intuitivo
+- Partición  de tablas  (reducción  a tablas  2×2)  → Método  potente , permite  obtener  mucha  información ,
+ es objetivo  pero laborioso )Análisis de las causas de significación
+2
+exp(6 ) 13.87gl=cg.l.= (nº de filas–1)×(nº de columnas –1)
+2
+exp 1  discrepancia  vs  (H )ij ijO E P    c
+2
+exp 0      (H )ij ijO E P    cTest de homogeneidad  con tablas de contingencia (distintas a 2 ×2)
+11
+Tabla de contingencia Tratamiento * Resultado
+Recuento
+7 28 115 150
+15 20 85 120
+10 30 90 130
+5 40 115 160
+37 118 405 560Tratamiento 1
+Tratamiento 2
+Tratamiento 3
+Tratamiento 4Tratamiento
+TotalPeor Igual M ejorResultado
+Total
+1n
+2n
+3n
+4n
+Proporción de Peor con el 
+Tratamiento 1 :  7/150=0.047 (4.7%)
+Tratamiento 2 : 15/120=0.125 (12.5%)
+Tratamiento 3 : 10/130=0.077 (7.7%)
+Tratamiento 4 :  5/160=0.031 (3.1%)Proporción de Igual con el 
+Tratamiento 1 :  28/150=0.187 (18.7%)
+Tratamiento 2 : 20/120=0.167 (16.7%)
+Tratamiento 3 : 30/130=0.231 (23.1%)
+Tratamiento 4 :  40/160=0.250 (25.0%)Proporción de Mejor con el 
+Tratamiento 1 :  115/150=0.767 (76.7%)
+Tratamiento 2 : 85/120=0.708 (70.8%)
+Tratamiento 3 : 90/130=0.692 (69.2%)
+Tratamiento 4 :  115/160=0.719 (71.9%)
+H0
+Estos porcentajes son iguales y estos también …. y estos también 
+(Los cuatro tratamientos empeoran por igual) (y  mejoran por igual) (y dejan igual, por igual)
+Tabla de contingencia Tratamiento * Resultado
+% de Tratamiento
+4.7% 18.7% 76.7% 100.0%
+12.5% 16.7% 70.8% 100.0%
+7.7% 23.1% 69.2% 100.0%
+3.1% 25.0% 71.9% 100.0%
+6.6% 21.1% 72.3% 100.0%Tratamiento 1
+Tratamiento 2
+Tratamiento 3
+Tratamiento 4Tratamiento
+TotalPeor Igual M ejorResultado
+Total
+Como P<0.05nopodemos aceptar H0,esdecir, nosepueden considerar equivalentes lostratamientos, entonces,
+¿qué tratamiento(s) es (o son) distinto(s) al resto?
+…antes deseguir, alavista delatabla quesigue acontinuación, deporcentajes porfilas,¿qué tratamiento usaría usted?Frecuencias observadas
+Proporciones observadasAnálisis de las causas de significación. Tabla de porcentajesTest de homogeneidad  con tablas de contingencia (distintas a 2 ×2)
+12
+Tabla de contingencia Tratamiento * Resultado
+% de Tratamiento
+4.7% 18.7% 76.7% 100.0%
+12.5% 16.7% 70.8% 100.0%
+7.7% 23.1% 69.2% 100.0%
+3.1% 25.0% 71.9% 100.0%
+6.6% 21.1% 72.3% 100.0%Tratamiento 1
+Tratamiento 2
+Tratamiento 3
+Tratamiento 4Tratamiento
+TotalPeor Igual M ejorResultado
+Total
+La tabla de porcentajes por filas permite detectar qué porcentajes son los mas dispares (y en principio allí 
+radica la significación del test)
+La discrepancia mas relevante se muestra en el % de ‘ peor ’ correspondiente a los tratamientos 2 (es el que mas 
+empeora) y 4 (el que menos empeora)
+La % de mejorías no es muy dispar, ronda en todos los casos el 70%Las proporciones observadas de ‘ igual ’ parecen definir dos grupos: los tratamientos 1 y 2  son similares y los 3 y 4 
+también
+No se puede negar que el método es un tanto subjetivo, pero debe contemplarse como una primera aproximación. 
+El estudio en profundidad de las causas de significación en las tablas de contingencia se hace mediante los otros 
+métodos indicadosEntonces, ¿qué tratamiento usaría usted?Test de homogeneidad  con tablas de contingencia (distintas a 2 ×2)
+Análisis de las causas de significación. Tabla de porcentajes (continuación)
+13
+                                  Natura leza del tumor
+Benigno Maligno Otros
+Localización Lóbulo frontal 23 9 6
+del tumor Lóbulo temporal 21 4 3
+Otras áreas 34 24 17
+141
+()
+()()
+()
+()
+()1
+11 11 12
+32
+3331
+2
+3
+12            Naturaleza
+Benigno Maligno Otros
+23 9 6Lóbulo frontal 38
+21 4 3Lóbulo temporal 28
+17 34 24Otras21.02 9.97 7.01
+15.49 7.35 5.16
+13.83 41.49 19 áreas 75.68
+78 37 2EE
+EOO
+OTotales
+F
+F
+F
+Totales C C====
+===
+=
+=
+==3 6 141CT==LocalizaciónCantidades esperadas 
+(suponiendo cierta H 0)Hipótesis:H0:Lanaturaleza deltumor esindependiente desulocalización
+H1:Lanaturaleza deltumor esta asociada asulocalizaciónAntes se trataba de la
+homogeneidad entre muestras ,
+ahora delaindependencia entre
+variables
+Elfundamento para obtenerlas esdiferente queeneltestdehomogeneidad, pero
+alfinallareceta eslamisma, asíquenocambia nada :Eij=F i×Cj/TAhora solo hay una muestra (nocuatro
+como antes) .Nosepuede hablar de
+homogeneidad .Test de independencia  con tablas de contingencia (distintas a 2 ×2)
+14
+5 para todos los ,  el método es válidoijE i j
+Se admitiría un valor 1< 5 pero no dos (9 20% =1.8)ijE
+Validez del método
+()22
+2
+expij ij ij
+i j i j ij ijOE OTEEc−
+= = − = 
+2 2 223 9 17141 7.6421.02 9.77 13.83= + + + − = L
+Estadístico de contraste:
+Nivel de significación:
+2  (3-1) (3-1)=4 . .con gl c
+0.10 0.20 P
+En la tabla
+Aunque nosepuede rechazar lahipótesis nula, hayindicios designificación .Unaumento detamaño demuestra sería
+recomendable para ganar potencia ydarfiabilidad alresultado
+Encaso dehaber obtenido significación, losporcentajes sepueden hacer porfilas oporcolumnas (como más intuitivo
+resulte)Test de independencia  con tablas de contingencia (distintas a 2 ×2)
+Igual que en el 
+test de 
+homogeneidad
+Igual que en el 
+test de 
+homogeneidad
+Usando  R: 
+> 1-pchisq(7.64,4,T)
+[1] 0.1900959
+15
+1.Identificar siesuntestdehomogeneidad ountestdeindependencia (elnúmero demuestras presentes enel
+estudio lodebe dedejar claro (1muestra→ indep ;2omás →homogeneidad)
+3.Silatabla es2x2
+Silatabla es“más grande” de2x2(continuar)2.Formular las hipótesis ( homogeneidad o independencia en H 0)
+4.Obtener las cantidades esperadas (suponiendo cierta la H 0)
+5.Comprobar las condiciones de validez (su cumplimiento se debe indicar de forma explícita)
+7.Obtener el nivel de significación Pe interpretarlo (como siempre):
+8.Sieltestharesultado significativo, obtener unatabla deporcentajes queseaadecuada para estudiar lascausas
+dedicha significación (comentar detalladamente elresultado)
+P
+PSiSignificativo (la muestra es improbable bajo H 0)
+No Significativo (no se puede rechazar H 0)
+Habitualmente al5%ysi0.05<P<0.20laaceptación deH0noesfiable ysedebe plantear unaumento del
+tamaño muestral (regla automática tradicional)En la práctica (análisis de tablas  de contingencia “grandes”)
+NOseguir este esquema,
+acudir alapartado dedicado
+atablas deeste tipo
+6.Si el método es aplicable, obtener el estadístico de contraste 
+2
+2
+expij
+ijijO
+T
+E=−c
+ij
+ijFCET=En el análisis de tablas de contingencia deberían ser consideradas las siguientes etapas :
+16
+•Unatabla 2x2puede presentarse de8formas distintas (cambiando filas porcolumnas, filas entre sío
+columnas entre sí).→Esnecesario adoptar unformato para facilitar laformulación implicada yla
+interpretación delanálisis .
+Sevaaconsiderar elsiguiente formato estándarEL CASO PARTICULAR DE LAS TABLAS 
+DE CONTINGENCIA 2 ×2
+•Permiten resolver problemas degran interés enelámbito biosanitario (enprincipio, toda variable cuantitativa
+esdicotomizable ).Consideraremos enparticular larelación entre laexposición aundeterminado factor de
+riesgo (FR) ylaaparición deunaenfermedad (E)(entérminos generales, sealudirá alasvariables factor
+yrespuesta respectivamente)
+•Permiten obtener “buenas” medidas delaintensidad delaasociación entre lasvariables implicadas
+•Aunque elplanteamiento general eselmismo quepara lastablas “mas grandes”, lastablas 2×2requieren
+untratamiento especial :lafórmula general delestadístico decontraste c2¡NO ESAPLICABLE!
+Disposición delainformación ynotación asumidas enlastablas 2x2:
+1
+2
+1211 12
+21 22E
+:ETotal
+F
+F
+Total C C TFR FRNo expuesto Factor de Riesgo Expuesto
+Enfermedad
+Presente
+AusenteOO
+OO
+Frecuencias observadas•Las tablas 2x2 surgen cuando las dos cualidades son de tipo dicotómico (o binario)Introducción
+•Variable respuesta (laenfermedad) porfilas.
+Modalidad demayor interés (SIenfermo) enla
+primera fila
+•Variable Factor (elfactor deriesgo) por
+columnas .Modalidad que induce atener la
+enfermedad enlaprimera columna
+17
+Análisis de tablas de contingencia 2x2
+()()
+()
+()E 20 26 46
+E 60 294 354
+: 80 320 400TotalFR FR
+TotalNo Si
+Bajo
+Normal
+Peso del niño 
+al nacerHábito de Fumar de la madreEjemplo :
+•Laenfermedad (respuesta )esta por
+filas,ylaprimera filaeslacategoría
+queinteresa estudiar (peso=Bajo )
+•Elfactor deriesgo (factor )sedispone
+porcolumnas ,ylaprimera columna
+eslacategoría que, encaso de
+asociación significativa, induce atener
+laenfermedad (Fumar=Si )Observaciones :
+Asociación positiva
+(la primera columna induce a 
+estar en la primera fila)
+12
+1
+2BB
+A
+A
++
++
+12
+1
+2BB
+A
+A
++
++Asociación negativa
+(la primera columna induce a 
+estar en la segunda fila)Tipos deasociación :
+•Esmas fácileintuitiva lainterpretación
+delosresultados cuando latabla se
+construye deforma que, encaso de
+haber asociación significativa, esta sea
+detipopositivo
+18
+0.11 0.0 5
+0.750 0.919 0.880. 8
+525 1 0
+: 1 1 1Total
+TotalSi No
+Bajo
+Normal
+Peso del 
+niño al 
+nacerMadre fumadora
+Deltotal demadres fumadoras, el25%han
+tenido unniño conelpeso demasiado bajo
+Deltotal demadres nofumadoras, el8%han
+tenido unniño conelpeso demasiado bajoAveces noesobvio quécategoría constituye elfactor deriesgo (por ejemplo, silavariable eselsexo) .Sise
+hace latabla deporcentajes porcolumnas ,seveenseguida quécategoría está asociada deforma positiva
+conlaenfermedad encaso dequehaya significación
+Conclusión :25%>8%,esdecir que elproblema sedamás enlasmadres fumadoras, esdecir, silas
+variables están asociadas, fumar=si esrealmente lamodalidad deriesgo para queelniño tenga elpeso bajo al
+nacerSi hay asociación, mejor que sea 
+positiva (la primera columna 
+induce a estar en la primera fila)
+SI NO
+SI
+NO
++
++Exposición al 
+Factor de riesgo
+Presencia de la 
+enfermedadAnálisis de tablas de contingencia 2x2
+El formato de tabla m ás conveniente
+19
+Tipo I-Estudio transversal .Setoman T(=400)individuos
+alazar yseclasifican enbase alapresencia oausencia dela
+enfermedad ysuexposición onoalfactor deriesgo .
+Tipo II-a)Estudio prospectivo, longitudinal ode
+cohortes .Setoman C1(=80)yC2(=320)individuos alazar
+(muestras M1yM2)yseclasifican enbase alapresencia ono
+delaenfermedad .
+Tipo II-b)Estudio Retrospectivo odeCaso -Control .
+Setoma F1(=46)yF2(=354)individuos alazar (muestras M1
+yM2)yseclasifican enbase alaexposición alfactor de
+riesgo .
+()()
+()
+()11 12 1
+21 22 2
+12E 46
+E 3520 26
+60 2 4
+80 39
+400 204TotalFR FR
+F
+F
+Total C C T= = =
+= = =
+= ==No Si Fuma
+Peso
+Bajo O O
+Normal O O
+()()
+()
+()11 12 1
+21 2
+1 22226
+2E 46
+E 354
+420
+9
+0060 4TotalFR FR
+F
+F
+Total T= = =
+= = =
+=No Si Fuma
+Peso
+Bajo O O
+Nor
+CO
+Cmal O
+80= 320=
+()()
+()
+()11 12
+21 22 2
+1260 29E
+E
+80 320 42
+000 26
+4TotalFR FR
+Total C C T==
+==
+= = =1
+354 =46 =No Si Fuma
+Peso
+Bajo O O
+Nor F mal O OF
+M
+1M
+2M
+1M
+2MTipos demuestreo otipos deestudio epidemiológicos
+Latabla considerada puede responder atrestipos demuestreo
+Obsérvese quelatabla eslamisma .Cambia quién oquiénes sonlasmuestras .Análisis de tablas de contingencia 2x2
+Hay una sola muestra
+De ella se observa cuántos enfermos y cuantos expuestos hay
+Hay dos muestras independientes
+Una de enfermos y otra de no enfermos
+De cada muestra se observan los expuestos y no expuestosHay dos muestras independientes :
+Una de expuestos y otra de no expuestos
+De cada muestra se observan los enfermos y no enfermosEltipo demuestreo (odeestudio )no
+esunaspecto exclusivo delastablas
+2×2,pero para proceder asuanálisis
+espreciso tenerlo encuenta
+20
+1
+2
+1211 12
+21 22E
+:ETotal
+F
+F
+Total C C TFR FRNo expuesto Factor de Riesgo Expuesto
+Enfermedad
+Presente
+AusenteOO
+OO
+Testc2entablas 2x2
+•Hipótesis :
+•Estadístico decontraste :
+•Grados delibertad :
+( )2
+11 22 12 21 2
+exp
+1 2 1 2O O O O cTF F C C−=-c*Con (que es la frecuencia mínima esperada)
+()()1 2 1 2 Mín ; Mín ; F F C CET=Análisis de tablas de contingencia 2x2
+Condición de validez*Estudio Corrección**c Muestra(s)
+14.9E
+( 7.7  si 500) ET
+12
+121 si 
+2 si FFcFF==
+12 y FF
+RetrospectivoTransversal
+T
+6.2E
+( 3.9  si 500) ET
+0.5c=
+12 y CC
+Prospectivo
+12
+121 si 
+2 si CCcCC==H0:Homogeneidad entre grupos oIndependencia
+entre variables, según eltipodemuestreo
+H1:Heterogeneidad oAsociación
+ATENCIÓN :Noesválida laexpresión general
+delestadístico c2usada contablas “grandes”
+**Obsérvese quesielestudio estransversal c=0.5,encaso contrario esc=1silostamaños demuestra sondistintos o
+c=2sisoniguales
+En tablas 2x2, siempre g.l.=1Lacondición clásica esquefuera
+E≥5independientemente deltipo
+deestudio .Esincorrecto
+21
+-Transversal
+()()
+()
+()11 12 1
+21 22 2
+12E 46
+E 3520 26
+60 2 4
+80 39
+400 204TotalFR FR
+F
+F
+Total C C T= = =
+= = =
+= ==No Si Fuma
+Peso
+Bajo O O
+Normal O O
+()()
+()
+()11 12 1
+21 2
+1 22226
+2E 46
+E 354
+420
+9
+0060 4TotalFR FR
+F
+F
+Total T= = =
+= = =
+=No Si Fuma
+Peso
+Bajo O O
+Nor
+CO
+Cmal O
+80= 320=
+()()
+()
+()11 12
+21 22 2
+1260 29E
+E
+80 320 42
+000 26
+4TotalFR FR
+Total C C T==
+==
+= = =1
+354 =46 =No Si Fuma
+Peso
+Bajo O O
+Nor F mal O OF
+: La proporción de niños con peso bajo es  la misma en madres
+       fumadoras que en no fumadoras
+:La proporción no es la misma  (por tant o hay asociación entre 
+       ambos caracteres)
+
+
+0
+1H
+H 
+()()()() ( )
+()()()()2
+2
+exp20 294 26 60 1
+400 89946 354 80 320−
+==-
+17. c
+()()()() ( )
+()()()()2
+2
+exp20 294 26 60 1
+400 89946 354 80 320−
+==-
+17. c
+La proporción de madres fumadoras con hi jos de bajo peso es igual a la
+         proporción de madres fumadoras en el grupo de niños de peso normal
+La proporción no es la misma y por tanto  hay aso
+0
+1H
+H  ciación entre ambos caracteres
+
+
+-Prospectivo
+-Retrospectivo
+0.001P
+0.001PResolución del ejemplo 
+()() Mín Mín9.2
+40046;354 80;320E==
+La frecuencia mínima esperada es
+()()()() ( )
+()()()()2
+2
+exp20 294 26 60 0.5
+40046 354 80 320−
+==-
+17.903 c
+: El peso del niño es independiente del h ábito de fumar de la madre
+:Hay asociación entre ambos caracteres
+
+0
+1H
+H 
+0.001P
+Validez:
+500; 3.9 TE
+Validez:
+500; 7.7 TE
+Validez:
+500; 7.7 TETestc2entablas 2x2
+Si el estudio es de tipo:
+R: 1-pchisq(17.903,1,ncp=0.5)
+R:  1 -pchisq(17.889,1,ncp=1)
+22
+•Sieltestessignificativo, Pnoindica laintensidad delaasociación entre lasvariables (noindica lopeligroso
+queesquelamadre fume para queelrecién nacido tenga elpeso demasiado bajo)
+Psolo indica lamagnitud delaevidencia muestral afavor (siesalto) oencontra (siesbajo) deH0
+•Una medida deasociación esunindicador delafuerza ointensidad delaasociación entre lasvariables
+•Lasmejores medidas para cuantificar laasociación entre variables categóricas son lasdefinidas sobre las
+tablas 2×2
+•T oda medida deasociación vaatener unvalor queesindicador delafalta deasociación oindependencia
+•Lasdiferentes medidas sepueden definir :
+•Como cocientes delasfrecuencias odelasproporciones observadas
+Eneste caso, silamedida vale 1indica quenohayasociación (eneltestc2será P>0.05)
+Son medidas deeste tipo:Elriesgo relativo ylarazón deproducto cruzado (odds ratio)
+•Como diferencias delasfrecuencias odelasproporciones observadas
+Eneste caso, silamedida vale 0indica quenohayasociación (eneltestc2será P>0.05)
+Son medidas deeste tipo:elriesgo absoluto (diferencia deBerkson )yelriesgo atribuibleMedidas de asociación en tablas de contingencia 2x2
+¿Es muy peligroso que la madre fume para que el niño tenga el peso bajo al nacer?
+23
+Indica  cuánto  es mayor  (o menor ) la probabilidad  de tener  la enfemedad   cuando  se 
+está expuesto  al factor  de riesgo  (p1) que cuando  no se está (p2)
+20 26ˆ 0.16980 320d= − =
+11 12 1
+21 22 2
+1220 26 46
+60 294 354
+80 320 400Si NoPeso
+Bajo
+NormTotal
+F
+F
+Totalal
+C C TFumar
+==
+==
+==
+=
+==OO
+OO
+La probabilidad  de que el recién  nacido  tenga  un 
+peso  bajo en madres  fumadoras  supera  a la 
+correspondiente  a madres  no fumadoras  un 16.9%Riesgo absoluto (diferencia de Berkson ) 
+Asociación 
+negativa
+d<0Asociación 
+positiva
+d>0
+1 0 .( )
+0
+0 1 .( )d Asoc
+d Independencia
+d Asoc−   −
+=
+  +
+P <0.05 en el test c2P <0.05 en el test c2
+P >0.05 en el test c2
+En el ejemplo:Estimador puntual:
+Valores posibles:Medidas de asociación en tablas de contingencia 2x2
+11 12 11 22 12 21
+12
+1 2 1 2ˆˆˆO O O O O Od p pC C C C−= − = − =
+12 1
+21
+1*
+** * *
+*EFR FR Total
+To al C tCO O
+11
+1 1ˆO
+C p=
+12
+2 2ˆO
+C p=
+En los estudios  retrospectivos  no se puede  estimar  (ello es debido  a que este tipo de estudios  no permiten  
+estimar  la prevalencia  de la enfermedad  P(E)
+12 (  |  ) (  |  ) d P E FR P E FR p p= − = −Tipo de estudios en que se puede estimar•T ransversales
+•Prospectivos
+
+
+
+Definición:
+11d−  +
+24
+Indica  cuántas  veces  es mayor  (o menor ) la 
+probabilidad  de tener  la enfemedad   cuando  
+se está expuesto  al factor  de riesgo  (p1) que 
+cuando  no se está (p2)
+()()
+()()20 320ˆ 3.0726 80R==
+11 12 1
+21 22 2
+1220 26 46
+60 294 354
+80 320 400Si NoPeso
+Bajo
+NormTotal
+F
+F
+Totalal
+C C TFumar
+==
+==
+==
+=
+==OO
+OO
+La probabilidad  de que el recién  nacido  tenga  un 
+peso  bajo es 3.07 veces  mayor  (¡el triple!)  si la 
+madre  es fumadora  respecto  a si no lo esRiesgo relativo
+Asociación 
+negativa
+R<1Asociación 
+positiva
+R>1
+0 1 .( )
+1
+1 .( )R Asoc
+R Independencia
+R Asoc  −
+=
+  +
+P <0.05 en el test c2P <0.05 en el test c2
+P >0.05 en el test c2
+En el ejemplo:Estimador puntual:
+Valores posibles:Medidas de asociación en tablas de contingencia 2x2
+1 11 1 11 2
+2 12 2 12 1ˆ /ˆ
+ˆ /p O C O CRp O C O C= = =
+12 1
+21
+1*
+** * *
+*EFR FR Total
+To al C tCO O
+11
+1 1ˆO
+C p=
+12
+2 2ˆO
+C p=
+En los estudios  retrospectivos  solo se puede  aproximar  si la enfermedad  es relativamente  rara (esto es, si su 
+prevalencia  es P(E)< 0.10) en cuyo  caso  tanto  el estimador  puntual  como  el IC se aproximan  a través  de la razón  
+de producto  cruzado  (la siguiente  medida  que vemos  a continuación )
+1
+2(  |  )
+(  |  )p P E FRRp P E FR==Tipo de estudios en que se puede calcular•T ransversales
+•Prospectivos
+
+
+
+Definición:
+0R 
+25
+()()
+()()20 294ˆ 3.76926 60==O
+11 12 1
+21 22 2
+1220 26 46
+60 294 354
+80 320 400Si NoPeso
+Bajo
+NormTotal
+F
+F
+Totalal
+C C TFumar
+==
+==
+==
+=
+==OO
+OO
+Lafracción deniños conpeso bajo alnacer
+frente alosdepeso normal es3.77veces
+mayor silamadre esfumadora que sinolo
+es.
+()()
+()()11 22
+12 210.5 0.5ˆ0
+0.5 0.5ijOOO
+OO++=  =
+++O'Fundamento: Superioridad de la enfermedad en cada categoría del FR:
+1 11 22
+12 21 2ˆˆ
+ˆS O O
+OO S==O
+0 1 .( )
+1
+1 .( )O Asoc
+O Independencia
+O Asoc  −
+=
+  +
+P <0.05 en el test c2P <0.05 en el test c2
+P >0.05 en el test c2Valores posibles:
+En el ejemplo:Asociación 
+negativa
+O <1Asociación 
+positiva
+O >1
+
+
+
+
+1 1
+221 2
+21
+**
+*
+* *EEFR FR Total
+TO
+otalO
+OO
+11
+21 1ˆO
+O S=
+12
+22 2ˆO
+O S=
+Tipo de estudios en que se puede calcular•Transversales
+•Prospectivos
+•RetrospectivosEn todos:
+Larazón deproducto cruzado eslamedida deasociación porexcelencia enepidemiología :
+•Ventajas :(1)Esválida encualquier tipodeestudio ;(2)forma parte demodelos más complejos (regresión logística)
+•Desventaja :suinterpretación esmenos intuitiva que ladelriesgo .Aveces selainterpreta (inadecuadamente) como si
+fuera elriesgo relativo
+1 11 21ˆS O O=Superioridad de la enfermedad en los expuestos
+Superioridad de la enfermedad en los no expuestos
+2 12 22ˆS O O=
+Si algunaRazón del producto cruzado ( odds ratio o razón de ventajas)Medidas de asociación en tablas de contingencia 2x2
+0O 
+26 Medidas de asociación en tablas de contingencia 2x2
+•Losestudios prospectivos
+‒Son más difíciles/costosos derealizar (requieren seguimiento ;expuestos aldesgaste muestral )
+‒Permiten estimar laincidencia (casos nuevos deenfermedad/unidad detiempo), pero nolaprevalencia
+‒Permiten analizar elefecto defactores (deriesgo) extraños
+1
+2
+1211 12
+21 22E
+:ETotal
+F
+F
+Total C C TFR FRNo expuesto Factor de Riesgo Expuesto
+Enfermedad
+Presente
+AusenteOO
+OO•Losestudios transversales
+‒Menor dificultad/coste ensuejecución .Más rápidos derealizar quelosprospectivos .
+‒Nopermiten establecer relaciones causales
+‒Son losúnicos quepermiten estimar laprevalencia delaenfermedad
+‒Admiten cualquier medida deasociación
+1ˆ()P E F T=Comentarios adicionales sobre los tipos de estudio
+•Losestudios retrospectivos
+‒Son rápidos derealizar, yaquenorequieren seguimiento
+‒Son losmás adecuados para elestudio deenfermedades raras (deprevalencia baja)
+‒Nopermiten estimar parámetros deinterés epidemiológico como laprevalencia olaincidencia dela
+enfermedad .
+‒Noadmiten laestimación deriesgos, aunque sique esposible aproximar elriesgo relativo cuando la
+enfermedad espoco frecuente :
+Enlosestudios retrospectivos sobre enfermedades raras, elriesgo relativo sepuede aproximar a
+través delarazón deproducto cruzado .Seacepta laaproximación cuando laprevalencia es
+P(E)<10%(esta información sedebe dardeforma adicional ysesuele obtener deestudios previos de
+prevalencia )
+ˆˆ ( ) 0.1Si P E R O → 
+Cuidado :Solo eslícita esta aproximación/interpretación enlasituación indicada .Esunerror frecuente
+interpretar siempre larazón deproducto cruzado Ocomo sifuera elriesgo relativo (dado que la
+interpretación deOesmenos intuitiva queladeR).
+27
+5.Si el método es aplicable, obtener el estadístico de contraste adecuado para el tipo de estudio 
+2
+expc1.Representar latabla enelformato estándar eidentificar eltipo deestudio realizado eindicarlo deforma explícita .Si
+esunestudio prospectivo oretrospectivo, eltest será dehomogeneidad ;siestransversal eltest será de
+independencia .Recuérdese queelnúmero demuestras presentes enelestudio lodebe dedejar claro (1muestra→
+testdeindependencia (estudio transversal) ;2omás →testdehomogeneidad (estudio prospectivo oretrospectivo)
+3.Con lastablas 2x2:
+•NOsepuede aplicar lafórmulac2general .Debe usarse aquella que viene corregida conunacorrección por
+continuidad
+•NOesnecesario calcular lasfrecuencias esperadas2.Formular las hipótesis (homogeneidad o independencia siempre en H0)
+4.Comprobar las condiciones de validez (su cumplimiento se debe indicar de forma explícita)
+6.Obtener el nivel de significación Pe interpretarlo (con la regla de siempre):
+7.Obtener unaomás medidas deasociación ,quesean adecuadas dado eltipodeestudio, ysuICal95%,
+P
+PSiT est significativo (la muestra es improbable bajo H 0)
+T est no significativo (no se puede rechazar H 0)
+•Sieltestharesultado significativo :permiten medir lafuerza delaasociación entre lasvariables .Debe ocurrir, en
+general* :En el análisis de tablas 2 ×2deberían ser consideradas las siguientes etapas :
+•Sieltestnohasido significativo elICproporciona unaidea delafiabilidad delaaceptación deH0.Debe ocurrir,
+engeneral* :
+() () () 1 1 1 0 , 1 , 1IC d IC R IC O− − −  
+() () () 1 1 1 0 , 1 , 1IC d IC R IC O− − −  
+*Aveces esto noocurre, eltestpuede sernosignificativo y,sinembargo, elICpara lamedida deasociación nocontiene alvalor queindica
+independencia (pero porpoco) .Esto esdebido aqueeltestylosICseobtienen pormétodos distintos .Engeneral estas situaciones nosedan,
+pero silohacen constituyen unindicador claro defalta depotencia (muestras pequeñas) .Enestos casos, losICsuelen sermuy anchos (poco
+precisos), loquecorrobora aúnmásesta idea.Laprecisión delintervalo permite hacer unaapreciación delaidoneidad deltamaño demuestra utilizado
+28
+Test de McNemar para comparar dos proporciones apareadas
+Ejemplo :Seestudia laeficacia dedosterapias alternativas, A(analgésica) yB(terapia física) para paliar el
+dolor crónico enpacientes con fibromialgia .Enelestudio han participado n=166 mujeres que fueron
+sometidas durante dosperiodos de6meses acada unodelosmétodos .Elorden enqueseaplicaron las
+terapias fuealeatorizado .Delconjunto depacientes considerado, 38respondieron aambos métodos, 82no
+respondieron aninguno y15delosque respondieron almétodo Anorespondieron alB¿Puede
+considerarse unaterapia más eficaz quelaotra?
+1. Identificación del problema:
+Cada paciente aporta dosobservaciones :surespuesta alaterapia Aysurespuesta alaterapia B,setrata
+portanto demuestras apareadas .Como losparámetros deinterés son lasproporciones decasos que
+responden acada terapia, elproblema consiste encontrastar lahomogeneidad dedos proporciones de
+muestras apareadas
+53 69
+113 97   A   
+Si
+No                         Terapia
+Respuesta    B   
+Podríamos pensar endos tipos detabla : 2. Información muestral:
+Noeslatabla que interesa, sepierde lainformación apareada :noes
+posible saber cuál eslarespuesta alaterapia Bporparte deunpaciente
+que harespondido positiva onegativamente alaA.Además, obsérvese
+queconeste planteamiento lasuma defrecuencias es332(eldoble queel
+número depacientes)
+Este formato anidado (lasmodalidades delarespuesta están anidadas
+encada modalidad delaterapia) siquepermite conservar lainformación
+apareada yesportanto elformato apropiado .
+53
+113
+69 97 16638 15
+31 82Respuesta                           Terapia B
+Si No
+Terapia Si  A NoAnexo. Otro tipo de tablas 2 ×2: muestras apareadas
+¿Aquépregunta seresponderá siserealiza eltestc2sobre esta tabla?
+29
+Portanto, setrata decomparar silaproporción decasos queSI
+supera laterapia AyNOlaBesigual alaproporción decasos
+queNOsupera laAySIlaB:Test deMcNemar3. Planteamiento de la inferencia. Hipótesis
+1 2 12 21
+1 1 2 1 12 2100H : H : 
+H : H : p p p p
+p p p p→ 
+==
+
+Declararemos eltestsignificativo siP≤=0.05
+11 12
+21 2253
+113
+69 97 16638 15
+31 82                            Terapia B
+Si No
+Terapia Si  A No
+nnn
+nn==
+==
+=
+1
+11 12 11 12
+1 11 12ˆ ˆ ˆ Proporción de pacientes que responden a l tto. A p
+n n n np p pn n n+=
++→ = = = +
+2
+11 21 11 21
+2 11 21ˆ ˆ ˆ Proporción de pacientes que responden a l tto. B p
+n n n np p pn n n=+=
++→ = = +Loscasos quesuperan ambas terapias (olosquenosuperan ninguna) noaportan información diferencial
+1 2 12 21 . Comparar   con  supone comparar con   p p p p
+2138 15 530.3193166 166
+38 31 690.4157166 166ˆ
+ˆp
+p+= = =
++== =
+4. Condición de validez
+12 21 10 nn+
+Debe ser .Como elmétodo esaplicable .
+12 21( 15) ( 31) 46 10nn= + = = 
+12 2115 310.0904; 0.1867166 166ˆˆ  pp= = = =Comparación de dos proporciones Apareadas. Test de McNemar
+30
+5. Estadístico de contraste y nivel de significación 
+12 21
+exp
+12 210.5 15 31 0.52.212
+15 31nnz
+nn−−−−= = =
+++
+en la normal estándar
+0.02 0.03 P
+Nopuede aceptar lahomogeneidad delasdosterapias .Aunadeellas seresponde más quealaotra(la
+probabilidad deerror implícita enesta afirmación esmenor al3%):
+2131.93%
+41.57%ˆ
+ˆp
+p=
+=
+Alaterapia Bseresponde enmayor proporción quealaA
+( 0.027)P=
+6. Estimación de la diferencia de porcentajes (efecto diferencial de la terapia B respecto a la A)
+()2
+12 21 12 21
+1 1 2 12 21 ( ) ( 1)22nn nnIC p p z nnnn− − −− =  + + −++
+( )95% 1 2( ) 0.0952 0.0787 0.1739; 0.0166 IC p p− =−  = − −
+Para unnivel deconfianza del95%(z=1.96)(método de Agresti -Min)
+Laterapia Btiene mayor respuesta positiva que laA,puntualmente ladiferencia esdeun9.5%de
+pacientes queresponden alaBmás quealaA.Con un95%deconfianza, esta diferencia esunvalor
+superior al1.66%einferior al17.39%Obsérvese que como seharechazado la
+hipótesis deque losdos porcentajes sean
+homogéneos (iguales), ladiferencia=“cero”
+noestá contenida enelintervalo
+53
+113
+69 97 16638 15
+31 82Respuesta                           Terapia B
+Si No
+Terapia Si  A NoComparación de dos proporciones Apareadas. Test de McNemar
+R: (1-pnorm(2.212))*2
+[1] 0.02696666

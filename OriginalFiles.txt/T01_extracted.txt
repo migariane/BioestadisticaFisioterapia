@@ -1,0 +1,872 @@
+1/41
+Grado en Enfermería
+Tema I
+Estadística descriptivaESTADÍSTICA
+Unidad de Bioestadística –Facultad de Medicina
+Universidad de GranadaPedro Femia Marzo & Miguel Angel Luque Fernandez
+pfemia@ugr.es ; mluquefe@ugr.es
+Actualización: 2023
+2/41
+1. Definición de la población objeto de estudio
+2. Selección de la muestra → Representatividad de las observaciones
+3. Medición → validez y fiabilidad del instrumento de medida
+4. Formato admisible por un programa de análisis estadístico
+5. Métodos descriptivos
+6. Métodos inferenciales. (6b) ¿Son correctos los supuestos sobre la 
+población? ¿es posible establecer un modelo ?
+7. Informe estadístico → evaluación de los resultados. 
+8. Publicación de resultados → Nueva información sobre la población (9)
+¿En cuáles de esta etapas se puede cometer error ? ¿de qué tipo?5
+678
+8
+1
+4 32
+9PoblaciónMuestreo
+Medición/Observación
+Muestra
+Análisis de los 
+datos (asociación 
+entre variables,…)Supuestos 
+acerca de la 
+población
+(¿modelo?)
+6bPreámbulo
+La investigación empírica
+Generación del 
+archivo de datos 
+en bruto
+Resumen 
+descriptivo
+Inferencia estadística
+3/41
+Tabla de datos en bruto (casos ×variables) → cómo son los datos que analiza un paquete informático 
+casoVariable
+Valor perdido o faltantePreámbulo
+4/41
+Los tipos de datos
+Modalidad
+Cada una de las maneras en las que se presenta un carácter.
+Cuantitativos :aquellos quenecesariamente requieren deunnúmero para serexpresados demanera
+rigurosa .
+3.Discretos :aquellos datos quesólo pueden tomar "valores numéricos aislados“ (números
+enteros )
+→Recuentos (nºderecaídas trasuntratamiento, nºdehijos, nºdeafectados, …)
+4.Continuos :pueden tomar cualquier valor dentro deunintervalo, demodo que entre dos
+valores cualquiera siempre existe otrovalor posible (números reales )
+→Medidas (peso, nivel decolesterol, presión arterial, …)Cualitativos :aquellos queserefieren aunacualidad, nosonexpresables demanera rigurosa porun
+número .
+1. Nominales :lasmodalidades nosonsusceptibles deestar ordenadas .Sisolo haydos
+modalidades sehabla dedatos Binarios oDicotómicos .
+→Categorías (sexo, grupo sanguíneo, seronoseropositivo para VIH,…)
+2.Ordinales :cuando lasmodalidades sonsusceptibles deestar ordenadas
+→Escalas (escala dedolor (nada/poco/mucho), escala desatisfacción (baja/media/alta), ...)Tipos de Datos (o tipos de variables)
+5/41
+Cuantitativos :
+3.Discretos →Recuentos
+4.Continuos :→MedidasCualitativos :
+1. Nominales →Categorías
+2.Ordinales →Escalas
+redondeocategorizaciónContenido informativo
++-
+Edad
+(exacta)22.2
+38.5
+48.8
+….22
+38
+48
+….Edad
+(forma habitual)Grupos de 
+Edad 20-30
+30-40
+40-50si
+noEdad > 35¿Qué tipo de carácter es la 
+edad de un paciente? ?Los tipos de datos
+6/41
+Nivel de Sobrecarga
+Nivel de Compromiso
+Nivel de Competencia
+… etcPor parte del profesional
+Por parte del paciente
+Nivel de calidad de vida (Cuestionario SF36)
+Nivel de dependencia (Escala de Barthel)
+Capacidad funcional física de las actividades cotidianas (T est de Barthel, Escala de Lawton y Brody)
+Riesgo de deterioro de la integridad cutánea (Escala Norton) 
+Nivel de impacto de la fibromialgia (FIQ, Fibromyalgia Impact Questionnaire )
+… etc
+Suele constar devarias preguntas =ítems cada unode
+loscuales evalúa unaspecto determinado
+Con frecuencia, losítems seconstruyen enforma deun
+enunciado yuna escala deintensidad (habitualmente
+conunnúmero impar deopciones) =escalas deLikertEl paciente con esquizofrenia debe permanecer aisladoConstructo
+Ejemplos deconstructos :Inteligencia, personalidad, innovación, ansiedad, …Idealización deunconcepto enelmarco deunateoría (habitualmente psicológica) .Desde elpunto devista físico, el
+constructo esunamagnitud malmedible ,nohayuninstrumento físico demedida quepermita evaluar sumagnitud o
+intensidad .Ensulugar seutilizan cuestionarios (=instrumentos enelámbito psicométrico) .Habitualmente sedefine a
+través demúltiples aspectos (=variables =ítems delcuestionario) .(RAE: Construcción teórica para comprender unproblema determinado )
+¿Puede definir lo que es la estatura de un paciente?
+¿Puede explicar cómo cuantificar la estatura de un paciente?
+¿Puede definir lo que es el nivel de ansiedad de un paciente?
+¿Puede explicar cómo cuantificar el nivel de ansiedad de un paciente?
+Cuestionario = Instrumento para medir constructos
+Lasescalas deLikert sonsumativas ,demanera que
+seobtiene una puntuación total delcuestionario
+obtenida porlasuma delosítems
+Las escalas en Medicina y Ciencias de la Salud
+¿Da igual la codificación elegida?
+7/41
+La escala es sumativa . Para el diagnóstico suelen asumirse puntos de corte (=categorización de la variable numérica)
+Un total de 22 ítems puntuados en una escala de 0 a 4 → Puntuación total 0 -88 puntos< 46 No hay sobrecarga
+46-56 Sobrecarga moderada
+>56 Sobrecarga intensa
+En España es más habitual puntuar los ítems de 1 a 5, entonces la 
+escala iría de 22 a 110 puntos < 68 No hay sobrecarga
+68-78 Sobrecarga 
+moderada
+>78 Sobrecarga intensaFiabilidad test-retest = 0.86Ejemplo de variables de tipo ordinal (escalas) 
+Test de Zarit para evaluar el nivel de sobrecarga del cuidador
+8/41
+Escala de Norton –Valoración del riesgo del deterioro de la integridad cutánea. 
+Consta de 14 ítems. Cada uno se puntúa de 1 (=mayor deterioro) a 4 (=menor deterioro)
+Riesgo de formación de úlceras según la puntuación total:
+Escala de Barthel –Valoración de la capacidad para realizar las actividades básicas de la vida diaria
+Consta de10ítems .Notodos sepuntúan igual .Valoración de
+cada ítem:0(=independencia), 5,10incluso 15enalgunos
+ítems (mayor puntuación =mayor independencia)Actividad Puntuación
+Comer 0 –5 –10
+Empleo ducha/baño 0 –5
+Vestirse 0 –5 –10
+Aseo personal 0 –5
+Control anal 0 –5 –10
+Control vesical 0 –5 –10
+Uso retrete 0 –5 –10
+Trasladarse (sillón/cama) 0 –5 –10 –15
+Desplazamiento 0 –5 –10 –15
+Subir escaleras 0 –5 –10Puntuación Riesgo
+1-11    Muy alto
+12-14  Moderado
+15-20  Mínimo
+0   –19 Dependencia Total
+20  –39 Dependencia Grave
+40  –59 Dependencia Moderada
+60  –85 Dependencia Leve
+86  –100 IndependientePuntuación Nivel de dependencia
+Construir un instrumento no es inmediato. Debe demostrarse su
+•Validez : que el instrumento realmente mide el constructo que se pretende medir
+•Fiabilidad : si se mide repetidamente a los mismos pacientes ¿se obtiene siempre el mismo resultado? 
+Elanálisis decuestionarios nosevaaabordar eneste curso .Requiere conocimientos untanto más avanzados (para
+losqueeste curso constituye labase) .Técnicas habituales sonlaspropias delAnálisis Factorial (tanto exploratorio
+como confirmatorio)Más ejemplosEjemplo de variables de tipo ordinal (escalas) 
+9/41
+Métodos descriptivos
+3 niveles descriptivos:
+• Tablas de frecuencias
+• Representaciones 
+gráficas
+• Medidas descriptivasResumen de la información
+Datos
+Se trata de sintetizar cómo es la 
+distribución de la variable
+10/41
+Tablas de frecuencias // variables nominales
+Grupo sanguíneo observado en los participantes del 
+estudio (n=500) 
+Frecuencia
+absoluta 
+(ni)Frecuencia
+relativa ( fi)Porcentaje
+A 150 0.30 30.0
+B 75 0.15 15.0
+AB 25 0.05 5.0
+0 2500.5050.0
+Total 500 100.0
+12
+1
+2 1
+1Frecuencia absoluta ( ):   .......     
+/ ; .......   1 Frecuencia relativa ( ) :   k
+i k
+i
+k
+k ii i
+irecuento f n f f f
+f n h h porcentaje h hh=
+=+ + + = =
+= + + + = =
+
+Sobre la notación y el símbolo sumatoria
+()
+1 1 1 1Propiedades: 1) ; 2)k k k k
+i i i ii i i iax x x a a x ka
+= = = == + = +   
+1 2 3 44
+1Aquí 4:  150 75 25 250 500i
+f f f fik n f
+== = = + + + =Lafrecuencia relativa (oel%)
+noesmas quelaestandarización
+delafrecuencia absoluta .Este
+tipo deestandarización esmuy
+conveniente, ya que permitirá
+hacer comparaciones coherentes,
+como veremos más adelante
+11/41
+Tablas de frecuencias // variables ordinales
+La frecuencia acumulada es relativa al orden natural de las categoríasLa posibilidad de ordenar de forma unívoca a las categorías de la variable permite poder 
+definir un nuevo tipo de frecuencia: la frecuencia acumulada (que podrá ser relativa o 
+absoluta)Estado Frecuencia Frecuencia 
+acumulada PorcentajePorcentaje 
+acumulado
+Mucho peor 25 25 5.0 5.0
+Peor 98 25+98= 123 19.6 5+19.6= 24.6
+Igual 159 123+159= 282 31.8 24.6+31.8= 56.4
+Mejor 147 282+147= 429 29.4 85.8
+Mucho mejor 71 429+71= 500 14.2 100
+Total 500 100Efecto observado tras la aplicación de una terapia acuática
+en n=500 mujeres con fibromialgia
+12/41
+Distribución de la edad (años)
+n=124nDistribución de la edad (años)
+n=124
+n f(%) F(%) acum . n f(%) F(%) acum .
+15 5 4.0 4.0 menos de 21 5 4.0 4.0
+16 28 22.6 26.6 21-25 28 22.6 26.6
+17 64 51.6 78.2 26-30 64 51.6 78.2
+18 18 14.5 92.7 31-35 18 14.5 92.7
+19 6 4.8 97.6 36-40 6 4.8 97.6
+20 3 2.4 100.0 más de 40 3 2.4 100.0
+Total n=124 100.0 Total n=124 100Tablas de frecuencias // variables discretas
+Si la variable discreta puede tomar muchos valores distintos, su resumen como tabla 
+de frecuencias suele hacerse agrupándola en intervalos.
+Los intervalos deben ser: 
+•Homogéneos (todos con la misma amplitud)
+•Exhaustivos (recorren todos los valores de la variable)
+•Excluyentes (no pueden solaparse)Con pocos valores distintos ( k=6) Con muchos valores distintos (k grande)
+Agrupación en intervalos desde el punto de vista estadístico
+13/41
+
+14/41
+Nivel de colesterol (mg/ dL) observado
+n=157Nivel de colesterol (mg/ dL) observado
+n=157
+n f(%) F % acum . n f(%) F% acum .
+102 -128 20 12.7 12.7 (101,  128] 20 12.7 12.7
+129 -155 69 43.9 56.7 (128,  155] 69 43.9 56.7
+156 -182 85 28.7 85.4 (155, 182] 45 28.7 85.4
+183 -209 13 8.3 93.6 (182, 209] 13 8.3 93.6
+210 -236 10 6.4 100.0 (209, 236] 10 6.4 100.0
+Total 157 100.0 Total 157 100.0Tablas de frecuencias // variables continuas
+(209, 236]  indica:  209< 236 x
+No se han observado (se han redondeado) 
+los valores decimales, por tanto, no hace 
+falta solapar los intervalosSi que se han observado los valores 
+decimales, es preciso establecer un criterio 
+para los límites de los intervalosCon variables continuas, no queda más remedio que agrupar en intervalos
+15/41
+Tipos de datos
+Datos cualitativos :
+1. Nominales
+2. Ordinales
+Cuantitativos
+3.Discretos
+4.ContinuosDiagramas de frecuencias Qué diagrama es correcto depende del tipode variable
+Diagrama de sectores
+Diagrama de barras
+Polígono de frecuencias
+Histograma
+k 
+k 
+16/41
+Diagramas de frecuencias // variables cualitativas
+Diagrama de sectoresDistribución de los grupos sanguíneos
+(n=500)
+Diagrama de barras
+Principio básico :para cada
+categoría delavariable, elárea
+del objeto gráfico debe ser
+proporcional (oigual) ala
+frecuencia dedicha categoría .
+¡menos adecuado!
+(falsa tridimensionalidad) Desgajado de un sector
+00 i
+ifangulon = 360
+17/41
+Diagramas de frecuencias // variables ordinales y discretas
+Diagrama de barrasPolígono de frecuenciasDistribución de la edad (n=124) Distribución de la edad (n=124)
+18/41
+D. frecuencias // variables agrupadas en intervalos (discretas o continuas)
+Histogramas
+Las dos representaciones corresponden a los mismos datos. Pocos intervalos y muy anchos 
+(dcha ) pueden enmascarar la distribución real de la variable Distribución del nivel de colesterol (n=500) Distribución del nivel de colesterol (n=500)
+19/41
+Diagramas de frecuencias // muestras pequeñas
+Cuando hay pocos datos, los histogramas ( izda) carecen de sentido. En su lugar es mejor 
+hacer un diagrama de puntos (dcha ). Tales diagr amas tienen mayor interés si se usan con 
+fines comparativos.
+Muestras pequeñas de variables continuasDistribución del nivel de colesterol (mg/ dL)
+20/41
+Diagramas de frecuencias 
+Consumo de medicamentos en los cuatro 
+distritos de una ciudad
+DistritoA
+B
+C
+DPictogramas de repetición
+ Pictogramas de amplificación
+Enfermedades más comunes en España
+(los datos son ficticios)
+La nube de palabras es un tipo de pictograma de amplificación 
+muy utilizado en el ámbito de internet
+Principios básicos de los diagramas de frecuencias :
+-El área del motivo gráfico asignado a cada categoría/valor/intervalo debe ser proporcional a su frecuencia
+-Siempre deben tener un encabezado en donde aparezcan datos básicos como son el tamaño muestral, las 
+unidades de medida si las hay, el año de referencia,…Otros diagramas
+21/41
+!
+Diagramas de frecuencias // Gráficas comparativas
+Uso de panelesBarras solapadas Polígonos de frecuencias
+Cuidado: En el 
+eje d e ordenadas 
+debe aparecer la 
+frecuencia 
+relativa (%)
+22/41
+Pirámide de población
+Evolución de la pirámide de población española con pronóstico para el año 2025 (fuente: INE)Muy utilizada endemografía .Setrata deun
+doble histograma endonde serepresenta la
+frecuencia deindividuos enfunción degrupos
+deedad ysexo .No obstante, pueden
+representarse otras variables con fines
+comparativos (dcha)Diagramas de frecuencias // Gráficas comparativas
+23/41
+Diagramas de frecuencias // aspectos de las gráficas
+Asimetría positiva
+Asimetría negativa
+BimodalEn qué hay que fijarse 
+(histogramas):
+Simetría aceptable
+•Simetría de la distribución
+•Presencia de valores extremos 
+o atípicos
+•Posible mezcla de grupos 
+(bimodalidad )
+•Equilibrio en las gráficas 
+comparativas
+M F
+Pirámide depoblación delos
+Emiratos Árabes en2005 .
+(en ese año hubo mucha 
+inmigración procedente, sobre 
+todo, de Pakistán)Analice esta imagen
+24/41
+Síntesis de datos: medidas descriptivas
+¿En qué se diferencian estas dos distribuciones?
+25/41
+Síntesis de datos: medidas descriptivas
+Posición central 
+(Moda, media, mediana)
+Posición no
+central: máximo
+Posición no central: 
+Percentil 97Dispersión: Rango o amplitud
+Dispersión: 
+Desviación típica
+Posición no central: 
+Mínimo •De posición, con tendencia
+•Central : media, 
+mediana, moda
+•Nocentral : extremos, 
+percentiles
+•De dispersión : Rango, 
+varianza, desviación típica, 
+coeficiente de variación, rango 
+intercuartílicoMedidas descriptivas
+Normalmente seresumen los
+datos proporcionando una
+medida deposición central
+junto auna dedispersión .
+Adicionalmente puede darse
+información relativa aotras
+medidas, como extremos y
+percentilesDispersión = Variabilidad
+26/41
+Datos cualitativos :
+1.Nominales →Proporción (porcentajes), moda
+2.Ordinales →Lasanteriores yademás medidas basadas enelorden delosdatos :
+Mediana yPercentiles, Rango intercuartílico
+Cuantitativos
+3.Discretos
+4.ContinuosMedidas descriptivas
+→Todas las anteriores y además 
+Medidas basadas en el valor numérico de los datos: 
+Media y varianza (desviación típica)Qué medida se puede calcular depende del tipo de la variableSíntesis de datos: medidas descriptivas
+27/41
+Mediana :eselvalor delavariable que divide alamuestra ordenada endos partes
+iguales (esdecir, deja tanto pordebajo como porencima el50%delasobservaciones) .
+1
+2n Me x+
+=
+ 
+()
+ ()
+ (3) 51
+2
+4 1 2.5
+2
+5
+71
+2) 3, 6, 7, 10, 15 7
+6 10) 3,6,10,15 82
+) 1,5,1,2,2,4,7,2,10 2
+) , , , , , ,a Me x x
+b Me x x
+c Me x
+d peor peor peor mejor igual mejor peor Me x peor+
+
++
+
++
+→ = = =
++→ = = = =
+→ = =
+→ = =Síntesis de datos: medidas descriptivas de posición
+Nominales
+Ordinales
+Ejemplos:Noconfundir laposición
+mediana (n+1)/2,con la
+mediana ensi,que esel
+valor queocupa laposición
+mediana cuando losdatos
+están ordenados demenor
+amayorProporción (de cada categoría): es la frecuencia relativa de dicha categoría:
+Cuando se informa de ella se suele dar como porcentaje:
+Moda : es el valor de la variable que tiene mayor frecuencia (puede no ser única). 
+i
+ifp
+n=
+( 100)%ip
+A las medidas descritas hay que añadir
+28/41
+Síntesis de datos: medidas descriptivas de posición
+Edad (años)
+n=124Edad (años)
+n=124
+ni NiF(%) acum . niNiF(%) acum .
+15 5 5 4.0 menos de 21 5 5 4.0
+16 28 33 26.6 21-25 28 33 26.6
+17 64 97 78.2 26-30 64 97 78.2
+18 18 115 92.7 31-35 18 115 92.7
+19 6 121 97.6 36-40 6121 97.6
+20 3 124 100.0 más de 40 3124 100.0
+Total n=124 Total n=124
+()() 124 1 62.5
+226 30 Me x x+= =  
+()() 124 1 62.5
+217 Me x x+= = =
+Lamediana eselprimer valor dela
+variable cuya frecuencia acumulada es
+mayor oigual a62.5o,equivalentemente,
+cuyo porcentaje acumulado esmayor o
+igual al50%Cuando lavariable está agrupada en
+intervalos, lamediana sepuede aproximar por
+interpolación lineal (seveenprácticas)Más ejemplos:
+29/41
+C = cuantil  (alfa)
+Ii-1 = extremo  inferior del interval agrupado  para la categoria  identificada
+ALFA = 0.3 ( cuantil  30% o Decil  3 o Percentil  30)
+n = tamaño  de la muestra
+N = frecuencia  absoluta  acumulada
+a = amplitud
+30/41
+
+31/41
+
+32/41
+
+33/41
+Media aritmética :dada unamuestra denobservaciones numérica sCuantitativas (Además de las medidas anteriores, al manejar números, ahora podemos hacer cálculos)
+11;n
+i
+inxxxx
+nn=++==L
+1,...,nxx
+Edad (años)
+n=124Edad (años)
+n=124
+xi fi (xifi) fiMarca de clase xi (xifi)
+15 5 15×5=75 menos de 21 5 18* 5×18=90
+16 28 448 21-25 28 (21+25)/2=23 644
+17 64 1088 26-30 64 (26+30)/2=28 1792
+18 18 324 31-35 18 33 594
+19 6 114 36-40 6 38 228
+20 3 60 más de 40 3 43* 129
+T otal n=124 ∑(xifi)=2109 T otal 124 3477
+1 1 1k
+i
+k ii
+kfxf x f xx
+nn=++==Lsilosdatos están agrupados
+enunatabla defrecuencias :
+2109 / 124 17.0 añosx==
+3477 / 124 28.0 añosx==
+Ejemplos :
+  3, 6, 7, 10, 15 (3+6+7+10+15)/5 = 8.2 x→=a)
+b) c)
+*Enestos intervalos “mal definidos” seusalamisma regla quecon
+losrestantes delatablaSíntesis de datos: medidas descriptivas de posición
+34/41
+Media ponderada : Debe utilizarse cuando no todas las observaciones tienen la misma 
+importancia (= peso o ponderación: wi)
+1
+1n
+nx x x
+w w w
+
+1 1 1
+1
+1n
+ii
+n n i
+p n
+n
+i
+ixwx w x wxwww=
+=++→ = =++
+L
+L
+Ejemplo:
+Nota obtenida ( ) 5 7 9
+Créditos de la asignatura ( ) 3 3 6x
+w
+5 3 7 3 9 6 907.53 3 6 12px +  + → = = =++
+5 7 973x++ = =
+11
+1kk
+ii
+ii
+k
+iii
+if x f x
+x
+nf==
+===
+
+1
+1n
+ii
+i
+p n
+i
+iwx
+x
+w=
+==
+
+Observe lasimilitud entre lamedia aritmética para datos agrupados ylamedia ponderada .
+Cuando laponderación (wi)decada valor essufrecuencia deaparición (fi),entonces tenemos la
+misma expresiónDadosSíntesis de datos: medidas descriptivas de posición
+iifw→
+p xx→
+35/41
+cd
+a
+b
+¿Quiénes son cada caso la 
+media y la mediana? Mediana Media aritmética
+Se puede calcular con variables 
+ordinales en adelanteRequiere que los datos sean cuantitativos
+Es robusta frente a valores extremos Más sensible alos valores extremos,
+especialmente cuando eltamaño de
+muestra espequeño (gana robustez al
+aumentar n)
+Es menos frecuente como medida de 
+posición en inferenciaEs la medida de posición más habitual en 
+inferencia
+Siladistribución essimétrica ,Me locuál permite decir queenesta situación y
+deforma aproximada ,lamedia viene adividir alamuestra endospartes iguales
+x50%Me
+50%
+xMediana vs. Media aritmética
+Me xSíntesis de datos: comparativa media y mediana y simetría de la distribución
+Elnúmero decasos con valores por
+debajo delaMeeselmismo que el
+número decasos con valores por
+encima deellaCriterio de 
+centralidadMétrica de 
+la variableRobustezLasuma delasdistancias alamedia delos
+valores inferiores a secompensa conla
+suma dedistancias alamedia delos
+valores porencima deella:
+()()
+iiii
+x x x xx x x x
+− − = −Uso
+x
+36/41
+Si media =moda= mediana , la distribución es simétrica 
+Si media > mediana , la distribución es asimétrica con cola a la 
+derecha (sesgada a la derecha). 
+Si media < mediana , la distribución es asimétrica con cola a la 
+izquierda (sesgada a la izquierda).
+Ejemplo : al estudiar  la fuerza  muscular de un paciente  usando  la Escala  de Robert Lovett & Kendall 
+de una muestra  de n=300 pacientes , se obtuvo  un valor medio de 4 unidades  en la escala . ¿quiere  esto 
+decir  que, aproximadamente , la mitad  de los pacientes  tienen  un nivel  de colesterol  por debajo  de este 
+valor?  NO. Solo si la distribucion  de la escala  es SIMETRICA donde  media, mediana  y moda  coinciden  
+37/41
+Síntesis de datos: medidas descriptivas de posición no central
+Medidas de posición no central para variables ordinales o cuantitativas
+Percentiles :elpercentila,Pa,eselvalor delavariable quedivide alamuestra ordenada endospartes,
+dejando pordebajo ela%delasobservaciones yporencima el(1–a)%.(generalización delconcepto
+demediana) .Sehabla depercentil 1(P1),...,percentil 99(P99).
+Ejemplo: Cálculo del P40a partir de una tabla de frecuencias
+0 1 2 3 4 5 6 más  de 6020406080100120140160
+  40% inicial
+  60% restanteFrecuencia
+Nº de hermanosDiagrama de barras de la tabla 2.3
+Nº de recaídas tras una operación (n=500 casos)
+x fi Fi acum
+0 72 72 14.4%
+1 155 227 45.4%
+2 97 324 64.8%
+3 81 405 81.0%
+4 30 435 87.0%
+5 27 462 92.4%
+6 20 482 96.4%
+más de 6 18 500 100.0%
+500
+40 Posición del P ( 500) : (500 1) 0.4 200.4 n= +  =
+40 (200.4)P1 x==
+El 40% de los casos observados tienen una recaida o ninguna. El 60% restante tienen una recaida o más
+()1100P
+nxa a+=Extremos (mínimo ymáximo) :Pueden estar muy alejados delresto delosdatos encuyo caso deben
+estudiarse .Para caracterizar ladistribución seusaotrocriterio deextremo :lospercentiles
+38/41
+Q1 Q3 Q2*Undiagrama decaja esunainteresante representación
+deladistribución delavariable queestá basada enlos
+cuartiles
+Observaciones respecto a los percentiles:
+Casos particulares :hay percentiles que
+reciben también otronombre :
+-Cuartiles :Q1=P25,Q2=P50=Me,Q3=P75
+-Deciles :D1=P10,...,D9=P90
+Obsérvese quesia1<a2entonces
+Esdecir, elP20porejemplo, nopuede ser
+mayor que elP25(aunque sique podría
+serigual)
+12PPaa
+Silamuestra esmuy pequeña, notiene
+sentido hablar depercentiles respecto a
+ella.
+Además delos cuartiles, seutilizan
+mucho lospercentiles 5y95¿cómo se
+interpreta cada unodeellos?Diagramas decaja
+Relación con el 
+histogramaDiagramas con fines 
+comparativos25% 25% 25% 25%
+¿Encuentra alguna relación entrelos
+percentiles yla frecuencia relativa
+acumulada?Síntesis de datos: medidas descriptivas de posición no central
+?
+39/41
+Síntesis de datos: medidas descriptivas de dispersión
+¿Son iguales en estatura los dos grupos?
+Estatura (cm)x=Grupo I Grupo II
+170 cmx=
+170 cmx=
+¿Son “iguales” estas dos distribuciones 
+con la misma media?
+minx
+maxx
+[A] 
+minx
+maxx
+[B]¿Qué se puede decir 
+de estas dos 
+distribuciones?
+40/41
+Para caracterizar un conjunto de datos, no basta con dar solamente medidas de posición, también es 
+necesario conocer su dispersión = heterogeneidad = variabilidad
+Rango (R) o amplitud (A):
+max min A x x=−
+Es una medida fácil de calcular, pero muy pobre, ya que solo tiene en cuenta a dos observaciones 
+de toda la muestra (los extremos)
+max min A x x=−
+minx
+maxx
+[A]
+max min A x x=−
+minx
+maxx
+[B]Medidas de dispersión (solo variables cuantitativas)
+A y B tienen el mismo rango o amplitudSíntesis de datos: medidas descriptivas de dispersión
+41/41
+1x
+ix
+2x
+iid x x=−
+x
+11d x x=−
+22d x x=−
+()0i i id x x x x nxdxn n n n n−= = = − = − =   
+¿Cómo se puede definir una buena medida de dispersión que tenga en cuenta a todas las observaciones?
+•Es necesario utilizar el concepto de distancia de cada observación respecto a un valor de referencia
+•Lamejor referencia esuna medida deposición central :optamos porlamedia aritmética como
+referencia
+•La idea es calcular todas las distancias de cada observación a la media y hacer la media de dichas 
+distancias:
+Elproblema esquedebido alcarácter central delamedia aritmética, lasdistancias negativas se
+compensan siempre conlaspositivas .Enlaimagen d1<0yd2>0.
+Dehecho, elproblema espermitir quehaya ¡¡distancias negativas!! (eso notiene sentido)mínimo máximo
+Ahora la media de las distancias (o distancia media respecto a la media aritmética) será
+¡¡Siempre cero!!Síntesis de datos: medidas descriptivas de dispersión
+42/41
+1x
+ix
+2x
+iid x x=−
+x
+11d x x=−
+22d x x=−
+()2 2
+2 iid x xSnn−==
+()2
+2
+1ixxsn−=−
+Laestrategia que seusapara impedir que lasdistancias sean negativas esunamuy utilizada enlas
+ciencias engeneral .Setrata deelevar cada distancia alcuadrado .Esto mantiene lainformación sobre su
+magnitud pero evita elproblema delsigno negativo .
+Elpromedio (delasdistancias alcuadrado respecto alamedia) entonces es:
+Porcuestiones queveremos mas adelante, seconsidera unpromedio norespecto altamaño demuestra
+n,sinorespecto aunacantidad quesedenomina grados delibertad yqueesn-1.
+Sedefine asíla
+Varianza muestralSíntesis de datos: medidas descriptivas de dispersión
+43/41
+2
+1 22
+11
+1n
+i n
+i
+i
+ix
+sxnn=
+==−−
+
+Cálculo práctico de la varianza
+2
+1 2
+11
+1n
+ii n
+i
+ii
+ifx
+fxnn=
+=   =−−
+
+2
+2 1()
+1n
+ii
+if x x
+sn=−
+=−
+Si los datos no están agrupados en 
+una tabla de frecuenciasSi los datos están agrupados en una tabla de frecuencias
+ ( )( )24 6 8 10 12 2 2 2 2: 4,6,8,10 7; 4 6 8 10 6.66734x x si+ + + → = = + + + − =
+xi fi xifi x2
+ifi
+15 5 75 1125
+16 28 448 7168
+17 64 1088 18496
+18 18 324 5832
+19 6 114 2166
+20 3 60 1200
+Suma 124 2109 35987
+2
+2 1 210935987 0.941124 1 124s= − =−
+210917.0124x==a)
+b)
+Obsérvese que la varianza depende de la media y 
+su valor no puede ser negativo, pero en el caso 
+de que todos sus valores sean iguales podría 
+ser igual a cero.EjemplosSíntesis de datos: medidas descriptivas de dispersión
+44/41
+Lavarianza tiene unidades demedida quesonaquellas quetenga lavariable pero alcuadrado .
+Esto supone quesilavariable esporejemplo laestatura encm(unidad delongitud) suvarianza viene
+dada encm2(¡¡unidad desuperficie!!)
+Para evitar este problema dedimensionalidad sedefine la
+Desviación típica (oestándar)
+2ss=
+•Es una medida de dispersión que tiene en cuenta a todas las observaciones
+•Se expresa en las mismas unidades que la variable
+•La desviación típica de forma aislada no dice nada, debe de ir acompañada de la media. 
+Normalmente se expresa
+por ejemplo: “… el nivel de colesterol observado en la muestra fue 175.3 ±12.5….”
+•Cuando la distribución de la variable es simétrica (mas concretamente normal*) el intervalo
+contiene aproximadamente al 95% de las observaciones. 
+Enelejemplo anterior, aproximadamente el95%deloscasos tienen unnivel decolesterol
+comprendido enelintervalo (150.5,200.5)siladistribución delcolesterol essimétrica (normal*)Esto debe entenderse en el sentido de que la d.t. se obtiene 
+una vez calculada la varianza al considerar su raíz cuadrada
+xs
+2xs
+* Más adelante se verá qué quiere decir exactamente que una distribución sea normalSíntesis de datos: medidas descriptivas de dispersión
+45/41
+Posición y dispersión sobre el diagrama de frecuencias
+~95%
+2xs−
+2xs+
+x
+17.0
+1.0x
+s=
+=
+xsIndicar              define muy bien la distribución, especialmente si es simétrica (normal*)
+* Más adelante se verá qué quiere decir exactamente que una distribución sea normal
+46/41
+Síntesis de datos: medidas descriptivas de dispersión
+Otras medidas dedispersión
+Coeficiente devariación
+() 100%sCVx=
+•Es una medida de dispersión adimensional (se multiplica por 100 y es un %)
+•Expresa la dispersión dada por la desviación típica en términos de la media (estandarización)
+•No debe calcularse si la media es inferior a 1 
+•Permite comparar la variab ilidad de muestras con diferente media e incluso con diferentes unidades
+•Muy utilizada para expresar la precisión de los aparatos de medida
+Rango intercuartílico (RIQ)
+31 RIQ Q Q=−
+Es una medida de dispersión basada en percentiles , por tanto
+•Se usa cuando la medida de posición considerada es la m ediana
+•No tiene sentido con muestras de pequeño tamaño
+•Debe interpretarse como que en un margen de RIQ unidades (entre Q1 y Q3) está el 50% (central) de 
+las observaciones
+•Una variación de esta medida es el rango semi intercuartílico (RSI) o desviación cuartil
+31
+2QQRSI−=
+47/41
+100 %sCVx=
+•Se utiliza para comparar métodos de medida. 
+•Es una medida que tiene en cuenta a todas las observaciones.
+•Es adimensional y no depende de las unidades de medida.
+•Se utilizan solamente cuando los datos son positivos.
+•Se expresa en %.
+•Cuanto menor es el CV , mayor es la precisión del método.
+•Ejemplo :CV= 10%indica queporcada 100 unidades demedida, el
+método comete unerror, medido endesviaciones típicas, de10.4. Medida de dispersión relativa: coeficiente de variación
+47
+48/41
+Síntesis de datos: ejercicio
+Ejercicio
+Calcule lamedia, ladesviación típica ylamediana delas7muestras queaparecen acontinuación
+¿Puede decirse quelasmuestras 3y6tienen lamisma dispersión?
+Solución
+Muestra n Media s Me
+1) 10.2 11.4 11.0 10.2 11.9 11.1 10.8 10.1 10.8 11.1 10 10.86 0.574 10.9
+2) 102 109 107 106 103 103 105 102 104 106 10 104.7 2.31 104.5
+3) 2.9 3.0 3.1 3.5 2.7 2.9 3.1 3.4 2.6 9 3.02 0.295 3.0
+4) 1.0 1.1 2.6 4.0 0.0 1.3 3.5 -1.0 1.0 1.5 10 1.50 1.515 1.2
+5) -0.6 -1.6 -1.6 -2.7 0.9 -0.3 -0.6 -2.9 -0.9 -2.2 10 -1.25 1.177 -1.25
+6) 5.9 6.0 6.1 6.5 5.7 5.9 6.1 6.4 5.6 9 6.02 0.295 6.0
+7) 0.5030 0.4961 0.5001 0.4961 0.5003 0.5023 0.4972 7 0.49930 0.00286 0.5001La media suele presentarse con un decimal más que los valores de la variable y la desviación típica con un decimal más que la media
+Larespuesta alapregunta esque no.Lamedia (dt)enlamuestra 3es3.02(0.295)mientras que enla6resulta ser6.02(0.295).Las
+desviaciones típicas, aunque numéricamente presentan elmismo valor, nosoncomparables, yaque ambas muestras tienen diferente media
+(lade6eseldoble que lade3).Siobtenemos loscoeficientes devariación resulta que CV(3)=9.8%yCV(6)=4.9%loque pone demanifiesto
+queladispersión relativa alamedia delamuestra 3eseldoble queladelamuestra 6.

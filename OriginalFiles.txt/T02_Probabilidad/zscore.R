@@ -1,0 +1,187 @@
+---
+title: "Estandarización de Variables (Numéricas): Z-score"
+author: "Miguel Angel Luque Fernández, PhD"
+date: "`r Sys.Date()`"
+output:
+    html_document:
+    toc: true
+toc_depth: 3
+number_sections: true
+---
+
+
+# Estandarización de Variables (Numéricas): Z-score y Cálculo de Probabilidades y Percentiles
+## 1. Introducción y Definición de Datos
+    
+Este documento ilustra el proceso de estandarización de una variable numérica (Talla) utilizando el **Z-score** y cómo se emplean los valores estandarizados para el cálculo de probabilidades y percentiles bajo el supuesto de una distribución normal.
+Definimos el vector de datos para la **Talla** (en cm):
+    
+```{r data-definition}
+talla <- c(170, 165, 180, 175, 160, 185, 190, 178, 172, 168,
+           182, 177, 169, 174, 181, 176, 183, 171, 167, 179)
+````
+
+## 2. Estadísticos Descriptivos y Visualización
+
+Verificamos la media y la desviación estándar de la variable original.
+
+```{r descriptive-stats}
+# Media
+media_talla <- mean(talla); media_talla
+# Desviación estándar
+sd_talla <- sd(talla); sd_talla
+```
+
+### 2.1 Visualización de la Talla
+
+Visualizamos la distribución de la Talla con un **Boxplot** y un **Histograma**, al que le superponemos la curva de densidad normal correspondiente.
+
+```{r visualization-original, fig.height=5, fig.width=8}
+# Boxplot
+boxplot(talla, main = "Boxplot de la Talla",
+        ylab = "Talla en cm", col = "salmon")
+```
+
+```{r histogram-density-original, fig.height=5, fig.width=8}
+# Histograma con línea de densidad normal
+hist(talla, main = "Histograma de la Talla",
+     xlab = "Talla en cm", breaks = 10, col = "lightblue", freq = FALSE)
+curve(dnorm(x, mean = media_talla, sd = sd_talla), 
+      col = "red", lwd = 2, add = TRUE)
+```
+
+## 3. Estandarización de la Variable (Z-score)
+
+Estandarizar una variable consiste en transformarla para que tenga una media de **0** y una desviación estándar de **1**.
+
+### 3.1 Método Automático (`scale()`)
+
+R provee la función `scale()` para realizar esta transformación automáticamente.
+
+```{r standardize-scale}
+ztalla_scale <- as.vector(scale(talla)) # Convierte a vector si es necesario
+```
+
+### 3.2 Método Manual (Creando una Función)
+
+También se puede crear una función explícita para el cálculo del Z-score: $Z = (x - \\mu) / \\sigma$.
+
+```{r standardize-function}
+# Creando función para estandarizar
+std <- function(x) {
+    return((x - mean(x)) / sd(x))
+}
+ztalla <- std(talla)
+
+# Ajustar opciones para mostrar resultados sin notación científica
+options(scipen = 999) 
+```
+
+### 3.3 Verificación de la Estandarización
+
+Una vez estandarizada, la nueva variable (`ztalla`) debe tener una media cercana a **0** y una desviación estándar de **1**.
+
+```{r check-standardization}
+# Media de ztalla (debe ser aproximadamente 0)
+mean(ztalla) 
+# Desviación estándar de ztalla (debe ser aproximadamente 1)
+sd(ztalla) 
+```
+
+## 4. Cálculo de Probabilidades
+
+Usaremos la distribución normal estandarizada ($Z \sim N(0, 1)$) para calcular probabilidades.
+
+### 4.1 Ejemplo: Probabilidad de medir más de 189.7 cm
+
+Calculamos el Z-score correspondiente a una talla de 189.7 cm.
+
+```{r z-score-example}
+talla_ejemplo <- 189.7
+ztalla_ejemplo <- (talla_ejemplo - media_talla) / sd_talla; ztalla_ejemplo
+```
+
+La probabilidad de que una persona mida más de 189.7 cm se calcula como $P(Talla > 189.7)$.
+**MUCHO MEJOR** usar la función **`pnorm`** de R, que calcula la probabilidad acumulada $P(X \le x)$. 
+Para $P(X > x)$, usamos $1 - P(X \le x)$.
+
+```{r probability-pnorm}
+# 1. Usando los valores estandarizados (Z-score)
+prob_z <- round(1 - pnorm(ztalla_ejemplo, mean = 0, sd = 1), 3); prob_z
+
+# 2. Usando los valores originales de la Talla
+prob_original <- round(1 - pnorm(talla_ejemplo, mean = media_talla, sd = sd_talla), 3); prob_original
+
+cat("La probabilidad de medir más de", talla_ejemplo, "cm es aproximadamente:", prob_z, "\n")
+```
+
+### 4.2 Visualización de la Talla Estandarizada y la Probabilidad
+
+Visualizamos la variable estandarizada (`ztalla`) y sombreamos el área de probabilidad calculada (usaremos `ztalla_ejemplo` como `ztalla_189.7` en el código, asumiendo una ligera variación en los datos originales por motivos de visualización si fuese necesario).
+
+```{r visualization-standardized, fig.height=5, fig.width=8}
+# Boxplot de ztalla
+boxplot(ztalla, main = "Boxplot de la Talla Estandarizada (Z-score)",
+        ylab = "Z-score", col = "salmon")
+
+# Histograma de ztalla
+hist(ztalla, main = "Histograma de la Talla Estandarizada (Z-score)",
+     xlab = "Z-score", breaks = 10, col = "lightblue", freq = FALSE)
+# Curva de densidad normal (media=0, sd=1)
+curve(dnorm(x, mean = 0, sd = 1), col = "red", lwd = 2, add = TRUE)
+
+# Línea vertical en el Z-score de interés
+abline(v = ztalla_ejemplo, col = "blue", lwd = 2)
+
+# Sombrear el área bajo la curva a la derecha (Probabilidad de cola superior)
+x <- seq(-4, 4, length = 200)
+y <- dnorm(x, mean = 0, sd = 1)
+polygon(c(ztalla_ejemplo, x[x >= ztalla_ejemplo], max(x)), 
+        c(0, y[x >= ztalla_ejemplo], 0), col = rgb(0, 0, 1, 0.5))
+
+# Añadir texto con probabilidad
+text(ztalla_ejemplo + 0.5, 0.1, 
+     paste("P(Z > ", round(ztalla_ejemplo, 2), ") =", prob_z), 
+     col = "blue")
+```
+
+## 5. Cálculo de Percentiles (Valores Críticos)
+
+La función **`qnorm`** en R se utiliza para encontrar el valor de la variable ($x$) o el Z-score ($z$) que corresponde a una probabilidad acumulada dada (percentil).
+
+Esto es fundamental para el cálculo de **Intervalos de Confianza**.
+
+### 5.1 Percentiles en la Talla Original
+
+Calculamos los percentiles **97.5%** y **2.5%** de la población (los límites típicos de un intervalo de confianza del 95%).
+
+```{r percentiles-qnorm}
+# Percentil 97.5% de la población (Límite superior)
+q97.5 <- qnorm(0.975, mean = media_talla, sd = sd_talla); q97.5
+# Percentil 2.5% de la población (Límite inferior)
+q2.5 <- qnorm(0.025, mean = media_talla, sd = sd_talla); q2.5
+
+cat("\nPercentil 97.5% (Talla):", round(q97.5, 2), "cm\n")
+cat("Percentil 2.5% (Talla):", round(q2.5, 2), "cm\n")
+```
+
+### 5.2 Alternativas de Cálculo
+
+Los mismos percentiles se pueden calcular utilizando la propiedad del Z-score: $x = \mu + Z \sigma$. 
+El Z-score para el percentil 97.5% es $\approx 1.96$ y para el 2.5% es $\approx -1.96$.
+
+```{r percentiles-alternative}
+# 1. Usando el Z-score (qnorm(p) con media=0, sd=1)
+q_z_97.5 <- qnorm(0.975); q_z_97.5
+q_z_2.5 <- qnorm(0.025); q_z_2.5
+
+limite_superior <- media_talla + sd_talla * q_z_97.5; limite_superior
+limite_inferior <- media_talla + sd_talla * q_z_2.5; limite_inferior
+```
+
+```{r percentiles-1.96}
+# 2. Usando el valor crítico 1.96 directamente
+limite_superior_1.96 <- media_talla + sd_talla * 1.96; limite_superior_1.96
+limite_inferior_1.96 <- media_talla - sd_talla * 1.96; limite_inferior_1.96
+```
+

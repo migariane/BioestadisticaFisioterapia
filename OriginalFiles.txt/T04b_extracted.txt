@@ -1,0 +1,287 @@
+1
+Grado en Fisioterapia
+Tema V
+Tests con una muestra para 
+la media y la proporción 
+(complemento)ESTADÍSTICA
+Universidad de GranadaPedro Femia Marzo (autor) & Miguel Angel Luque Fernandez ( update )
+Unidad de Bioestadística –Facultad de Medicina
+2
+•La distribución normal es un modelo de distribución de probabilidad para variables continuas
+•Generalmente interesa más la normalidad de la distribución de la media de la variable que de la variable en 
+si. 
+•En la práctica:
+•Sieltamaño demuestra esn≥60
+•Sieltamaño demuestra esn<60:←Lanormalidad deladistribución delamedia muestral viene
+avalada porelteorema dellímite central ,incluso silavariable
+esdiscreta (en talcaso sedebe incluir una corrección por
+continuidad (cpc))porlotanto usamos T-Student
+•silavariable esdiscreta :nodeben utilizarse apriori métodos basados enladistribución normal
+usaríamos Chicuadrado Test oTest Exacto deFisher•silavariable escontinua :estudiar sunormalidad estadística ←Análisis gráfico +T est de
+normalidadLamedia deuna VAcon distribución normal también tiene distribución normal (con dispersión menor
+cuanto mayor eseltamaño delamuestra n)
+() () Si  N ; N ;X X n→    →  
+()aprox.
+60Si  ?? N ;
+nX X n
+→  →  
+Lamedia deuna VAcondistribución desconocida, tiene una distribución aproximadamente normal siel
+tamaño demuestra esn≥60.Ladispersión disminuye ylacalidad delaaproximación aumenta cuanto
+mayor seaeltamaño delamuestra n(T eorema delLímite Central)Recordemos que:Estudio de la normalidad
+3
+•Se trata de un problema que puede ser difícil de resolver. Especialmente si el tamaño de muestra es pequeño
+•Se deben combinar los test de hipótesis con métodos gráficos
+Análisis gráfico•Histograma de la variable con curva de referencia
+•Diagramas de caja
+•Otros métodos específicos ( diagramas probabilísticos P -P, Q-Q,…)
+•T est de D’Agostino ←Se puede hacer a mano
+•T est de Kolmogorov -Smirnov ← Aproximado. Solo para muestras grandes (SPSS)
+•T est de Shapiro -Wilk ← Quizá la mejor opción (SPSS)
+( … y hay más)Pruebas (tests) de normalidad
+•Muchos métodos que requieren que la variable sea normal, a 
+menudo funcionan bien si la desviación no es muy severaObservar la simetría de la distribución
+A B CAsimetría positiva
+Muchos “tienen” poco y 
+pocos “tienen” mucho(A)
+Mezcla de 2 grupos 
+heterogéneos(B)
+¿Normal?(C)Estudio de la normalidad
+4
+Test de normalidad de D’Agostino
+1. Test de D’Agostino. Hipótesis a contrastar
+0
+1H:
+H:
+
+
+La variable tiene distribución normal
+La variable NO tiene distribución normal
+()()
+exp2( 1) 2
+ =
+( 1)i ii x n x
+D
+n n n s−+
+−
+(Confrontar con la tabla de D’Agostino)
+ i
+() iix
+()ix
+ ix
+ n=12
+()iix= 512.06
+2s=7.40
+ix= 62.37
+exp = 0.2844 D
+ 0.10 0.20 p
+H0: xtiene distribución normal
+Distribución observada de x
+(Diagrama de puntos)2. Estadístico de contrasteEn todos los tests de 
+normalidad, H0es siempre
+“La variable es normal”
+3. Ejemplo de cálculoEl peligro de las 
+muestras pequeñas
+n pequeño
+T est poco potente
+No se rechaza H0
+¡La variable es normal!
+¿conclusión?Estudio de la normalidad
+1 2.1 1.3 11.3
+2 8.6 2.1 24.2
+3 6.1 2.6 37.8
+4 3.5 3.4 413.6
+5 6.2 3.5 517.5
+6 3.4 4.9 629.4
+7 5.5 5.5 738.5
+8 9.7 6.1 848.8
+9 1.3 6.2 955.8
+10 2.6 8.5 1085.0
+11 8.5 8.6 1194.6
+12 4.9 9.7 12116.4
+5
+la diferencia entre la información muestral (   ) y la propuesta de la hipótesis nula (           ) son muy 
+discrepantes o no (un valor tipificado es “ auto informativo” )
+x
+0=
+entonces1. Si la variable Xtiene distribución normal
+(); XN→   Si
+X
+X
+() ; x N n→  2. Su media también tiene distribución normal
+x
+Distribución 
+de la 
+variableDistribución 
+de la media 
+de la 
+variable
+
+Ahora interviene la información dada por la hipótesis nula H 0
+4. Si H0 es cierta
+0=
+()()00;1xNn−→ de este modo tenemos un criterio para decidir si 
+5. Solo falta eliminar al parámetro perturbador (la desviación
+típica poblacional, que es desconocida)
+
+Si sustituimos       por su estimador puntual            obtenemos*
+
+ˆs=
+() 0; xN
+n− →
+3. Tipificando:
+Tipificación de la media muestral
+()()0;1xNn−→
+()0(0,1)Nxzn→−=
+z
+()0-xt t Studentsn−=→
+Esta cantidad esunafunción delosvalores muestrales quenospermite decidir enfavor oen
+contra delahipótesis nula araízdelaevidencia muestral .Sedenomina estadístico decontraste
+ocantidad experimental .Habitualmente seindica (o según ladistribución usada)
+expt
+2, ,...exp expF
+Hipótesis estadísticas
+Test para una media
+* Recordar que la distribución t-Student constituye una “corrección” de la distribución normal necesaria para muestras pequeñas ( n<100) cuando 
+es desconocido (siempre, en gral.)
+-5.3 1.96 -1.96Laestatura Xdelosindividuos varones residentes enunapequeña región sigue
+unadistribución normal .Deseamos contrastar lahipótesis dequeelvalor medio de
+Xes175cm,conelnivel designificación de0,05.Para ellosehan elegido 90
+personas alazar, obteniéndose una altura media de172 ydesviación típica
+muestral de5.3cm.¿Qué decisión deberíamos tomar?Contrastes para unapoblación Normal :
+Contrastes sobre lamedia unasola muestraInferencia Estadística: Tests de hipótesis
+X: “Estatura de individuos varones”
+X→N(μ, σ)n = 90    α= 0.05
+
+=
+175 :175:
+10
+
+HH
+Rechazamos H0
+3.5172
+==
+sx
+)1,0(0N
+nSXZ →−=Información poblacionalInformación muestral
+Existe evidencia empírica
+deque nopodemos asumir
+esaaltura media
+369.5
+903.5175 172
+exp −=−= z
+96.1025.0==z zteorica
+7Test con una proporción
+Ejemplo :
+Según laencuesta nacional desalud de2012 ,laprevalencia deltabaquismo enlosestudiantes deprimer curso
+universitario esdel22%.Para estudiar sihavariado en2013 sehatomado unamuestra de300estudiantes delos
+cuales :48son fumadores, 239 noloson yelresto nocontestan .¿Puede afirmarse que laproporción de
+fumadores eneste sector delapoblación hacambiado respecto a2012 ?
+1. Información muestral :
+T amaño de muestra original = 300; pero solo contestan 239+48=287 = n x= 48
+n-x= 239n = 287
+2. Hipótesis : se trata de comprobar si la prevalencia ha cambiado respecto al valor propuesto p0=0.22
+0
+100H : 
+H : pp
+pp=
+
+La prevalencia no ha cambiado
+La prevalencia si ha cambiado
+10.22
+0.220H : 
+H : p
+p=
+
+3. Condiciones de validez : debe cumplirse que
+4. Evidencia muestral: el estadístico de contraste :
+0
+005
+(1 ) 5np
+n p nq
+− = 
+0
+0287 0.22 63.14
+287 0.78 223.86np
+nq=  =
+=  =Se cumple: podemos aplicar el método
+(de lo contrario no podemos seguir)
+0
+exp
+000.5 48 287 0.22 0.52.086
+287 0.22 0.78x npz
+np q− − −  −= = =
+Fijamos el error de tipo I a un nivel a=0.05, de manera que declararemos significativo a todo resultado que 
+de lugar a un nivel de significación P≤a=0.05
+8
+•Laprobabilidad deequivocarnos alrechazar lahipótesis nula conestos datos esmenor al4%.Como
+esta probabilidad esmenor aa=5%,elnivel deerror estolerable yenconsecuencia rechazamos H0
+•SiH0escierta, esdecir silaprevalencia esdel22%en2013 ,laprobabilidad deobservar unamuestra
+como laactual, omás discrepante con dicha hipótesis, esdel4%.Consideramos que esa
+probabilidad esbaja (<a)yenconsecuencia rechazamos H05.Nivel de significación (se obtiene de la tabla de la distribución normal):
+0.03 0.04 P
+6.Interpretación :elresultado essignificativo ,esdecir que rechazamos lahipótesis nula deque la
+prevalencia en2013 eslamisma quelaobservada en2012
+Lecturas posibles (y equivalentes) de este valor de P
+7.Análisis de la significación . Como rechazamos la H0no puede asumirse que la prevalencia es el valor 
+propuesto, ¿Qué valor toma entonces dicho parámetro? ← IC para una proporción
+Atendiendo almétodo deWilson, laprevalencia deltabaquismo es,conun95%deprobabilidad, unvalor comprendido entre
+el12.7%yel21.7%.Podemos asumir que hadisminuido respecto al22%delañoanterior .Observese como p0=0.22no
+está enelICparap
+Test con una proporción
+9
+¿Y si los datos muestrales hubieran sido?
+0.07 0.08 P x= 33
+n-x= 167n = 200
+0
+005
+(1 ) 5np
+n p nq
+− = 
+0
+0200 0.22 44
+200 0.78 156np
+nq=  =
+=  =
+El método es válido
+El resultado no es
+significativo .No podemos
+rechazar lahipótesis nula con
+estos datos, aunque hay
+indicios designificación .
+0
+exp
+000.5 33 200 0.22 0.51.792
+200 0.22 0.78x npz
+np q− − −  −= = =
+
+Observemos ahora el 95% -IC para p
+Atendiendo al IC del método de Wilson:
+•El valor p0pertenece al IC:
+( ) 0.22 0.1178; 0.2254
+•Elvalor deeste intervalo eseldeapreciar quelaprueba noencuentra diferencias entre un22%yun11.78%(el
+límite delICmas discrepante) .Como esto puede seruna discrepancia muy grande (11%eslamitad de22%)
+observamos unsíntoma defalta depotencia deltest.Laaceptación deH0noresulta fiable ysería recomendable
+aumentar eltamaño demuestra (para ganar potencia)Test con una proporción
+10
+La determinación del tamaño de muestra requiere fijar de antemano:
+-El nivel de error aasumible
+-La potencia deseada (o de forma equivalente el nivel de error asumible b)
+-La mínima diferencia con p0a detectar ( d)
+Considerando el valor más cercano a 0.5 de 
+10pp= d
+•Porejemplo, siinteresa declarar significativa unadiferencia del6%conunapotencia del90%aunerrora
+del5%
+2
+0 0 2 1 1 z p q z p qnab + d
+Por ser el más cercano a 0.5
+0
+10.160.22 0.060.28ppd=  = =
+2 0.200.05 1.96
+1 0.90; 0.10 1.282
+0.06az
+zzba= → =
+= −b= b= → = =
+d=
+2
+1.96 0.22 (1 0.22) 1.282 0.28 (1 0.28)534.6 5350.06n  − +  − = →
+Son necesarias más de 534 observaciones (=535)Test con una proporción
