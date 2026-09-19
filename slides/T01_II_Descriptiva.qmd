@@ -449,7 +449,10 @@ Cuando los datos están agrupados en $k$ intervalos, las fórmulas de la media y
 $$\bar{x} = \frac{1}{n}\sum_{j=1}^{k} x_j \cdot n_j = \sum_{j=1}^{k} x_j \cdot f_j$$
 
 **Varianza desde tabla agrupada (fórmula abreviada de cálculo):**
-$$s^2 = \frac{1}{n-1}\left[ \sum_{j=1}^{k} x_j^2 \cdot n_j - \frac{\left( \sum_{j=1}^{k} x_j \cdot n_j \right)^2}{n} \right]$$
+$$
+s^2 = \frac{1}{n-1}\left[ \sum_{j=1}^{k} x_j^2 \cdot n_j
+      - \frac{\left( \sum_{j=1}^{k} x_j \cdot n_j \right)^2}{n} \right]
+$$
 :::
 
 **Relación con las fórmulas para datos sin agrupar:**
@@ -473,7 +476,13 @@ $$s^2 = \frac{1}{n-1}\left[ \sum_{j=1}^{k} x_j^2 \cdot n_j - \frac{\left( \sum_{
 
 $$\bar{x} = \frac{\sum x_j \cdot n_j}{n} = \frac{8050}{60} = 134.2°$$
 
-$$s^2 = \frac{1}{n-1}\left[\sum x_j^2 n_j - \frac{(\sum x_j n_j)^2}{n}\right] = \frac{1}{59}\left[1,086,500 - \frac{8,050^2}{60}\right] = \frac{6,458}{59} = 109.5$$
+$$
+\begin{aligned}
+s^2 &= \frac{1}{n-1}\left[\sum x_j^2 n_j - \frac{(\sum x_j n_j)^2}{n}\right] \\
+    &= \frac{1}{59}\left[1{,}086{,}500 - \frac{8{,}050^2}{60}\right]
+     = \frac{6{,}458}{59} = 109.5
+\end{aligned}
+$$
 
 $$s = \sqrt{109.5} = 10.5°$$
 
@@ -602,7 +611,14 @@ par(mfrow=c(1,1))
 **ECDF (Empirical Cumulative Distribution Function):** describe la proporción de datos $\leq$ cada valor observado. Es el equivalente muestral de la función de distribución $F(x) = P(X \leq x)$.
 :::
 
-$$F_n(x) = \frac{1}{n}\sum_{i=1}^{n} \mathbb{1}_{\{x_i \leq x\}} = \begin{cases} 0 & x < x_{(1)} \\ i/n & x_{(i)} \leq x < x_{(i+1)} \\ 1 & x \geq x_{(n)} \end{cases}$$
+$$
+F_n(x) = \frac{1}{n}\sum_{i=1}^{n} \mathbb{1}_{\{x_i \leq x\}} =
+\begin{cases}
+0   & x < x_{(1)} \\
+i/n & x_{(i)} \leq x < x_{(i+1)} \\
+1   & x \geq x_{(n)}
+\end{cases}
+$$
 
 
 donde $\mathbb{1}_{\{x_i \leq x\}}$ vale 1 si $x_i \leq x$ y 0 en caso contrario.

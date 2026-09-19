@@ -420,7 +420,15 @@ Cada sector: $\alpha_i = f_i \times 360°$. Altura de barra $\propto$ frecuencia
 
 **Álgebra de frecuencias acumuladas:**
 
-$$N_i = \sum_{j=1}^{i} n_j \quad \Rightarrow \quad \begin{cases} N_1 = n_1 \\ N_2 = n_1 + n_2 \\ \cdots \\ N_k = \sum_{j=1}^{k} n_j = n \end{cases}$$
+$$
+N_i = \sum_{j=1}^{i} n_j \quad \Rightarrow \quad
+\begin{cases}
+N_1 = n_1 \\
+N_2 = n_1 + n_2 \\
+\cdots \\
+N_k = \sum_{j=1}^{k} n_j = n
+\end{cases}
+$$
 
 **Frecuencia relativa acumulada:** $F_i = \frac{N_i}{n} = \sum_{j=1}^{i} f_j$, con $F_k = 1$.
 
@@ -450,7 +458,11 @@ Para cada intervalo $j$, las frecuencias y densidades se definen como:
 
 **Propiedad fundamental del histograma (el área ∝ frecuencia):**
 
-$$\sum_{j=1}^{k} \hat{f}_j \cdot \Delta x_j = \sum_{j=1}^{k} \frac{f_j}{\Delta x_j} \cdot \Delta x_j = \sum_{j=1}^{k} f_j = 1$$
+$$
+\sum_{j=1}^{k} \hat{f}_j \cdot \Delta x_j
+= \sum_{j=1}^{k} \frac{f_j}{\Delta x_j} \cdot \Delta x_j
+= \sum_{j=1}^{k} f_j = 1
+$$
 
 **Por tanto:** en el histograma la **altura** es densidad $\hat{f}_j$, la **base** es $\Delta x_j$, y el **área** de cada barra es $f_j$. La suma de todas las áreas es 1.
 

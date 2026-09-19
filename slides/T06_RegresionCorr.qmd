@@ -391,7 +391,13 @@ El método de **mínimos cuadrados ordinarios (MCO)** produce la mejor estimaci�
 ::: {.framed}
 **Estimadores MCO — construidos sobre los tres pilares:**
 
-$$\hat{\beta}_1 = \frac{S_{xy}}{S_{xx}} = \frac{\sum(x_i-\bar{x})(y_i-\bar{y})}{\sum(x_i-\bar{x})^2} \qquad \hat{\beta}_0 = \bar{y} - \hat{\beta}_1\bar{x}$$
+$$
+\begin{aligned}
+\hat{\beta}_1 &= \frac{S_{xy}}{S_{xx}}
+              = \frac{\sum(x_i-\bar{x})(y_i-\bar{y})}{\sum(x_i-\bar{x})^2} \\[4pt]
+\hat{\beta}_0 &= \bar{y} - \hat{\beta}_1\bar{x}
+\end{aligned}
+$$
 
 - $\hat{\beta}_1$: "cuánto varían juntas $X$ e $Y$" dividido por "cuánto varía $X$" = $\frac{S_{xy}}{S_{xx}}$
 - $\hat{\beta}_0$: ajusta la altura para que la recta pase por el centroide $(\bar{x}, \bar{y})$
@@ -435,7 +441,12 @@ par(mfrow=c(1,1))
 Una vez estimada la recta, cuantificamos **cuánto se equivoca** el modelo con la varianza residual $s^2$:
 
 ::: {.formula-box}
-$$s^2 = \frac{SC_{res}}{n-2} = \frac{\sum_{i=1}^n (y_i - \hat{y}_i)^2}{n-2}, \qquad s = \sqrt{s^2} \text{ (error estándar residual)}$$
+$$
+\begin{aligned}
+s^2 &= \frac{SC_{res}}{n-2} = \frac{\sum_{i=1}^n (y_i - \hat{y}_i)^2}{n-2} \\[4pt]
+s &= \sqrt{s^2} \quad \text{(error estándar residual)}
+\end{aligned}
+$$
 :::
 
 **¿Por qué $n-2$?** Hemos estimado **2 parámetros** ($\beta_0$ y $\beta_1$) → "gastamos" 2 grados de libertad. Es el mismo principio que $n-1$ en la varianza muestral (Tema 3), pero con 2 restricciones en lugar de 1.
@@ -508,7 +519,13 @@ predict(modelo, newdata=data.frame(imc=22))
 
 ::: {.callout-note}
 
-$$r = \frac{S_{xy}}{\sqrt{S_{xx} \cdot S_{yy}}} = \frac{\sum(x_i-\bar{x})(y_i-\bar{y})}{\sqrt{\sum(x_i-\bar{x})^2 \cdot \sum(y_i-\bar{y})^2}}$$
+$$
+\begin{aligned}
+r &= \frac{S_{xy}}{\sqrt{S_{xx} \cdot S_{yy}}} \\[4pt]
+  &= \frac{\sum(x_i-\bar{x})(y_i-\bar{y})}
+          {\sqrt{\sum(x_i-\bar{x})^2 \cdot \sum(y_i-\bar{y})^2}}
+\end{aligned}
+$$
 
 :::
 

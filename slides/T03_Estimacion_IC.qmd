@@ -182,7 +182,12 @@ Ejemplos: $\bar{X}$, $s^2$, $\hat{p}$, mediana, mínimo, máximo...
 ::: {.callout-note}
 **La pregunta:** ¿Por qué dividimos por $n-1$ al calcular la varianza muestral en lugar de por $n$, que parecería lo natural?
 
-$$S^2 = \frac{1}{n-1}\sum_{i=1}^n (X_i - \bar{X})^2 \quad \text{(con corrección)} \qquad \text{vs.} \qquad S'^2 = \frac{1}{n}\sum_{i=1}^n (X_i - \bar{X})^2 \quad \text{(sin corrección)}$$
+$$
+\begin{aligned}
+S^2 &= \frac{1}{n-1}\sum_{i=1}^n (X_i - \bar{X})^2 && \text{(con corrección)} \\
+S'^2 &= \frac{1}{n}\sum_{i=1}^n (X_i - \bar{X})^2 && \text{(sin corrección)}
+\end{aligned}
+$$
 :::
 
 **La intuición en una frase:** $\bar{X}$ está más cerca de los datos que $\mu$, así que las distancias a $\bar{X}$ son sistemáticamente más pequeñas que las distancias a $\mu$. Para compensar, inflamos la estimación dividiendo por un número menor ($n-1$).
@@ -237,11 +242,21 @@ Pero como no conocemos $\mu$, usamos $\bar{X}$. **Este es el origen del problema
 
 **Paso 2 — Sumamos y restamos $\bar{X}$ dentro del cuadrado:**
 
-$$(X_i - \mu)^2 = (X_i - \bar{X} + \bar{X} - \mu)^2 = \underbrace{(X_i - \bar{X})^2}_{\text{lo que calculamos}} + (\bar{X} - \mu)^2 + 2(X_i - \bar{X})(\bar{X} - \mu)$$
+$$
+\begin{aligned}
+(X_i - \mu)^2 &= (X_i - \bar{X} + \bar{X} - \mu)^2 \\
+&= \underbrace{(X_i - \bar{X})^2}_{\text{lo que calculamos}} + (\bar{X} - \mu)^2 + 2(X_i - \bar{X})(\bar{X} - \mu)
+\end{aligned}
+$$
 
 **Paso 3 — Sumamos sobre $i$ y aplicamos esperanzas:**
 
-$$E\left[\sum (X_i - \mu)^2\right] = E\left[\sum (X_i - \bar{X})^2\right] + n \cdot E[(\bar{X} - \mu)^2] + \underbrace{2E\left[(\bar{X} - \mu)\sum (X_i - \bar{X})\right]}_{=0 \text{ porque } \sum (X_i - \bar{X}) = 0}$$
+$$
+\begin{aligned}
+E\left[\sum (X_i - \mu)^2\right] ={}& E\left[\sum (X_i - \bar{X})^2\right] + n \cdot E[(\bar{X} - \mu)^2] \\
+&+ \underbrace{2E\left[(\bar{X} - \mu)\sum (X_i - \bar{X})\right]}_{=0 \text{ porque } \sum (X_i - \bar{X}) = 0}
+\end{aligned}
+$$
 
 ## Derivación matemática — El resultado
 
@@ -253,11 +268,21 @@ $$E\left[\sum (X_i - \mu)^2\right] = E\left[\sum (X_i - \bar{X})^2\right] + n \c
 | $E\left[\sum (X_i - \bar{X})^2\right]$ | $(n-1)\sigma^2$ | Suma de cuadrados muestral (¡lo que calculamos!) |
 | $n \cdot E[(\bar{X} - \mu)^2]$ | $n \cdot \frac{\sigma^2}{n} = \sigma^2$ | Varianza de la media muestral × n |
 
-$$n\sigma^2 = E\left[\sum (X_i - \bar{X})^2\right] + \sigma^2 \quad\Rightarrow\quad E\left[\sum (X_i - \bar{X})^2\right] = (n-1)\sigma^2$$
+$$
+\begin{aligned}
+n\sigma^2 &= E\left[\sum (X_i - \bar{X})^2\right] + \sigma^2 \\
+\Rightarrow \quad E\left[\sum (X_i - \bar{X})^2\right] &= (n-1)\sigma^2
+\end{aligned}
+$$
 
 **Paso 5 — Despejamos el estimador insesgado:**
 
-$$E\left[\frac{\sum (X_i - \bar{X})^2}{n-1}\right] = \sigma^2 \qquad\Longrightarrow\qquad S^2 = \frac{1}{n-1}\sum_{i=1}^n (X_i - \bar{X})^2$$
+$$
+\begin{aligned}
+E\left[\frac{\sum (X_i - \bar{X})^2}{n-1}\right] &= \sigma^2 \\
+\Longrightarrow \quad S^2 &= \frac{1}{n-1}\sum_{i=1}^n (X_i - \bar{X})^2
+\end{aligned}
+$$
 
 ::: {.callout-important}
 **La intuición algebraica:** De la variabilidad total ($n\sigma^2$), $\sigma^2$ se "gasta" en estimar $\bar{X}$ (la incertidumbre sobre la media). Solo quedan $(n-1)\sigma^2$ para estimar la dispersión. Por eso dividimos por $n-1$: es el número de **piezas independientes de información sobre la variabilidad** que quedan tras estimar la media.
@@ -271,7 +296,12 @@ Los **grados de libertad** ($gl = n-1$) son exactamente eso: el número de pieza
 **Analogía clínica:** Mides la flexión de rodilla en 5 pacientes. Sabes que la media es 130°. Si te digo el valor de 4 pacientes, el 5º queda **determinado** (no es libre). Solo $5-1=4$ pacientes aportan información independiente sobre la **variabilidad**.
 :::
 
-$$\sum_{i=1}^n (x_i - \bar{x}) = 0 \quad\Rightarrow\quad \text{1 restricción} \quad\Rightarrow\quad n-1 \text{ grados de libertad}$$
+$$
+\begin{aligned}
+\sum_{i=1}^n (x_i - \bar{x}) = 0 \quad &\Rightarrow \quad \text{1 restricción} \\
+&\Rightarrow \quad n-1 \text{ grados de libertad}
+\end{aligned}
+$$
 
 ## Impacto práctico en fisioterapia
 
@@ -446,7 +476,12 @@ La fórmula del intervalo de confianza para la media no es arbitraria. Se obtien
 ::: {.incremental}
 
 **Paso 1 — Distribución de la media muestral (TCL, Tema 3):**
-$$\bar{X} \sim N\left(\mu, \frac{\sigma}{\sqrt{n}}\right) \quad \Rightarrow \quad Z = \frac{\bar{X} - \mu}{\sigma / \sqrt{n}} \sim N(0,1)$$
+$$
+\begin{aligned}
+\bar{X} &\sim N\left(\mu, \frac{\sigma}{\sqrt{n}}\right) \\[2pt]
+\Rightarrow \quad Z &= \frac{\bar{X} - \mu}{\sigma / \sqrt{n}} \sim N(0,1)
+\end{aligned}
+$$
 
 **Paso 2 — Sustitución de $\sigma$ por $s$ (Tema 3, corrección $n-1$):**
 $$T = \frac{\bar{X} - \mu}{s / \sqrt{n}} \sim t_{n-1}$$
@@ -464,7 +499,12 @@ La distribución $t$ de Student (Tema 2) corrige la incertidumbre adicional por 
 $$P\left(-t_{\alpha/2;\, n-1} \leq \frac{\bar{X} - \mu}{s / \sqrt{n}} \leq t_{\alpha/2;\, n-1}\right) = 1 - \alpha$$
 
 Despejando $\mu$ de la desigualdad central:
-$$P\left(\bar{X} - t_{\alpha/2;\, n-1} \cdot \frac{s}{\sqrt{n}} \leq \mu \leq \bar{X} + t_{\alpha/2;\, n-1} \cdot \frac{s}{\sqrt{n}}\right) = 1 - \alpha$$
+$$
+\begin{aligned}
+P\Big( &\bar{X} - t_{\alpha/2;\, n-1} \cdot \frac{s}{\sqrt{n}} \;\leq\; \mu \\[2pt]
+       &\leq\; \bar{X} + t_{\alpha/2;\, n-1} \cdot \frac{s}{\sqrt{n}} \Big) = 1 - \alpha
+\end{aligned}
+$$
 :::
 
 ::: {.framed}
@@ -624,7 +664,13 @@ El **área verde** central cubre el 95% de la distribución. Los valores de $t$ 
 $$d = t_{\alpha/2;\, n-1} \cdot \frac{s}{\sqrt{n}}$$
 
 **Paso 1 — Despejar $n$:**
-$$d = t_{\alpha/2;\, n-1} \cdot \frac{s}{\sqrt{n}} \;\Rightarrow\; \sqrt{n} = \frac{t_{\alpha/2;\, n-1} \cdot s}{d} \;\Rightarrow\; n = \left(\frac{t_{\alpha/2;\, n-1} \cdot s}{d}\right)^2$$
+$$
+\begin{aligned}
+d &= t_{\alpha/2;\, n-1} \cdot \frac{s}{\sqrt{n}} \\
+\Rightarrow \quad \sqrt{n} &= \frac{t_{\alpha/2;\, n-1} \cdot s}{d} \\
+\Rightarrow \quad n &= \left(\frac{t_{\alpha/2;\, n-1} \cdot s}{d}\right)^2
+\end{aligned}
+$$
 
 *(La solución iterativa y la fórmula con z se desarrollan en la siguiente diapositiva.)*
 
@@ -677,7 +723,12 @@ cat("n0 (z) =", n0, "→ n1 (t,", n0-1, "gl) =", n1, "→ n2 (t,", n1-1, "gl) ="
 **Paso 1 — Estadísticos muestrales:**
 $n=8$, $\bar{x} = \frac{168+174+162+170+166+172+164+170}{8} = \frac{1346}{8} = 168.25°$
 
-$s = \sqrt{\frac{\sum(x_i-\bar{x})^2}{7}} = \sqrt{\frac{(-0.25)^2+5.75^2+(-6.25)^2+1.75^2+(-2.25)^2+3.75^2+(-4.25)^2+1.75^2}{7}}$
+$$
+\begin{aligned}
+s &= \sqrt{\frac{\sum(x_i-\bar{x})^2}{7}} \\
+  &= \sqrt{\frac{(-0.25)^2+5.75^2+(-6.25)^2+1.75^2+(-2.25)^2+3.75^2+(-4.25)^2+1.75^2}{7}}
+\end{aligned}
+$$
 
 $s = \sqrt{\frac{0.06+33.06+39.06+3.06+5.06+14.06+18.06+3.06}{7}} = \sqrt{\frac{115.5}{7}} = 4.06°$
 
@@ -701,7 +752,12 @@ cat("IC 95%: (", round(IC_lo,1), ",", round(IC_hi,1), ")°",
 
 **Método de Wilson (recomendado, condición: $x>5$, $n-x>5$):**
 
-$$p \in \frac{x + \frac{z_{\alpha/2}^2}{2}}{n + z_{\alpha/2}^2} \pm \frac{z_{\alpha/2}}{n + z_{\alpha/2}^2}\sqrt{\frac{x(n-x)}{n} + \frac{z_{\alpha/2}^2}{4}}$$
+$$
+\begin{aligned}
+p \in{}& \frac{x + \frac{z_{\alpha/2}^2}{2}}{n + z_{\alpha/2}^2} \\
+      &\pm \frac{z_{\alpha/2}}{n + z_{\alpha/2}^2}\sqrt{\frac{x(n-x)}{n} + \frac{z_{\alpha/2}^2}{4}}
+\end{aligned}
+$$
 
 **Wald (evitar):** $\hat{p} \pm z_{\alpha/2} \sqrt{\hat{p}(1-\hat{p})/n}$ (requiere $x>20$, $n-x>20$, puede exceder $[0,1]$)
 
