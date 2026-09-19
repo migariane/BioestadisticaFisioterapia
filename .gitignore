@@ -1,3 +1,13 @@
 /.quarto/
 **/*.quarto_ipynb
 /Moodle/
+
+# Carpetas de trabajo locales y estado de R. Este repo está anidado, así que
+# NO hereda el .gitignore del repositorio padre — las reglas deben repetirse aquí.
+# (El .Renviron rastreado que se publicó en 2026-09 salió justo por este hueco.)
+OriginalFiles.txt/
+qmd_slides/
+.Rhistory
+.RData
+.Renviron
+.env
