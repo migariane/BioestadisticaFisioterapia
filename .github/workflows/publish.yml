@@ -36,11 +36,31 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      # ------------------------------------------------------- dependencias de SO
+      # T02_I y T02_II declaran tambien `format: pdf`, y sus figuras son SVG
+      # (fig-format: svg en _quarto.yml). Para meter un SVG en un PDF, Quarto
+      # llama a rsvg-convert, que no viene en el runner de Ubuntu: sin el, el
+      # render aborta con "Could not convert a SVG to a PDF for output".
+      # librsvg2-bin aporta rsvg-convert; tinytex aporta el LaTeX que necesita
+      # el propio PDF (es mucho mas ligero que texlive-full).
+      - name: Install system dependencies for PDF output
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends librsvg2-bin
+          rsvg-convert --version
+
+      - name: Set up TinyTeX
+        uses: r-lib/actions/setup-tinytex@v2
+
       # ---------------------------------------------------------------- Quarto
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
         with:
           version: 1.9.38
+          # tinytex: true haria que esta accion instalase su propia copia de
+          # TinyTeX, duplicando el paso anterior. Se deja en su default (false)
+          # y se instala una sola vez con setup-tinytex (arriba). Quarto usa el
+          # pdflatex que encuentre en el PATH.
 
       # --------------------------------------------------------------------- R
       # r-lib/actions gestiona la cache de paquetes, que es lo que hace que el
