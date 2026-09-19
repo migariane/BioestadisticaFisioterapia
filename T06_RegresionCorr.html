@@ -891,7 +891,13 @@ lm() b1 = 0.616</code></pre>
 </div>
 <div class="framed">
 <p><strong>Estimadores MCO — construidos sobre los tres pilares:</strong></p>
-<p><span class="math display">\[\hat{\beta}_1 = \frac{S_{xy}}{S_{xx}} = \frac{\sum(x_i-\bar{x})(y_i-\bar{y})}{\sum(x_i-\bar{x})^2} \qquad \hat{\beta}_0 = \bar{y} - \hat{\beta}_1\bar{x}\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+\hat{\beta}_1 &amp;= \frac{S_{xy}}{S_{xx}}
+              = \frac{\sum(x_i-\bar{x})(y_i-\bar{y})}{\sum(x_i-\bar{x})^2} \\[4pt]
+\hat{\beta}_0 &amp;= \bar{y} - \hat{\beta}_1\bar{x}
+\end{aligned}
+\]</span></p>
 <ul>
 <li><span class="math inline">\(\hat{\beta}_1\)</span>: “cuánto varían juntas <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span>” dividido por “cuánto varía <span class="math inline">\(X\)</span>” = <span class="math inline">\(\frac{S_{xy}}{S_{xx}}\)</span></li>
 <li><span class="math inline">\(\hat{\beta}_0\)</span>: ajusta la altura para que la recta pase por el centroide <span class="math inline">\((\bar{x}, \bar{y})\)</span></li>
@@ -972,7 +978,12 @@ F-statistic: 7.136 on 1 and 10 DF,  p-value: 0.02344</code></pre>
 <h2>Varianza residual — Lo que el modelo no explica</h2>
 <p>Una vez estimada la recta, cuantificamos <strong>cuánto se equivoca</strong> el modelo con la varianza residual <span class="math inline">\(s^2\)</span>:</p>
 <div class="formula-box">
-<p><span class="math display">\[s^2 = \frac{SC_{res}}{n-2} = \frac{\sum_{i=1}^n (y_i - \hat{y}_i)^2}{n-2}, \qquad s = \sqrt{s^2} \text{ (error estándar residual)}\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+s^2 &amp;= \frac{SC_{res}}{n-2} = \frac{\sum_{i=1}^n (y_i - \hat{y}_i)^2}{n-2} \\[4pt]
+s &amp;= \sqrt{s^2} \quad \text{(error estándar residual)}
+\end{aligned}
+\]</span></p>
 </div>
 <p><strong>¿Por qué <span class="math inline">\(n-2\)</span>?</strong> Hemos estimado <strong>2 parámetros</strong> (<span class="math inline">\(\beta_0\)</span> y <span class="math inline">\(\beta_1\)</span>) → “gastamos” 2 grados de libertad. Es el mismo principio que <span class="math inline">\(n-1\)</span> en la varianza muestral (Tema 3), pero con 2 restricciones en lugar de 1.</p>
 <p><strong>En el ejemplo IMC-Graso:</strong> <span class="math inline">\(s = 4.30\)</span> significa que el modelo se equivoca típicamente en <span class="math inline">\(\pm 4.30\)</span> puntos porcentuales de grasa corporal al predecir desde el IMC.</p>
@@ -1092,7 +1103,13 @@ summary(modelo)$sigma = 4.3</code></pre>
 <p><strong>Nota</strong></p>
 </div>
 <div class="callout-content">
-<p><span class="math display">\[r = \frac{S_{xy}}{\sqrt{S_{xx} \cdot S_{yy}}} = \frac{\sum(x_i-\bar{x})(y_i-\bar{y})}{\sqrt{\sum(x_i-\bar{x})^2 \cdot \sum(y_i-\bar{y})^2}}\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+r &amp;= \frac{S_{xy}}{\sqrt{S_{xx} \cdot S_{yy}}} \\[4pt]
+  &amp;= \frac{\sum(x_i-\bar{x})(y_i-\bar{y})}
+          {\sqrt{\sum(x_i-\bar{x})^2 \cdot \sum(y_i-\bar{y})^2}}
+\end{aligned}
+\]</span></p>
 </div>
 </div>
 </div>

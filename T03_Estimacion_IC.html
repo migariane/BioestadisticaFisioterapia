@@ -596,7 +596,12 @@
 </div>
 <div class="callout-content">
 <p><strong>La pregunta:</strong> ¿Por qué dividimos por <span class="math inline">\(n-1\)</span> al calcular la varianza muestral en lugar de por <span class="math inline">\(n\)</span>, que parecería lo natural?</p>
-<p><span class="math display">\[S^2 = \frac{1}{n-1}\sum_{i=1}^n (X_i - \bar{X})^2 \quad \text{(con corrección)} \qquad \text{vs.} \qquad S'^2 = \frac{1}{n}\sum_{i=1}^n (X_i - \bar{X})^2 \quad \text{(sin corrección)}\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+S^2 &amp;= \frac{1}{n-1}\sum_{i=1}^n (X_i - \bar{X})^2 &amp;&amp; \text{(con corrección)} \\
+S'^2 &amp;= \frac{1}{n}\sum_{i=1}^n (X_i - \bar{X})^2 &amp;&amp; \text{(sin corrección)}
+\end{aligned}
+\]</span></p>
 </div>
 </div>
 </div>
@@ -677,9 +682,19 @@
 <p><span class="math display">\[\sigma^2 = E\left[\frac{1}{n}\sum_{i=1}^n (X_i - \mu)^2\right]\]</span></p>
 <p>Pero como no conocemos <span class="math inline">\(\mu\)</span>, usamos <span class="math inline">\(\bar{X}\)</span>. <strong>Este es el origen del problema.</strong></p>
 <p><strong>Paso 2 — Sumamos y restamos <span class="math inline">\(\bar{X}\)</span> dentro del cuadrado:</strong></p>
-<p><span class="math display">\[(X_i - \mu)^2 = (X_i - \bar{X} + \bar{X} - \mu)^2 = \underbrace{(X_i - \bar{X})^2}_{\text{lo que calculamos}} + (\bar{X} - \mu)^2 + 2(X_i - \bar{X})(\bar{X} - \mu)\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+(X_i - \mu)^2 &amp;= (X_i - \bar{X} + \bar{X} - \mu)^2 \\
+&amp;= \underbrace{(X_i - \bar{X})^2}_{\text{lo que calculamos}} + (\bar{X} - \mu)^2 + 2(X_i - \bar{X})(\bar{X} - \mu)
+\end{aligned}
+\]</span></p>
 <p><strong>Paso 3 — Sumamos sobre <span class="math inline">\(i\)</span> y aplicamos esperanzas:</strong></p>
-<p><span class="math display">\[E\left[\sum (X_i - \mu)^2\right] = E\left[\sum (X_i - \bar{X})^2\right] + n \cdot E[(\bar{X} - \mu)^2] + \underbrace{2E\left[(\bar{X} - \mu)\sum (X_i - \bar{X})\right]}_{=0 \text{ porque } \sum (X_i - \bar{X}) = 0}\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+E\left[\sum (X_i - \mu)^2\right] ={}&amp; E\left[\sum (X_i - \bar{X})^2\right] + n \cdot E[(\bar{X} - \mu)^2] \\
+&amp;+ \underbrace{2E\left[(\bar{X} - \mu)\sum (X_i - \bar{X})\right]}_{=0 \text{ porque } \sum (X_i - \bar{X}) = 0}
+\end{aligned}
+\]</span></p>
 </section>
 <section id="derivación-matemática-el-resultado" class="slide level2 center">
 <h2>Derivación matemática — El resultado</h2>
@@ -715,9 +730,19 @@
 </tr>
 </tbody>
 </table>
-<p><span class="math display">\[n\sigma^2 = E\left[\sum (X_i - \bar{X})^2\right] + \sigma^2 \quad\Rightarrow\quad E\left[\sum (X_i - \bar{X})^2\right] = (n-1)\sigma^2\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+n\sigma^2 &amp;= E\left[\sum (X_i - \bar{X})^2\right] + \sigma^2 \\
+\Rightarrow \quad E\left[\sum (X_i - \bar{X})^2\right] &amp;= (n-1)\sigma^2
+\end{aligned}
+\]</span></p>
 <p><strong>Paso 5 — Despejamos el estimador insesgado:</strong></p>
-<p><span class="math display">\[E\left[\frac{\sum (X_i - \bar{X})^2}{n-1}\right] = \sigma^2 \qquad\Longrightarrow\qquad S^2 = \frac{1}{n-1}\sum_{i=1}^n (X_i - \bar{X})^2\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+E\left[\frac{\sum (X_i - \bar{X})^2}{n-1}\right] &amp;= \sigma^2 \\
+\Longrightarrow \quad S^2 &amp;= \frac{1}{n-1}\sum_{i=1}^n (X_i - \bar{X})^2
+\end{aligned}
+\]</span></p>
 <div class="callout callout-important callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -748,7 +773,12 @@
 </div>
 </div>
 </div>
-<p><span class="math display">\[\sum_{i=1}^n (x_i - \bar{x}) = 0 \quad\Rightarrow\quad \text{1 restricción} \quad\Rightarrow\quad n-1 \text{ grados de libertad}\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+\sum_{i=1}^n (x_i - \bar{x}) = 0 \quad &amp;\Rightarrow \quad \text{1 restricción} \\
+&amp;\Rightarrow \quad n-1 \text{ grados de libertad}
+\end{aligned}
+\]</span></p>
 </section>
 <section id="impacto-práctico-en-fisioterapia" class="slide level2 center">
 <h2>Impacto práctico en fisioterapia</h2>
@@ -1062,7 +1092,12 @@
 <p><strong>Nota</strong></p>
 </div>
 <div class="callout-content">
-<p><strong>Paso 1 — Distribución de la media muestral (TCL, Tema 3):</strong> <span class="math display">\[\bar{X} \sim N\left(\mu, \frac{\sigma}{\sqrt{n}}\right) \quad \Rightarrow \quad Z = \frac{\bar{X} - \mu}{\sigma / \sqrt{n}} \sim N(0,1)\]</span></p>
+<p><strong>Paso 1 — Distribución de la media muestral (TCL, Tema 3):</strong> <span class="math display">\[
+\begin{aligned}
+\bar{X} &amp;\sim N\left(\mu, \frac{\sigma}{\sqrt{n}}\right) \\[2pt]
+\Rightarrow \quad Z &amp;= \frac{\bar{X} - \mu}{\sigma / \sqrt{n}} \sim N(0,1)
+\end{aligned}
+\]</span></p>
 <p><strong>Paso 2 — Sustitución de <span class="math inline">\(\sigma\)</span> por <span class="math inline">\(s\)</span> (Tema 3, corrección <span class="math inline">\(n-1\)</span>):</strong> <span class="math display">\[T = \frac{\bar{X} - \mu}{s / \sqrt{n}} \sim t_{n-1}\]</span> La distribución <span class="math inline">\(t\)</span> de Student (Tema 2) corrige la incertidumbre adicional por estimar <span class="math inline">\(\sigma\)</span>.</p>
 <p><em>(El despeje y la fórmula final se desarrollan en la siguiente diapositiva.)</em></p>
 </div>
@@ -1081,7 +1116,12 @@
 </div>
 <div class="callout-content">
 <p><strong>Paso 3 — Intervalo de probabilidad y despeje de <span class="math inline">\(\mu\)</span>:</strong> <span class="math display">\[P\left(-t_{\alpha/2;\, n-1} \leq \frac{\bar{X} - \mu}{s / \sqrt{n}} \leq t_{\alpha/2;\, n-1}\right) = 1 - \alpha\]</span></p>
-<p>Despejando <span class="math inline">\(\mu\)</span> de la desigualdad central: <span class="math display">\[P\left(\bar{X} - t_{\alpha/2;\, n-1} \cdot \frac{s}{\sqrt{n}} \leq \mu \leq \bar{X} + t_{\alpha/2;\, n-1} \cdot \frac{s}{\sqrt{n}}\right) = 1 - \alpha\]</span></p>
+<p>Despejando <span class="math inline">\(\mu\)</span> de la desigualdad central: <span class="math display">\[
+\begin{aligned}
+P\Big( &amp;\bar{X} - t_{\alpha/2;\, n-1} \cdot \frac{s}{\sqrt{n}} \;\leq\; \mu \\[2pt]
+       &amp;\leq\; \bar{X} + t_{\alpha/2;\, n-1} \cdot \frac{s}{\sqrt{n}} \Big) = 1 - \alpha
+\end{aligned}
+\]</span></p>
 </div>
 </div>
 </div>
@@ -1309,7 +1349,13 @@ Precisión d = 3.08 mg/dL</code></pre>
 <section id="derivación-del-tamaño-muestral-para-mu" class="slide level2 center">
 <h2>Derivación del tamaño muestral para <span class="math inline">\(\mu\)</span></h2>
 <p><strong>Punto de partida — la precisión del IC:</strong> <span class="math display">\[d = t_{\alpha/2;\, n-1} \cdot \frac{s}{\sqrt{n}}\]</span></p>
-<p><strong>Paso 1 — Despejar <span class="math inline">\(n\)</span>:</strong> <span class="math display">\[d = t_{\alpha/2;\, n-1} \cdot \frac{s}{\sqrt{n}} \;\Rightarrow\; \sqrt{n} = \frac{t_{\alpha/2;\, n-1} \cdot s}{d} \;\Rightarrow\; n = \left(\frac{t_{\alpha/2;\, n-1} \cdot s}{d}\right)^2\]</span></p>
+<p><strong>Paso 1 — Despejar <span class="math inline">\(n\)</span>:</strong> <span class="math display">\[
+\begin{aligned}
+d &amp;= t_{\alpha/2;\, n-1} \cdot \frac{s}{\sqrt{n}} \\
+\Rightarrow \quad \sqrt{n} &amp;= \frac{t_{\alpha/2;\, n-1} \cdot s}{d} \\
+\Rightarrow \quad n &amp;= \left(\frac{t_{\alpha/2;\, n-1} \cdot s}{d}\right)^2
+\end{aligned}
+\]</span></p>
 <p><em>(La solución iterativa y la fórmula con z se desarrollan en la siguiente diapositiva.)</em></p>
 </section>
 <section id="tamaño-muestral-el-problema-de-circularidad" class="slide level2 center">
@@ -1356,7 +1402,12 @@ Precisión d = 3.08 mg/dL</code></pre>
 <p><strong>Contexto clínico:</strong> Goniometría de flexión de hombro en 8 pacientes post-rehabilitación:</p>
 <p>168°, 174°, 162°, 170°, 166°, 172°, 164°, 170°</p>
 <p><strong>Paso 1 — Estadísticos muestrales:</strong> <span class="math inline">\(n=8\)</span>, <span class="math inline">\(\bar{x} = \frac{168+174+162+170+166+172+164+170}{8} = \frac{1346}{8} = 168.25°\)</span></p>
-<p><span class="math inline">\(s = \sqrt{\frac{\sum(x_i-\bar{x})^2}{7}} = \sqrt{\frac{(-0.25)^2+5.75^2+(-6.25)^2+1.75^2+(-2.25)^2+3.75^2+(-4.25)^2+1.75^2}{7}}\)</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+s &amp;= \sqrt{\frac{\sum(x_i-\bar{x})^2}{7}} \\
+  &amp;= \sqrt{\frac{(-0.25)^2+5.75^2+(-6.25)^2+1.75^2+(-2.25)^2+3.75^2+(-4.25)^2+1.75^2}{7}}
+\end{aligned}
+\]</span></p>
 <p><span class="math inline">\(s = \sqrt{\frac{0.06+33.06+39.06+3.06+5.06+14.06+18.06+3.06}{7}} = \sqrt{\frac{115.5}{7}} = 4.06°\)</span></p>
 <p><strong>Paso 2 — Valor crítico:</strong> <span class="math inline">\(t_{0.025;7} = 2.365\)</span></p>
 <p><strong>Paso 3 — IC 95%:</strong> <span class="math inline">\(168.25 \pm 2.365 \cdot \frac{4.06}{\sqrt{8}} = 168.25 \pm 3.39 = (164.9°, 171.6°)\)</span></p>
@@ -1380,7 +1431,12 @@ Precision d = 3.4 °</code></pre>
 <h2>IC para una proporción poblacional</h2>
 <p><strong>Estimador puntual:</strong> <span class="math inline">\(\hat{p} = x/n\)</span></p>
 <p><strong>Método de Wilson (recomendado, condición: <span class="math inline">\(x&gt;5\)</span>, <span class="math inline">\(n-x&gt;5\)</span>):</strong></p>
-<p><span class="math display">\[p \in \frac{x + \frac{z_{\alpha/2}^2}{2}}{n + z_{\alpha/2}^2} \pm \frac{z_{\alpha/2}}{n + z_{\alpha/2}^2}\sqrt{\frac{x(n-x)}{n} + \frac{z_{\alpha/2}^2}{4}}\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+p \in{}&amp; \frac{x + \frac{z_{\alpha/2}^2}{2}}{n + z_{\alpha/2}^2} \\
+      &amp;\pm \frac{z_{\alpha/2}}{n + z_{\alpha/2}^2}\sqrt{\frac{x(n-x)}{n} + \frac{z_{\alpha/2}^2}{4}}
+\end{aligned}
+\]</span></p>
 <p><strong>Wald (evitar):</strong> <span class="math inline">\(\hat{p} \pm z_{\alpha/2} \sqrt{\hat{p}(1-\hat{p})/n}\)</span> (requiere <span class="math inline">\(x&gt;20\)</span>, <span class="math inline">\(n-x&gt;20\)</span>, puede exceder <span class="math inline">\([0,1]\)</span>)</p>
 <p><strong>Wald ajustado:</strong> <span class="math inline">\(\frac{x+2}{n+4} \pm z_{\alpha/2} \sqrt{\frac{(x+2)(n-x+2)}{(n+4)^3}}\)</span> (siempre válido)</p>
 <p><em>Siempre preferir Wilson.</em> Es el que mejor cobertura tiene y respeta <span class="math inline">\([0,1]\)</span>.</p>

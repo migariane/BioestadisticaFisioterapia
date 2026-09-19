@@ -1037,7 +1037,10 @@ RIQ = 10.5</code></pre>
 <p>Cuando los datos están agrupados en <span class="math inline">\(k\)</span> intervalos, las fórmulas de la media y la varianza se adaptan usando la <strong>marca de clase</strong> <span class="math inline">\(x_j\)</span> como representante del intervalo:</p>
 <div class="framed">
 <p><strong>Media desde tabla agrupada:</strong> <span class="math display">\[\bar{x} = \frac{1}{n}\sum_{j=1}^{k} x_j \cdot n_j = \sum_{j=1}^{k} x_j \cdot f_j\]</span></p>
-<p><strong>Varianza desde tabla agrupada (fórmula abreviada de cálculo):</strong> <span class="math display">\[s^2 = \frac{1}{n-1}\left[ \sum_{j=1}^{k} x_j^2 \cdot n_j - \frac{\left( \sum_{j=1}^{k} x_j \cdot n_j \right)^2}{n} \right]\]</span></p>
+<p><strong>Varianza desde tabla agrupada (fórmula abreviada de cálculo):</strong> <span class="math display">\[
+s^2 = \frac{1}{n-1}\left[ \sum_{j=1}^{k} x_j^2 \cdot n_j
+      - \frac{\left( \sum_{j=1}^{k} x_j \cdot n_j \right)^2}{n} \right]
+\]</span></p>
 </div>
 <p><strong>Relación con las fórmulas para datos sin agrupar:</strong></p>
 <ul>
@@ -1112,7 +1115,13 @@ RIQ = 10.5</code></pre>
 </tbody>
 </table>
 <p><span class="math display">\[\bar{x} = \frac{\sum x_j \cdot n_j}{n} = \frac{8050}{60} = 134.2°\]</span></p>
-<p><span class="math display">\[s^2 = \frac{1}{n-1}\left[\sum x_j^2 n_j - \frac{(\sum x_j n_j)^2}{n}\right] = \frac{1}{59}\left[1,086,500 - \frac{8,050^2}{60}\right] = \frac{6,458}{59} = 109.5\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+s^2 &amp;= \frac{1}{n-1}\left[\sum x_j^2 n_j - \frac{(\sum x_j n_j)^2}{n}\right] \\
+    &amp;= \frac{1}{59}\left[1{,}086{,}500 - \frac{8{,}050^2}{60}\right]
+     = \frac{6{,}458}{59} = 109.5
+\end{aligned}
+\]</span></p>
 <p><span class="math display">\[s = \sqrt{109.5} = 10.5°\]</span></p>
 <div class="cell">
 <details class="code-fold">
@@ -1336,7 +1345,14 @@ RIQ = 10.5</code></pre>
 </div>
 </div>
 </div>
-<p><span class="math display">\[F_n(x) = \frac{1}{n}\sum_{i=1}^{n} \mathbb{1}_{\{x_i \leq x\}} = \begin{cases} 0 &amp; x &lt; x_{(1)} \\ i/n &amp; x_{(i)} \leq x &lt; x_{(i+1)} \\ 1 &amp; x \geq x_{(n)} \end{cases}\]</span></p>
+<p><span class="math display">\[
+F_n(x) = \frac{1}{n}\sum_{i=1}^{n} \mathbb{1}_{\{x_i \leq x\}} =
+\begin{cases}
+0   &amp; x &lt; x_{(1)} \\
+i/n &amp; x_{(i)} \leq x &lt; x_{(i+1)} \\
+1   &amp; x \geq x_{(n)}
+\end{cases}
+\]</span></p>
 <p>donde <span class="math inline">\(\mathbb{1}_{\{x_i \leq x\}}\)</span> vale 1 si <span class="math inline">\(x_i \leq x\)</span> y 0 en caso contrario.</p>
 <p><strong>Utilidad clínica de la ECDF:</strong></p>
 <ul>
