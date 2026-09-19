@@ -65,6 +65,15 @@ jobs:
             any::lmtest
             any::rmarkdown
             any::knitr
+            # svglite es el dispositivo de figuras que pide _quarto.yml
+            # (knitr.opts_chunk.dev y format.revealjs.fig-format). Quarto lo
+            # carga por su cuenta, no aparece en ningun library() del .qmd, y
+            # sin el el render aborta en el primer chunk de setup.
+            any::svglite
+            # Usados con :: dentro de los chunks, no via library().
+            any::corrplot
+            any::remotes
+            any::jsonlite
 
       # ------------------------------------------------------------- BioEstatR
       # 6 de los 10 temas hacen library(BioEstatR) sin guard: sin este paquete
