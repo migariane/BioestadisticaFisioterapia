@@ -1,0 +1,120 @@
+name: Publish slides to GitHub Pages
+
+# Reconstruye el sitio Quarto desde las fuentes (slides/*.qmd) y lo publica en
+# la rama gh-pages. Antes este paso era manual: se renderizaba en local, se
+# copiaba el resultado a gh-pages y se hacia push. El resultado era que la web
+# podia quedar desincronizada de las fuentes (en sept-2026 servia un build de
+# agosto mientras las fuentes ya tenian cambios).
+#
+# A partir de ahora gh-pages es un artefacto generado: no se edita a mano.
+
+on:
+  push:
+    branches: [main]
+    # Solo cuando cambia algo que afecta al sitio.
+    paths:
+      - 'slides/**'
+      - 'R-packages/**'
+      - '.github/workflows/publish.yml'
+  # Permite lanzarlo a mano desde la pestana Actions.
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+# Un unico deploy a la vez. Si llegan dos pushes seguidos, se cancela el
+# anterior: no tiene sentido publicar una version que ya ha quedado obsoleta.
+concurrency:
+  group: publish-gh-pages
+  cancel-in-progress: true
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # ---------------------------------------------------------------- Quarto
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: 1.9.38
+
+      # --------------------------------------------------------------------- R
+      # r-lib/actions gestiona la cache de paquetes, que es lo que hace que el
+      # job no tarde 20 minutos en cada push.
+      - name: Set up R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: '4.5.1'
+          use-public-rspm: true
+
+      - name: Install R dependencies
+        uses: r-lib/actions/setup-r-dependencies@v2
+        with:
+          # BioEstatR es un paquete local de la UGR, no esta en CRAN. Se instala
+          # aparte en el paso siguiente desde el tarball del repo.
+          packages: |
+            any::ggplot2
+            any::ResourceSelection
+            any::pROC
+            any::e1071
+            any::MASS
+            any::lmtest
+            any::rmarkdown
+            any::knitr
+
+      # ------------------------------------------------------------- BioEstatR
+      # 6 de los 10 temas hacen library(BioEstatR) sin guard: sin este paquete
+      # el render falla. Se verifica el checksum para detectar un tarball
+      # corrupto o sustituido.
+      - name: Install BioEstatR from bundled tarball
+        working-directory: R-packages
+        run: |
+          echo "$(cat BioEstatR_1.0.2.tar.gz.sha256)" | shasum -a 256 -c -
+          R CMD INSTALL BioEstatR_1.0.2.tar.gz
+
+      # ---------------------------------------------------------------- render
+      # Los .qmd usan set.seed(123) en todas las simulaciones y no descargan
+      # datos de la red, asi que el build es determinista y reproducible.
+      - name: Render site
+        working-directory: slides
+        run: quarto render
+
+      # Comprobacion de integridad: si el render no produce los HTML de los
+      # temas, publicariamos un sitio incompleto. Mejor fallar aqui.
+      - name: Sanity check the build
+        working-directory: slides
+        run: |
+          set -euo pipefail
+          missing=0
+          for f in index T01_I_Descriptiva T01_II_Descriptiva \
+                   T02_I_Probabilidad T02_II_Probabilidad T03_Estimacion_IC \
+                   T04_I_Test_Hipotesis T04_II_Test_Hipotesis \
+                   T05_ChiCuadrado T06_RegresionCorr; do
+            if [ ! -f "_site/${f}.html" ]; then
+              echo "::error::Falta _site/${f}.html en el build"
+              missing=1
+            fi
+          done
+          [ "$missing" -eq 0 ] || exit 1
+          echo "Build completo: los 10 HTML estan presentes."
+          du -sh _site
+
+      # ---------------------------------------------------------------- deploy
+      - name: Publish to gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./slides/_site
+          publish_branch: gh-pages
+          # .nojekyll evita que Jekyll procese el sitio y rompa los ficheros
+          # que empiezan por guion bajo, como _site/.../index_files.
+          enable_jekyll: false
+          # Un commit por despliegue, con el SHA que lo origino: se puede
+          # volver atras desde el historial de gh-pages.
+          commit_message: 'Publish ${{ github.sha }}'
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
