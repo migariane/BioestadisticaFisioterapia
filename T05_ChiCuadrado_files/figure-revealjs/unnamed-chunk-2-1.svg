@@ -41,18 +41,18 @@
 <rect x='271.68' y='46.83' width='30.58' height='103.36' style='stroke-width: 0.75; fill: #FF7F50;' />
 </g>
 <g clip-path='url(#cpMC4wMHw2NDguMDB8MC4wMHwzOTYuMDA=)'>
-<text x='88.18' y='171.71' text-anchor='middle' style='font-size: 9.96px; font-family: "Arial";' textLength='21.02px' lengthAdjust='spacingAndGlyphs'>Peor</text>
-<text x='179.93' y='171.71' text-anchor='middle' style='font-size: 9.96px; font-family: "Arial";' textLength='21.58px' lengthAdjust='spacingAndGlyphs'>Igual</text>
-<text x='271.68' y='171.71' text-anchor='middle' style='font-size: 9.96px; font-family: "Arial";' textLength='24.89px' lengthAdjust='spacingAndGlyphs'>Mejor</text>
+<text x='88.18' y='171.71' text-anchor='middle' style='font-size: 9.96px; font-family: "Liberation Sans";' textLength='21.02px' lengthAdjust='spacingAndGlyphs'>Peor</text>
+<text x='179.93' y='171.71' text-anchor='middle' style='font-size: 9.96px; font-family: "Liberation Sans";' textLength='21.58px' lengthAdjust='spacingAndGlyphs'>Igual</text>
+<text x='271.68' y='171.71' text-anchor='middle' style='font-size: 9.96px; font-family: "Liberation Sans";' textLength='24.89px' lengthAdjust='spacingAndGlyphs'>Mejor</text>
 </g>
 <g clip-path='url(#cpMC4wMHwzMjQuMDB8MC4wMHwxOTguMDA=)'>
 <rect x='226.59' y='43.06' width='78.25' height='35.86' style='stroke-width: 0.75; fill: #FFFFFF;' />
 <rect x='235.56' y='52.02' width='7.17' height='5.98' style='stroke-width: 0.75; fill: #4682B4;' />
 <rect x='235.56' y='63.97' width='7.17' height='5.98' style='stroke-width: 0.75; fill: #FF7F50;' />
-<text x='251.69' y='58.57' style='font-size: 9.96px; font-family: "Arial";' textLength='48.67px' lengthAdjust='spacingAndGlyphs'>Observado</text>
-<text x='251.69' y='70.52' style='font-size: 9.96px; font-family: "Arial";' textLength='42.59px' lengthAdjust='spacingAndGlyphs'>Esperado</text>
-<text x='179.93' y='22.20' text-anchor='middle' style='font-size: 11.95px; font-weight: bold; font-family: "Arial";' textLength='77.61px' lengthAdjust='spacingAndGlyphs'>Tratamiento 1</text>
-<text transform='translate(9.56,93.02) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Arial";' textLength='49.23px' lengthAdjust='spacingAndGlyphs'>Frecuencia</text>
+<text x='251.69' y='58.43' style='font-size: 9.96px; font-family: "Liberation Sans";' textLength='48.67px' lengthAdjust='spacingAndGlyphs'>Observado</text>
+<text x='251.69' y='70.38' style='font-size: 9.96px; font-family: "Liberation Sans";' textLength='42.59px' lengthAdjust='spacingAndGlyphs'>Esperado</text>
+<text x='179.93' y='22.04' text-anchor='middle' style='font-size: 11.95px; font-weight: bold; font-family: "Liberation Sans";' textLength='77.61px' lengthAdjust='spacingAndGlyphs'>Tratamiento 1</text>
+<text transform='translate(9.56,93.02) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Liberation Sans";' textLength='49.23px' lengthAdjust='spacingAndGlyphs'>Frecuencia</text>
 </g>
 <g clip-path='url(#cpMC4wMHw2NDguMDB8MC4wMHwzOTYuMDA=)'>
 <line x1='47.81' y1='150.19' x2='47.81' y2='35.86' style='stroke-width: 0.75;' />
@@ -63,10 +63,10 @@
 <line x1='47.81' y1='73.97' x2='41.83' y2='73.97' style='stroke-width: 0.75;' />
 <line x1='47.81' y1='54.91' x2='41.83' y2='54.91' style='stroke-width: 0.75;' />
 <line x1='47.81' y1='35.86' x2='41.83' y2='35.86' style='stroke-width: 0.75;' />
-<text transform='translate(33.47,150.19) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Arial";' textLength='5.53px' lengthAdjust='spacingAndGlyphs'>0</text>
-<text transform='translate(33.47,131.14) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Arial";' textLength='11.06px' lengthAdjust='spacingAndGlyphs'>20</text>
-<text transform='translate(33.47,93.02) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Arial";' textLength='11.06px' lengthAdjust='spacingAndGlyphs'>60</text>
-<text transform='translate(33.47,54.91) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Arial";' textLength='16.59px' lengthAdjust='spacingAndGlyphs'>100</text>
+<text transform='translate(33.47,150.19) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Liberation Sans";' textLength='5.53px' lengthAdjust='spacingAndGlyphs'>0</text>
+<text transform='translate(33.47,131.14) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Liberation Sans";' textLength='11.06px' lengthAdjust='spacingAndGlyphs'>20</text>
+<text transform='translate(33.47,93.02) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Liberation Sans";' textLength='11.06px' lengthAdjust='spacingAndGlyphs'>60</text>
+<text transform='translate(33.47,54.91) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Liberation Sans";' textLength='16.59px' lengthAdjust='spacingAndGlyphs'>100</text>
 </g>
 <defs>
   <clipPath id='cpMzI0LjAwfDY0OC4wMHwwLjAwfDE5OC4wMA=='>
@@ -82,18 +82,18 @@
 <rect x='595.68' y='67.50' width='30.58' height='82.69' style='stroke-width: 0.75; fill: #FF7F50;' />
 </g>
 <g clip-path='url(#cpMC4wMHw2NDguMDB8MC4wMHwzOTYuMDA=)'>
-<text x='412.18' y='171.71' text-anchor='middle' style='font-size: 9.96px; font-family: "Arial";' textLength='21.02px' lengthAdjust='spacingAndGlyphs'>Peor</text>
-<text x='503.93' y='171.71' text-anchor='middle' style='font-size: 9.96px; font-family: "Arial";' textLength='21.58px' lengthAdjust='spacingAndGlyphs'>Igual</text>
-<text x='595.68' y='171.71' text-anchor='middle' style='font-size: 9.96px; font-family: "Arial";' textLength='24.89px' lengthAdjust='spacingAndGlyphs'>Mejor</text>
+<text x='412.18' y='171.71' text-anchor='middle' style='font-size: 9.96px; font-family: "Liberation Sans";' textLength='21.02px' lengthAdjust='spacingAndGlyphs'>Peor</text>
+<text x='503.93' y='171.71' text-anchor='middle' style='font-size: 9.96px; font-family: "Liberation Sans";' textLength='21.58px' lengthAdjust='spacingAndGlyphs'>Igual</text>
+<text x='595.68' y='171.71' text-anchor='middle' style='font-size: 9.96px; font-family: "Liberation Sans";' textLength='24.89px' lengthAdjust='spacingAndGlyphs'>Mejor</text>
 </g>
 <g clip-path='url(#cpMzI0LjAwfDY0OC4wMHwwLjAwfDE5OC4wMA==)'>
 <rect x='550.59' y='43.06' width='78.25' height='35.86' style='stroke-width: 0.75; fill: #FFFFFF;' />
 <rect x='559.56' y='52.02' width='7.17' height='5.98' style='stroke-width: 0.75; fill: #4682B4;' />
 <rect x='559.56' y='63.97' width='7.17' height='5.98' style='stroke-width: 0.75; fill: #FF7F50;' />
-<text x='575.69' y='58.57' style='font-size: 9.96px; font-family: "Arial";' textLength='48.67px' lengthAdjust='spacingAndGlyphs'>Observado</text>
-<text x='575.69' y='70.52' style='font-size: 9.96px; font-family: "Arial";' textLength='42.59px' lengthAdjust='spacingAndGlyphs'>Esperado</text>
-<text x='503.93' y='22.20' text-anchor='middle' style='font-size: 11.95px; font-weight: bold; font-family: "Arial";' textLength='77.61px' lengthAdjust='spacingAndGlyphs'>Tratamiento 2</text>
-<text transform='translate(333.56,93.02) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Arial";' textLength='49.23px' lengthAdjust='spacingAndGlyphs'>Frecuencia</text>
+<text x='575.69' y='58.43' style='font-size: 9.96px; font-family: "Liberation Sans";' textLength='48.67px' lengthAdjust='spacingAndGlyphs'>Observado</text>
+<text x='575.69' y='70.38' style='font-size: 9.96px; font-family: "Liberation Sans";' textLength='42.59px' lengthAdjust='spacingAndGlyphs'>Esperado</text>
+<text x='503.93' y='22.04' text-anchor='middle' style='font-size: 11.95px; font-weight: bold; font-family: "Liberation Sans";' textLength='77.61px' lengthAdjust='spacingAndGlyphs'>Tratamiento 2</text>
+<text transform='translate(333.56,93.02) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Liberation Sans";' textLength='49.23px' lengthAdjust='spacingAndGlyphs'>Frecuencia</text>
 </g>
 <g clip-path='url(#cpMC4wMHw2NDguMDB8MC4wMHwzOTYuMDA=)'>
 <line x1='371.81' y1='150.19' x2='371.81' y2='35.86' style='stroke-width: 0.75;' />
@@ -104,10 +104,10 @@
 <line x1='371.81' y1='73.97' x2='365.83' y2='73.97' style='stroke-width: 0.75;' />
 <line x1='371.81' y1='54.91' x2='365.83' y2='54.91' style='stroke-width: 0.75;' />
 <line x1='371.81' y1='35.86' x2='365.83' y2='35.86' style='stroke-width: 0.75;' />
-<text transform='translate(357.47,150.19) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Arial";' textLength='5.53px' lengthAdjust='spacingAndGlyphs'>0</text>
-<text transform='translate(357.47,131.14) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Arial";' textLength='11.06px' lengthAdjust='spacingAndGlyphs'>20</text>
-<text transform='translate(357.47,93.02) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Arial";' textLength='11.06px' lengthAdjust='spacingAndGlyphs'>60</text>
-<text transform='translate(357.47,54.91) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Arial";' textLength='16.59px' lengthAdjust='spacingAndGlyphs'>100</text>
+<text transform='translate(357.47,150.19) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Liberation Sans";' textLength='5.53px' lengthAdjust='spacingAndGlyphs'>0</text>
+<text transform='translate(357.47,131.14) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Liberation Sans";' textLength='11.06px' lengthAdjust='spacingAndGlyphs'>20</text>
+<text transform='translate(357.47,93.02) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Liberation Sans";' textLength='11.06px' lengthAdjust='spacingAndGlyphs'>60</text>
+<text transform='translate(357.47,54.91) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Liberation Sans";' textLength='16.59px' lengthAdjust='spacingAndGlyphs'>100</text>
 </g>
 <defs>
   <clipPath id='cpMC4wMHwzMjQuMDB8MTk4LjAwfDM5Ni4wMA=='>
@@ -123,18 +123,18 @@
 <rect x='271.68' y='258.61' width='30.58' height='89.58' style='stroke-width: 0.75; fill: #FF7F50;' />
 </g>
 <g clip-path='url(#cpMC4wMHw2NDguMDB8MC4wMHwzOTYuMDA=)'>
-<text x='88.18' y='369.71' text-anchor='middle' style='font-size: 9.96px; font-family: "Arial";' textLength='21.02px' lengthAdjust='spacingAndGlyphs'>Peor</text>
-<text x='179.93' y='369.71' text-anchor='middle' style='font-size: 9.96px; font-family: "Arial";' textLength='21.58px' lengthAdjust='spacingAndGlyphs'>Igual</text>
-<text x='271.68' y='369.71' text-anchor='middle' style='font-size: 9.96px; font-family: "Arial";' textLength='24.89px' lengthAdjust='spacingAndGlyphs'>Mejor</text>
+<text x='88.18' y='369.71' text-anchor='middle' style='font-size: 9.96px; font-family: "Liberation Sans";' textLength='21.02px' lengthAdjust='spacingAndGlyphs'>Peor</text>
+<text x='179.93' y='369.71' text-anchor='middle' style='font-size: 9.96px; font-family: "Liberation Sans";' textLength='21.58px' lengthAdjust='spacingAndGlyphs'>Igual</text>
+<text x='271.68' y='369.71' text-anchor='middle' style='font-size: 9.96px; font-family: "Liberation Sans";' textLength='24.89px' lengthAdjust='spacingAndGlyphs'>Mejor</text>
 </g>
 <g clip-path='url(#cpMC4wMHwzMjQuMDB8MTk4LjAwfDM5Ni4wMA==)'>
 <rect x='226.59' y='241.06' width='78.25' height='35.86' style='stroke-width: 0.75; fill: #FFFFFF;' />
 <rect x='235.56' y='250.02' width='7.17' height='5.98' style='stroke-width: 0.75; fill: #4682B4;' />
 <rect x='235.56' y='261.97' width='7.17' height='5.98' style='stroke-width: 0.75; fill: #FF7F50;' />
-<text x='251.69' y='256.57' style='font-size: 9.96px; font-family: "Arial";' textLength='48.67px' lengthAdjust='spacingAndGlyphs'>Observado</text>
-<text x='251.69' y='268.52' style='font-size: 9.96px; font-family: "Arial";' textLength='42.59px' lengthAdjust='spacingAndGlyphs'>Esperado</text>
-<text x='179.93' y='220.20' text-anchor='middle' style='font-size: 11.95px; font-weight: bold; font-family: "Arial";' textLength='77.61px' lengthAdjust='spacingAndGlyphs'>Tratamiento 3</text>
-<text transform='translate(9.56,291.02) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Arial";' textLength='49.23px' lengthAdjust='spacingAndGlyphs'>Frecuencia</text>
+<text x='251.69' y='256.43' style='font-size: 9.96px; font-family: "Liberation Sans";' textLength='48.67px' lengthAdjust='spacingAndGlyphs'>Observado</text>
+<text x='251.69' y='268.38' style='font-size: 9.96px; font-family: "Liberation Sans";' textLength='42.59px' lengthAdjust='spacingAndGlyphs'>Esperado</text>
+<text x='179.93' y='220.04' text-anchor='middle' style='font-size: 11.95px; font-weight: bold; font-family: "Liberation Sans";' textLength='77.61px' lengthAdjust='spacingAndGlyphs'>Tratamiento 3</text>
+<text transform='translate(9.56,291.02) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Liberation Sans";' textLength='49.23px' lengthAdjust='spacingAndGlyphs'>Frecuencia</text>
 </g>
 <g clip-path='url(#cpMC4wMHw2NDguMDB8MC4wMHwzOTYuMDA=)'>
 <line x1='47.81' y1='348.19' x2='47.81' y2='233.86' style='stroke-width: 0.75;' />
@@ -145,10 +145,10 @@
 <line x1='47.81' y1='271.97' x2='41.83' y2='271.97' style='stroke-width: 0.75;' />
 <line x1='47.81' y1='252.91' x2='41.83' y2='252.91' style='stroke-width: 0.75;' />
 <line x1='47.81' y1='233.86' x2='41.83' y2='233.86' style='stroke-width: 0.75;' />
-<text transform='translate(33.47,348.19) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Arial";' textLength='5.53px' lengthAdjust='spacingAndGlyphs'>0</text>
-<text transform='translate(33.47,329.14) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Arial";' textLength='11.06px' lengthAdjust='spacingAndGlyphs'>20</text>
-<text transform='translate(33.47,291.02) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Arial";' textLength='11.06px' lengthAdjust='spacingAndGlyphs'>60</text>
-<text transform='translate(33.47,252.91) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Arial";' textLength='16.59px' lengthAdjust='spacingAndGlyphs'>100</text>
+<text transform='translate(33.47,348.19) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Liberation Sans";' textLength='5.53px' lengthAdjust='spacingAndGlyphs'>0</text>
+<text transform='translate(33.47,329.14) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Liberation Sans";' textLength='11.06px' lengthAdjust='spacingAndGlyphs'>20</text>
+<text transform='translate(33.47,291.02) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Liberation Sans";' textLength='11.06px' lengthAdjust='spacingAndGlyphs'>60</text>
+<text transform='translate(33.47,252.91) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Liberation Sans";' textLength='16.59px' lengthAdjust='spacingAndGlyphs'>100</text>
 </g>
 <defs>
   <clipPath id='cpMzI0LjAwfDY0OC4wMHwxOTguMDB8Mzk2LjAw'>
@@ -164,18 +164,18 @@
 <rect x='595.68' y='237.94' width='30.58' height='110.25' style='stroke-width: 0.75; fill: #FF7F50;' />
 </g>
 <g clip-path='url(#cpMC4wMHw2NDguMDB8MC4wMHwzOTYuMDA=)'>
-<text x='412.18' y='369.71' text-anchor='middle' style='font-size: 9.96px; font-family: "Arial";' textLength='21.02px' lengthAdjust='spacingAndGlyphs'>Peor</text>
-<text x='503.93' y='369.71' text-anchor='middle' style='font-size: 9.96px; font-family: "Arial";' textLength='21.58px' lengthAdjust='spacingAndGlyphs'>Igual</text>
-<text x='595.68' y='369.71' text-anchor='middle' style='font-size: 9.96px; font-family: "Arial";' textLength='24.89px' lengthAdjust='spacingAndGlyphs'>Mejor</text>
+<text x='412.18' y='369.71' text-anchor='middle' style='font-size: 9.96px; font-family: "Liberation Sans";' textLength='21.02px' lengthAdjust='spacingAndGlyphs'>Peor</text>
+<text x='503.93' y='369.71' text-anchor='middle' style='font-size: 9.96px; font-family: "Liberation Sans";' textLength='21.58px' lengthAdjust='spacingAndGlyphs'>Igual</text>
+<text x='595.68' y='369.71' text-anchor='middle' style='font-size: 9.96px; font-family: "Liberation Sans";' textLength='24.89px' lengthAdjust='spacingAndGlyphs'>Mejor</text>
 </g>
 <g clip-path='url(#cpMzI0LjAwfDY0OC4wMHwxOTguMDB8Mzk2LjAw)'>
 <rect x='550.59' y='241.06' width='78.25' height='35.86' style='stroke-width: 0.75; fill: #FFFFFF;' />
 <rect x='559.56' y='250.02' width='7.17' height='5.98' style='stroke-width: 0.75; fill: #4682B4;' />
 <rect x='559.56' y='261.97' width='7.17' height='5.98' style='stroke-width: 0.75; fill: #FF7F50;' />
-<text x='575.69' y='256.57' style='font-size: 9.96px; font-family: "Arial";' textLength='48.67px' lengthAdjust='spacingAndGlyphs'>Observado</text>
-<text x='575.69' y='268.52' style='font-size: 9.96px; font-family: "Arial";' textLength='42.59px' lengthAdjust='spacingAndGlyphs'>Esperado</text>
-<text x='503.93' y='220.20' text-anchor='middle' style='font-size: 11.95px; font-weight: bold; font-family: "Arial";' textLength='77.61px' lengthAdjust='spacingAndGlyphs'>Tratamiento 4</text>
-<text transform='translate(333.56,291.02) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Arial";' textLength='49.23px' lengthAdjust='spacingAndGlyphs'>Frecuencia</text>
+<text x='575.69' y='256.43' style='font-size: 9.96px; font-family: "Liberation Sans";' textLength='48.67px' lengthAdjust='spacingAndGlyphs'>Observado</text>
+<text x='575.69' y='268.38' style='font-size: 9.96px; font-family: "Liberation Sans";' textLength='42.59px' lengthAdjust='spacingAndGlyphs'>Esperado</text>
+<text x='503.93' y='220.04' text-anchor='middle' style='font-size: 11.95px; font-weight: bold; font-family: "Liberation Sans";' textLength='77.61px' lengthAdjust='spacingAndGlyphs'>Tratamiento 4</text>
+<text transform='translate(333.56,291.02) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Liberation Sans";' textLength='49.23px' lengthAdjust='spacingAndGlyphs'>Frecuencia</text>
 </g>
 <g clip-path='url(#cpMC4wMHw2NDguMDB8MC4wMHwzOTYuMDA=)'>
 <line x1='371.81' y1='348.19' x2='371.81' y2='233.86' style='stroke-width: 0.75;' />
@@ -186,10 +186,10 @@
 <line x1='371.81' y1='271.97' x2='365.83' y2='271.97' style='stroke-width: 0.75;' />
 <line x1='371.81' y1='252.91' x2='365.83' y2='252.91' style='stroke-width: 0.75;' />
 <line x1='371.81' y1='233.86' x2='365.83' y2='233.86' style='stroke-width: 0.75;' />
-<text transform='translate(357.47,348.19) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Arial";' textLength='5.53px' lengthAdjust='spacingAndGlyphs'>0</text>
-<text transform='translate(357.47,329.14) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Arial";' textLength='11.06px' lengthAdjust='spacingAndGlyphs'>20</text>
-<text transform='translate(357.47,291.02) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Arial";' textLength='11.06px' lengthAdjust='spacingAndGlyphs'>60</text>
-<text transform='translate(357.47,252.91) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Arial";' textLength='16.59px' lengthAdjust='spacingAndGlyphs'>100</text>
+<text transform='translate(357.47,348.19) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Liberation Sans";' textLength='5.53px' lengthAdjust='spacingAndGlyphs'>0</text>
+<text transform='translate(357.47,329.14) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Liberation Sans";' textLength='11.06px' lengthAdjust='spacingAndGlyphs'>20</text>
+<text transform='translate(357.47,291.02) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Liberation Sans";' textLength='11.06px' lengthAdjust='spacingAndGlyphs'>60</text>
+<text transform='translate(357.47,252.91) rotate(-90)' text-anchor='middle' style='font-size: 9.96px; font-family: "Liberation Sans";' textLength='16.59px' lengthAdjust='spacingAndGlyphs'>100</text>
 </g>
 </g>
 </svg>

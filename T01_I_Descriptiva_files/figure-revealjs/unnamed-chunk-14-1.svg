@@ -32,25 +32,25 @@
 <rect x='134.59' y='169.90' width='249.50' height='41.90' style='stroke-width: 0.75; fill: #FF903F;' />
 <rect x='134.59' y='119.62' width='224.55' height='41.90' style='stroke-width: 0.75; fill: #FFB31F;' />
 <rect x='134.59' y='69.33' width='149.70' height='41.90' style='stroke-width: 0.75; fill: #FFD700;' />
-<text x='115.20' y='345.36' text-anchor='end' style='font-size: 10.20px; font-family: "Arial";' textLength='47.05px' lengthAdjust='spacingAndGlyphs'>Lumbalgia</text>
-<text x='115.20' y='295.08' text-anchor='end' style='font-size: 10.20px; font-family: "Arial";' textLength='50.42px' lengthAdjust='spacingAndGlyphs'>Cervicalgia</text>
-<text x='115.20' y='244.79' text-anchor='end' style='font-size: 10.20px; font-family: "Arial";' textLength='37.95px' lengthAdjust='spacingAndGlyphs'>Omalgia</text>
-<text x='115.20' y='194.50' text-anchor='end' style='font-size: 10.20px; font-family: "Arial";' textLength='34.53px' lengthAdjust='spacingAndGlyphs'>Artrosis</text>
-<text x='115.20' y='144.22' text-anchor='end' style='font-size: 10.20px; font-family: "Arial";' textLength='41.94px' lengthAdjust='spacingAndGlyphs'>Esguince</text>
-<text x='115.20' y='93.93' text-anchor='end' style='font-size: 10.20px; font-family: "Arial";' textLength='42.50px' lengthAdjust='spacingAndGlyphs'>Tendinitis</text>
-<text x='381.60' y='33.95' text-anchor='middle' style='font-size: 14.40px; font-weight: bold; font-family: "Arial";' textLength='250.75px' lengthAdjust='spacingAndGlyphs'>Diagnósticos en Fisioterapia (n=150)</text>
-<text x='381.60' y='429.12' text-anchor='middle' style='font-size: 12.00px; font-family: "Arial";' textLength='59.36px' lengthAdjust='spacingAndGlyphs'>Frecuencia</text>
+<text x='115.20' y='345.22' text-anchor='end' style='font-size: 10.20px; font-family: "Liberation Sans";' textLength='47.05px' lengthAdjust='spacingAndGlyphs'>Lumbalgia</text>
+<text x='115.20' y='294.93' text-anchor='end' style='font-size: 10.20px; font-family: "Liberation Sans";' textLength='50.42px' lengthAdjust='spacingAndGlyphs'>Cervicalgia</text>
+<text x='115.20' y='244.65' text-anchor='end' style='font-size: 10.20px; font-family: "Liberation Sans";' textLength='37.95px' lengthAdjust='spacingAndGlyphs'>Omalgia</text>
+<text x='115.20' y='194.36' text-anchor='end' style='font-size: 10.20px; font-family: "Liberation Sans";' textLength='34.53px' lengthAdjust='spacingAndGlyphs'>Artrosis</text>
+<text x='115.20' y='144.08' text-anchor='end' style='font-size: 10.20px; font-family: "Liberation Sans";' textLength='41.94px' lengthAdjust='spacingAndGlyphs'>Esguince</text>
+<text x='115.20' y='93.79' text-anchor='end' style='font-size: 10.20px; font-family: "Liberation Sans";' textLength='42.50px' lengthAdjust='spacingAndGlyphs'>Tendinitis</text>
+<text x='381.60' y='33.75' text-anchor='middle' style='font-size: 14.40px; font-weight: bold; font-family: "Liberation Sans";' textLength='250.75px' lengthAdjust='spacingAndGlyphs'>Diagnósticos en Fisioterapia (n=150)</text>
+<text x='381.60' y='429.12' text-anchor='middle' style='font-size: 12.00px; font-family: "Liberation Sans";' textLength='59.36px' lengthAdjust='spacingAndGlyphs'>Frecuencia</text>
 <line x1='134.59' y1='374.40' x2='633.60' y2='374.40' style='stroke-width: 0.75;' />
 <line x1='134.59' y1='374.40' x2='134.59' y2='381.60' style='stroke-width: 0.75;' />
 <line x1='259.34' y1='374.40' x2='259.34' y2='381.60' style='stroke-width: 0.75;' />
 <line x1='384.10' y1='374.40' x2='384.10' y2='381.60' style='stroke-width: 0.75;' />
 <line x1='508.85' y1='374.40' x2='508.85' y2='381.60' style='stroke-width: 0.75;' />
 <line x1='633.60' y1='374.40' x2='633.60' y2='381.60' style='stroke-width: 0.75;' />
-<text x='134.59' y='400.32' text-anchor='middle' style='font-size: 12.00px; font-family: "Arial";' textLength='6.67px' lengthAdjust='spacingAndGlyphs'>0</text>
-<text x='259.34' y='400.32' text-anchor='middle' style='font-size: 12.00px; font-family: "Arial";' textLength='13.34px' lengthAdjust='spacingAndGlyphs'>10</text>
-<text x='384.10' y='400.32' text-anchor='middle' style='font-size: 12.00px; font-family: "Arial";' textLength='13.34px' lengthAdjust='spacingAndGlyphs'>20</text>
-<text x='508.85' y='400.32' text-anchor='middle' style='font-size: 12.00px; font-family: "Arial";' textLength='13.34px' lengthAdjust='spacingAndGlyphs'>30</text>
-<text x='633.60' y='400.32' text-anchor='middle' style='font-size: 12.00px; font-family: "Arial";' textLength='13.34px' lengthAdjust='spacingAndGlyphs'>40</text>
+<text x='134.59' y='400.32' text-anchor='middle' style='font-size: 12.00px; font-family: "Liberation Sans";' textLength='6.67px' lengthAdjust='spacingAndGlyphs'>0</text>
+<text x='259.34' y='400.32' text-anchor='middle' style='font-size: 12.00px; font-family: "Liberation Sans";' textLength='13.34px' lengthAdjust='spacingAndGlyphs'>10</text>
+<text x='384.10' y='400.32' text-anchor='middle' style='font-size: 12.00px; font-family: "Liberation Sans";' textLength='13.34px' lengthAdjust='spacingAndGlyphs'>20</text>
+<text x='508.85' y='400.32' text-anchor='middle' style='font-size: 12.00px; font-family: "Liberation Sans";' textLength='13.34px' lengthAdjust='spacingAndGlyphs'>30</text>
+<text x='633.60' y='400.32' text-anchor='middle' style='font-size: 12.00px; font-family: "Liberation Sans";' textLength='13.34px' lengthAdjust='spacingAndGlyphs'>40</text>
 </g>
 </g>
 </svg>
