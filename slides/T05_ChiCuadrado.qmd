@@ -1315,3 +1315,10 @@ mcnemar.test(matrix(c(38, 15, 31, 82), nrow = 2))
 library(BioEstatR)
 testmcnemar(n11 = 38, n12 = 15, n21 = 31, n22 = 82)
 ```
+
+## Verificación del despliegue automático
+
+<!-- MARCADOR-TEST-AUTODEPLOY-20260919 -->
+Esta diapositiva se añadió para comprobar que el despliegue automático
+funciona: al hacer push a `main`, GitHub Actions reconstruye el sitio y lo
+publica en `gh-pages` sin intervención manual.
