@@ -51,11 +51,23 @@ jobs:
           r-version: '4.5.1'
           use-public-rspm: true
 
+      # Los paquetes de R que necesita el render. Ojo: el campo `packages` de
+      # setup-r-dependencies se pasa literalmente a `pak`, asi que NO admite
+      # comentarios `#` dentro del bloque: los interpreta como nombres de
+      # paquete y el paso falla con "Cannot parse packages".
+      #
+      # - svglite: es el dispositivo de figuras que pide _quarto.yml
+      #   (knitr.opts_chunk.dev y fig-format: svg). Quarto lo carga por su
+      #   cuenta, no aparece en ningun library() de los .qmd, y sin el el
+      #   render aborta en el primer chunk de setup.
+      # - corrplot, remotes, jsonlite: se usan con `::` dentro de los chunks,
+      #   asi que tampoco salen en un grep de library().
+      #
+      # BioEstatR es un paquete local de la UGR, no esta en CRAN: se instala
+      # aparte en el paso siguiente desde el tarball del repo.
       - name: Install R dependencies
         uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          # BioEstatR es un paquete local de la UGR, no esta en CRAN. Se instala
-          # aparte en el paso siguiente desde el tarball del repo.
           packages: |
             any::ggplot2
             any::ResourceSelection
@@ -65,12 +77,7 @@ jobs:
             any::lmtest
             any::rmarkdown
             any::knitr
-            # svglite es el dispositivo de figuras que pide _quarto.yml
-            # (knitr.opts_chunk.dev y format.revealjs.fig-format). Quarto lo
-            # carga por su cuenta, no aparece en ningun library() del .qmd, y
-            # sin el el render aborta en el primer chunk de setup.
             any::svglite
-            # Usados con :: dentro de los chunks, no via library().
             any::corrplot
             any::remotes
             any::jsonlite
@@ -84,6 +91,25 @@ jobs:
         run: |
           echo "$(cat BioEstatR_1.0.2.tar.gz.sha256)" | shasum -a 256 -c -
           R CMD INSTALL BioEstatR_1.0.2.tar.gz
+
+      # Comprueba que todos los paquetes que los .qmd cargan estan realmente
+      # instalados. Es la red de seguridad que faltaba: el primer run fallo
+      # porque svglite no estaba en la lista y el error solo aparecio dentro
+      # del render, varios minutos despues. Si aqui falta algo, se ve el
+      # nombre concreto de inmediato.
+      - name: Verify required R packages are present
+        run: |
+          Rscript -e '
+            needed <- c("BioEstatR", "ggplot2", "ResourceSelection", "pROC",
+                        "e1071", "MASS", "lmtest", "rmarkdown", "knitr",
+                        "svglite", "corrplot", "remotes", "jsonlite")
+            missing <- needed[!vapply(needed, requireNamespace, logical(1),
+                                      quietly = TRUE)]
+            if (length(missing)) {
+              stop("Faltan paquetes: ", paste(missing, collapse = ", "))
+            }
+            cat("Los", length(needed), "paquetes necesarios estan instalados.\n")
+          '
 
       # ---------------------------------------------------------------- render
       # Los .qmd usan set.seed(123) en todas las simulaciones y no descargan
