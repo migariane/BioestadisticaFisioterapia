@@ -1,0 +1,19 @@
+/.quarto/
+**/*.quarto_ipynb
+.DS_Store
+/Moodle/
+
+# Carpetas de trabajo locales y estado de R. Este repo está anidado, así que
+# NO hereda el .gitignore del repositorio padre — las reglas deben repetirse aquí.
+# (El .Renviron rastreado que se publicó en 2026-09 salió justo por este hueco.)
+#
+# Esta carpeta solo versiona las fuentes de las slides (slides/) y lo necesario
+# para publicarlas en gh-pages (.github/workflows/publish.yml + R-packages/).
+# El material de origen (OriginalFiles.txt/), los quizzes de Moodle/ y el repo
+# anidado qmd_slides/ se quedan en disco pero fuera de git.
+OriginalFiles.txt/
+qmd_slides/
+.Rhistory
+.RData
+.Renviron
+.env
