@@ -2,7 +2,7 @@
 
 **Material docente interactivo — Grado en Fisioterapia, Universidad de Granada**
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](Slides/TemasTeoriaFisioterapia/LICENSE)
 [![Slides](https://img.shields.io/badge/Slides-RevealJS-39729E.svg)](https://migariane.github.io/BioestadisticaFisioterapia/)
 [![R](https://img.shields.io/badge/R-BioEstatR-276DC3.svg)](https://migariane.github.io/BioEstatR)
 [![Libro](https://img.shields.io/badge/Libro-Matem%C3%A1ticaEstad%C3%ADsticaMedicinaR-green.svg)](https://migariane.github.io/MatematicaEstadisticaMedicinaR)
@@ -42,22 +42,30 @@ Todo el contenido sigue la estructura y notación de:
 ## Estructura del proyecto
 
 ```
-qmd_slides/
-├── _quarto.yml              # Configuración del sitio web (Quarto)
-├── index.qmd                # Página de inicio
-├── madrid-theme.scss        # Tema visual personalizado RevealJS
-├── T01_I_Descriptiva.qmd     # Tema I — Estadística Descriptiva (Parte I)
-├── T01_II_Descriptiva.qmd    # Tema I — Estadística Descriptiva (Parte II)
-├── T02_I_Probabilidad.qmd    # Tema II — Probabilidad (Parte I)
-├── T02_II_Probabilidad.qmd   # Tema II — Probabilidad (Parte II)
-├── T03_Estimacion_IC.qmd     # Tema III — Estimación e IC
-├── T04_I_Test_Hipotesis.qmd  # Tema IV — Contraste de Hipótesis (Parte I)
-├── T04_II_Test_Hipotesis.qmd # Tema IV — Contraste de Hipótesis (Parte II)
-├── T05_ChiCuadrado.qmd       # Tema V — χ²
-├── T06_RegresionCorr.qmd     # Tema VI — Regresión y Correlación
-├── references.bib           # Bibliografía (BibTeX)
-└── pdf-macros.tex           # Macros LaTeX para PDF
+Slides/TemasTeoriaFisioterapia/
+├── slides/                       # Fuentes Quarto de las diapositivas
+│   ├── _quarto.yml               # Configuración del sitio web (Quarto)
+│   ├── index.qmd                 # Página de inicio
+│   ├── madrid-theme.scss         # Tema visual personalizado RevealJS
+│   ├── T01_I_Descriptiva.qmd     # Tema I — Estadística Descriptiva (Parte I)
+│   ├── T01_II_Descriptiva.qmd    # Tema I — Estadística Descriptiva (Parte II)
+│   ├── T02_I_Probabilidad.qmd    # Tema II — Probabilidad (Parte I)
+│   ├── T02_II_Probabilidad.qmd   # Tema II — Probabilidad (Parte II)
+│   ├── T03_Estimacion_IC.qmd     # Tema III — Estimación e IC
+│   ├── T04_I_Test_Hipotesis.qmd  # Tema IV — Contraste de Hipótesis (Parte I)
+│   ├── T04_II_Test_Hipotesis.qmd # Tema IV — Contraste de Hipótesis (Parte II)
+│   ├── T05_ChiCuadrado.qmd       # Tema V — χ²
+│   ├── T06_RegresionCorr.qmd     # Tema VI — Regresión y Correlación
+│   ├── references.bib            # Bibliografía (BibTeX)
+│   └── data/                     # Datos de los ejemplos
+├── R-packages/                   # BioEstatR, necesario para el render en CI
+├── .gitignore
+└── LICENSE
 ```
+
+La publicación en **gh-pages** la hace
+[.github/workflows/publish.yml](.github/workflows/publish.yml) en cada push a
+`main`: renderiza el sitio con Quarto y lo sube a la rama `gh-pages`.
 
 ---
 
@@ -65,18 +73,18 @@ qmd_slides/
 
 ```bash
 # Renderizar el sitio completo (RevealJS)
-cd qmd_slides
+cd Slides/TemasTeoriaFisioterapia/slides
 quarto render
 
 # Renderizar un tema específico a PDF
-quarto render T01_Descriptiva.qmd --to pdf
+quarto render T01_I_Descriptiva.qmd --to pdf
 ```
 
 ---
 
 ## Licencia
 
-[MIT](LICENSE) © 2026 Miguel Angel Luque-Fernández  
+[MIT](Slides/TemasTeoriaFisioterapia/LICENSE) © 2026 Miguel Angel Luque-Fernández  
 Las diapositivas son de uso libre para fines docentes.
 
 ---
