@@ -2,7 +2,7 @@
 
 **Material docente interactivo — Grado en Fisioterapia, Universidad de Granada**
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](Slides/TemasTeoriaFisioterapia/LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Slides](https://img.shields.io/badge/Slides-RevealJS-39729E.svg)](https://migariane.github.io/BioestadisticaFisioterapia/)
 [![R](https://img.shields.io/badge/R-BioEstatR-276DC3.svg)](https://migariane.github.io/BioEstatR)
 [![Libro](https://img.shields.io/badge/Libro-Matem%C3%A1ticaEstad%C3%ADsticaMedicinaR-green.svg)](https://migariane.github.io/MatematicaEstadisticaMedicinaR)
@@ -42,7 +42,7 @@ Todo el contenido sigue la estructura y notación de:
 ## Estructura del proyecto
 
 ```
-Slides/TemasTeoriaFisioterapia/
+.
 ├── slides/                       # Fuentes Quarto de las diapositivas
 │   ├── _quarto.yml               # Configuración del sitio web (Quarto)
 │   ├── index.qmd                 # Página de inicio
@@ -59,7 +59,9 @@ Slides/TemasTeoriaFisioterapia/
 │   ├── references.bib            # Bibliografía (BibTeX)
 │   └── data/                     # Datos de los ejemplos
 ├── R-packages/                   # BioEstatR, necesario para el render en CI
+├── .github/workflows/            # publish.yml — publicación automática
 ├── .gitignore
+├── README.md
 └── LICENSE
 ```
 
@@ -73,7 +75,7 @@ La publicación en **gh-pages** la hace
 
 ```bash
 # Renderizar el sitio completo (RevealJS)
-cd Slides/TemasTeoriaFisioterapia/slides
+cd slides
 quarto render
 
 # Renderizar un tema específico a PDF
@@ -84,7 +86,7 @@ quarto render T01_I_Descriptiva.qmd --to pdf
 
 ## Licencia
 
-[MIT](Slides/TemasTeoriaFisioterapia/LICENSE) © 2026 Miguel Angel Luque-Fernández  
+[MIT](LICENSE) © 2026 Miguel Angel Luque-Fernández  
 Las diapositivas son de uso libre para fines docentes.
 
 ---
