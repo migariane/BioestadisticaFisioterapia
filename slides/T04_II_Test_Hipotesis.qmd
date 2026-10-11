@@ -410,7 +410,10 @@ $$H_0: \theta_1 = \theta_2 \quad \text{vs.} \quad H_1: \theta_1 \neq \theta_2$$
 **Paso 1 — Combinar y ordenar:** Juntamos las $N = n_1 + n_2$ observaciones y asignamos rangos de 1 a $N$.
 
 **Paso 2 — Sumas de rangos por grupo:**
-$$R_1 = \sum_{i \in \text{Grupo 1}} \operatorname{rank}(X_i), \qquad R_2 = \sum_{j \in \text{Grupo 2}} \operatorname{rank}(X_j)$$
+$$\begin{aligned}
+R_1 &= \sum_{i \in \text{Grupo 1}} \operatorname{rank}(X_i) \\[2pt]
+R_2 &= \sum_{j \in \text{Grupo 2}} \operatorname{rank}(X_j)
+\end{aligned}$$
 
 **Paso 3 — El estadístico $U$:**
 $$U_1 = R_1 - \frac{n_1(n_1+1)}{2}, \qquad U_2 = R_2 - \frac{n_2(n_2+1)}{2}$$

@@ -661,7 +661,11 @@ El teorema de Bayes es la **piedra angular** de la estadística bayesiana: un pa
 
 **El flujo bayesiano:**
 
-$$\underbrace{P(\theta)}_{\text{Distribución a priori}} \;\; \times \;\; \underbrace{P(\text{datos} \mid \theta)}_{\text{Verosimilitud}} \;\; \propto \;\; \underbrace{P(\theta \mid \text{datos})}_{\text{Distribución a posteriori}}$$
+$$\begin{aligned}
+& \underbrace{P(\theta)}_{\text{Distribución a priori}} \;\; \times \\[2pt]
+& \underbrace{P(\text{datos} \mid \theta)}_{\text{Verosimilitud}} \\[4pt]
+& \propto \;\; \underbrace{P(\theta \mid \text{datos})}_{\text{Distribución a posteriori}}
+\end{aligned}$$
 
 | Concepto | Enfoque Frecuentista | Enfoque Bayesiano |
 |----------|---------------------|-------------------|

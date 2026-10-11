@@ -13,4 +13,8 @@ notebooklm_txt/
 
 /.quarto/
 **/*.quarto_ipynb
-_files/
+# HTML standalone + sus assets, por tema (T07 y futuros renders sueltos).
+# El patrón `_files/` solo casa con dirs llamados EXACTAMENTE `_files`,
+# no con `T07_ModelosMixtos_files/` — el comodín es obligatorio.
+*.html
+*_files/
