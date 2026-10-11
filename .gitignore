@@ -17,3 +17,12 @@ qmd_slides/
 .RData
 .Renviron
 .env
+
+# Material de trabajo local, no parte del curso. En el remoto ya figuraban
+# ignorados, pero con prefijo `Slides/TemasTeoriaFisioterapia/` — prefijo de
+# jerarquia del repo PADRE. Como este repo es anidado, esa regla nunca casaba
+# y los tres seguian rastreados: al reenviar `main` se habrian publicado.
+# Ninguno esta en gh-pages ni lo referencian el workflow, los .qmd ni el README.
+slides/CLAUDE.md
+slides/generate_videos.py
+slides/quality_reports/
