@@ -805,6 +805,14 @@ $$R_i = \#\{j : X_j \leq X_i\}$$
 
 $$W^+ = \sum_{i: D_i > 0} R_i, \qquad W^- = \sum_{i: D_i < 0} R_i, \qquad W^+ + W^- = \frac{n(n+1)}{2}$$
 
+::: {.formula-box}
+**Bajo $H_0$** (para $n \geq 12$, $W^+$ se aproxima a una Normal):
+
+$$\E[W^+] = \frac{n(n+1)}{4}, \qquad \Var(W^+) = \frac{n(n+1)(2n+1)}{24}$$
+
+$$Z = \frac{W^+ - \E[W^+]}{\sqrt{\Var(W^+)}} \sim N(0,1)$$
+:::
+
 ## Wilcoxon una muestra — tabla de cálculo manual
 
 | $i$ | $X_i$ | $D_i$ | $|D_i|$ | Rango | Signo | Rango con signo |
@@ -843,6 +851,14 @@ wilcox.test(x, mu = 130, exact = FALSE)
 | Rango | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 |
 
 **Sumas de rangos:** $R_A = 17$, $R_B = 49$ (control: $17 + 49 = 66 = \frac{11\cdot12}{2}$ ✓)
+
+::: {.formula-box}
+**Estadístico $U$ y su distribución bajo $H_0$** (para $n_1, n_2 \geq 8$, aproximación Normal):
+
+$$U_1 = R_1 - \frac{n_1(n_1+1)}{2}, \qquad U_2 = R_2 - \frac{n_2(n_2+1)}{2}, \qquad U = \min(U_1, U_2)$$
+
+$$\E[U] = \frac{n_1 n_2}{2}, \qquad \Var(U) = \frac{n_1 n_2 (n_1+n_2+1)}{12}, \qquad Z = \frac{U - \E[U]}{\sqrt{\Var(U)}} \sim N(0,1)$$
+:::
 
 $$U_A = 17 - \frac{5\cdot6}{2} = 2, \qquad U_B = 49 - \frac{6\cdot7}{2} = 28, \qquad U = \min(2, 28) = 2$$
 
