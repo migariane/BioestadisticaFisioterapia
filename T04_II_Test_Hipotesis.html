@@ -1571,6 +1571,11 @@ Método de Agresti-Min: -0.0952 95%-IC = (-0.1739, -0.0166)</code></pre>
 <p><strong>Paso 4 — Rangos con signo:</strong> <span class="math inline">\(R_i^+ = R_i \cdot \operatorname{sign}(D_i)\)</span>.</p>
 <p><strong>Paso 5 — Estadístico <span class="math inline">\(W^+\)</span></strong> = suma de los rangos con diferencia positiva.</p>
 <p><span class="math display">\[W^+ = \sum_{i: D_i &gt; 0} R_i, \qquad W^- = \sum_{i: D_i &lt; 0} R_i, \qquad W^+ + W^- = \frac{n(n+1)}{2}\]</span></p>
+<div class="formula-box">
+<p><strong>Bajo <span class="math inline">\(H_0\)</span></strong> (para <span class="math inline">\(n \geq 12\)</span>, <span class="math inline">\(W^+\)</span> se aproxima a una Normal):</p>
+<p><span class="math display">\[\E[W^+] = \frac{n(n+1)}{4}, \qquad \Var(W^+) = \frac{n(n+1)(2n+1)}{24}\]</span></p>
+<p><span class="math display">\[Z = \frac{W^+ - \E[W^+]}{\sqrt{\Var(W^+)}} \sim N(0,1)\]</span></p>
+</div>
 </section>
 <section id="wilcoxon-una-muestra-tabla-de-cálculo-manual" class="slide level2 center">
 <h2>Wilcoxon una muestra — tabla de cálculo manual</h2>
@@ -1745,6 +1750,11 @@ alternative hypothesis: true location is not equal to 130</code></pre>
 </tbody>
 </table>
 <p><strong>Sumas de rangos:</strong> <span class="math inline">\(R_A = 17\)</span>, <span class="math inline">\(R_B = 49\)</span> (control: <span class="math inline">\(17 + 49 = 66 = \frac{11\cdot12}{2}\)</span> ✓)</p>
+<div class="formula-box">
+<p><strong>Estadístico <span class="math inline">\(U\)</span> y su distribución bajo <span class="math inline">\(H_0\)</span></strong> (para <span class="math inline">\(n_1, n_2 \geq 8\)</span>, aproximación Normal):</p>
+<p><span class="math display">\[U_1 = R_1 - \frac{n_1(n_1+1)}{2}, \qquad U_2 = R_2 - \frac{n_2(n_2+1)}{2}, \qquad U = \min(U_1, U_2)\]</span></p>
+<p><span class="math display">\[\E[U] = \frac{n_1 n_2}{2}, \qquad \Var(U) = \frac{n_1 n_2 (n_1+n_2+1)}{12}, \qquad Z = \frac{U - \E[U]}{\sqrt{\Var(U)}} \sim N(0,1)\]</span></p>
+</div>
 <p><span class="math display">\[U_A = 17 - \frac{5\cdot6}{2} = 2, \qquad U_B = 49 - \frac{6\cdot7}{2} = 28, \qquad U = \min(2, 28) = 2\]</span></p>
 <p>Bajo <span class="math inline">\(H_0\)</span>: <span class="math inline">\(\E[U] = \frac{5\cdot6}{2} = 15\)</span>, <span class="math inline">\(\Var(U) = \frac{5\cdot6\cdot12}{12} = 30\)</span></p>
 <p><span class="math display">\[Z = \frac{2 - 15}{\sqrt{30}} = -2.37, \qquad P = 2\,\Phi(-2.37) = 0.018\]</span></p>
