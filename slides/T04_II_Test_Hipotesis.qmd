@@ -564,9 +564,11 @@ testmcnemar(n = c(38, 15, 31, 82))
 
 ## Tamaño muestral — diferencia de medias (potencia deseada)
 
-**Dos grupos independientes, $n_1 = n_2 = n$:**
+::: {.formula-box}
+**Dos grupos independientes ($n_1 = n_2 = n$):**
 
 $$n \approx \frac{2(z_{1-\alpha/2} + z_{1-\beta})^2 \cdot s^2}{\delta^2}$$
+:::
 
 ```{r}
 delta<-5; s<-12; z_a<-qnorm(0.975); z_b<-qnorm(0.80)
@@ -577,25 +579,34 @@ cat("n por grupo =", n, "→ n total =", 2*n)
 
 ## Tamaño muestral — dos proporciones independientes
 
-**Dos grupos independientes, $n_1 = n_2 = n$, diferencia a detectar $\delta = p_1 - p_2$:**
+::: {.formula-box}
+**Dos grupos independientes ($n_1 = n_2 = n$), diferencia a detectar $\delta = p_1 - p_2$:**
 
 $$n \approx \frac{(z_{1-\alpha/2} + z_{1-\beta})^2 \cdot [p_1(1-p_1) + p_2(1-p_2)]}{\delta^2}$$
+:::
 
 ::: {.callout-note}
 **Versión conservadora (varianza máxima):** si no conocemos $p_1$ y $p_2$ a priori, usamos $p = 0.5$ (que maximiza la varianza $p(1-p)$):
 
 $$n = \frac{(z_{1-\alpha/2} + z_{1-\beta})^2}{2\,\delta^2}$$
 
-**Corrección de continuidad (Fleiss):** $n' = \dfrac{n}{4}\left(1 + \sqrt{1 + \dfrac{4}{n\,|\delta|}}\right)^2$
+**Corrección de continuidad (Fleiss):**
+
+$$n' = \frac{n}{4}\left(1 + \sqrt{1 + \frac{4}{n\,|\delta|}}\right)^2$$
 :::
 
-**Ejemplo clínico — proporción de pacientes que alcanzan la DMI (diferencia mínima importante):**
+## Ejemplo — tamaño muestral para dos proporciones
 
-- Control (ejercicio terapéutico): se espera $p_1 = 0.30$
-- Intervención (punción seca + ejercicio): se espera $p_2 = 0.50$
-- $\delta = 0.20$, $\alpha = 0.05$, potencia 80%
+::: {.example-box}
+**Contexto:** proporción de pacientes que alcanzan la **DMI** (diferencia mínima importante) tras 4 semanas de tratamiento.
 
-$$n = \frac{7.85 \times (0.21 + 0.25)}{0.20^2} = \frac{7.85 \times 0.46}{0.04} = 90.3 \to \mathbf{91 \text{ por grupo}}$$
+- **Control** (ejercicio terapéutico): se espera $p_1 = 0.30$
+- **Intervención** (punción seca + ejercicio): se espera $p_2 = 0.50$
+
+$\delta = 0.20$, $\alpha = 0.05$, potencia $1-\beta = 80\%$
+:::
+
+$$n = \frac{(1.96 + 0.842)^2 \times (0.21 + 0.25)}{0.20^2} = \frac{7.85 \times 0.46}{0.04} = 90.3 \to \mathbf{91 \text{ por grupo}}$$
 
 ```{r}
 p1<-0.30; p2<-0.50; delta<-p1-p2
