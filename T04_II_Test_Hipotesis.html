@@ -295,6 +295,7 @@
 <ul>
 <li><a href="#/tamaño-muestral-diferencia-de-medias-potencia-deseada" id="/toc-tamaño-muestral-diferencia-de-medias-potencia-deseada">Tamaño muestral — diferencia de medias (potencia deseada)</a></li>
 <li><a href="#/tamaño-muestral-dos-proporciones-independientes" id="/toc-tamaño-muestral-dos-proporciones-independientes">Tamaño muestral — dos proporciones independientes</a></li>
+<li><a href="#/ejemplo-tamaño-muestral-para-dos-proporciones" id="/toc-ejemplo-tamaño-muestral-para-dos-proporciones">Ejemplo — tamaño muestral para dos proporciones</a></li>
 <li><a href="#/derivación-de-la-fórmula-de-tamaño-muestral-para-potencia" id="/toc-derivación-de-la-fórmula-de-tamaño-muestral-para-potencia">Derivación de la fórmula de tamaño muestral para potencia</a></li>
 <li><a href="#/derivación-de-n-paso-a-paso-y-ejemplo-numérico" id="/toc-derivación-de-n-paso-a-paso-y-ejemplo-numérico">Derivación de <span class="math inline">\(n\)</span> — Paso a paso y ejemplo numérico</a></li>
 <li><a href="#/ejemplo-detallado-proteína-α-klotho-y-edad" id="/toc-ejemplo-detallado-proteína-α-klotho-y-edad">Ejemplo detallado — Proteína α-klotho y edad</a></li>
@@ -1395,8 +1396,10 @@ alternative hypothesis: true location shift is not equal to 0</code></pre>
 </section>
 <section id="tamaño-muestral-diferencia-de-medias-potencia-deseada" class="slide level2 center">
 <h2>Tamaño muestral — diferencia de medias (potencia deseada)</h2>
-<p><strong>Dos grupos independientes, <span class="math inline">\(n_1 = n_2 = n\)</span>:</strong></p>
+<div class="formula-box">
+<p><strong>Dos grupos independientes (<span class="math inline">\(n_1 = n_2 = n\)</span>):</strong></p>
 <p><span class="math display">\[n \approx \frac{2(z_{1-\alpha/2} + z_{1-\beta})^2 \cdot s^2}{\delta^2}\]</span></p>
+</div>
 <div class="cell">
 <details class="code-fold">
 <summary>Mostrar código R</summary>
@@ -1415,8 +1418,10 @@ alternative hypothesis: true location shift is not equal to 0</code></pre>
 </section>
 <section id="tamaño-muestral-dos-proporciones-independientes" class="slide level2 center">
 <h2>Tamaño muestral — dos proporciones independientes</h2>
-<p><strong>Dos grupos independientes, <span class="math inline">\(n_1 = n_2 = n\)</span>, diferencia a detectar <span class="math inline">\(\delta = p_1 - p_2\)</span>:</strong></p>
+<div class="formula-box">
+<p><strong>Dos grupos independientes (<span class="math inline">\(n_1 = n_2 = n\)</span>), diferencia a detectar <span class="math inline">\(\delta = p_1 - p_2\)</span>:</strong></p>
 <p><span class="math display">\[n \approx \frac{(z_{1-\alpha/2} + z_{1-\beta})^2 \cdot [p_1(1-p_1) + p_2(1-p_2)]}{\delta^2}\]</span></p>
+</div>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
@@ -1428,17 +1433,23 @@ alternative hypothesis: true location shift is not equal to 0</code></pre>
 <div class="callout-content">
 <p><strong>Versión conservadora (varianza máxima):</strong> si no conocemos <span class="math inline">\(p_1\)</span> y <span class="math inline">\(p_2\)</span> a priori, usamos <span class="math inline">\(p = 0.5\)</span> (que maximiza la varianza <span class="math inline">\(p(1-p)\)</span>):</p>
 <p><span class="math display">\[n = \frac{(z_{1-\alpha/2} + z_{1-\beta})^2}{2\,\delta^2}\]</span></p>
-<p><strong>Corrección de continuidad (Fleiss):</strong> <span class="math inline">\(n' = \dfrac{n}{4}\left(1 + \sqrt{1 + \dfrac{4}{n\,|\delta|}}\right)^2\)</span></p>
+<p><strong>Corrección de continuidad (Fleiss):</strong></p>
+<p><span class="math display">\[n' = \frac{n}{4}\left(1 + \sqrt{1 + \frac{4}{n\,|\delta|}}\right)^2\]</span></p>
 </div>
 </div>
 </div>
-<p><strong>Ejemplo clínico — proporción de pacientes que alcanzan la DMI (diferencia mínima importante):</strong></p>
+</section>
+<section id="ejemplo-tamaño-muestral-para-dos-proporciones" class="slide level2 center">
+<h2>Ejemplo — tamaño muestral para dos proporciones</h2>
+<div class="example-box">
+<p><strong>Contexto:</strong> proporción de pacientes que alcanzan la <strong>DMI</strong> (diferencia mínima importante) tras 4 semanas de tratamiento.</p>
 <ul>
-<li>Control (ejercicio terapéutico): se espera <span class="math inline">\(p_1 = 0.30\)</span></li>
-<li>Intervención (punción seca + ejercicio): se espera <span class="math inline">\(p_2 = 0.50\)</span></li>
-<li><span class="math inline">\(\delta = 0.20\)</span>, <span class="math inline">\(\alpha = 0.05\)</span>, potencia 80%</li>
+<li><strong>Control</strong> (ejercicio terapéutico): se espera <span class="math inline">\(p_1 = 0.30\)</span></li>
+<li><strong>Intervención</strong> (punción seca + ejercicio): se espera <span class="math inline">\(p_2 = 0.50\)</span></li>
 </ul>
-<p><span class="math display">\[n = \frac{7.85 \times (0.21 + 0.25)}{0.20^2} = \frac{7.85 \times 0.46}{0.04} = 90.3 \to \mathbf{91 \text{ por grupo}}\]</span></p>
+<p><span class="math inline">\(\delta = 0.20\)</span>, <span class="math inline">\(\alpha = 0.05\)</span>, potencia <span class="math inline">\(1-\beta = 80\%\)</span></p>
+</div>
+<p><span class="math display">\[n = \frac{(1.96 + 0.842)^2 \times (0.21 + 0.25)}{0.20^2} = \frac{7.85 \times 0.46}{0.04} = 90.3 \to \mathbf{91 \text{ por grupo}}\]</span></p>
 <div class="cell">
 <details class="code-fold">
 <summary>Mostrar código R</summary>
