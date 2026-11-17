@@ -210,6 +210,19 @@ $code-bg: #f4f7fb;
   gap: 1em;
 }
 
+// Compact tables side by side (opt-in via .tabcols): fill the column width
+.reveal .columns.tabcols {
+  > .column {
+    margin-left: 0.35em;
+    margin-right: 0.35em;
+    > table {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
 // ============================================
 // IMAGES — clean, subtle shadow, contained in slide
 // ============================================

@@ -240,6 +240,42 @@ Cruzamos dos variables cualitativas $A$ (filas, $r$ categorías) y $B$ (columnas
 
 **Porcentajes totales:** el 5% del total son madres fumadoras con niño de bajo peso
 
+::: {.columns .tabcols}
+::: {.column width="30%"}
+
+**Porcentajes por filas (%)**
+
+| |Fuma Sí|Fuma No|Total|
+|:-:|:-:|:-:|:-:|
+|**Peso Bajo**|43.5|56.5|100|
+|**Peso Normal**|16.9|83.1|100|
+|**Total**|20.0|80.0|100|
+
+:::
+::: {.column width="30%"}
+
+**Porcentajes por columnas (%)**
+
+| |Fuma Sí|Fuma No|
+|:-:|:-:|:-:|
+|**Peso Bajo**|25.0|8.1|
+|**Peso Normal**|75.0|91.9|
+|**Total**|100|100|
+
+:::
+::: {.column width="30%"}
+
+**Porcentajes totales (%)**
+
+| |Fuma Sí|Fuma No|Total|
+|:-:|:-:|:-:|:-:|
+|**Peso Bajo**|5.0|6.5|11.5|
+|**Peso Normal**|15.0|73.5|88.5|
+|**Total**|20.0|80.0|100|
+
+:::
+:::
+
 ## Tipos de estudio epidemiológico en tablas $2 \times 2$
 
 La misma tabla $2 \times 2$ puede proceder de **tres tipos de muestreo**:
