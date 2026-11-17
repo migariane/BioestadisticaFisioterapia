@@ -173,7 +173,8 @@ cat("Fexp =", round(Fexp,3), "| F0.10;(15,19) = 1.86 → Fexp < F teórica → v
 
 **Paso 3 — Test de Student (varianzas homogéneas):**
 
-$$s_p^2 = \frac{19(89)^2 + 15(96)^2}{34} = 8492.32, \quad t_{\text{exp}} = \frac{450-380}{\sqrt{8492.32(1/20+1/16)}} = \frac{70}{30.91} = 2.265$$
+$$s_p^2 = \frac{19(89)^2 + 15(96)^2}{34} = 8492.32$$
+$$t_{\text{exp}} = \frac{450-380}{\sqrt{8492.32(1/20+1/16)}} = \frac{70}{30.91} = 2.265$$
 
 **Paso 4 — IC 95%:** $70 \pm t_{0.975;\,34} \times 30.91 = 70 \pm 2.032 \times 30.91 = (7.19,\ 132.82)$ pg/mL.
 
@@ -214,7 +215,8 @@ texp = 2.245, gl = 31.11, p = 0.032 (bilateral)
 **Variante del ejemplo anterior** (cambia $s_1$): Jóvenes $n_1=20$, $\bar{x}_1=450$, $s_1=59$; Ancianos $n_2=16$, $\bar{x}_2=380$, $s_2=96$.
 :::
 
-$$F_{\text{exp}} = \left(\frac{96}{59}\right)^2 = 2.648 > F_{0.10;(15,19)} = 1.86 \Rightarrow \text{varianzas distintas} \Rightarrow \text{Welch}$$
+$$F_{\text{exp}} = \left(\frac{96}{59}\right)^2 = 2.648 > F_{0.10;(15,19)}$$
+$$F_{0.10;(15,19)} = 1.86 \Rightarrow \text{varianzas distintas} \Rightarrow \text{Welch}$$
 
 $$t_{\text{exp}} = \frac{450-380}{\sqrt{59^2/20 + 96^2/16}} = \frac{70}{27.39} = 2.556, \qquad gl \approx 23.7$$
 
@@ -480,7 +482,8 @@ La versión **exacta** (cuantiles $t$ con $gl=2n-2$, como hace BioEstatR) da $n 
 ::: {.formula-box}
 Sea $r = \dfrac{s_{\text{mayor}}}{s_{\text{menor}}} \ge 1$:
 
-$$n_{\text{menor}} \approx \frac{(r+1)\,s_{\text{menor}}^2\,(z_{\alpha/2}+z_{1-\beta})^2}{\delta^2}, \qquad n_{\text{mayor}} = r \cdot n_{\text{menor}}$$
+$$n_{\text{menor}} \approx \frac{(r+1)\,s_{\text{menor}}^2\,(z_{\alpha/2}+z_{1-\beta})^2}{\delta^2}$$
+$$n_{\text{mayor}} = r \cdot n_{\text{menor}}$$
 :::
 
 ::: {.callout-note}
@@ -554,7 +557,8 @@ CC BY 4.0 — Miguel Angel Luque-Fernández
 ## Dos proporciones independientes — `testp()`
 
 ::: {.formula-box}
-$$\hat{p} = \frac{x_1+x_2}{n_1+n_2}, \qquad Z = \frac{\hat{p}_1 - \hat{p}_2}{\sqrt{\hat{p}(1-\hat{p})\left(\frac{1}{n_1}+\frac{1}{n_2}\right)}} \sim N(0,1)$$
+$$\hat{p} = \frac{x_1+x_2}{n_1+n_2}$$
+$$Z = \frac{\hat{p}_1 - \hat{p}_2}{\sqrt{\hat{p}(1-\hat{p})\left(\frac{1}{n_1}+\frac{1}{n_2}\right)}} \sim N(0,1)$$
 :::
 
 **Firma de `testp()`** (dos muestras independientes):
@@ -576,7 +580,8 @@ testp(x = respuesta, grupos = grupo, x0 = "Sí") # variable + agrupación
 - **No fumadores:** $n_2=119$, $x_2=15$ con alto riesgo → $\hat{p}_2 = 12.6\%$
 :::
 
-$$\hat{p} = \frac{45+15}{105+119} = 0.268, \qquad Z = \frac{0.429 - 0.126}{\sqrt{0.268 \times 0.732 \times (1/105 + 1/119)}} = 5.10$$
+$$\hat{p} = \frac{45+15}{105+119} = 0.268$$
+$$Z = \frac{0.429 - 0.126}{\sqrt{0.268 \times 0.732 \times (1/105 + 1/119)}} = 5.10$$
 
 $P < 0.001$ → **rechazamos $H_0$**: el riesgo elevado es mucho más frecuente en fumadores.
 
@@ -649,7 +654,8 @@ $$n' = \frac{n}{4}\left(1 + \sqrt{1 + \frac{4}{n\,|\delta|}}\right)^2$$
 $\delta = 0.20$, $\alpha = 0.05$, potencia $1-\beta = 80\%$
 :::
 
-$$n = \frac{(1.96 + 0.842)^2 \times (0.21 + 0.25)}{0.20^2} = \frac{7.85 \times 0.46}{0.04} = 90.3 \to \mathbf{91 \text{ por grupo}}$$
+$$n = \frac{(1.96 + 0.842)^2 \times (0.21 + 0.25)}{0.20^2} = \frac{7.85 \times 0.46}{0.04} = 90.3$$
+$$\to \mathbf{91 \text{ por grupo}}$$
 
 ```{r}
 p1<-0.30; p2<-0.50; delta<-p1-p2
@@ -857,7 +863,8 @@ wilcox.test(x, mu = 130, exact = FALSE)
 
 $$U_1 = R_1 - \frac{n_1(n_1+1)}{2}, \qquad U_2 = R_2 - \frac{n_2(n_2+1)}{2}, \qquad U = \min(U_1, U_2)$$
 
-$$\E[U] = \frac{n_1 n_2}{2}, \qquad \Var(U) = \frac{n_1 n_2 (n_1+n_2+1)}{12}, \qquad Z = \frac{U - \E[U]}{\sqrt{\Var(U)}} \sim N(0,1)$$
+$$\Var(U) = \frac{n_1 n_2 (n_1+n_2+1)}{12}$$
+$$Z = \frac{U - \E[U]}{\sqrt{\Var(U)}} \sim N(0,1)$$
 :::
 
 $$U_A = 17 - \frac{5\cdot6}{2} = 2, \qquad U_B = 49 - \frac{6\cdot7}{2} = 28, \qquad U = \min(2, 28) = 2$$

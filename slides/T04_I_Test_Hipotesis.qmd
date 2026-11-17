@@ -161,7 +161,12 @@ Queremos decidir si la **media poblacional** $\mu$ adopta un valor concreto $\mu
 ::: {.formula-box}
 **Tipificación de la media muestral** (repaso del Tema 3):
 
-$$\bar{X} \sim N\left(\mu,\ \frac{\sigma}{\sqrt{n}}\right) \quad \Longrightarrow \quad Z = \frac{\bar{X} - \mu}{\sigma/\sqrt{n}} \sim N(0,1)$$
+$$
+\begin{aligned}
+\bar{X} &\sim N\left(\mu,\ \frac{\sigma}{\sqrt{n}}\right) \\[4pt]
+\Longrightarrow \quad Z &= \frac{\bar{X} - \mu}{\sigma/\sqrt{n}} \sim N(0,1)
+\end{aligned}
+$$
 
 Como $\sigma$ es **desconocida**, la sustituimos por su estimador $s$ → la distribución se "corrige" a una **t de Student**.
 :::
