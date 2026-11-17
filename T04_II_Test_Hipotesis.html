@@ -119,7 +119,7 @@
     div.csl-indent {
       margin-left: 2em;
     }  </style>
-  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-41c66a2ec884fa48f4dd25a6beeb7670.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-4b60b4fb745e9aba134be22621898082.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -607,7 +607,7 @@ mean of x mean of y
 </div>
 </div>
 <p><strong>Paso 3 — Test de Student (varianzas homogéneas):</strong></p>
-<p><span class="math display">\[s_p^2 = \frac{19(89)^2 + 15(96)^2}{34} = 8492.32, \quad t_{\text{exp}} = \frac{450-380}{\sqrt{8492.32(1/20+1/16)}} = \frac{70}{30.91} = 2.265\]</span></p>
+<p><span class="math display">\[s_p^2 = \frac{19(89)^2 + 15(96)^2}{34} = 8492.32\]</span> <span class="math display">\[t_{\text{exp}} = \frac{450-380}{\sqrt{8492.32(1/20+1/16)}} = \frac{70}{30.91} = 2.265\]</span></p>
 <p><strong>Paso 4 — IC 95%:</strong> <span class="math inline">\(70 \pm t_{0.975;\,34} \times 30.91 = 70 \pm 2.032 \times 30.91 = (7.19,\ 132.82)\)</span> pg/mL.</p>
 <div class="callout callout-tip callout-titled callout-style-default">
 <div class="callout-body">
@@ -653,7 +653,7 @@ texp = 2.245, gl = 31.11, p = 0.032 (bilateral)
 <div class="example-box">
 <p><strong>Variante del ejemplo anterior</strong> (cambia <span class="math inline">\(s_1\)</span>): Jóvenes <span class="math inline">\(n_1=20\)</span>, <span class="math inline">\(\bar{x}_1=450\)</span>, <span class="math inline">\(s_1=59\)</span>; Ancianos <span class="math inline">\(n_2=16\)</span>, <span class="math inline">\(\bar{x}_2=380\)</span>, <span class="math inline">\(s_2=96\)</span>.</p>
 </div>
-<p><span class="math display">\[F_{\text{exp}} = \left(\frac{96}{59}\right)^2 = 2.648 &gt; F_{0.10;(15,19)} = 1.86 \Rightarrow \text{varianzas distintas} \Rightarrow \text{Welch}\]</span></p>
+<p><span class="math display">\[F_{\text{exp}} = \left(\frac{96}{59}\right)^2 = 2.648 &gt; F_{0.10;(15,19)}\]</span> <span class="math display">\[F_{0.10;(15,19)} = 1.86 \Rightarrow \text{varianzas distintas} \Rightarrow \text{Welch}\]</span></p>
 <p><span class="math display">\[t_{\text{exp}} = \frac{450-380}{\sqrt{59^2/20 + 96^2/16}} = \frac{70}{27.39} = 2.556, \qquad gl \approx 23.7\]</span></p>
 <p><strong>IC 95%:</strong> <span class="math inline">\(70 \pm t_{0.975;\,23.7} \times 27.39 = 70 \pm 2.065 \times 27.39 = (13.44,\ 126.56)\)</span> pg/mL.</p>
 <div class="callout callout-warning callout-titled callout-style-default">
@@ -1067,7 +1067,7 @@ mean difference
 <h2>Dos muestras independientes — varianzas no homogéneas (Welch)</h2>
 <div class="formula-box">
 <p>Sea <span class="math inline">\(r = \dfrac{s_{\text{mayor}}}{s_{\text{menor}}} \ge 1\)</span>:</p>
-<p><span class="math display">\[n_{\text{menor}} \approx \frac{(r+1)\,s_{\text{menor}}^2\,(z_{\alpha/2}+z_{1-\beta})^2}{\delta^2}, \qquad n_{\text{mayor}} = r \cdot n_{\text{menor}}\]</span></p>
+<p><span class="math display">\[n_{\text{menor}} \approx \frac{(r+1)\,s_{\text{menor}}^2\,(z_{\alpha/2}+z_{1-\beta})^2}{\delta^2}\]</span> <span class="math display">\[n_{\text{mayor}} = r \cdot n_{\text{menor}}\]</span></p>
 </div>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
@@ -1179,7 +1179,7 @@ mean difference
 <section id="dos-proporciones-independientes-testp" class="slide level2 center">
 <h2>Dos proporciones independientes — <code>testp()</code></h2>
 <div class="formula-box">
-<p><span class="math display">\[\hat{p} = \frac{x_1+x_2}{n_1+n_2}, \qquad Z = \frac{\hat{p}_1 - \hat{p}_2}{\sqrt{\hat{p}(1-\hat{p})\left(\frac{1}{n_1}+\frac{1}{n_2}\right)}} \sim N(0,1)\]</span></p>
+<p><span class="math display">\[\hat{p} = \frac{x_1+x_2}{n_1+n_2}\]</span> <span class="math display">\[Z = \frac{\hat{p}_1 - \hat{p}_2}{\sqrt{\hat{p}(1-\hat{p})\left(\frac{1}{n_1}+\frac{1}{n_2}\right)}} \sim N(0,1)\]</span></p>
 </div>
 <p><strong>Firma de <code>testp()</code></strong> (dos muestras independientes):</p>
 <div class="cell">
@@ -1201,7 +1201,7 @@ mean difference
 <li><strong>No fumadores:</strong> <span class="math inline">\(n_2=119\)</span>, <span class="math inline">\(x_2=15\)</span> con alto riesgo → <span class="math inline">\(\hat{p}_2 = 12.6\%\)</span></li>
 </ul>
 </div>
-<p><span class="math display">\[\hat{p} = \frac{45+15}{105+119} = 0.268, \qquad Z = \frac{0.429 - 0.126}{\sqrt{0.268 \times 0.732 \times (1/105 + 1/119)}} = 5.10\]</span></p>
+<p><span class="math display">\[\hat{p} = \frac{45+15}{105+119} = 0.268\]</span> <span class="math display">\[Z = \frac{0.429 - 0.126}{\sqrt{0.268 \times 0.732 \times (1/105 + 1/119)}} = 5.10\]</span></p>
 <p><span class="math inline">\(P &lt; 0.001\)</span> → <strong>rechazamos <span class="math inline">\(H_0\)</span></strong>: el riesgo elevado es mucho más frecuente en fumadores.</p>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
@@ -1299,7 +1299,7 @@ mean difference
 </ul>
 <p><span class="math inline">\(\delta = 0.20\)</span>, <span class="math inline">\(\alpha = 0.05\)</span>, potencia <span class="math inline">\(1-\beta = 80\%\)</span></p>
 </div>
-<p><span class="math display">\[n = \frac{(1.96 + 0.842)^2 \times (0.21 + 0.25)}{0.20^2} = \frac{7.85 \times 0.46}{0.04} = 90.3 \to \mathbf{91 \text{ por grupo}}\]</span></p>
+<p><span class="math display">\[n = \frac{(1.96 + 0.842)^2 \times (0.21 + 0.25)}{0.20^2} = \frac{7.85 \times 0.46}{0.04} = 90.3\]</span> <span class="math display">\[\to \mathbf{91 \text{ por grupo}}\]</span></p>
 <div class="cell">
 <details class="code-fold">
 <summary>Mostrar código R</summary>
@@ -1753,7 +1753,7 @@ alternative hypothesis: true location is not equal to 130</code></pre>
 <div class="formula-box">
 <p><strong>Estadístico <span class="math inline">\(U\)</span> y su distribución bajo <span class="math inline">\(H_0\)</span></strong> (para <span class="math inline">\(n_1, n_2 \geq 8\)</span>, aproximación Normal):</p>
 <p><span class="math display">\[U_1 = R_1 - \frac{n_1(n_1+1)}{2}, \qquad U_2 = R_2 - \frac{n_2(n_2+1)}{2}, \qquad U = \min(U_1, U_2)\]</span></p>
-<p><span class="math display">\[\E[U] = \frac{n_1 n_2}{2}, \qquad \Var(U) = \frac{n_1 n_2 (n_1+n_2+1)}{12}, \qquad Z = \frac{U - \E[U]}{\sqrt{\Var(U)}} \sim N(0,1)\]</span></p>
+<p><span class="math display">\[\Var(U) = \frac{n_1 n_2 (n_1+n_2+1)}{12}\]</span> <span class="math display">\[Z = \frac{U - \E[U]}{\sqrt{\Var(U)}} \sim N(0,1)\]</span></p>
 </div>
 <p><span class="math display">\[U_A = 17 - \frac{5\cdot6}{2} = 2, \qquad U_B = 49 - \frac{6\cdot7}{2} = 28, \qquad U = \min(2, 28) = 2\]</span></p>
 <p>Bajo <span class="math inline">\(H_0\)</span>: <span class="math inline">\(\E[U] = \frac{5\cdot6}{2} = 15\)</span>, <span class="math inline">\(\Var(U) = \frac{5\cdot6\cdot12}{12} = 30\)</span></p>

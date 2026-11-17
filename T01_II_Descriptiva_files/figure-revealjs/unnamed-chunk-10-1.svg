@@ -59,11 +59,11 @@
 <text transform='translate(41.76,148.54) rotate(-90)' text-anchor='middle' style='font-size: 12.00px; font-family: "Liberation Sans";' textLength='16.67px' lengthAdjust='spacingAndGlyphs'>0.3</text>
 <text transform='translate(41.76,70.64) rotate(-90)' text-anchor='middle' style='font-size: 12.00px; font-family: "Liberation Sans";' textLength='16.67px' lengthAdjust='spacingAndGlyphs'>0.4</text>
 <polygon points='59.04,394.56 617.76,394.56 617.76,59.04 59.04,59.04 ' style='stroke-width: 0.75;' />
-<text x='320.58' y='34.47' style='font-size: 14.40px; font-family: "Liberation Sans";' textLength='7.20px' lengthAdjust='spacingAndGlyphs'>x</text>
-<polyline points='320.58,24.89 327.78,24.89 ' style='stroke-width: 0.75;' />
-<text x='330.45' y='34.47' style='font-size: 14.40px; font-family: "Standard Symbols PS";' textLength='7.91px' lengthAdjust='spacingAndGlyphs'>±</text>
-<text x='341.01' y='34.47' style='font-size: 14.40px; font-family: "Liberation Sans";' textLength='8.00px' lengthAdjust='spacingAndGlyphs'>2</text>
-<text x='349.02' y='34.47' style='font-size: 14.40px; font-family: "Liberation Sans";' textLength='7.20px' lengthAdjust='spacingAndGlyphs'>s</text>
+<text x='318.50' y='34.47' style='font-size: 14.40px; font-family: "Liberation Sans";' textLength='7.20px' lengthAdjust='spacingAndGlyphs'>x</text>
+<polyline points='318.50,24.89 325.70,24.89 ' style='stroke-width: 0.75;' />
+<text x='328.37' y='34.47' style='font-size: 14.40px; font-family: "DejaVu Sans";' textLength='12.06px' lengthAdjust='spacingAndGlyphs'>±</text>
+<text x='343.09' y='34.47' style='font-size: 14.40px; font-family: "Liberation Sans";' textLength='8.00px' lengthAdjust='spacingAndGlyphs'>2</text>
+<text x='351.10' y='34.47' style='font-size: 14.40px; font-family: "Liberation Sans";' textLength='7.20px' lengthAdjust='spacingAndGlyphs'>s</text>
 <text x='338.40' y='449.28' text-anchor='middle' style='font-size: 12.00px; font-family: "Liberation Sans";' textLength='6.00px' lengthAdjust='spacingAndGlyphs'>x</text>
 <text transform='translate(12.96,226.80) rotate(-90)' text-anchor='middle' style='font-size: 12.00px; font-family: "Liberation Sans";' textLength='48.02px' lengthAdjust='spacingAndGlyphs'>dnorm(x)</text>
 </g>

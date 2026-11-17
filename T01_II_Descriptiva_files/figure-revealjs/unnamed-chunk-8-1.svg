@@ -61,10 +61,10 @@
 <text transform='translate(41.76,137.83) rotate(-90)' text-anchor='middle' style='font-size: 12.00px; font-family: "Liberation Sans";' textLength='23.34px' lengthAdjust='spacingAndGlyphs'>0.06</text>
 <text transform='translate(41.76,67.94) rotate(-90)' text-anchor='middle' style='font-size: 12.00px; font-family: "Liberation Sans";' textLength='23.34px' lengthAdjust='spacingAndGlyphs'>0.08</text>
 <polygon points='59.04,358.56 617.76,358.56 617.76,59.04 59.04,59.04 ' style='stroke-width: 0.75;' />
-<text x='267.73' y='33.82' style='font-size: 14.40px; font-family: "Liberation Sans";' textLength='46.38px' lengthAdjust='spacingAndGlyphs'>Misma </text>
-<text x='314.10' y='33.82' style='font-size: 14.40px; font-family: "Standard Symbols PS";' textLength='8.28px' lengthAdjust='spacingAndGlyphs'>μ</text>
-<text x='317.70' y='33.82' style='font-size: 14.40px; font-family: "Liberation Sans";' textLength='87.77px' lengthAdjust='spacingAndGlyphs'>=90°, distinta </text>
-<text x='405.47' y='33.82' style='font-size: 14.40px; font-family: "Standard Symbols PS";' textLength='8.67px' lengthAdjust='spacingAndGlyphs'>σ</text>
+<text x='262.19' y='33.24' style='font-size: 14.40px; font-family: "Liberation Sans";' textLength='46.38px' lengthAdjust='spacingAndGlyphs'>Misma </text>
+<text x='308.56' y='33.24' style='font-size: 14.40px; font-family: "DejaVu Sans";' textLength='9.16px' lengthAdjust='spacingAndGlyphs'>μ</text>
+<text x='317.72' y='33.24' style='font-size: 14.40px; font-family: "Liberation Sans";' textLength='87.77px' lengthAdjust='spacingAndGlyphs'>=90°, distinta </text>
+<text x='405.49' y='33.24' style='font-size: 14.40px; font-family: "DejaVu Sans";' textLength='9.12px' lengthAdjust='spacingAndGlyphs'>σ</text>
 <text x='338.40' y='413.28' text-anchor='middle' style='font-size: 12.00px; font-family: "Liberation Sans";' textLength='90.17px' lengthAdjust='spacingAndGlyphs'>Flexión rodilla (°)</text>
 <text transform='translate(12.96,208.80) rotate(-90)' text-anchor='middle' style='font-size: 12.00px; font-family: "Liberation Sans";' textLength='40.02px' lengthAdjust='spacingAndGlyphs'>Density</text>
 </g>
@@ -78,14 +78,14 @@
 <line x1='183.20' y1='330.00' x2='493.60' y2='330.00' style='stroke-width: 2.25; stroke: #2E8B57;' />
 <polyline points='183.20,321.36 183.20,330.00 183.20,338.64 ' style='stroke-width: 2.25; stroke: #2E8B57;' />
 <polyline points='493.60,338.64 493.60,330.00 493.60,321.36 ' style='stroke-width: 2.25; stroke: #2E8B57;' />
-<line x1='531.60' y1='77.76' x2='559.68' y2='77.76' style='stroke-width: 3.00; stroke: #4682B4;' />
-<line x1='531.60' y1='96.48' x2='559.68' y2='96.48' style='stroke-width: 3.00; stroke: #2E8B57;' />
-<text x='573.72' y='83.05' style='font-size: 15.60px; font-family: "Standard Symbols PS";' textLength='9.41px' lengthAdjust='spacingAndGlyphs'>σ</text>
-<text x='581.23' y='83.05' style='font-size: 15.60px; font-family: "Standard Symbols PS";' textLength='8.56px' lengthAdjust='spacingAndGlyphs'>=</text>
-<text x='593.40' y='83.05' style='font-size: 15.60px; font-family: "Liberation Sans";' textLength='8.67px' lengthAdjust='spacingAndGlyphs'>5</text>
-<text x='573.72' y='101.85' style='font-size: 15.60px; font-family: "Standard Symbols PS";' textLength='9.41px' lengthAdjust='spacingAndGlyphs'>σ</text>
-<text x='581.23' y='101.85' style='font-size: 15.60px; font-family: "Standard Symbols PS";' textLength='8.56px' lengthAdjust='spacingAndGlyphs'>=</text>
-<text x='593.40' y='101.85' style='font-size: 15.60px; font-family: "Liberation Sans";' textLength='17.34px' lengthAdjust='spacingAndGlyphs'>18</text>
+<line x1='521.11' y1='77.76' x2='549.19' y2='77.76' style='stroke-width: 3.00; stroke: #4682B4;' />
+<line x1='521.11' y1='96.48' x2='549.19' y2='96.48' style='stroke-width: 3.00; stroke: #2E8B57;' />
+<text x='563.23' y='83.02' style='font-size: 15.60px; font-family: "DejaVu Sans";' textLength='9.89px' lengthAdjust='spacingAndGlyphs'>σ</text>
+<text x='576.72' y='83.02' style='font-size: 15.60px; font-family: "DejaVu Sans";' textLength='13.06px' lengthAdjust='spacingAndGlyphs'>=</text>
+<text x='593.40' y='83.02' style='font-size: 15.60px; font-family: "Liberation Sans";' textLength='8.67px' lengthAdjust='spacingAndGlyphs'>5</text>
+<text x='563.23' y='101.82' style='font-size: 15.60px; font-family: "DejaVu Sans";' textLength='9.89px' lengthAdjust='spacingAndGlyphs'>σ</text>
+<text x='576.72' y='101.82' style='font-size: 15.60px; font-family: "DejaVu Sans";' textLength='13.06px' lengthAdjust='spacingAndGlyphs'>=</text>
+<text x='593.40' y='101.82' style='font-size: 15.60px; font-family: "Liberation Sans";' textLength='17.34px' lengthAdjust='spacingAndGlyphs'>18</text>
 </g>
 </g>
 </svg>

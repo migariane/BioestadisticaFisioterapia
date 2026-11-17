@@ -61,10 +61,10 @@
 <polygon points='59.04,286.56 617.76,286.56 617.76,59.04 59.04,59.04 ' style='stroke-width: 0.75;' />
 <text x='338.40' y='34.47' text-anchor='middle' style='font-size: 14.40px; font-weight: bold; font-family: "Liberation Sans";' textLength='177.88px' lengthAdjust='spacingAndGlyphs'>Z = ±1.96 deja 95% central</text>
 <text x='338.40' y='341.28' text-anchor='middle' style='font-size: 12.00px; font-family: "Liberation Sans";' textLength='6.00px' lengthAdjust='spacingAndGlyphs'>z</text>
-<text transform='translate(10.38,182.30) rotate(-90)' style='font-size: 12.00px; font-family: "Standard Symbols PS";' textLength='7.23px' lengthAdjust='spacingAndGlyphs'>ϕ</text>
-<text transform='translate(10.38,179.30) rotate(-90)' style='font-size: 15.00px; font-family: "Standard Symbols PS";' textLength='5.00px' lengthAdjust='spacingAndGlyphs'>(</text>
-<text transform='translate(10.38,174.30) rotate(-90)' style='font-size: 12.00px; font-family: "Liberation Sans";' textLength='6.00px' lengthAdjust='spacingAndGlyphs'>z</text>
-<text transform='translate(10.38,168.30) rotate(-90)' style='font-size: 15.00px; font-family: "Standard Symbols PS";' textLength='5.00px' lengthAdjust='spacingAndGlyphs'>)</text>
+<text transform='translate(10.46,185.62) rotate(-90)' style='font-size: 12.00px; font-family: "DejaVu Sans";' textLength='7.92px' lengthAdjust='spacingAndGlyphs'>ϕ</text>
+<text transform='translate(10.46,177.70) rotate(-90)' style='font-size: 15.00px; font-family: "DejaVu Sans";' textLength='5.86px' lengthAdjust='spacingAndGlyphs'>(</text>
+<text transform='translate(10.46,171.84) rotate(-90)' style='font-size: 12.00px; font-family: "Liberation Sans";' textLength='6.00px' lengthAdjust='spacingAndGlyphs'>z</text>
+<text transform='translate(10.46,165.84) rotate(-90)' style='font-size: 15.00px; font-family: "DejaVu Sans";' textLength='5.86px' lengthAdjust='spacingAndGlyphs'>)</text>
 </g>
 <g clip-path='url(#cpNTkuMDR8NjE3Ljc2fDU5LjA0fDI4Ni41Ng==)'>
 <line x1='211.65' y1='286.56' x2='211.65' y2='59.04' style='stroke-width: 1.50; stroke: #006400; stroke-dasharray: 8.00,8.00;' />

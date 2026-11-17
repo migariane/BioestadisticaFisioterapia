@@ -83,9 +83,9 @@
   </clipPath>
 </defs>
 <g clip-path='url(#cpMC4wMHwyMTYuMDB8MC4wMHwzNzQuNDA=)'>
-<text x='74.48' y='16.88' style='font-size: 9.50px; font-family: "Standard Symbols PS";' textLength='5.22px' lengthAdjust='spacingAndGlyphs'>β</text>
-<text x='76.86' y='18.63' style='font-size: 6.65px; font-family: "Liberation Sans";' textLength='3.69px' lengthAdjust='spacingAndGlyphs'>1</text>
-<text x='80.55' y='16.88' style='font-size: 9.50px; font-family: "Liberation Sans";' textLength='89.48px' lengthAdjust='spacingAndGlyphs'> &gt; 0: Relación directa</text>
+<text x='72.64' y='16.90' style='font-size: 9.50px; font-family: "DejaVu Sans";' textLength='6.06px' lengthAdjust='spacingAndGlyphs'>β</text>
+<text x='78.70' y='18.66' style='font-size: 6.65px; font-family: "Liberation Sans";' textLength='3.69px' lengthAdjust='spacingAndGlyphs'>1</text>
+<text x='82.39' y='16.90' style='font-size: 9.50px; font-family: "Liberation Sans";' textLength='89.48px' lengthAdjust='spacingAndGlyphs'> &gt; 0: Relación directa</text>
 <text x='122.26' y='372.50' text-anchor='middle' style='font-size: 7.92px; font-family: "Liberation Sans";' textLength='32.48px' lengthAdjust='spacingAndGlyphs'>Sesiones</text>
 <text transform='translate(7.60,182.45) rotate(-90)' text-anchor='middle' style='font-size: 7.92px; font-family: "Liberation Sans";' textLength='26.36px' lengthAdjust='spacingAndGlyphs'>Mejoría</text>
 </g>
@@ -152,9 +152,9 @@
   </clipPath>
 </defs>
 <g clip-path='url(#cpMjE2LjAwfDQzMi4wMHwwLjAwfDM3NC40MA==)'>
-<text x='299.71' y='16.88' style='font-size: 9.50px; font-family: "Standard Symbols PS";' textLength='5.22px' lengthAdjust='spacingAndGlyphs'>β</text>
-<text x='302.09' y='18.63' style='font-size: 6.65px; font-family: "Liberation Sans";' textLength='3.69px' lengthAdjust='spacingAndGlyphs'>1</text>
-<text x='305.78' y='16.88' style='font-size: 9.50px; font-family: "Liberation Sans";' textLength='71.02px' lengthAdjust='spacingAndGlyphs'> = 0: Sin relación</text>
+<text x='297.87' y='16.90' style='font-size: 9.50px; font-family: "DejaVu Sans";' textLength='6.06px' lengthAdjust='spacingAndGlyphs'>β</text>
+<text x='303.93' y='18.66' style='font-size: 6.65px; font-family: "Liberation Sans";' textLength='3.69px' lengthAdjust='spacingAndGlyphs'>1</text>
+<text x='307.63' y='16.90' style='font-size: 9.50px; font-family: "Liberation Sans";' textLength='71.02px' lengthAdjust='spacingAndGlyphs'> = 0: Sin relación</text>
 <text x='338.26' y='372.50' text-anchor='middle' style='font-size: 7.92px; font-family: "Liberation Sans";' textLength='32.48px' lengthAdjust='spacingAndGlyphs'>Sesiones</text>
 <text transform='translate(223.60,182.45) rotate(-90)' text-anchor='middle' style='font-size: 7.92px; font-family: "Liberation Sans";' textLength='26.36px' lengthAdjust='spacingAndGlyphs'>Mejoría</text>
 </g>
@@ -221,9 +221,9 @@
   </clipPath>
 </defs>
 <g clip-path='url(#cpNDMyLjAwfDY0OC4wMHwwLjAwfDM3NC40MA==)'>
-<text x='505.42' y='16.88' style='font-size: 9.50px; font-family: "Standard Symbols PS";' textLength='5.22px' lengthAdjust='spacingAndGlyphs'>β</text>
-<text x='507.80' y='18.63' style='font-size: 6.65px; font-family: "Liberation Sans";' textLength='3.69px' lengthAdjust='spacingAndGlyphs'>1</text>
-<text x='511.49' y='16.88' style='font-size: 9.50px; font-family: "Liberation Sans";' textLength='91.59px' lengthAdjust='spacingAndGlyphs'> &lt; 0: Relación inversa</text>
+<text x='503.58' y='16.90' style='font-size: 9.50px; font-family: "DejaVu Sans";' textLength='6.06px' lengthAdjust='spacingAndGlyphs'>β</text>
+<text x='509.64' y='18.66' style='font-size: 6.65px; font-family: "Liberation Sans";' textLength='3.69px' lengthAdjust='spacingAndGlyphs'>1</text>
+<text x='513.34' y='16.90' style='font-size: 9.50px; font-family: "Liberation Sans";' textLength='91.59px' lengthAdjust='spacingAndGlyphs'> &lt; 0: Relación inversa</text>
 <text x='554.26' y='372.50' text-anchor='middle' style='font-size: 7.92px; font-family: "Liberation Sans";' textLength='32.48px' lengthAdjust='spacingAndGlyphs'>Sesiones</text>
 <text transform='translate(439.60,182.45) rotate(-90)' text-anchor='middle' style='font-size: 7.92px; font-family: "Liberation Sans";' textLength='18.88px' lengthAdjust='spacingAndGlyphs'>Dolor</text>
 </g>

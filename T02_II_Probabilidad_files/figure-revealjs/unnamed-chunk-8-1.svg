@@ -120,10 +120,10 @@
 <g clip-path='url(#cpMzI0LjAwfDY0OC4wMHwwLjAwfDM2MC4wMA==)'>
 <text x='507.60' y='26.55' text-anchor='middle' style='font-size: 14.40px; font-weight: bold; font-family: "Liberation Sans";' textLength='171.56px' lengthAdjust='spacingAndGlyphs'>Estandarizada: Z ~ N(0,1)</text>
 <text x='507.60' y='357.12' text-anchor='middle' style='font-size: 12.00px; font-family: "Liberation Sans";' textLength='7.33px' lengthAdjust='spacingAndGlyphs'>Z</text>
-<text transform='translate(332.94,182.30) rotate(-90)' style='font-size: 12.00px; font-family: "Standard Symbols PS";' textLength='6.25px' lengthAdjust='spacingAndGlyphs'>φ</text>
-<text transform='translate(332.94,179.30) rotate(-90)' style='font-size: 15.00px; font-family: "Standard Symbols PS";' textLength='5.00px' lengthAdjust='spacingAndGlyphs'>(</text>
-<text transform='translate(332.94,174.30) rotate(-90)' style='font-size: 12.00px; font-family: "Liberation Sans";' textLength='6.00px' lengthAdjust='spacingAndGlyphs'>z</text>
-<text transform='translate(332.94,168.30) rotate(-90)' style='font-size: 15.00px; font-family: "Standard Symbols PS";' textLength='5.00px' lengthAdjust='spacingAndGlyphs'>)</text>
+<text transform='translate(333.02,185.62) rotate(-90)' style='font-size: 12.00px; font-family: "DejaVu Sans";' textLength='7.92px' lengthAdjust='spacingAndGlyphs'>φ</text>
+<text transform='translate(333.02,177.70) rotate(-90)' style='font-size: 15.00px; font-family: "DejaVu Sans";' textLength='5.86px' lengthAdjust='spacingAndGlyphs'>(</text>
+<text transform='translate(333.02,171.84) rotate(-90)' style='font-size: 12.00px; font-family: "Liberation Sans";' textLength='6.00px' lengthAdjust='spacingAndGlyphs'>z</text>
+<text transform='translate(333.02,165.84) rotate(-90)' style='font-size: 15.00px; font-family: "DejaVu Sans";' textLength='5.86px' lengthAdjust='spacingAndGlyphs'>)</text>
 </g>
 <g clip-path='url(#cpMzgxLjYwfDYzMy42MHw0My4yMHwzMDIuNDA=)'>
 <line x1='478.43' y1='302.40' x2='478.43' y2='43.20' style='stroke-width: 1.50; stroke: #006400;' />

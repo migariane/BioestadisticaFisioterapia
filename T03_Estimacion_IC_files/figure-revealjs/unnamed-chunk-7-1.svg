@@ -60,21 +60,21 @@
 <text transform='translate(41.76,90.87) rotate(-90)' text-anchor='middle' style='font-size: 12.00px; font-family: "Liberation Sans";' textLength='16.67px' lengthAdjust='spacingAndGlyphs'>0.4</text>
 <polygon points='59.04,286.56 617.76,286.56 617.76,59.04 59.04,59.04 ' style='stroke-width: 0.75;' />
 <text x='338.40' y='34.47' text-anchor='middle' style='font-size: 14.40px; font-weight: bold; font-family: "Liberation Sans";' textLength='227.12px' lengthAdjust='spacingAndGlyphs'>IC 95% para μ — Distribución t(9)</text>
-<text x='296.09' y='338.70' style='font-size: 12.00px; font-family: "Liberation Sans";' textLength='3.33px' lengthAdjust='spacingAndGlyphs'>t</text>
-<text x='302.20' y='338.70' style='font-size: 12.00px; font-family: "Standard Symbols PS";' textLength='6.59px' lengthAdjust='spacingAndGlyphs'>=</text>
-<text x='311.57' y='338.70' style='font-size: 15.00px; font-family: "Standard Symbols PS";' textLength='5.00px' lengthAdjust='spacingAndGlyphs'>(</text>
-<text x='316.56' y='338.70' style='font-size: 12.00px; font-family: "Liberation Sans";' textLength='6.00px' lengthAdjust='spacingAndGlyphs'>x</text>
-<polyline points='316.56,330.70 322.57,330.70 ' style='stroke-width: 0.75;' />
-<text x='324.79' y='338.70' style='font-size: 12.00px; font-family: "Standard Symbols PS";' textLength='6.59px' lengthAdjust='spacingAndGlyphs'>−</text>
-<text x='330.02' y='338.70' style='font-size: 12.00px; font-family: "Standard Symbols PS";' textLength='6.91px' lengthAdjust='spacingAndGlyphs'>μ</text>
-<text x='333.02' y='338.70' style='font-size: 15.00px; font-family: "Standard Symbols PS";' textLength='5.00px' lengthAdjust='spacingAndGlyphs'>)</text>
-<polyline points='339.60,340.43 342.77,328.70 ' style='stroke-width: 0.75;' />
-<text x='344.36' y='338.70' style='font-size: 15.00px; font-family: "Standard Symbols PS";' textLength='5.00px' lengthAdjust='spacingAndGlyphs'>(</text>
-<text x='349.36' y='338.70' style='font-size: 12.00px; font-family: "Liberation Sans";' textLength='6.00px' lengthAdjust='spacingAndGlyphs'>s</text>
-<polyline points='356.95,340.43 360.12,328.70 ' style='stroke-width: 0.75;' />
-<polyline points='361.70,336.11 363.19,335.47 364.68,338.70 366.66,329.70 375.16,329.70 ' style='stroke-width: 0.75;' />
-<text x='367.93' y='338.70' style='font-size: 12.00px; font-family: "Liberation Sans";' textLength='6.67px' lengthAdjust='spacingAndGlyphs'>n</text>
-<text x='375.71' y='338.70' style='font-size: 15.00px; font-family: "Standard Symbols PS";' textLength='5.00px' lengthAdjust='spacingAndGlyphs'>)</text>
+<text x='286.79' y='338.78' style='font-size: 12.00px; font-family: "Liberation Sans";' textLength='3.33px' lengthAdjust='spacingAndGlyphs'>t</text>
+<text x='292.91' y='338.78' style='font-size: 12.00px; font-family: "DejaVu Sans";' textLength='10.06px' lengthAdjust='spacingAndGlyphs'>=</text>
+<text x='305.74' y='338.78' style='font-size: 15.00px; font-family: "DejaVu Sans";' textLength='5.86px' lengthAdjust='spacingAndGlyphs'>(</text>
+<text x='311.60' y='338.78' style='font-size: 12.00px; font-family: "Liberation Sans";' textLength='6.00px' lengthAdjust='spacingAndGlyphs'>x</text>
+<polyline points='311.60,330.79 317.60,330.79 ' style='stroke-width: 0.75;' />
+<text x='319.82' y='338.78' style='font-size: 12.00px; font-family: "DejaVu Sans";' textLength='10.06px' lengthAdjust='spacingAndGlyphs'>−</text>
+<text x='332.10' y='338.78' style='font-size: 12.00px; font-family: "DejaVu Sans";' textLength='7.64px' lengthAdjust='spacingAndGlyphs'>μ</text>
+<text x='339.74' y='338.78' style='font-size: 15.00px; font-family: "DejaVu Sans";' textLength='5.86px' lengthAdjust='spacingAndGlyphs'>)</text>
+<polyline points='347.18,340.52 350.35,328.79 ' style='stroke-width: 0.75;' />
+<text x='351.94' y='338.78' style='font-size: 15.00px; font-family: "DejaVu Sans";' textLength='5.86px' lengthAdjust='spacingAndGlyphs'>(</text>
+<text x='357.79' y='338.78' style='font-size: 12.00px; font-family: "Liberation Sans";' textLength='6.00px' lengthAdjust='spacingAndGlyphs'>s</text>
+<polyline points='365.38,340.52 368.56,328.79 ' style='stroke-width: 0.75;' />
+<polyline points='370.14,336.20 371.63,335.55 373.12,338.78 375.10,329.79 383.60,329.79 ' style='stroke-width: 0.75;' />
+<text x='376.37' y='338.78' style='font-size: 12.00px; font-family: "Liberation Sans";' textLength='6.67px' lengthAdjust='spacingAndGlyphs'>n</text>
+<text x='384.15' y='338.78' style='font-size: 15.00px; font-family: "DejaVu Sans";' textLength='5.86px' lengthAdjust='spacingAndGlyphs'>)</text>
 <text transform='translate(12.96,172.80) rotate(-90)' text-anchor='middle' style='font-size: 12.00px; font-family: "Liberation Sans";' textLength='50.70px' lengthAdjust='spacingAndGlyphs'>Densidad</text>
 </g>
 <g clip-path='url(#cpNTkuMDR8NjE3Ljc2fDU5LjA0fDI4Ni41Ng==)'>
@@ -82,34 +82,34 @@
 <line x1='208.37' y1='286.56' x2='208.37' y2='59.04' style='stroke-width: 1.88; stroke: #006400; stroke-dasharray: 10.00,10.00;' />
 <line x1='468.43' y1='286.56' x2='468.43' y2='59.04' style='stroke-width: 1.88; stroke: #006400; stroke-dasharray: 10.00,10.00;' />
 <text x='338.40' y='86.88' text-anchor='middle' style='font-size: 15.60px; font-weight: bold;fill: #006400; font-family: "Liberation Sans";' textLength='31.20px' lengthAdjust='spacingAndGlyphs'>95%</text>
-<text x='124.46' y='210.95' style='font-size: 12.00px;fill: #006400; font-family: "Standard Symbols PS";' textLength='6.59px' lengthAdjust='spacingAndGlyphs'>−</text>
-<text x='129.13' y='210.95' style='font-size: 12.00px;fill: #006400; font-family: "Liberation Sans";' textLength='3.33px' lengthAdjust='spacingAndGlyphs'>t</text>
-<text x='132.46' y='213.17' style='font-size: 8.40px;fill: #006400; font-family: "Liberation Sans";' textLength='21.02px' lengthAdjust='spacingAndGlyphs'>0.025</text>
-<text x='156.26' y='210.95' style='font-size: 12.00px;fill: #006400; font-family: "Standard Symbols PS";' textLength='6.59px' lengthAdjust='spacingAndGlyphs'>=</text>
-<text x='165.62' y='210.95' style='font-size: 12.00px;fill: #006400; font-family: "Standard Symbols PS";' textLength='6.59px' lengthAdjust='spacingAndGlyphs'>−</text>
-<text x='170.29' y='210.95' style='font-size: 12.00px;fill: #006400; font-family: "Liberation Sans";' textLength='30.02px' lengthAdjust='spacingAndGlyphs'>2.262</text>
-<text x='472.91' y='210.95' style='font-size: 12.00px;fill: #006400; font-family: "Standard Symbols PS";' textLength='6.59px' lengthAdjust='spacingAndGlyphs'>+</text>
-<text x='481.16' y='210.95' style='font-size: 12.00px;fill: #006400; font-family: "Liberation Sans";' textLength='3.33px' lengthAdjust='spacingAndGlyphs'>t</text>
-<text x='484.50' y='213.17' style='font-size: 8.40px;fill: #006400; font-family: "Liberation Sans";' textLength='21.02px' lengthAdjust='spacingAndGlyphs'>0.025</text>
-<text x='508.29' y='210.95' style='font-size: 12.00px;fill: #006400; font-family: "Standard Symbols PS";' textLength='6.59px' lengthAdjust='spacingAndGlyphs'>=</text>
-<text x='517.66' y='210.95' style='font-size: 12.00px;fill: #006400; font-family: "Standard Symbols PS";' textLength='6.59px' lengthAdjust='spacingAndGlyphs'>+</text>
-<text x='525.91' y='210.95' style='font-size: 12.00px;fill: #006400; font-family: "Liberation Sans";' textLength='30.02px' lengthAdjust='spacingAndGlyphs'>2.262</text>
+<text x='115.67' y='210.95' style='font-size: 12.00px;fill: #006400; font-family: "DejaVu Sans";' textLength='10.06px' lengthAdjust='spacingAndGlyphs'>−</text>
+<text x='127.39' y='210.95' style='font-size: 12.00px;fill: #006400; font-family: "Liberation Sans";' textLength='3.33px' lengthAdjust='spacingAndGlyphs'>t</text>
+<text x='130.73' y='213.17' style='font-size: 8.40px;fill: #006400; font-family: "Liberation Sans";' textLength='21.02px' lengthAdjust='spacingAndGlyphs'>0.025</text>
+<text x='154.52' y='210.95' style='font-size: 12.00px;fill: #006400; font-family: "DejaVu Sans";' textLength='10.06px' lengthAdjust='spacingAndGlyphs'>=</text>
+<text x='167.36' y='210.95' style='font-size: 12.00px;fill: #006400; font-family: "DejaVu Sans";' textLength='10.06px' lengthAdjust='spacingAndGlyphs'>−</text>
+<text x='179.08' y='210.95' style='font-size: 12.00px;fill: #006400; font-family: "Liberation Sans";' textLength='30.02px' lengthAdjust='spacingAndGlyphs'>2.262</text>
+<text x='467.70' y='210.95' style='font-size: 12.00px;fill: #006400; font-family: "DejaVu Sans";' textLength='10.06px' lengthAdjust='spacingAndGlyphs'>+</text>
+<text x='479.43' y='210.95' style='font-size: 12.00px;fill: #006400; font-family: "Liberation Sans";' textLength='3.33px' lengthAdjust='spacingAndGlyphs'>t</text>
+<text x='482.76' y='213.17' style='font-size: 8.40px;fill: #006400; font-family: "Liberation Sans";' textLength='21.02px' lengthAdjust='spacingAndGlyphs'>0.025</text>
+<text x='506.55' y='210.95' style='font-size: 12.00px;fill: #006400; font-family: "DejaVu Sans";' textLength='10.06px' lengthAdjust='spacingAndGlyphs'>=</text>
+<text x='519.39' y='210.95' style='font-size: 12.00px;fill: #006400; font-family: "DejaVu Sans";' textLength='10.06px' lengthAdjust='spacingAndGlyphs'>+</text>
+<text x='531.12' y='210.95' style='font-size: 12.00px;fill: #006400; font-family: "Liberation Sans";' textLength='30.02px' lengthAdjust='spacingAndGlyphs'>2.262</text>
 <line x1='119.97' y1='250.04' x2='202.62' y2='273.45' style='stroke-width: 1.50; stroke: #E74C3C;' />
 <polyline points='195.64,275.22 202.62,273.45 197.60,268.29 ' style='stroke-width: 1.50; stroke: #E74C3C;' />
 <line x1='556.83' y1='250.04' x2='474.18' y2='273.45' style='stroke-width: 1.50; stroke: #E74C3C;' />
 <polyline points='479.20,268.29 474.18,273.45 481.16,275.22 ' style='stroke-width: 1.50; stroke: #E74C3C;' />
-<text x='97.79' y='239.30' style='font-size: 9.60px;fill: #E74C3C; font-family: "Standard Symbols PS";' textLength='6.05px' lengthAdjust='spacingAndGlyphs'>α</text>
-<polyline points='101.45,240.68 103.99,231.32 ' style='stroke-width: 0.75; stroke: #E74C3C;' />
-<text x='105.25' y='239.30' style='font-size: 9.60px;fill: #E74C3C; font-family: "Liberation Sans";' textLength='5.33px' lengthAdjust='spacingAndGlyphs'>2</text>
-<text x='112.81' y='239.30' style='font-size: 9.60px;fill: #E74C3C; font-family: "Standard Symbols PS";' textLength='5.27px' lengthAdjust='spacingAndGlyphs'>=</text>
-<text x='120.30' y='239.30' style='font-size: 9.60px;fill: #E74C3C; font-family: "Liberation Sans";' textLength='13.33px' lengthAdjust='spacingAndGlyphs'>2.5</text>
-<text x='133.63' y='239.30' style='font-size: 9.60px;fill: #E74C3C; font-family: "Liberation Sans";' textLength='8.53px' lengthAdjust='spacingAndGlyphs'>%</text>
-<text x='534.65' y='239.30' style='font-size: 9.60px;fill: #E74C3C; font-family: "Standard Symbols PS";' textLength='6.05px' lengthAdjust='spacingAndGlyphs'>α</text>
-<polyline points='538.31,240.68 540.85,231.32 ' style='stroke-width: 0.75; stroke: #E74C3C;' />
-<text x='542.11' y='239.30' style='font-size: 9.60px;fill: #E74C3C; font-family: "Liberation Sans";' textLength='5.33px' lengthAdjust='spacingAndGlyphs'>2</text>
-<text x='549.67' y='239.30' style='font-size: 9.60px;fill: #E74C3C; font-family: "Standard Symbols PS";' textLength='5.27px' lengthAdjust='spacingAndGlyphs'>=</text>
-<text x='557.16' y='239.30' style='font-size: 9.60px;fill: #E74C3C; font-family: "Liberation Sans";' textLength='13.33px' lengthAdjust='spacingAndGlyphs'>2.5</text>
-<text x='570.49' y='239.30' style='font-size: 9.60px;fill: #E74C3C; font-family: "Liberation Sans";' textLength='8.53px' lengthAdjust='spacingAndGlyphs'>%</text>
+<text x='94.44' y='239.30' style='font-size: 9.60px;fill: #E74C3C; font-family: "DejaVu Sans";' textLength='6.33px' lengthAdjust='spacingAndGlyphs'>α</text>
+<polyline points='102.03,240.68 104.57,231.32 ' style='stroke-width: 0.75; stroke: #E74C3C;' />
+<text x='105.83' y='239.30' style='font-size: 9.60px;fill: #E74C3C; font-family: "Liberation Sans";' textLength='5.33px' lengthAdjust='spacingAndGlyphs'>2</text>
+<text x='113.39' y='239.30' style='font-size: 9.60px;fill: #E74C3C; font-family: "DejaVu Sans";' textLength='8.03px' lengthAdjust='spacingAndGlyphs'>=</text>
+<text x='123.64' y='239.30' style='font-size: 9.60px;fill: #E74C3C; font-family: "Liberation Sans";' textLength='13.33px' lengthAdjust='spacingAndGlyphs'>2.5</text>
+<text x='136.97' y='239.30' style='font-size: 9.60px;fill: #E74C3C; font-family: "Liberation Sans";' textLength='8.53px' lengthAdjust='spacingAndGlyphs'>%</text>
+<text x='531.30' y='239.30' style='font-size: 9.60px;fill: #E74C3C; font-family: "DejaVu Sans";' textLength='6.33px' lengthAdjust='spacingAndGlyphs'>α</text>
+<polyline points='538.89,240.68 541.43,231.32 ' style='stroke-width: 0.75; stroke: #E74C3C;' />
+<text x='542.69' y='239.30' style='font-size: 9.60px;fill: #E74C3C; font-family: "Liberation Sans";' textLength='5.33px' lengthAdjust='spacingAndGlyphs'>2</text>
+<text x='550.25' y='239.30' style='font-size: 9.60px;fill: #E74C3C; font-family: "DejaVu Sans";' textLength='8.03px' lengthAdjust='spacingAndGlyphs'>=</text>
+<text x='560.50' y='239.30' style='font-size: 9.60px;fill: #E74C3C; font-family: "Liberation Sans";' textLength='13.33px' lengthAdjust='spacingAndGlyphs'>2.5</text>
+<text x='573.83' y='239.30' style='font-size: 9.60px;fill: #E74C3C; font-family: "Liberation Sans";' textLength='8.53px' lengthAdjust='spacingAndGlyphs'>%</text>
 </g>
 </g>
 </svg>
