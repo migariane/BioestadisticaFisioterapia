@@ -18,3 +18,7 @@ notebooklm_txt/
 # no con `T07_ModelosMixtos_files/` — el comodín es obligatorio.
 *.html
 *_files/
+
+# Pre-render intermedio que deja `quality_score.py` al ejecutar
+# `quarto render` (es el `.qmd` con el YAML resuelto). Regenerable.
+*.rmarkdown
